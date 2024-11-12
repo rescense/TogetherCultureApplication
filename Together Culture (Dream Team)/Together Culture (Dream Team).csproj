@@ -7,14 +7,32 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>Together_Culture__Dream_Team_.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Front-End\Assets\Icons\" />
-    <Folder Include="Front-End\Assets\Images\" />
     <Folder Include="Front-End\Assets\GIFS\" />
     <Folder Include="Front-End\Src\Navigator\" />
     <Folder Include="Front-End\Src\Test\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

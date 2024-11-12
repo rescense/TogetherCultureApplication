@@ -1,3 +1,5 @@
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+
 namespace Together_Culture__Dream_Team_
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Together_Culture__Dream_Team_
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new landingPage());
         }
     }
 }
