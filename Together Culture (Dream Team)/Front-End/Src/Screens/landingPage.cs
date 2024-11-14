@@ -32,6 +32,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void addUserControl(UserControl userControl)
         {
+            userControl.Dock = DockStyle.Fill;
             guna2CustomGradientPanel4.Controls.Clear();
             guna2CustomGradientPanel4.Controls.Add(userControl);
             userControl.BringToFront();
@@ -54,5 +55,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControl11_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usrCntrl_Memberships1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

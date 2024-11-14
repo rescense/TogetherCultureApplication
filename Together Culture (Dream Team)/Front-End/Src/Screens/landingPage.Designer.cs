@@ -91,6 +91,7 @@
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             panel3 = new Panel();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            usrCntrl_Memberships1 = new usrCntrl_Memberships();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             guna2CustomGradientPanel2.SuspendLayout();
@@ -98,6 +99,7 @@
             guna2CustomGradientPanel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
+            guna2CustomGradientPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -107,7 +109,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(1788, -35);
+            label1.Location = new Point(1859, -35);
             label1.Name = "label1";
             label1.Size = new Size(198, 32);
             label1.TabIndex = 4;
@@ -118,7 +120,7 @@
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1985, -38);
+            pictureBox1.Location = new Point(2056, -38);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 35);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -130,7 +132,7 @@
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(684, 23);
+            pictureBox2.Location = new Point(755, 23);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(47, 35);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -144,7 +146,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(3629, 34);
+            label5.Location = new Point(3770, 34);
             label5.Name = "label5";
             label5.Size = new Size(112, 15);
             label5.TabIndex = 6;
@@ -157,7 +159,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(2335, 34);
+            label6.Location = new Point(2476, 34);
             label6.Name = "label6";
             label6.Size = new Size(112, 15);
             label6.TabIndex = 13;
@@ -177,7 +179,7 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(3443, 21);
+            guna2Button1.Location = new Point(3584, 21);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(155, 45);
@@ -198,7 +200,7 @@
             guna2Button4.FillColor = Color.Black;
             guna2Button4.Font = new Font("Segoe UI", 9F);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(2149, 21);
+            guna2Button4.Location = new Point(2290, 21);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button4.Size = new Size(155, 45);
@@ -219,7 +221,7 @@
             guna2Button2.FillColor = Color.Black;
             guna2Button2.Font = new Font("Segoe UI", 9F);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(3758, 21);
+            guna2Button2.Location = new Point(3899, 21);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(147, 45);
@@ -240,7 +242,7 @@
             guna2Button3.FillColor = Color.Black;
             guna2Button3.Font = new Font("Segoe UI", 9F);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(2464, 21);
+            guna2Button3.Location = new Point(2605, 21);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button3.Size = new Size(147, 45);
@@ -274,7 +276,7 @@
             guna2CustomGradientPanel2.Location = new Point(0, 0);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2CustomGradientPanel2.Size = new Size(1305, 82);
+            guna2CustomGradientPanel2.Size = new Size(1446, 82);
             guna2CustomGradientPanel2.TabIndex = 4;
             // 
             // guna2Button9
@@ -291,7 +293,7 @@
             guna2Button9.FillColor = Color.Black;
             guna2Button9.Font = new Font("Segoe UI", 9F);
             guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(1146, 21);
+            guna2Button9.Location = new Point(1287, 21);
             guna2Button9.Name = "guna2Button9";
             guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button9.Size = new Size(147, 45);
@@ -312,7 +314,7 @@
             guna2Button10.FillColor = Color.Black;
             guna2Button10.Font = new Font("Segoe UI", 9F);
             guna2Button10.ForeColor = Color.White;
-            guna2Button10.Location = new Point(831, 21);
+            guna2Button10.Location = new Point(972, 21);
             guna2Button10.Name = "guna2Button10";
             guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button10.Size = new Size(155, 45);
@@ -326,7 +328,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(1017, 34);
+            label16.Location = new Point(1158, 34);
             label16.Name = "label16";
             label16.Size = new Size(112, 15);
             label16.TabIndex = 21;
@@ -375,7 +377,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(480, 26);
+            label7.Location = new Point(551, 26);
             label7.Name = "label7";
             label7.Size = new Size(198, 32);
             label7.TabIndex = 16;
@@ -397,10 +399,10 @@
             guna2CustomGradientPanel3.FillColor2 = Color.Bisque;
             guna2CustomGradientPanel3.FillColor3 = Color.Salmon;
             guna2CustomGradientPanel3.FillColor4 = Color.PeachPuff;
-            guna2CustomGradientPanel3.Location = new Point(0, 725);
+            guna2CustomGradientPanel3.Location = new Point(0, 801);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel3.Size = new Size(1305, 53);
+            guna2CustomGradientPanel3.Size = new Size(1446, 53);
             guna2CustomGradientPanel3.TabIndex = 5;
             // 
             // label12
@@ -408,7 +410,7 @@
             label12.Anchor = AnchorStyles.None;
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
-            label12.Location = new Point(898, 20);
+            label12.Location = new Point(969, 20);
             label12.Name = "label12";
             label12.Size = new Size(93, 15);
             label12.TabIndex = 5;
@@ -419,7 +421,7 @@
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
             label13.BackColor = Color.Transparent;
-            label13.Location = new Point(785, 20);
+            label13.Location = new Point(856, 20);
             label13.Name = "label13";
             label13.Size = new Size(91, 15);
             label13.TabIndex = 6;
@@ -430,7 +432,7 @@
             label14.Anchor = AnchorStyles.None;
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.Location = new Point(684, 20);
+            label14.Location = new Point(755, 20);
             label14.Name = "label14";
             label14.Size = new Size(80, 15);
             label14.TabIndex = 7;
@@ -441,7 +443,7 @@
             label15.Anchor = AnchorStyles.None;
             label15.AutoSize = true;
             label15.BackColor = Color.Transparent;
-            label15.Location = new Point(413, 20);
+            label15.Location = new Point(484, 20);
             label15.Name = "label15";
             label15.Size = new Size(239, 15);
             label15.TabIndex = 8;
@@ -452,7 +454,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.Location = new Point(2154, -55);
+            label9.Location = new Point(2225, -55);
             label9.Name = "label9";
             label9.Size = new Size(93, 15);
             label9.TabIndex = 1;
@@ -463,7 +465,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Location = new Point(2041, -55);
+            label8.Location = new Point(2112, -55);
             label8.Name = "label8";
             label8.Size = new Size(91, 15);
             label8.TabIndex = 2;
@@ -474,7 +476,7 @@
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Location = new Point(1940, -55);
+            label10.Location = new Point(2011, -55);
             label10.Name = "label10";
             label10.Size = new Size(80, 15);
             label10.TabIndex = 3;
@@ -485,7 +487,7 @@
             label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
-            label11.Location = new Point(1669, -55);
+            label11.Location = new Point(1740, -55);
             label11.Name = "label11";
             label11.Size = new Size(239, 15);
             label11.TabIndex = 4;
@@ -504,7 +506,7 @@
             guna2CustomGradientPanel1.Location = new Point(-1, -1);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2CustomGradientPanel1.Size = new Size(269, 1197);
+            guna2CustomGradientPanel1.Size = new Size(269, 1273);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -526,7 +528,8 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
-            tableLayoutPanel1.Size = new Size(269, 627);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(269, 703);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // guna2Button5
@@ -547,7 +550,7 @@
             guna2Button5.Location = new Point(3, 3);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button5.Size = new Size(263, 150);
+            guna2Button5.Size = new Size(263, 169);
             guna2Button5.TabIndex = 0;
             guna2Button5.Text = "About us";
             guna2Button5.Click += guna2Button5_Click;
@@ -566,10 +569,10 @@
             guna2ButtonMembership.ForeColor = Color.White;
             guna2ButtonMembership.ImageAlign = HorizontalAlignment.Left;
             guna2ButtonMembership.ImageSize = new Size(50, 50);
-            guna2ButtonMembership.Location = new Point(3, 159);
+            guna2ButtonMembership.Location = new Point(3, 178);
             guna2ButtonMembership.Name = "guna2ButtonMembership";
             guna2ButtonMembership.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2ButtonMembership.Size = new Size(263, 150);
+            guna2ButtonMembership.Size = new Size(263, 169);
             guna2ButtonMembership.TabIndex = 0;
             guna2ButtonMembership.Text = "Memberships";
             guna2ButtonMembership.Click += guna2ButtonMembership_Click;
@@ -588,10 +591,10 @@
             guna2Button7.ForeColor = Color.White;
             guna2Button7.ImageAlign = HorizontalAlignment.Left;
             guna2Button7.ImageSize = new Size(50, 50);
-            guna2Button7.Location = new Point(3, 315);
+            guna2Button7.Location = new Point(3, 353);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Button7.Size = new Size(263, 150);
+            guna2Button7.Size = new Size(263, 169);
             guna2Button7.TabIndex = 0;
             guna2Button7.Text = "Community";
             guna2Button7.Click += guna2Button5_Click;
@@ -610,10 +613,10 @@
             guna2Button8.ForeColor = Color.White;
             guna2Button8.ImageAlign = HorizontalAlignment.Left;
             guna2Button8.ImageSize = new Size(50, 50);
-            guna2Button8.Location = new Point(3, 471);
+            guna2Button8.Location = new Point(3, 528);
             guna2Button8.Name = "guna2Button8";
             guna2Button8.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Button8.Size = new Size(263, 153);
+            guna2Button8.Size = new Size(263, 172);
             guna2Button8.TabIndex = 0;
             guna2Button8.Text = "Time bank";
             guna2Button8.Click += guna2Button5_Click;
@@ -622,31 +625,38 @@
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(guna2CustomGradientPanel4);
             panel3.Controls.Add(guna2CustomGradientPanel1);
             panel3.Location = new Point(0, 88);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1305, 631);
+            panel3.Size = new Size(1446, 707);
             panel3.TabIndex = 6;
             // 
             // guna2CustomGradientPanel4
             // 
             guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2CustomGradientPanel4.AutoScroll = true;
-            guna2CustomGradientPanel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            guna2CustomGradientPanel4.Controls.Add(usrCntrl_Memberships1);
             guna2CustomGradientPanel4.CustomizableEdges = customizableEdges27;
-            guna2CustomGradientPanel4.Location = new Point(275, 88);
+            guna2CustomGradientPanel4.FillColor4 = Color.MistyRose;
+            guna2CustomGradientPanel4.Location = new Point(274, 2);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2CustomGradientPanel4.Size = new Size(1030, 627);
-            guna2CustomGradientPanel4.TabIndex = 1;
-            guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint;
+            guna2CustomGradientPanel4.Size = new Size(1171, 703);
+            guna2CustomGradientPanel4.TabIndex = 19;
+            // 
+            // usrCntrl_Memberships1
+            // 
+            usrCntrl_Memberships1.Dock = DockStyle.Fill;
+            usrCntrl_Memberships1.Location = new Point(0, 0);
+            usrCntrl_Memberships1.Name = "usrCntrl_Memberships1";
+            usrCntrl_Memberships1.Size = new Size(1171, 703);
+            usrCntrl_Memberships1.TabIndex = 0;
             // 
             // landingPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1305, 778);
-            Controls.Add(guna2CustomGradientPanel4);
+            ClientSize = new Size(1446, 854);
             Controls.Add(panel3);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
@@ -663,6 +673,7 @@
             guna2CustomGradientPanel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            guna2CustomGradientPanel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -702,5 +713,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
+        private usrCntrl_Memberships usrCntrl_Memberships1;
     }
 }

@@ -26,5 +26,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
 
         }
+
+        private void usrCntrl_Memberships_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

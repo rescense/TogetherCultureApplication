@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
-    partial class usrCntrl_AboutUs
+    partial class UserControl1
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // guna2HtmlLabel1
+            // pictureBox1
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Location = new Point(536, 349);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(51, 17);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "About us";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(885, 5000);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // usrCntrl_AboutUs
+            // UserControl1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(guna2HtmlLabel1);
-            Name = "usrCntrl_AboutUs";
-            Size = new Size(1171, 703);
+            Controls.Add(pictureBox1);
+            Name = "UserControl1";
+            Size = new Size(885, 5000);
+            Load += UserControl1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private PictureBox pictureBox1;
     }
 }
