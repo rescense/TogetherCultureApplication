@@ -55,7 +55,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel3 = new Panel();
             panel1 = new Panel();
-            userControl11 = new UserControl1();
+            userControl11 = new usrCntrl_Memberships();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -593,6 +593,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Panel panel1;
-        private UserControl1 userControl11;
+        private usrCntrl_Memberships userControl11;
     }
 }
