@@ -40,7 +40,7 @@
             pictureBox4.Location = new Point(0, 0);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(860, 2500);
+            pictureBox4.Size = new Size(1441, 8000);
             pictureBox4.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox4.TabIndex = 12;
             pictureBox4.TabStop = false;
@@ -51,7 +51,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pictureBox4);
             Name = "usrCntrl_AboutUs";
-            Size = new Size(860, 2500);
+            Size = new Size(1441, 8000);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
