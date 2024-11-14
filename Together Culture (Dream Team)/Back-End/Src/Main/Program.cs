@@ -1,4 +1,5 @@
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+using togther_Culture;
 
 namespace Together_Culture__Dream_Team_
 {
@@ -13,7 +14,7 @@ namespace Together_Culture__Dream_Team_
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new landingPage());
+            Application.Run(new main());
         }
     }
 }
