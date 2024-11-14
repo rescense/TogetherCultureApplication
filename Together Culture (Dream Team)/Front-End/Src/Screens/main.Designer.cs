@@ -146,7 +146,6 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.ColumnCount = 1;
@@ -158,7 +157,7 @@
             tableLayoutPanel1.Controls.Add(guna2Button7, 0, 4);
             tableLayoutPanel1.Controls.Add(guna2Button8, 0, 5);
             tableLayoutPanel1.Controls.Add(guna2Button9, 0, 6);
-            tableLayoutPanel1.Location = new Point(16, 0);
+            tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RightToLeft = RightToLeft.No;
             tableLayoutPanel1.RowCount = 7;
@@ -169,7 +168,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.2857141F));
-            tableLayoutPanel1.Size = new Size(234, 658);
+            tableLayoutPanel1.Size = new Size(269, 664);
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint_1;
             // 
@@ -188,7 +187,7 @@
             guna2Button3.Location = new Point(3, 3);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button3.Size = new Size(228, 88);
+            guna2Button3.Size = new Size(263, 88);
             guna2Button3.TabIndex = 0;
             guna2Button3.Click += guna2Button3_Click;
             // 
@@ -207,7 +206,7 @@
             guna2Button4.Location = new Point(3, 97);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button4.Size = new Size(228, 88);
+            guna2Button4.Size = new Size(263, 88);
             guna2Button4.TabIndex = 0;
             // 
             // guna2Button5
@@ -225,7 +224,7 @@
             guna2Button5.Location = new Point(3, 191);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button5.Size = new Size(228, 88);
+            guna2Button5.Size = new Size(263, 88);
             guna2Button5.TabIndex = 0;
             // 
             // guna2Button6
@@ -243,7 +242,7 @@
             guna2Button6.Location = new Point(3, 285);
             guna2Button6.Name = "guna2Button6";
             guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button6.Size = new Size(228, 88);
+            guna2Button6.Size = new Size(263, 88);
             guna2Button6.TabIndex = 0;
             // 
             // guna2Button7
@@ -261,7 +260,7 @@
             guna2Button7.Location = new Point(3, 379);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button7.Size = new Size(228, 88);
+            guna2Button7.Size = new Size(263, 88);
             guna2Button7.TabIndex = 0;
             // 
             // guna2Button8
@@ -279,7 +278,7 @@
             guna2Button8.Location = new Point(3, 473);
             guna2Button8.Name = "guna2Button8";
             guna2Button8.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button8.Size = new Size(228, 88);
+            guna2Button8.Size = new Size(263, 88);
             guna2Button8.TabIndex = 0;
             // 
             // guna2Button9
@@ -297,7 +296,7 @@
             guna2Button9.Location = new Point(3, 567);
             guna2Button9.Name = "guna2Button9";
             guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button9.Size = new Size(228, 88);
+            guna2Button9.Size = new Size(263, 88);
             guna2Button9.TabIndex = 0;
             // 
             // BottomToolStripPanel
@@ -554,7 +553,6 @@
             panel3.ResumeLayout(false);
             panel1.ResumeLayout(false);
             guna2CustomGradientPanel1.ResumeLayout(false);
-            guna2CustomGradientPanel1.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
