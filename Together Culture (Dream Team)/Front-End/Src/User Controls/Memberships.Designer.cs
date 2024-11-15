@@ -28,99 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memberships));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel2 = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            label20 = new Label();
-            label19 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label20 = new Label();
+            label19 = new Label();
             tableLayoutPanel1.SuspendLayout();
+            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox4);
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label20);
-            panel2.Controls.Add(label19);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1446, 147);
-            panel2.TabIndex = 21;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1128, 15);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(193, 119);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Anchor = AnchorStyles.None;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(133, 15);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(193, 119);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 9;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Anchor = AnchorStyles.None;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(2376, 60);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(193, 119);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 10;
-            pictureBox5.TabStop = false;
-            // 
-            // label20
-            // 
-            label20.Anchor = AnchorStyles.None;
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(389, 99);
-            label20.Name = "label20";
-            label20.Size = new Size(694, 21);
-            label20.TabIndex = 8;
-            label20.Text = "Explore our membership options and connect with a vibrant community of like-minded individuals.";
-            // 
-            // label19
-            // 
-            label19.Anchor = AnchorStyles.None;
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(421, 24);
-            label19.Name = "label19";
-            label19.Size = new Size(615, 65);
-            label19.TabIndex = 7;
-            label19.Text = "Explore Our Memberships";
             // 
             // tableLayoutPanel1
             // 
@@ -134,11 +59,11 @@
             tableLayoutPanel1.Controls.Add(guna2Button7, 2, 0);
             tableLayoutPanel1.Controls.Add(guna2Button6, 1, 0);
             tableLayoutPanel1.Controls.Add(guna2Button5, 0, 0);
-            tableLayoutPanel1.Location = new Point(23, 153);
+            tableLayoutPanel1.Location = new Point(134, 254);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1397, 416);
+            tableLayoutPanel1.Size = new Size(1109, 319);
             tableLayoutPanel1.TabIndex = 22;
             // 
             // guna2Button7
@@ -154,11 +79,11 @@
             guna2Button7.FillColor = Color.FromArgb(167, 62, 62);
             guna2Button7.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button7.ForeColor = Color.White;
-            guna2Button7.Location = new Point(950, 20);
+            guna2Button7.Location = new Point(758, 20);
             guna2Button7.Margin = new Padding(20);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button7.Size = new Size(427, 376);
+            guna2Button7.Size = new Size(331, 279);
             guna2Button7.TabIndex = 0;
             guna2Button7.Text = "Organization Member";
             guna2Button7.Click += organizationMember_click;
@@ -176,11 +101,11 @@
             guna2Button6.FillColor = Color.FromArgb(167, 62, 62);
             guna2Button6.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button6.ForeColor = Color.White;
-            guna2Button6.Location = new Point(485, 20);
+            guna2Button6.Location = new Point(389, 20);
             guna2Button6.Margin = new Padding(20);
             guna2Button6.Name = "guna2Button6";
             guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button6.Size = new Size(425, 376);
+            guna2Button6.Size = new Size(329, 279);
             guna2Button6.TabIndex = 0;
             guna2Button6.Text = "Creative Workspace Member";
             guna2Button6.Click += creativeWorkspaceMember_click;
@@ -202,41 +127,76 @@
             guna2Button5.Margin = new Padding(20);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button5.Size = new Size(425, 376);
+            guna2Button5.Size = new Size(329, 279);
             guna2Button5.TabIndex = 0;
             guna2Button5.Text = "Community Member";
             guna2Button5.Click += communityMemberButton_click;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.Controls.Add(label20);
+            guna2CustomGradientPanel1.Controls.Add(label19);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel1.Dock = DockStyle.Top;
+            guna2CustomGradientPanel1.FillColor = Color.Brown;
+            guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
+            guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.TabIndex = 32;
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(376, 101);
+            label20.Name = "label20";
+            label20.Size = new Size(694, 21);
+            label20.TabIndex = 26;
+            label20.Text = "Explore our membership options and connect with a vibrant community of like-minded individuals.";
+            // 
+            // label19
+            // 
+            label19.Anchor = AnchorStyles.None;
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(408, 26);
+            label19.Name = "label19";
+            label19.Size = new Size(615, 65);
+            label19.TabIndex = 25;
+            label19.Text = "Explore Our Memberships";
             // 
             // Memberships
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(panel2);
             Name = "Memberships";
             Size = new Size(1446, 607);
             Load += Memberships_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
+            guna2CustomGradientPanel1.ResumeLayout(false);
+            guna2CustomGradientPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel2;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private Label label20;
-        private Label label19;
         private TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Label label20;
+        private Label label19;
     }
 }

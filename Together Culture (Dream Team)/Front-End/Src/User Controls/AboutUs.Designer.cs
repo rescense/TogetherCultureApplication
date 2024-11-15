@@ -31,82 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUs));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            label20 = new Label();
-            label19 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox3 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label20 = new Label();
+            label19 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel2.BackColor = Color.LightGray;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label20);
-            panel2.Controls.Add(label19);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1446, 147);
-            panel2.TabIndex = 22;
-            panel2.Paint += panel2_Paint;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(2362, 71);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(193, 119);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Anchor = AnchorStyles.None;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(2999, 83);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(193, 119);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 10;
-            pictureBox5.TabStop = false;
-            // 
-            // label20
-            // 
-            label20.Anchor = AnchorStyles.None;
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(429, 99);
-            label20.Name = "label20";
-            label20.Size = new Size(612, 21);
-            label20.TabIndex = 8;
-            label20.Text = "Join our vibrant community to connect, share, and grow together with fellow members.";
-            label20.Click += label20_Click;
-            // 
-            // label19
-            // 
-            label19.Anchor = AnchorStyles.None;
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(613, 22);
-            label19.Name = "label19";
-            label19.Size = new Size(232, 65);
-            label19.TabIndex = 7;
-            label19.Text = "About us";
             // 
             // pictureBox3
             // 
@@ -182,13 +120,55 @@
             guna2Button1.Text = "Learn more";
             guna2Button1.Click += guna2Button1_Click;
             // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.Controls.Add(label20);
+            guna2CustomGradientPanel1.Controls.Add(label19);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges3;
+            guna2CustomGradientPanel1.Dock = DockStyle.Top;
+            guna2CustomGradientPanel1.FillColor = Color.Brown;
+            guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
+            guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.TabIndex = 25;
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(417, 102);
+            label20.Name = "label20";
+            label20.Size = new Size(612, 21);
+            label20.TabIndex = 12;
+            label20.Text = "Join our vibrant community to connect, share, and grow together with fellow members.";
+            // 
+            // label19
+            // 
+            label19.Anchor = AnchorStyles.None;
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(601, 25);
+            label19.Name = "label19";
+            label19.Size = new Size(232, 65);
+            label19.TabIndex = 11;
+            label19.Text = "About us";
+            // 
             // AboutUs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2Button1);
             Controls.Add(pictureBox3);
-            Controls.Add(panel2);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -196,27 +176,22 @@
             Name = "AboutUs";
             Size = new Size(1446, 607);
             Load += AboutUs_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            guna2CustomGradientPanel1.ResumeLayout(false);
+            guna2CustomGradientPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel2;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox5;
-        private Label label20;
-        private Label label19;
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Label label20;
+        private Label label19;
     }
 }

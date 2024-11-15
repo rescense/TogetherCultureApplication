@@ -58,12 +58,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 BringToFront();
 
                 // Change PictureBox color when visible
-                pictureBox3.BackColor = Color.White; // Example color
+                pictureBox3.BackColor = Color.Black;
             }
             else
             {
                 // Hide the sidebar
-                panel1.Controls.Clear(); // Remove the sidebar from the panel
+                panel1.Controls.Clear();
                 panel1.Visible = false;
                 isSideMenuVisible = false;
 

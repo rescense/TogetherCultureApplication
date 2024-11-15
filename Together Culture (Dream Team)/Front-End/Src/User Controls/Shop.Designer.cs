@@ -31,80 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shop));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            label20 = new Label();
-            label19 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox2 = new PictureBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label20 = new Label();
+            label19 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel2.BackColor = Color.LightGray;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(label20);
-            panel2.Controls.Add(label19);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1446, 147);
-            panel2.TabIndex = 23;
-            panel2.Paint += panel2_Paint;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(2985, 94);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(193, 119);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Anchor = AnchorStyles.None;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(3622, 106);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(193, 119);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 10;
-            pictureBox5.TabStop = false;
-            // 
-            // label20
-            // 
-            label20.Anchor = AnchorStyles.None;
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(423, 99);
-            label20.Name = "label20";
-            label20.Size = new Size(605, 21);
-            label20.TabIndex = 8;
-            label20.Text = "For every book bought from our shop, Together Culture earns a 10% commission rate.";
-            // 
-            // label19
-            // 
-            label19.Anchor = AnchorStyles.None;
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(645, 18);
-            label19.Name = "label19";
-            label19.Size = new Size(143, 65);
-            label19.TabIndex = 7;
-            label19.Text = "Shop";
             // 
             // pictureBox2
             // 
@@ -165,39 +104,76 @@
             label4.TabIndex = 28;
             label4.Text = "Our 'Just People' tees are a reminder of the Together Culture community's \r\ncreative intent. All proceeds go towards building our permanent home.";
             // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.Controls.Add(label20);
+            guna2CustomGradientPanel1.Controls.Add(label19);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges3;
+            guna2CustomGradientPanel1.Dock = DockStyle.Top;
+            guna2CustomGradientPanel1.FillColor = Color.Brown;
+            guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
+            guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.TabIndex = 31;
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(421, 104);
+            label20.Name = "label20";
+            label20.Size = new Size(605, 21);
+            label20.TabIndex = 32;
+            label20.Text = "For every book bought from our shop, Together Culture earns a 10% commission rate.";
+            // 
+            // label19
+            // 
+            label19.Anchor = AnchorStyles.None;
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(643, 23);
+            label19.Name = "label19";
+            label19.Size = new Size(143, 65);
+            label19.TabIndex = 31;
+            label19.Text = "Shop";
+            // 
             // Shop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(guna2Button1);
             Controls.Add(pictureBox2);
-            Controls.Add(panel2);
             Name = "Shop";
             Size = new Size(1446, 614);
             Load += Shop_Load;
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            guna2CustomGradientPanel1.ResumeLayout(false);
+            guna2CustomGradientPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel2;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox5;
-        private Label label20;
-        private Label label19;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Label label1;
         private Label label2;
         private Label label4;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Label label20;
+        private Label label19;
     }
 }
