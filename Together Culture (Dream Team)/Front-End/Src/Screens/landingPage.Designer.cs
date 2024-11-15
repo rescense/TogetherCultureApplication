@@ -561,11 +561,11 @@
             guna2CustomGradientPanel4.Controls.Add(tableLayoutPanel1);
             guna2CustomGradientPanel4.Controls.Add(panel2);
             guna2CustomGradientPanel4.CustomizableEdges = customizableEdges23;
-            guna2CustomGradientPanel4.FillColor4 = Color.MistyRose;
-            guna2CustomGradientPanel4.Location = new Point(-1, 5);
+            guna2CustomGradientPanel4.FillColor3 = Color.LightCoral;
+            guna2CustomGradientPanel4.Location = new Point(-1, -1);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2CustomGradientPanel4.Size = new Size(1446, 607);
+            guna2CustomGradientPanel4.Size = new Size(1446, 623);
             guna2CustomGradientPanel4.TabIndex = 19;
             guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint_1;
             // 
@@ -594,7 +594,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1397, 416);
+            tableLayoutPanel1.Size = new Size(1397, 432);
             tableLayoutPanel1.TabIndex = 8;
             // 
             // guna2Button7
@@ -614,7 +614,7 @@
             guna2Button7.Margin = new Padding(20);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button7.Size = new Size(427, 376);
+            guna2Button7.Size = new Size(427, 392);
             guna2Button7.TabIndex = 0;
             guna2Button7.Text = "Organization Member";
             // 
@@ -635,7 +635,7 @@
             guna2Button6.Margin = new Padding(20);
             guna2Button6.Name = "guna2Button6";
             guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button6.Size = new Size(425, 376);
+            guna2Button6.Size = new Size(425, 392);
             guna2Button6.TabIndex = 0;
             guna2Button6.Text = "Creative Wrokspace Member";
             // 
@@ -656,7 +656,7 @@
             guna2Button5.Margin = new Padding(20);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Button5.Size = new Size(425, 376);
+            guna2Button5.Size = new Size(425, 392);
             guna2Button5.TabIndex = 0;
             guna2Button5.Text = "Community Member";
             // 
