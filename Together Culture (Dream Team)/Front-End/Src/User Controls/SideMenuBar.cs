@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
+namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class sfasfasfasf : UserControl
+    public partial class SideMenuBar : UserControl
     {
-        public sfasfasfasf()
+        public SideMenuBar()
         {
             InitializeComponent();
         }
