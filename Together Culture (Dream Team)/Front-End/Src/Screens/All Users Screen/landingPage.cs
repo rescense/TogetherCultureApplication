@@ -26,6 +26,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         Memberships Memberships = new Memberships();
 
         private bool isSideMenuVisible = false;
+        private bool colorChange = false;
 
         private void addUserControl(UserControl userControl)
         {
@@ -127,10 +128,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
@@ -149,7 +147,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void guna2CustomGradientPanel4_Paint_1(object sender, PaintEventArgs e)
         {
-
+            addUserControl(AboutUs);
         }
 
         // Community Member button redirect to website
@@ -201,11 +199,101 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void aboutUsLabel_Click(object sender, EventArgs e)
         {
             addUserControl(AboutUs);
+
+
+            if (!colorChange)
+            {
+
+                // Change PictureBox color when visible
+                label2.BackColor = Color.Black; // Example color
+                label3.BackColor = Color.Transparent;
+                label4.BackColor = Color.Transparent;
+                label17.BackColor = Color.Transparent;
+                label18.BackColor = Color.Transparent;
+            }
+            else
+            {
+
+                label2.BackColor = Color.Transparent;
+            }
         }
 
         private void membershipLabel_Click(object sender, EventArgs e)
         {
             addUserControl(Memberships);
+
+            if (!colorChange)
+            {
+
+                // Change PictureBox color when visible
+                label3.BackColor = Color.Black; // Example color
+                label2.BackColor = Color.Transparent;
+                label4.BackColor = Color.Transparent;
+                label17.BackColor = Color.Transparent;
+                label18.BackColor = Color.Transparent;
+            }
+            else
+            {
+
+                label3.BackColor = Color.Transparent;
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            if (!colorChange)
+            {
+
+                // Change PictureBox color when visible
+                label4.BackColor = Color.Black; // Example color
+                label2.BackColor = Color.Transparent;
+                label3.BackColor = Color.Transparent;
+                label17.BackColor = Color.Transparent;
+                label18.BackColor = Color.Transparent;
+            }
+            else
+            {
+
+                label4.BackColor = Color.Transparent;
+            }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            if (!colorChange)
+            {
+
+                // Change PictureBox color when visible
+                label17.BackColor = Color.Black; // Example color
+                label2.BackColor = Color.Transparent;
+                label3.BackColor = Color.Transparent;
+                label4.BackColor = Color.Transparent;
+                label18.BackColor = Color.Transparent;
+            }
+            else
+            {
+
+                label17.BackColor = Color.Transparent;
+            }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            if (!colorChange)
+            {
+
+                // Change PictureBox color when visible
+                label18.BackColor = Color.Black; // Example color
+                label2.BackColor = Color.Transparent;
+                label3.BackColor = Color.Transparent;
+                label4.BackColor = Color.Transparent;
+                label17.BackColor = Color.Transparent;
+            }
+            else
+            {
+
+                label18.BackColor = Color.Transparent;
+            }
         }
     }
 }

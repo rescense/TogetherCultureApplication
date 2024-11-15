@@ -346,7 +346,7 @@
             label18.Size = new Size(111, 30);
             label18.TabIndex = 18;
             label18.Text = "Place Hire";
-            label18.Click += label17_Click;
+            label18.Click += label18_Click;
             // 
             // label17
             // 
@@ -374,6 +374,7 @@
             label4.Size = new Size(64, 30);
             label4.TabIndex = 18;
             label4.Text = "Shop";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
