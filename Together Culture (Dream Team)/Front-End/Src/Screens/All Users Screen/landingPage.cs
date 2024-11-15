@@ -24,6 +24,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         SideMenuBar SideMenuBar = new SideMenuBar();
         AboutUs AboutUs = new AboutUs();
         Memberships Memberships = new Memberships();
+        Shop Shop = new Shop();
 
         private bool isSideMenuVisible = false;
         private bool colorChange = false;
@@ -241,6 +242,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+            addUserControl(Shop);
             if (!colorChange)
             {
 
