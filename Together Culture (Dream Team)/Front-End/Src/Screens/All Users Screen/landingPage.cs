@@ -25,6 +25,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         AboutUs AboutUs = new AboutUs();
         Memberships Memberships = new Memberships();
         Shop Shop = new Shop();
+        Blog Blog = new Blog();
 
         private bool isSideMenuVisible = false;
         private bool colorChange = false;
@@ -263,6 +264,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void label17_Click(object sender, EventArgs e)
         {
+
+            addUserControl(Blog);
+
             if (!colorChange)
             {
 
@@ -297,6 +301,68 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
                 label18.BackColor = Color.Transparent;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String url = "https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Ensures compatibility with modern systems
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unable to open the link: {ex.Message}");
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String url = "https://www.togetherculture.com/contact";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Ensures compatibility with modern systems
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unable to open the link: {ex.Message}");
+            }
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String url = "https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Ensures compatibility with modern systems
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unable to open the link: {ex.Message}");
+            }
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Black;
+
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Transparent;
         }
     }
 }

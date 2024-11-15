@@ -50,9 +50,9 @@
             // 
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(831, 145);
+            pictureBox3.Location = new Point(831, 141);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(615, 462);
+            pictureBox3.Size = new Size(615, 475);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 23;
             pictureBox3.TabStop = false;

@@ -68,9 +68,9 @@
             label2 = new Label();
             label7 = new Label();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
+            linkLabel3 = new LinkLabel();
+            linkLabel2 = new LinkLabel();
+            linkLabel1 = new LinkLabel();
             label15 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -278,6 +278,8 @@
             pictureBox3.TabIndex = 24;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
+            pictureBox3.MouseEnter += pictureBox3_MouseEnter;
+            pictureBox3.MouseLeave += pictureBox3_MouseLeave;
             // 
             // guna2Button9
             // 
@@ -419,9 +421,9 @@
             // 
             // guna2CustomGradientPanel3
             // 
-            guna2CustomGradientPanel3.Controls.Add(label12);
-            guna2CustomGradientPanel3.Controls.Add(label13);
-            guna2CustomGradientPanel3.Controls.Add(label14);
+            guna2CustomGradientPanel3.Controls.Add(linkLabel3);
+            guna2CustomGradientPanel3.Controls.Add(linkLabel2);
+            guna2CustomGradientPanel3.Controls.Add(linkLabel1);
             guna2CustomGradientPanel3.Controls.Add(label15);
             guna2CustomGradientPanel3.Controls.Add(label9);
             guna2CustomGradientPanel3.Controls.Add(label8);
@@ -429,55 +431,65 @@
             guna2CustomGradientPanel3.Controls.Add(label11);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges15;
             guna2CustomGradientPanel3.Dock = DockStyle.Bottom;
-            guna2CustomGradientPanel3.FillColor = Color.DarkSalmon;
-            guna2CustomGradientPanel3.FillColor2 = Color.Bisque;
-            guna2CustomGradientPanel3.FillColor3 = Color.Salmon;
-            guna2CustomGradientPanel3.FillColor4 = Color.PeachPuff;
-            guna2CustomGradientPanel3.Location = new Point(0, 787);
+            guna2CustomGradientPanel3.FillColor = Color.IndianRed;
+            guna2CustomGradientPanel3.FillColor2 = Color.Brown;
+            guna2CustomGradientPanel3.FillColor3 = Color.Firebrick;
+            guna2CustomGradientPanel3.FillColor4 = Color.Tomato;
+            guna2CustomGradientPanel3.Location = new Point(0, 765);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel3.Size = new Size(1446, 67);
+            guna2CustomGradientPanel3.Size = new Size(1446, 89);
             guna2CustomGradientPanel3.TabIndex = 5;
             // 
-            // label12
+            // linkLabel3
             // 
-            label12.Anchor = AnchorStyles.None;
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Location = new Point(969, 27);
-            label12.Name = "label12";
-            label12.Size = new Size(93, 15);
-            label12.TabIndex = 5;
-            label12.Text = "Cookies settings";
+            linkLabel3.Anchor = AnchorStyles.None;
+            linkLabel3.AutoSize = true;
+            linkLabel3.BackColor = Color.Transparent;
+            linkLabel3.LinkColor = Color.White;
+            linkLabel3.Location = new Point(925, 51);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new Size(92, 15);
+            linkLabel3.TabIndex = 9;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "Term of Services";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
-            // label13
+            // linkLabel2
             // 
-            label13.Anchor = AnchorStyles.None;
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Location = new Point(856, 27);
-            label13.Name = "label13";
-            label13.Size = new Size(91, 15);
-            label13.TabIndex = 6;
-            label13.Text = "Terms of service";
+            linkLabel2.Anchor = AnchorStyles.None;
+            linkLabel2.AutoSize = true;
+            linkLabel2.BackColor = Color.Transparent;
+            linkLabel2.LinkColor = Color.White;
+            linkLabel2.Location = new Point(849, 51);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(49, 15);
+            linkLabel2.TabIndex = 9;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Contact";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
-            // label14
+            // linkLabel1
             // 
-            label14.Anchor = AnchorStyles.None;
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Location = new Point(755, 27);
-            label14.Name = "label14";
-            label14.Size = new Size(80, 15);
-            label14.TabIndex = 7;
-            label14.Text = "Privacy policy";
+            linkLabel1.Anchor = AnchorStyles.None;
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = Color.Transparent;
+            linkLabel1.LinkColor = Color.White;
+            linkLabel1.Location = new Point(748, 51);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(80, 15);
+            linkLabel1.TabIndex = 9;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Privacy Policy";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label15
             // 
             label15.Anchor = AnchorStyles.None;
             label15.AutoSize = true;
             label15.BackColor = Color.Transparent;
-            label15.Location = new Point(484, 27);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(481, 51);
             label15.Name = "label15";
             label15.Size = new Size(239, 15);
             label15.TabIndex = 8;
@@ -488,7 +500,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.Location = new Point(2225, -48);
+            label9.Location = new Point(2225, -37);
             label9.Name = "label9";
             label9.Size = new Size(93, 15);
             label9.TabIndex = 1;
@@ -499,7 +511,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Location = new Point(2112, -48);
+            label8.Location = new Point(2112, -37);
             label8.Name = "label8";
             label8.Size = new Size(91, 15);
             label8.TabIndex = 2;
@@ -510,7 +522,7 @@
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Location = new Point(2011, -48);
+            label10.Location = new Point(2011, -37);
             label10.Name = "label10";
             label10.Size = new Size(80, 15);
             label10.TabIndex = 3;
@@ -521,7 +533,7 @@
             label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
-            label11.Location = new Point(1740, -48);
+            label11.Location = new Point(1740, -37);
             label11.Name = "label11";
             label11.Size = new Size(239, 15);
             label11.TabIndex = 4;
@@ -555,7 +567,7 @@
             guna2CustomGradientPanel4.Location = new Point(-1, -1);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2CustomGradientPanel4.Size = new Size(1446, 614);
+            guna2CustomGradientPanel4.Size = new Size(1446, 610);
             guna2CustomGradientPanel4.TabIndex = 19;
             guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint_1;
             // 
@@ -599,9 +611,6 @@
         private Label label8;
         private Label label10;
         private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
         private Label label15;
         private Label label4;
         private Label label3;
@@ -616,5 +625,8 @@
         private PictureBox pictureBox3;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
+        private LinkLabel linkLabel3;
+        private LinkLabel linkLabel2;
+        private LinkLabel linkLabel1;
     }
 }

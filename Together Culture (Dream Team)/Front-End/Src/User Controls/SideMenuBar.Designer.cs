@@ -139,9 +139,10 @@
             // 
             guna2CustomGradientPanel1.Controls.Add(tableLayoutPanel1);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
-            guna2CustomGradientPanel1.FillColor = Color.Snow;
+            guna2CustomGradientPanel1.FillColor = Color.Firebrick;
             guna2CustomGradientPanel1.FillColor2 = Color.Salmon;
             guna2CustomGradientPanel1.FillColor3 = Color.Firebrick;
+            guna2CustomGradientPanel1.FillColor4 = Color.RosyBrown;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
