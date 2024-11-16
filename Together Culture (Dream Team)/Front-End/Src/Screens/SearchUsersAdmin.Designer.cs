@@ -1,4 +1,5 @@
-﻿
+﻿using Together_Culture__Dream_Team_.Front_End.Src.ToolBoxItems;
+
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     partial class SearchUsersAdmin
@@ -51,16 +52,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             actionsBtn = new Guna.UI2.WinForms.Guna2Button();
             selectAllRadioBtn = new RadioButton();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            chatBtn = new Button();
+            forYouBtn = new Button();
+            eventsBtn = new Button();
+            timeBankBtn = new Button();
+            myModulesBtn = new Button();
             adminPic = new PictureBox();
             profileBtn = new Guna.UI2.WinForms.Guna2Button();
             pictureBox2 = new PictureBox();
             label7 = new Label();
             pictureBox3 = new PictureBox();
-            myModulesBtn = new Button();
-            timeBankBtn = new Button();
-            eventsBtn = new Button();
-            forYouBtn = new Button();
-            chatBtn = new Button();
             guna2CustomGradientPanel4.SuspendLayout();
             userApprovalListing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
@@ -81,7 +82,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             guna2CustomGradientPanel4.Location = new Point(0, 124);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel4.Size = new Size(985, 491);
+            guna2CustomGradientPanel4.Size = new Size(1447, 734);
             guna2CustomGradientPanel4.TabIndex = 20;
             // 
             // userApprovalListing
@@ -177,6 +178,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             panel1.Name = "panel1";
             panel1.Size = new Size(600, 388);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // filterBtn
             // 
@@ -248,6 +250,77 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel1.Size = new Size(1000, 127);
             guna2CustomGradientPanel1.TabIndex = 21;
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
+            // 
+            // chatBtn
+            // 
+            chatBtn.BackColor = Color.Transparent;
+            chatBtn.FlatAppearance.BorderSize = 0;
+            chatBtn.FlatStyle = FlatStyle.Flat;
+            chatBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            chatBtn.ForeColor = Color.White;
+            chatBtn.Location = new Point(492, 10);
+            chatBtn.Name = "chatBtn";
+            chatBtn.Size = new Size(65, 38);
+            chatBtn.TabIndex = 39;
+            chatBtn.Text = "Chat";
+            chatBtn.UseVisualStyleBackColor = false;
+            // 
+            // forYouBtn
+            // 
+            forYouBtn.BackColor = Color.Transparent;
+            forYouBtn.FlatAppearance.BorderSize = 0;
+            forYouBtn.FlatStyle = FlatStyle.Flat;
+            forYouBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            forYouBtn.ForeColor = Color.White;
+            forYouBtn.Location = new Point(561, 10);
+            forYouBtn.Name = "forYouBtn";
+            forYouBtn.Size = new Size(91, 38);
+            forYouBtn.TabIndex = 38;
+            forYouBtn.Text = "For You";
+            forYouBtn.UseVisualStyleBackColor = false;
+            // 
+            // eventsBtn
+            // 
+            eventsBtn.BackColor = Color.Transparent;
+            eventsBtn.FlatAppearance.BorderSize = 0;
+            eventsBtn.FlatStyle = FlatStyle.Flat;
+            eventsBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            eventsBtn.ForeColor = Color.White;
+            eventsBtn.Location = new Point(656, 10);
+            eventsBtn.Name = "eventsBtn";
+            eventsBtn.Size = new Size(78, 38);
+            eventsBtn.TabIndex = 37;
+            eventsBtn.Text = "Events";
+            eventsBtn.UseVisualStyleBackColor = false;
+            // 
+            // timeBankBtn
+            // 
+            timeBankBtn.BackColor = Color.Transparent;
+            timeBankBtn.FlatAppearance.BorderSize = 0;
+            timeBankBtn.FlatStyle = FlatStyle.Flat;
+            timeBankBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            timeBankBtn.ForeColor = Color.White;
+            timeBankBtn.Location = new Point(738, 10);
+            timeBankBtn.Name = "timeBankBtn";
+            timeBankBtn.Size = new Size(106, 38);
+            timeBankBtn.TabIndex = 36;
+            timeBankBtn.Text = "TimeBank";
+            timeBankBtn.UseVisualStyleBackColor = false;
+            // 
+            // myModulesBtn
+            // 
+            myModulesBtn.BackColor = Color.Transparent;
+            myModulesBtn.FlatAppearance.BorderSize = 0;
+            myModulesBtn.FlatStyle = FlatStyle.Flat;
+            myModulesBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            myModulesBtn.ForeColor = Color.White;
+            myModulesBtn.Location = new Point(848, 10);
+            myModulesBtn.Name = "myModulesBtn";
+            myModulesBtn.Size = new Size(137, 38);
+            myModulesBtn.TabIndex = 35;
+            myModulesBtn.Text = "My Modules";
+            myModulesBtn.UseVisualStyleBackColor = false;
             // 
             // adminPic
             // 
@@ -315,85 +388,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
             // 
-            // myModulesBtn
-            // 
-            myModulesBtn.BackColor = Color.Transparent;
-            myModulesBtn.FlatAppearance.BorderSize = 0;
-            myModulesBtn.FlatStyle = FlatStyle.Flat;
-            myModulesBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
-            myModulesBtn.ForeColor = Color.White;
-            myModulesBtn.Location = new Point(848, 10);
-            myModulesBtn.Name = "myModulesBtn";
-            myModulesBtn.Size = new Size(137, 38);
-            myModulesBtn.TabIndex = 35;
-            myModulesBtn.Text = "My Modules";
-            myModulesBtn.UseVisualStyleBackColor = false;
-            // 
-            // timeBankBtn
-            // 
-            timeBankBtn.BackColor = Color.Transparent;
-            timeBankBtn.FlatAppearance.BorderSize = 0;
-            timeBankBtn.FlatStyle = FlatStyle.Flat;
-            timeBankBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
-            timeBankBtn.ForeColor = Color.White;
-            timeBankBtn.Location = new Point(738, 10);
-            timeBankBtn.Name = "timeBankBtn";
-            timeBankBtn.Size = new Size(106, 38);
-            timeBankBtn.TabIndex = 36;
-            timeBankBtn.Text = "TimeBank";
-            timeBankBtn.UseVisualStyleBackColor = false;
-            // 
-            // eventsBtn
-            // 
-            eventsBtn.BackColor = Color.Transparent;
-            eventsBtn.FlatAppearance.BorderSize = 0;
-            eventsBtn.FlatStyle = FlatStyle.Flat;
-            eventsBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
-            eventsBtn.ForeColor = Color.White;
-            eventsBtn.Location = new Point(656, 10);
-            eventsBtn.Name = "eventsBtn";
-            eventsBtn.Size = new Size(78, 38);
-            eventsBtn.TabIndex = 37;
-            eventsBtn.Text = "Events";
-            eventsBtn.UseVisualStyleBackColor = false;
-            // 
-            // forYouBtn
-            // 
-            forYouBtn.BackColor = Color.Transparent;
-            forYouBtn.FlatAppearance.BorderSize = 0;
-            forYouBtn.FlatStyle = FlatStyle.Flat;
-            forYouBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
-            forYouBtn.ForeColor = Color.White;
-            forYouBtn.Location = new Point(561, 10);
-            forYouBtn.Name = "forYouBtn";
-            forYouBtn.Size = new Size(91, 38);
-            forYouBtn.TabIndex = 38;
-            forYouBtn.Text = "For You";
-            forYouBtn.UseVisualStyleBackColor = false;
-            // 
-            // chatBtn
-            // 
-            chatBtn.BackColor = Color.Transparent;
-            chatBtn.FlatAppearance.BorderSize = 0;
-            chatBtn.FlatStyle = FlatStyle.Flat;
-            chatBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
-            chatBtn.ForeColor = Color.White;
-            chatBtn.Location = new Point(492, 10);
-            chatBtn.Name = "chatBtn";
-            chatBtn.Size = new Size(65, 38);
-            chatBtn.TabIndex = 39;
-            chatBtn.Text = "Chat";
-            chatBtn.UseVisualStyleBackColor = false;
-            // 
             // SearchUsersAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 611);
+            ClientSize = new Size(1446, 854);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2CustomGradientPanel4);
             Name = "SearchUsersAdmin";
             Text = "Form1";
+            Load += SearchUsersAdmin_Load;
             guna2CustomGradientPanel4.ResumeLayout(false);
             userApprovalListing.ResumeLayout(false);
             userApprovalListing.PerformLayout();
