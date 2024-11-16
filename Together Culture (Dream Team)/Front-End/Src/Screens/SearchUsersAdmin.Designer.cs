@@ -1,7 +1,7 @@
 ﻿
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    partial class SearchPendingApprovals
+    partial class SearchUsersAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,44 +31,44 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPendingApprovals));
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             userApprovalListing = new Panel();
+            userDetailsTxtBox = new TextBox();
+            userPicBox = new PictureBox();
+            calendarBtn = new Button();
+            tagBtn = new Button();
+            rejectBtn = new Button();
             checkBox1 = new CheckBox();
             panel1 = new Panel();
-            rejectBtn = new Button();
             filterBtn = new Button();
             actionsBtn = new Guna.UI2.WinForms.Guna2Button();
             selectAllRadioBtn = new RadioButton();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             adminPic = new PictureBox();
-            chatLbl = new Label();
-            forYouLbl = new Label();
-            eventsLbl = new Label();
-            timeBankLbl = new Label();
-            myModulesLbl = new Label();
             profileBtn = new Guna.UI2.WinForms.Guna2Button();
             pictureBox2 = new PictureBox();
             label7 = new Label();
             pictureBox3 = new PictureBox();
-            tagBtn = new Button();
-            calendarBtn = new Button();
-            userPicBox = new PictureBox();
-            userDetailsTxtBox = new TextBox();
+            myModulesBtn = new Button();
+            timeBankBtn = new Button();
+            eventsBtn = new Button();
+            forYouBtn = new Button();
+            chatBtn = new Button();
             guna2CustomGradientPanel4.SuspendLayout();
             userApprovalListing.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
             panel1.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel4
@@ -98,6 +98,66 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userApprovalListing.Size = new Size(600, 36);
             userApprovalListing.TabIndex = 1;
             // 
+            // userDetailsTxtBox
+            // 
+            userDetailsTxtBox.Location = new Point(71, 7);
+            userDetailsTxtBox.Name = "userDetailsTxtBox";
+            userDetailsTxtBox.Size = new Size(439, 23);
+            userDetailsTxtBox.TabIndex = 41;
+            // 
+            // userPicBox
+            // 
+            userPicBox.BackgroundImage = (Image)resources.GetObject("userPicBox.BackgroundImage");
+            userPicBox.Location = new Point(29, 0);
+            userPicBox.Name = "userPicBox";
+            userPicBox.Size = new Size(36, 36);
+            userPicBox.TabIndex = 40;
+            userPicBox.TabStop = false;
+            // 
+            // calendarBtn
+            // 
+            calendarBtn.AllowDrop = true;
+            calendarBtn.BackColor = Color.FromArgb(248, 237, 235);
+            calendarBtn.BackgroundImage = (Image)resources.GetObject("calendarBtn.BackgroundImage");
+            calendarBtn.FlatAppearance.BorderSize = 0;
+            calendarBtn.FlatStyle = FlatStyle.Flat;
+            calendarBtn.ForeColor = Color.Transparent;
+            calendarBtn.Location = new Point(516, 5);
+            calendarBtn.Name = "calendarBtn";
+            calendarBtn.Size = new Size(25, 25);
+            calendarBtn.TabIndex = 39;
+            calendarBtn.UseVisualStyleBackColor = false;
+            // 
+            // tagBtn
+            // 
+            tagBtn.AllowDrop = true;
+            tagBtn.BackColor = Color.FromArgb(248, 237, 235);
+            tagBtn.BackgroundImage = (Image)resources.GetObject("tagBtn.BackgroundImage");
+            tagBtn.FlatAppearance.BorderSize = 0;
+            tagBtn.FlatStyle = FlatStyle.Flat;
+            tagBtn.ForeColor = Color.Transparent;
+            tagBtn.Location = new Point(544, 5);
+            tagBtn.Name = "tagBtn";
+            tagBtn.Size = new Size(25, 25);
+            tagBtn.TabIndex = 38;
+            tagBtn.UseVisualStyleBackColor = false;
+            // 
+            // rejectBtn
+            // 
+            rejectBtn.AllowDrop = true;
+            rejectBtn.BackColor = Color.FromArgb(248, 237, 235);
+            rejectBtn.BackgroundImage = (Image)resources.GetObject("rejectBtn.BackgroundImage");
+            rejectBtn.FlatAppearance.BorderSize = 0;
+            rejectBtn.FlatStyle = FlatStyle.Flat;
+            rejectBtn.ForeColor = Color.Transparent;
+            rejectBtn.Location = new Point(572, 5);
+            rejectBtn.Margin = new Padding(0);
+            rejectBtn.Name = "rejectBtn";
+            rejectBtn.Size = new Size(25, 25);
+            rejectBtn.TabIndex = 37;
+            rejectBtn.UseVisualStyleBackColor = false;
+            rejectBtn.Click += button1_Click;
+            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
@@ -117,22 +177,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             panel1.Name = "panel1";
             panel1.Size = new Size(600, 388);
             panel1.TabIndex = 1;
-            // 
-            // rejectBtn
-            // 
-            rejectBtn.AllowDrop = true;
-            rejectBtn.BackColor = Color.FromArgb(248, 237, 235);
-            rejectBtn.BackgroundImage = (Image)resources.GetObject("rejectBtn.BackgroundImage");
-            rejectBtn.FlatAppearance.BorderSize = 0;
-            rejectBtn.FlatStyle = FlatStyle.Flat;
-            rejectBtn.ForeColor = Color.Transparent;
-            rejectBtn.Location = new Point(572, 5);
-            rejectBtn.Margin = new Padding(0);
-            rejectBtn.Name = "rejectBtn";
-            rejectBtn.Size = new Size(25, 25);
-            rejectBtn.TabIndex = 37;
-            rejectBtn.UseVisualStyleBackColor = false;
-            rejectBtn.Click += button1_Click;
             // 
             // filterBtn
             // 
@@ -184,12 +228,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.Controls.Add(chatBtn);
+            guna2CustomGradientPanel1.Controls.Add(forYouBtn);
+            guna2CustomGradientPanel1.Controls.Add(eventsBtn);
+            guna2CustomGradientPanel1.Controls.Add(timeBankBtn);
+            guna2CustomGradientPanel1.Controls.Add(myModulesBtn);
             guna2CustomGradientPanel1.Controls.Add(adminPic);
-            guna2CustomGradientPanel1.Controls.Add(chatLbl);
-            guna2CustomGradientPanel1.Controls.Add(forYouLbl);
-            guna2CustomGradientPanel1.Controls.Add(eventsLbl);
-            guna2CustomGradientPanel1.Controls.Add(timeBankLbl);
-            guna2CustomGradientPanel1.Controls.Add(myModulesLbl);
             guna2CustomGradientPanel1.Controls.Add(profileBtn);
             guna2CustomGradientPanel1.Controls.Add(pictureBox2);
             guna2CustomGradientPanel1.Controls.Add(label7);
@@ -215,71 +259,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             adminPic.Size = new Size(80, 80);
             adminPic.TabIndex = 34;
             adminPic.TabStop = false;
-            // 
-            // chatLbl
-            // 
-            chatLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            chatLbl.AutoSize = true;
-            chatLbl.BackColor = Color.Transparent;
-            chatLbl.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            chatLbl.ForeColor = Color.White;
-            chatLbl.Location = new Point(531, 15);
-            chatLbl.Name = "chatLbl";
-            chatLbl.Size = new Size(54, 30);
-            chatLbl.TabIndex = 33;
-            chatLbl.Text = "Chat";
-            // 
-            // forYouLbl
-            // 
-            forYouLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            forYouLbl.AutoSize = true;
-            forYouLbl.BackColor = Color.Transparent;
-            forYouLbl.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            forYouLbl.ForeColor = Color.White;
-            forYouLbl.Location = new Point(591, 15);
-            forYouLbl.Name = "forYouLbl";
-            forYouLbl.Size = new Size(80, 30);
-            forYouLbl.TabIndex = 32;
-            forYouLbl.Text = "For You";
-            // 
-            // eventsLbl
-            // 
-            eventsLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            eventsLbl.AutoSize = true;
-            eventsLbl.BackColor = Color.Transparent;
-            eventsLbl.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            eventsLbl.ForeColor = Color.White;
-            eventsLbl.Location = new Point(677, 15);
-            eventsLbl.Name = "eventsLbl";
-            eventsLbl.Size = new Size(68, 30);
-            eventsLbl.TabIndex = 31;
-            eventsLbl.Text = "Events";
-            // 
-            // timeBankLbl
-            // 
-            timeBankLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            timeBankLbl.AutoSize = true;
-            timeBankLbl.BackColor = Color.Transparent;
-            timeBankLbl.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            timeBankLbl.ForeColor = Color.White;
-            timeBankLbl.Location = new Point(751, 15);
-            timeBankLbl.Name = "timeBankLbl";
-            timeBankLbl.Size = new Size(97, 30);
-            timeBankLbl.TabIndex = 30;
-            timeBankLbl.Text = "TimeBank";
-            // 
-            // myModulesLbl
-            // 
-            myModulesLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            myModulesLbl.AutoSize = true;
-            myModulesLbl.BackColor = Color.Transparent;
-            myModulesLbl.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            myModulesLbl.ForeColor = Color.White;
-            myModulesLbl.Location = new Point(854, 15);
-            myModulesLbl.Name = "myModulesLbl";
-            myModulesLbl.Size = new Size(118, 30);
-            myModulesLbl.TabIndex = 29;
-            myModulesLbl.Text = "My Modules";
             // 
             // profileBtn
             // 
@@ -336,62 +315,89 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
             // 
-            // tagBtn
+            // myModulesBtn
             // 
-            tagBtn.AllowDrop = true;
-            tagBtn.BackColor = Color.FromArgb(248, 237, 235);
-            tagBtn.BackgroundImage = (Image)resources.GetObject("tagBtn.BackgroundImage");
-            tagBtn.FlatAppearance.BorderSize = 0;
-            tagBtn.FlatStyle = FlatStyle.Flat;
-            tagBtn.ForeColor = Color.Transparent;
-            tagBtn.Location = new Point(544, 5);
-            tagBtn.Name = "tagBtn";
-            tagBtn.Size = new Size(25, 25);
-            tagBtn.TabIndex = 38;
-            tagBtn.UseVisualStyleBackColor = false;
+            myModulesBtn.BackColor = Color.Transparent;
+            myModulesBtn.FlatAppearance.BorderSize = 0;
+            myModulesBtn.FlatStyle = FlatStyle.Flat;
+            myModulesBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            myModulesBtn.ForeColor = Color.White;
+            myModulesBtn.Location = new Point(848, 10);
+            myModulesBtn.Name = "myModulesBtn";
+            myModulesBtn.Size = new Size(137, 38);
+            myModulesBtn.TabIndex = 35;
+            myModulesBtn.Text = "My Modules";
+            myModulesBtn.UseVisualStyleBackColor = false;
             // 
-            // calendarBtn
+            // timeBankBtn
             // 
-            calendarBtn.AllowDrop = true;
-            calendarBtn.BackColor = Color.FromArgb(248, 237, 235);
-            calendarBtn.BackgroundImage = (Image)resources.GetObject("calendarBtn.BackgroundImage");
-            calendarBtn.FlatAppearance.BorderSize = 0;
-            calendarBtn.FlatStyle = FlatStyle.Flat;
-            calendarBtn.ForeColor = Color.Transparent;
-            calendarBtn.Location = new Point(516, 5);
-            calendarBtn.Name = "calendarBtn";
-            calendarBtn.Size = new Size(25, 25);
-            calendarBtn.TabIndex = 39;
-            calendarBtn.UseVisualStyleBackColor = false;
+            timeBankBtn.BackColor = Color.Transparent;
+            timeBankBtn.FlatAppearance.BorderSize = 0;
+            timeBankBtn.FlatStyle = FlatStyle.Flat;
+            timeBankBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            timeBankBtn.ForeColor = Color.White;
+            timeBankBtn.Location = new Point(738, 10);
+            timeBankBtn.Name = "timeBankBtn";
+            timeBankBtn.Size = new Size(106, 38);
+            timeBankBtn.TabIndex = 36;
+            timeBankBtn.Text = "TimeBank";
+            timeBankBtn.UseVisualStyleBackColor = false;
             // 
-            // userPicBox
+            // eventsBtn
             // 
-            userPicBox.BackgroundImage = (Image)resources.GetObject("userPicBox.BackgroundImage");
-            userPicBox.Location = new Point(29, 0);
-            userPicBox.Name = "userPicBox";
-            userPicBox.Size = new Size(36, 36);
-            userPicBox.TabIndex = 40;
-            userPicBox.TabStop = false;
+            eventsBtn.BackColor = Color.Transparent;
+            eventsBtn.FlatAppearance.BorderSize = 0;
+            eventsBtn.FlatStyle = FlatStyle.Flat;
+            eventsBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            eventsBtn.ForeColor = Color.White;
+            eventsBtn.Location = new Point(656, 10);
+            eventsBtn.Name = "eventsBtn";
+            eventsBtn.Size = new Size(78, 38);
+            eventsBtn.TabIndex = 37;
+            eventsBtn.Text = "Events";
+            eventsBtn.UseVisualStyleBackColor = false;
             // 
-            // userDetailsTxtBox
+            // forYouBtn
             // 
-            userDetailsTxtBox.Location = new Point(71, 7);
-            userDetailsTxtBox.Name = "userDetailsTxtBox";
-            userDetailsTxtBox.Size = new Size(439, 23);
-            userDetailsTxtBox.TabIndex = 41;
+            forYouBtn.BackColor = Color.Transparent;
+            forYouBtn.FlatAppearance.BorderSize = 0;
+            forYouBtn.FlatStyle = FlatStyle.Flat;
+            forYouBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            forYouBtn.ForeColor = Color.White;
+            forYouBtn.Location = new Point(561, 10);
+            forYouBtn.Name = "forYouBtn";
+            forYouBtn.Size = new Size(91, 38);
+            forYouBtn.TabIndex = 38;
+            forYouBtn.Text = "For You";
+            forYouBtn.UseVisualStyleBackColor = false;
             // 
-            // SearchPendingApprovals
+            // chatBtn
+            // 
+            chatBtn.BackColor = Color.Transparent;
+            chatBtn.FlatAppearance.BorderSize = 0;
+            chatBtn.FlatStyle = FlatStyle.Flat;
+            chatBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
+            chatBtn.ForeColor = Color.White;
+            chatBtn.Location = new Point(492, 10);
+            chatBtn.Name = "chatBtn";
+            chatBtn.Size = new Size(65, 38);
+            chatBtn.TabIndex = 39;
+            chatBtn.Text = "Chat";
+            chatBtn.UseVisualStyleBackColor = false;
+            // 
+            // SearchUsersAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 611);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2CustomGradientPanel4);
-            Name = "SearchPendingApprovals";
+            Name = "SearchUsersAdmin";
             Text = "Form1";
             guna2CustomGradientPanel4.ResumeLayout(false);
             userApprovalListing.ResumeLayout(false);
             userApprovalListing.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)userPicBox).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             guna2CustomGradientPanel1.ResumeLayout(false);
@@ -399,7 +405,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userPicBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -416,11 +421,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private Label label7;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button profileBtn;
-        private Label chatLbl;
-        private Label forYouLbl;
-        private Label eventsLbl;
-        private Label timeBankLbl;
-        private Label myModulesLbl;
         private PictureBox adminPic;
         private Panel panel1;
         private RadioButton selectAllRadioBtn;
@@ -433,5 +433,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private Button calendarBtn;
         private PictureBox userPicBox;
         private TextBox userDetailsTxtBox;
+        private Button myModulesBtn;
+        private Button chatBtn;
+        private Button forYouBtn;
+        private Button eventsBtn;
+        private Button timeBankBtn;
     }
 }

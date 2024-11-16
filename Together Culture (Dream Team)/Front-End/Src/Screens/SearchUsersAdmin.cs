@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class SearchPendingApprovals : Form
+    public partial class SearchUsersAdmin : Form
     {
-        public SearchPendingApprovals()
+        public SearchUsersAdmin()
         {
             InitializeComponent();
         }
