@@ -51,11 +51,22 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void timeBankBtn_Click(object sender, EventArgs e)
         {
-            // Create an instance of the skillShareMain form
+            // Create an instance of the skillShare form
             skillShare skillShareForm = new skillShare();
 
             // Show the skillShareMain form
             skillShareForm.Show();
+
+            this.Close(); //  completely close the form
+        }
+
+        private void eventsBtn_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the eventsMainForm form
+            eventsMain eventsMainForm = new eventsMain();
+
+            // Show the eventsMainForm form
+            eventsMainForm.Show();
 
             this.Close(); //  completely close the form
         }

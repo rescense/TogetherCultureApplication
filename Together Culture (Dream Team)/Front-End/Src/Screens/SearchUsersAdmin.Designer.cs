@@ -32,14 +32,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            searchBarPanel = new RoundedPanel();
+            searchUsersTxtBx = new TextBox();
+            pictureBox1 = new PictureBox();
             userApprovalListing = new Panel();
             userDetailsTxtBox = new TextBox();
             userPicBox = new PictureBox();
@@ -62,10 +65,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox2 = new PictureBox();
             label7 = new Label();
             pictureBox3 = new PictureBox();
-            searchBarPanel = new RoundedPanel();
-            pictureBox1 = new PictureBox();
-            searchUsersTxtBx = new TextBox();
             guna2CustomGradientPanel4.SuspendLayout();
+            searchBarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             userApprovalListing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
             panel1.SuspendLayout();
@@ -73,8 +75,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            searchBarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel4
@@ -90,6 +90,35 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2CustomGradientPanel4.Size = new Size(1447, 734);
             guna2CustomGradientPanel4.TabIndex = 20;
+            // 
+            // searchBarPanel
+            // 
+            searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
+            searchBarPanel.Controls.Add(searchUsersTxtBx);
+            searchBarPanel.Controls.Add(pictureBox1);
+            searchBarPanel.CornerRadius = 20;
+            searchBarPanel.Location = new Point(200, 42);
+            searchBarPanel.Name = "searchBarPanel";
+            searchBarPanel.Size = new Size(1062, 42);
+            searchBarPanel.TabIndex = 2;
+            // 
+            // searchUsersTxtBx
+            // 
+            searchUsersTxtBx.Location = new Point(8, 10);
+            searchUsersTxtBx.Name = "searchUsersTxtBx";
+            searchUsersTxtBx.Size = new Size(999, 23);
+            searchUsersTxtBx.TabIndex = 4;
+            searchUsersTxtBx.Text = "Search users...";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(1013, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(40, 40);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // userApprovalListing
             // 
@@ -299,6 +328,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             eventsBtn.TabIndex = 37;
             eventsBtn.Text = "Events";
             eventsBtn.UseVisualStyleBackColor = false;
+            eventsBtn.Click += eventsBtn_Click;
             // 
             // timeBankBtn
             // 
@@ -395,35 +425,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
             // 
-            // searchBarPanel
-            // 
-            searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
-            searchBarPanel.Controls.Add(searchUsersTxtBx);
-            searchBarPanel.Controls.Add(pictureBox1);
-            searchBarPanel.CornerRadius = 20;
-            searchBarPanel.Location = new Point(200, 42);
-            searchBarPanel.Name = "searchBarPanel";
-            searchBarPanel.Size = new Size(1062, 42);
-            searchBarPanel.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(1013, 1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 40);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
-            // searchUsersTxtBx
-            // 
-            searchUsersTxtBx.Location = new Point(8, 10);
-            searchUsersTxtBx.Name = "searchUsersTxtBx";
-            searchUsersTxtBx.Size = new Size(999, 23);
-            searchUsersTxtBx.TabIndex = 4;
-            searchUsersTxtBx.Text = "Search users...";
-            // 
             // SearchUsersAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -435,6 +436,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             Text = "Form1";
             Load += SearchUsersAdmin_Load;
             guna2CustomGradientPanel4.ResumeLayout(false);
+            searchBarPanel.ResumeLayout(false);
+            searchBarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             userApprovalListing.ResumeLayout(false);
             userApprovalListing.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).EndInit();
@@ -445,9 +449,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            searchBarPanel.ResumeLayout(false);
-            searchBarPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
