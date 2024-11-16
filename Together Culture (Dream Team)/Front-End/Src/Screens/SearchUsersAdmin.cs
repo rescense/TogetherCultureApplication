@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             this.Controls.Add(roundedPanel);
         }
 
-    private void panel1_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -42,6 +43,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timeBankBtn_Click(object sender, EventArgs e)
         {
 
         }

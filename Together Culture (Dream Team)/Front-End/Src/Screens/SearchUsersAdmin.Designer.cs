@@ -32,13 +32,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             userApprovalListing = new Panel();
             userDetailsTxtBox = new TextBox();
@@ -62,6 +62,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox2 = new PictureBox();
             label7 = new Label();
             pictureBox3 = new PictureBox();
+            searchBarPanel = new RoundedPanel();
+            pictureBox1 = new PictureBox();
+            searchUsersTxtBx = new TextBox();
             guna2CustomGradientPanel4.SuspendLayout();
             userApprovalListing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
@@ -70,11 +73,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            searchBarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel4
             // 
             guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel4.Controls.Add(searchBarPanel);
             guna2CustomGradientPanel4.Controls.Add(userApprovalListing);
             guna2CustomGradientPanel4.Controls.Add(panel1);
             guna2CustomGradientPanel4.CustomizableEdges = customizableEdges3;
@@ -94,16 +100,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userApprovalListing.Controls.Add(tagBtn);
             userApprovalListing.Controls.Add(rejectBtn);
             userApprovalListing.Controls.Add(checkBox1);
-            userApprovalListing.Location = new Point(200, 157);
+            userApprovalListing.Location = new Point(200, 147);
             userApprovalListing.Name = "userApprovalListing";
-            userApprovalListing.Size = new Size(600, 36);
+            userApprovalListing.Size = new Size(1062, 36);
             userApprovalListing.TabIndex = 1;
             // 
             // userDetailsTxtBox
             // 
             userDetailsTxtBox.Location = new Point(71, 7);
             userDetailsTxtBox.Name = "userDetailsTxtBox";
-            userDetailsTxtBox.Size = new Size(439, 23);
+            userDetailsTxtBox.Size = new Size(900, 23);
             userDetailsTxtBox.TabIndex = 41;
             // 
             // userPicBox
@@ -123,7 +129,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             calendarBtn.FlatAppearance.BorderSize = 0;
             calendarBtn.FlatStyle = FlatStyle.Flat;
             calendarBtn.ForeColor = Color.Transparent;
-            calendarBtn.Location = new Point(516, 5);
+            calendarBtn.Location = new Point(977, 5);
             calendarBtn.Name = "calendarBtn";
             calendarBtn.Size = new Size(25, 25);
             calendarBtn.TabIndex = 39;
@@ -137,7 +143,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             tagBtn.FlatAppearance.BorderSize = 0;
             tagBtn.FlatStyle = FlatStyle.Flat;
             tagBtn.ForeColor = Color.Transparent;
-            tagBtn.Location = new Point(544, 5);
+            tagBtn.Location = new Point(1005, 5);
             tagBtn.Name = "tagBtn";
             tagBtn.Size = new Size(25, 25);
             tagBtn.TabIndex = 38;
@@ -151,7 +157,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             rejectBtn.FlatAppearance.BorderSize = 0;
             rejectBtn.FlatStyle = FlatStyle.Flat;
             rejectBtn.ForeColor = Color.Transparent;
-            rejectBtn.Location = new Point(572, 5);
+            rejectBtn.Location = new Point(1033, 5);
             rejectBtn.Margin = new Padding(0);
             rejectBtn.Name = "rejectBtn";
             rejectBtn.Size = new Size(25, 25);
@@ -176,7 +182,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             panel1.Controls.Add(selectAllRadioBtn);
             panel1.Location = new Point(200, 100);
             panel1.Name = "panel1";
-            panel1.Size = new Size(600, 388);
+            panel1.Size = new Size(1062, 631);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -188,7 +194,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             filterBtn.FlatAppearance.BorderSize = 0;
             filterBtn.FlatStyle = FlatStyle.Flat;
             filterBtn.ForeColor = Color.Transparent;
-            filterBtn.Location = new Point(572, 9);
+            filterBtn.Location = new Point(1032, 9);
             filterBtn.Name = "filterBtn";
             filterBtn.Size = new Size(25, 25);
             filterBtn.TabIndex = 36;
@@ -208,7 +214,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             actionsBtn.FillColor = Color.Black;
             actionsBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             actionsBtn.ForeColor = Color.White;
-            actionsBtn.Location = new Point(485, 9);
+            actionsBtn.Location = new Point(947, 9);
             actionsBtn.Name = "actionsBtn";
             actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             actionsBtn.Size = new Size(82, 25);
@@ -220,7 +226,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             selectAllRadioBtn.AutoSize = true;
             selectAllRadioBtn.BackColor = Color.Transparent;
             selectAllRadioBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            selectAllRadioBtn.Location = new Point(17, 15);
+            selectAllRadioBtn.Location = new Point(8, 9);
             selectAllRadioBtn.Name = "selectAllRadioBtn";
             selectAllRadioBtn.Size = new Size(77, 19);
             selectAllRadioBtn.TabIndex = 0;
@@ -248,7 +254,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2CustomGradientPanel1.Size = new Size(1000, 127);
+            guna2CustomGradientPanel1.Size = new Size(1447, 127);
             guna2CustomGradientPanel1.TabIndex = 21;
             guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
             // 
@@ -259,7 +265,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             chatBtn.FlatStyle = FlatStyle.Flat;
             chatBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             chatBtn.ForeColor = Color.White;
-            chatBtn.Location = new Point(492, 10);
+            chatBtn.Location = new Point(943, 10);
             chatBtn.Name = "chatBtn";
             chatBtn.Size = new Size(65, 38);
             chatBtn.TabIndex = 39;
@@ -273,7 +279,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             forYouBtn.FlatStyle = FlatStyle.Flat;
             forYouBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             forYouBtn.ForeColor = Color.White;
-            forYouBtn.Location = new Point(561, 10);
+            forYouBtn.Location = new Point(1014, 10);
             forYouBtn.Name = "forYouBtn";
             forYouBtn.Size = new Size(91, 38);
             forYouBtn.TabIndex = 38;
@@ -287,7 +293,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             eventsBtn.FlatStyle = FlatStyle.Flat;
             eventsBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             eventsBtn.ForeColor = Color.White;
-            eventsBtn.Location = new Point(656, 10);
+            eventsBtn.Location = new Point(1111, 10);
             eventsBtn.Name = "eventsBtn";
             eventsBtn.Size = new Size(78, 38);
             eventsBtn.TabIndex = 37;
@@ -301,12 +307,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             timeBankBtn.FlatStyle = FlatStyle.Flat;
             timeBankBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             timeBankBtn.ForeColor = Color.White;
-            timeBankBtn.Location = new Point(738, 10);
+            timeBankBtn.Location = new Point(1195, 10);
             timeBankBtn.Name = "timeBankBtn";
             timeBankBtn.Size = new Size(106, 38);
             timeBankBtn.TabIndex = 36;
             timeBankBtn.Text = "TimeBank";
             timeBankBtn.UseVisualStyleBackColor = false;
+            timeBankBtn.Click += timeBankBtn_Click;
             // 
             // myModulesBtn
             // 
@@ -315,7 +322,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             myModulesBtn.FlatStyle = FlatStyle.Flat;
             myModulesBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             myModulesBtn.ForeColor = Color.White;
-            myModulesBtn.Location = new Point(848, 10);
+            myModulesBtn.Location = new Point(1307, 10);
             myModulesBtn.Name = "myModulesBtn";
             myModulesBtn.Size = new Size(137, 38);
             myModulesBtn.TabIndex = 35;
@@ -327,7 +334,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             adminPic.BackColor = Color.Transparent;
             adminPic.Image = (Image)resources.GetObject("adminPic.Image");
             adminPic.InitialImage = (Image)resources.GetObject("adminPic.InitialImage");
-            adminPic.Location = new Point(905, 48);
+            adminPic.Location = new Point(1364, 47);
             adminPic.Name = "adminPic";
             adminPic.Size = new Size(80, 80);
             adminPic.TabIndex = 34;
@@ -347,7 +354,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             profileBtn.FillColor = Color.Black;
             profileBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             profileBtn.ForeColor = Color.White;
-            profileBtn.Location = new Point(759, 70);
+            profileBtn.Location = new Point(1206, 70);
             profileBtn.Name = "profileBtn";
             profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             profileBtn.Size = new Size(128, 37);
@@ -388,6 +395,35 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
             // 
+            // searchBarPanel
+            // 
+            searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
+            searchBarPanel.Controls.Add(searchUsersTxtBx);
+            searchBarPanel.Controls.Add(pictureBox1);
+            searchBarPanel.CornerRadius = 20;
+            searchBarPanel.Location = new Point(200, 42);
+            searchBarPanel.Name = "searchBarPanel";
+            searchBarPanel.Size = new Size(1062, 42);
+            searchBarPanel.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(1013, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(40, 40);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // searchUsersTxtBx
+            // 
+            searchUsersTxtBx.Location = new Point(8, 10);
+            searchUsersTxtBx.Name = "searchUsersTxtBx";
+            searchUsersTxtBx.Size = new Size(999, 23);
+            searchUsersTxtBx.TabIndex = 4;
+            searchUsersTxtBx.Text = "Search users...";
+            // 
             // SearchUsersAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -409,6 +445,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            searchBarPanel.ResumeLayout(false);
+            searchBarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -442,5 +481,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private Button forYouBtn;
         private Button eventsBtn;
         private Button timeBankBtn;
+        private RoundedPanel searchBarPanel;
+        private TextBox searchUsersTxtBx;
+        private PictureBox pictureBox1;
     }
 }
