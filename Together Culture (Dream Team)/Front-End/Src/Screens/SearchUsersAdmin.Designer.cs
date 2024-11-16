@@ -109,6 +109,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             searchUsersTxtBx.Size = new Size(999, 23);
             searchUsersTxtBx.TabIndex = 4;
             searchUsersTxtBx.Text = "Search users...";
+            searchUsersTxtBx.Enter += searchUsersTxtBx_Enter;
+            searchUsersTxtBx.Leave += searchUsersTxtBx_Leave;
             // 
             // pictureBox1
             // 
@@ -192,7 +194,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             rejectBtn.Size = new Size(25, 25);
             rejectBtn.TabIndex = 37;
             rejectBtn.UseVisualStyleBackColor = false;
-            rejectBtn.Click += button1_Click;
             // 
             // checkBox1
             // 
@@ -450,11 +451,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion

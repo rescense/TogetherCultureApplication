@@ -20,6 +20,21 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             InitializeComponent();
 
+            //top menu buttons mods for hover
+            myModulesBtn.FlatAppearance.MouseOverBackColor = myModulesBtn.BackColor; // No background change on hover
+            myModulesBtn.FlatAppearance.MouseDownBackColor = myModulesBtn.BackColor; // No background change on click
+
+            timeBankBtn.FlatAppearance.MouseOverBackColor = timeBankBtn.BackColor; // No background change on hover
+            timeBankBtn.FlatAppearance.MouseDownBackColor = timeBankBtn.BackColor; // No background change on click
+
+            eventsBtn.FlatAppearance.MouseOverBackColor = eventsBtn.BackColor; // No background change on hover
+            eventsBtn.FlatAppearance.MouseDownBackColor = eventsBtn.BackColor; // No background change on click
+
+            forYouBtn.FlatAppearance.MouseOverBackColor = forYouBtn.BackColor; // No background change on hover
+            forYouBtn.FlatAppearance.MouseDownBackColor = forYouBtn.BackColor; // No background change on click
+
+            chatBtn.FlatAppearance.MouseOverBackColor = chatBtn.BackColor; // No background change on hover
+            chatBtn.FlatAppearance.MouseDownBackColor = chatBtn.BackColor; // No background change on click
 
             RoundedPanel roundedPanel = new RoundedPanel
             {
@@ -69,6 +84,26 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             eventsMainForm.Show();
 
             this.Close(); //  completely close the form
+        }
+
+        private void searchUsersTxtBx_Enter(object sender, EventArgs e)
+        {
+            // Only clear the placeholder text if it's the default
+            if (searchUsersTxtBx.Text == "Search Users...")
+            {
+                searchUsersTxtBx.Text = "";
+                searchUsersTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
+            }
+        }
+
+        private void searchUsersTxtBx_Leave(object sender, EventArgs e)
+        {
+            // Restore the placeholder text if the user has left it empty
+            if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
+            {
+                searchUsersTxtBx.Text = "Search Users...";
+                searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
+            }
         }
     }
 
