@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Front-End\Src\ToolBoxItems\RoundedPanel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <compile Include="Front-End\Src\ToolBoxItems\RoundedPanel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Front-End\Assets\GIFS\" />
     <Folder Include="Front-End\Src\Navigator\" />
     <Folder Include="Front-End\Src\Test\" />
