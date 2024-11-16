@@ -49,6 +49,18 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             this.Controls.Add(roundedPanel);
         }
 
+        private void MyModulesBtn_MouseEnter(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            myModulesBtn.ForeColor = Color.Black;
+        }
+
+        private void MyModulesBtn_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            myModulesBtn.ForeColor = Color.Gray; // Or any other default color
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
