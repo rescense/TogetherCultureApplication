@@ -40,9 +40,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             {
                 Size = new Size(300, 200), // Set size of the panel
                 Location = new Point(10, 10), // Set location on the form
-                BackColor = Color.LightBlue, // Background color
-                ForeColor = Color.DarkBlue, // Border color
-                CornerRadius = 30 // Customize corner radius
             };
 
             // Add the RoundedPanel to the form's controls

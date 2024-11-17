@@ -11,27 +11,37 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.ToolBoxItems
 {
     public class RoundedPanel : Panel
     {
-        public int CornerRadius { get; set; } = 20; // You can set a default radius
+        // Adjustable radius to control the roundness of the corners
+        private int _radius = 20;
 
+        public int Radius
+        {
+            get { return _radius; }
+            set { _radius = value; Invalidate(); } // Invalidate the panel to re-draw it when the radius changes
+        }
+
+        // Override OnPaint to create custom drawing
         protected override void OnPaint(PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-
-            using (GraphicsPath path = new GraphicsPath())
-            {
-                path.StartFigure();
-                path.AddArc(0, 0, CornerRadius, CornerRadius, 180, 90); // Top-left corner
-                path.AddArc(Width - CornerRadius, 0, CornerRadius, CornerRadius, 270, 90); // Top-right corner
-                path.AddArc(Width - CornerRadius, Height - CornerRadius, CornerRadius, CornerRadius, 0, 90); // Bottom-right corner
-                path.AddArc(0, Height - CornerRadius, CornerRadius, CornerRadius, 90, 90); // Bottom-left corner
-                path.CloseFigure();
-
-                g.FillPath(new SolidBrush(BackColor), path);
-                g.DrawPath(new Pen(ForeColor), path); // Optional: Draw the border
-            }
-
             base.OnPaint(e);
+
+            // Create a GraphicsPath with rounded corners
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, _radius, _radius, 180, 90); // Top left corner
+            path.AddArc(this.Width - _radius - 1, 0, _radius, _radius, 270, 90); // Top right corner
+            path.AddArc(this.Width - _radius - 1, this.Height - _radius - 1, _radius, _radius, 0, 90); // Bottom right corner
+            path.AddArc(0, this.Height - _radius - 1, _radius, _radius, 90, 90); // Bottom left corner
+            path.CloseAllFigures();
+
+            // Set the Region property to the path to apply the rounded shape
+            this.Region = new Region(path);
+        }
+
+        // Override OnResize to adjust the region when resizing the panel
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            this.Invalidate(); // Re-draw the panel when resized
         }
     }
 }

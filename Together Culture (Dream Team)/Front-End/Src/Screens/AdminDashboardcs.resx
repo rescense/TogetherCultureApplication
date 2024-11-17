@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="adminDashboardPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAAgcSURBVHhe7d2Nkds2
+        wAAADsABataJCQAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAAgcSURBVHhe7d2Nkds2
         FIXRLcWlpJR04lJSSkpJKYmuI4xlGpTIB4B8P9+ZuZOJPdZKFHgJgNrdLwAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAkN+3R/545Pszfz/yz070d3898ucj+jcAsJxKqpXTvwNpRabHosAATNNKSgXTK58ZaeUFACat
         qHoFsyqtuPS1AeCQq4tqG2ZcuIyujor2JpT2//BP79PKpd/Z6LkwdjCFBpKugsrRTVgNwNc7RvDj7lnV
@@ -159,10 +159,10 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAMd8ff0HAZ/YbRhgZpEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="adminDashboardPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAA1PSURBVHhe7Z2Lcds6
+        wAAADsABataJCQAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAA1PSURBVHhe7Z2Lcds6
         EEVVSkpJKe4keZW4FJeSUvL2GkQkUuAfn7vAvTNnJmNLDi1jD4EVSD0URVEURVEURVEURVEURVEURVEU
         RVEURVEURVEURVEUxXd+P35M/+KOl+NUFKVQfj++jL/GJ6UQfj9+TseGY/yavqp0nL+Pxw/j58THxK8X
         4tdAfJxOZt3n9+NjEsErEBgk0XYAhGOLMn3lY3qE4jyQjBEl9GX8Mf7eBD8DP+vT+Bba9N8prgMhvcvg
@@ -222,10 +222,10 @@
         oiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiK8prH43+b9RFSFMUh8wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="eventsAdminPic.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="adminDashboardPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAAkMSURBVHhe7ZwxjyTV
+        wAAADsABataJCQAAABZ0RVh0U29mdHdhcmUAUGFpbnQuTkVUIDUuMfeD95MAAAkMSURBVHhe7ZwxjyTV
         FUZXREgkSEggsnUCEojQCUIWMk5wwjBdLWsRC13dCyLadeIAG8SKYCMEkYWZrpkR/AT+AD+FhIwfAfV4
         1xJY15eueXWn7p0+RzoChGa/6e56Z2qaGW4BAAAAAAAAAAAAAAAAAIRgM/rdRG8K2mOzLM8VACzIJ6M/
         TfSmoD02y/JcAcCCEKzDJVgAC0OwDpdgASwMwTpcggWwMATrcAlWIC7Xm5fOTrd/2Xf3Tvfd9p2z1faD

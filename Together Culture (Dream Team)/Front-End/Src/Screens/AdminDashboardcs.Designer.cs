@@ -41,13 +41,10 @@
             adminDashboardLabel = new Label();
             adminDashboardPanel3 = new ToolBoxItems.RoundedPanel();
             searchUsersLabel = new Label();
-            pictureBox4 = new PictureBox();
             adminDashboardPanel2 = new ToolBoxItems.RoundedPanel();
             pendingApprovalsLabel = new Label();
-            pictureBox1 = new PictureBox();
             adminDashboardPanel = new ToolBoxItems.RoundedPanel();
             eventsAdminLabel = new Label();
-            eventsAdminPic = new PictureBox();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             chatBtn = new Button();
@@ -62,11 +59,8 @@
             pictureBox3 = new PictureBox();
             guna2CustomGradientPanel4.SuspendLayout();
             adminDashboardPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             adminDashboardPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             adminDashboardPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)eventsAdminPic).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -102,11 +96,13 @@
             // adminDashboardPanel3
             // 
             adminDashboardPanel3.BackColor = Color.FromArgb(248, 237, 235);
+            adminDashboardPanel3.BackgroundImage = (Image)resources.GetObject("adminDashboardPanel3.BackgroundImage");
+            adminDashboardPanel3.BackgroundImageLayout = ImageLayout.Center;
+            adminDashboardPanel3.BorderStyle = BorderStyle.Fixed3D;
             adminDashboardPanel3.Controls.Add(searchUsersLabel);
-            adminDashboardPanel3.Controls.Add(pictureBox4);
-            adminDashboardPanel3.CornerRadius = 20;
             adminDashboardPanel3.Location = new Point(1022, 233);
             adminDashboardPanel3.Name = "adminDashboardPanel3";
+            adminDashboardPanel3.Radius = 20;
             adminDashboardPanel3.Size = new Size(300, 300);
             adminDashboardPanel3.TabIndex = 3;
             adminDashboardPanel3.MouseClick += adminDashboardPanel3_MouseClick;
@@ -123,26 +119,16 @@
             searchUsersLabel.Text = "Search and Manage Users";
             searchUsersLabel.MouseClick += searchUsersLabel_MouseClick;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox4.Location = new Point(0, 9);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(298, 282);
-            pictureBox4.TabIndex = 8;
-            pictureBox4.TabStop = false;
-            pictureBox4.MouseClick += pictureBox4_MouseClick;
-            // 
             // adminDashboardPanel2
             // 
             adminDashboardPanel2.BackColor = Color.FromArgb(248, 237, 235);
+            adminDashboardPanel2.BackgroundImage = (Image)resources.GetObject("adminDashboardPanel2.BackgroundImage");
+            adminDashboardPanel2.BackgroundImageLayout = ImageLayout.Center;
+            adminDashboardPanel2.BorderStyle = BorderStyle.Fixed3D;
             adminDashboardPanel2.Controls.Add(pendingApprovalsLabel);
-            adminDashboardPanel2.Controls.Add(pictureBox1);
-            adminDashboardPanel2.CornerRadius = 20;
             adminDashboardPanel2.Location = new Point(581, 233);
             adminDashboardPanel2.Name = "adminDashboardPanel2";
+            adminDashboardPanel2.Radius = 20;
             adminDashboardPanel2.Size = new Size(300, 300);
             adminDashboardPanel2.TabIndex = 3;
             adminDashboardPanel2.MouseClick += adminDashboardPanel2_MouseClick;
@@ -159,25 +145,16 @@
             pendingApprovalsLabel.Text = "Pending Approvals";
             pendingApprovalsLabel.UseCompatibleTextRendering = true;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox1.Location = new Point(0, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(298, 282);
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            // 
             // adminDashboardPanel
             // 
             adminDashboardPanel.BackColor = Color.FromArgb(248, 237, 235);
+            adminDashboardPanel.BackgroundImage = (Image)resources.GetObject("adminDashboardPanel.BackgroundImage");
+            adminDashboardPanel.BackgroundImageLayout = ImageLayout.Center;
+            adminDashboardPanel.BorderStyle = BorderStyle.Fixed3D;
             adminDashboardPanel.Controls.Add(eventsAdminLabel);
-            adminDashboardPanel.Controls.Add(eventsAdminPic);
-            adminDashboardPanel.CornerRadius = 20;
             adminDashboardPanel.Location = new Point(141, 233);
             adminDashboardPanel.Name = "adminDashboardPanel";
+            adminDashboardPanel.Radius = 20;
             adminDashboardPanel.Size = new Size(300, 300);
             adminDashboardPanel.TabIndex = 2;
             // 
@@ -191,17 +168,6 @@
             eventsAdminLabel.Size = new Size(146, 30);
             eventsAdminLabel.TabIndex = 6;
             eventsAdminLabel.Text = "Events Trends";
-            // 
-            // eventsAdminPic
-            // 
-            eventsAdminPic.BackColor = Color.Transparent;
-            eventsAdminPic.BackgroundImage = (Image)resources.GetObject("eventsAdminPic.BackgroundImage");
-            eventsAdminPic.BackgroundImageLayout = ImageLayout.Center;
-            eventsAdminPic.Location = new Point(0, 9);
-            eventsAdminPic.Name = "eventsAdminPic";
-            eventsAdminPic.Size = new Size(298, 282);
-            eventsAdminPic.TabIndex = 5;
-            eventsAdminPic.TabStop = false;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -398,13 +364,10 @@
             guna2CustomGradientPanel4.PerformLayout();
             adminDashboardPanel3.ResumeLayout(false);
             adminDashboardPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             adminDashboardPanel2.ResumeLayout(false);
             adminDashboardPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             adminDashboardPanel.ResumeLayout(false);
             adminDashboardPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)eventsAdminPic).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();

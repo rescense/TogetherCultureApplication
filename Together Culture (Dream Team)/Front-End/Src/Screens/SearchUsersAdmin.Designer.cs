@@ -44,7 +44,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             searchUsersTxtBx = new TextBox();
             pictureBox1 = new PictureBox();
             userApprovalListing = new Panel();
-            userDetailsTxtBox = new TextBox();
+            userDetailsLbl = new Label();
             userPicBox = new PictureBox();
             calendarBtn = new Button();
             tagBtn = new Button();
@@ -96,9 +96,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
             searchBarPanel.Controls.Add(searchUsersTxtBx);
             searchBarPanel.Controls.Add(pictureBox1);
-            searchBarPanel.CornerRadius = 20;
             searchBarPanel.Location = new Point(200, 42);
             searchBarPanel.Name = "searchBarPanel";
+            searchBarPanel.Radius = 20;
             searchBarPanel.Size = new Size(1062, 42);
             searchBarPanel.TabIndex = 2;
             // 
@@ -126,7 +126,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // userApprovalListing
             // 
             userApprovalListing.BackColor = Color.FromArgb(248, 237, 235);
-            userApprovalListing.Controls.Add(userDetailsTxtBox);
+            userApprovalListing.Controls.Add(userDetailsLbl);
             userApprovalListing.Controls.Add(userPicBox);
             userApprovalListing.Controls.Add(calendarBtn);
             userApprovalListing.Controls.Add(tagBtn);
@@ -137,12 +137,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userApprovalListing.Size = new Size(1062, 36);
             userApprovalListing.TabIndex = 1;
             // 
-            // userDetailsTxtBox
+            // userDetailsLbl
             // 
-            userDetailsTxtBox.Location = new Point(71, 7);
-            userDetailsTxtBox.Name = "userDetailsTxtBox";
-            userDetailsTxtBox.Size = new Size(900, 23);
-            userDetailsTxtBox.TabIndex = 41;
+            userDetailsLbl.AutoSize = true;
+            userDetailsLbl.BackColor = Color.White;
+            userDetailsLbl.BorderStyle = BorderStyle.FixedSingle;
+            userDetailsLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            userDetailsLbl.Location = new Point(71, 7);
+            userDetailsLbl.Name = "userDetailsLbl";
+            userDetailsLbl.Size = new Size(262, 23);
+            userDetailsLbl.TabIndex = 37;
+            userDetailsLbl.Text = "Name Surname, details of the user";
             // 
             // userPicBox
             // 
@@ -496,5 +501,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private RoundedPanel searchBarPanel;
         private TextBox searchUsersTxtBx;
         private PictureBox pictureBox1;
+        private Label userDetailsLbl;
     }
 }
