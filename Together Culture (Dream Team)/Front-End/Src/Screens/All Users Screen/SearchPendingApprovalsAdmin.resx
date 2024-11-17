@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PendingAppMaginfying.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAABGdBTUEAALGPC/xhBQAAAU9JREFUWEft
         lYuJwzAQRF3KlZJSrpMrJaWklJSS04MIhkGKrWilOKCBIeDY2qf9SNvS0tJn9ZP8l3xNvj1/8W/yKQTc
@@ -155,7 +155,7 @@
         waZ5iB6gRehPM4u8E1JUEhAMia4APU2jGeMC7ahsmxpaErwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="filterBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="filterBtnApprovals.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAFdJREFUSEtj
         GAWjgK6gnkKcAMQEwX8K8X0gJggUKMQjGDiQgMkCII3YIhYXJipVoQNQJKK7Fh8eBSiA5vkBZCh6RINy
