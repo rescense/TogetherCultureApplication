@@ -1,4 +1,5 @@
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 using togther_Culture;
 
 namespace Together_Culture__Dream_Team_
@@ -14,7 +15,9 @@ namespace Together_Culture__Dream_Team_
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new landingPage());
+            //for testing the below form opens first, please uncomment the line bellow, and delete or comment the one with SearchUsersAdmin to view the landingPage upon running the program
+            Application.Run(new SearchUsersAdmin());
+            //Application.Run(new landingPage());
         }
     }
 }

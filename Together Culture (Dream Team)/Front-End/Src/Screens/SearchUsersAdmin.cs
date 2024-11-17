@@ -49,7 +49,55 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             this.Controls.Add(roundedPanel);
         }
 
-        private void MyModulesBtn_MouseEnter(object sender, EventArgs e)
+        private void ChatBtn_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            chatBtn.ForeColor = Color.Black;
+        }
+
+        private void ChatBtn_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            chatBtn.ForeColor = Color.White;
+        }
+
+        private void ForYouBtn_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            forYouBtn.ForeColor = Color.Black;
+        }
+
+        private void ForYouBtn_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            forYouBtn.ForeColor = Color.White;
+        }
+
+        private void EventsBtn_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            eventsBtn.ForeColor = Color.Black;
+        }
+
+        private void EventsBtn_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            eventsBtn.ForeColor = Color.White;
+        }
+
+        private void TimeBankBtn_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            timeBankBtn.ForeColor = Color.Black;
+        }
+
+        private void TimeBankBtn_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            timeBankBtn.ForeColor = Color.White;
+        }
+
+        private void MyModulesBtn_MouseHover(object sender, EventArgs e)
         {
             // Change text color to black on hover
             myModulesBtn.ForeColor = Color.Black;
@@ -58,7 +106,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private void MyModulesBtn_MouseLeave(object sender, EventArgs e)
         {
             // Reset text color when the mouse leaves
-            myModulesBtn.ForeColor = Color.Gray; // Or any other default color
+            myModulesBtn.ForeColor = Color.White;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -76,29 +124,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         }
 
-        private void timeBankBtn_Click(object sender, EventArgs e)
-        {
-            // Create an instance of the skillShare form
-            skillShare skillShareForm = new skillShare();
-
-            // Show the skillShareMain form
-            skillShareForm.Show();
-
-            this.Close(); //  completely close the form
-        }
-
-        private void eventsBtn_Click(object sender, EventArgs e)
-        {
-            // Create an instance of the eventsMainForm form
-            eventsMain eventsMainForm = new eventsMain();
-
-            // Show the eventsMainForm form
-            eventsMainForm.Show();
-
-            this.Close(); //  completely close the form
-        }
-
-        private void searchUsersTxtBx_Enter(object sender, EventArgs e)
+        private void searchUsersTxtBx_MouseClick(object sender, EventArgs e)
         {
             // Only clear the placeholder text if it's the default
             if (searchUsersTxtBx.Text == "Search Users...")
@@ -116,6 +142,61 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 searchUsersTxtBx.Text = "Search Users...";
                 searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
             }
+        }
+
+        private void timeBankBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the skillShare form
+            skillShare skillShareForm = new skillShare();
+
+            // Show the skillShareMain form
+            skillShareForm.Show();
+
+            this.Hide(); //  hide the form
+        }
+
+        private void eventsBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the eventsMainForm form
+            eventsMain eventsMainForm = new eventsMain();
+
+            // Show the eventsMainForm form
+            eventsMainForm.Show();
+
+            this.Hide(); //  hide the form
+        }
+
+        private void label7_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the eventsMainForm form
+            landingPage landingPageForm = new landingPage();
+
+            // Show the eventsMainForm form
+            landingPageForm.Show();
+
+            this.Hide(); //  hide the form
+        }
+        private void Label7_MouseLeave(object sender, EventArgs e)
+        {
+            // Reset text color when the mouse leaves
+            label7.ForeColor = Color.White;
+        }
+
+        private void Label7_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            label7.ForeColor = Color.Black;
+        }
+
+        private void adminPic_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the eventsMainForm form
+            AdminDashboardcs adminDashboardForm = new AdminDashboardcs();
+
+            // Show the eventsMainForm form
+            adminDashboardForm.Show();
+
+            this.Hide(); //  hide the form
         }
     }
 
