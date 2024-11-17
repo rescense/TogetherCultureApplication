@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 using togther_Culture;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
+namespace Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen
 {
-    public partial class AdminDashboardcs : Form
+    public partial class SearchPendingApprovalsAdmin : Form
     {
-        public AdminDashboardcs()
+        public SearchPendingApprovalsAdmin()
         {
             InitializeComponent();
 
@@ -39,43 +38,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Change text color to black on hover
             chatBtn.ForeColor = Color.Black;
         }
-
-        private void adminDashboardPanel_MouseHover(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel.BackColor = Color.FromArgb(217, 204, 200);
-        }
-
-        private void adminDashboardPanel_MouseLeave(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel.BackColor = Color.FromArgb(248, 237, 235);
-        }
-
-        private void adminDashboardPanel2_MouseHover(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel2.BackColor = Color.FromArgb(217, 204, 200);
-        }
-
-        private void adminDashboardPanel2_MouseLeave(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel2.BackColor = Color.FromArgb(248, 237, 235);
-        }
-
-        private void adminDashboardPanel3_MouseHover(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel3.BackColor = Color.FromArgb(217, 204, 200);
-        }
-
-        private void adminDashboardPanel3_MouseLeave(object sender, EventArgs e)
-        {
-            // Change text color to black on hover
-            adminDashboardPanel3.BackColor = Color.FromArgb(248, 237, 235);
-        }
-
         private void ChatBtn_MouseLeave(object sender, EventArgs e)
         {
             // Reset text color when the mouse leaves
@@ -138,7 +100,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Show the skillShareMain form
             skillShareForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
 
         private void eventsBtn_MouseClick(object sender, MouseEventArgs e)
@@ -149,7 +111,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Show the eventsMainForm form
             eventsMainForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
 
         private void label7_MouseClick(object sender, MouseEventArgs e)
@@ -160,7 +122,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Show the eventsMainForm form
             landingPageForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
         private void Label7_MouseLeave(object sender, EventArgs e)
         {
@@ -174,53 +136,50 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             label7.ForeColor = Color.Black;
         }
 
-        private void AdminDashboardcs_Load(object sender, EventArgs e)
+        private void SearchPendingApprovalsAdmin_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void adminDashboardPanel2_MouseClick(object sender, MouseEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // Create an instance of the SearchUsersAdmin form
-            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
 
-            // Show the SearchUsersAdmin form
-            searchUsersAdminForm.Show();
-
-            this.Hide(); //  hide the form
         }
 
-        private void adminDashboardPanel3_MouseClick(object sender, MouseEventArgs e)
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
-            // Create an instance of the SearchUsersAdmin form
-            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
 
-            // Show the SearchUsersAdmin form
-            searchUsersAdminForm.Show();
-
-            this.Hide(); //  hide the form
         }
 
-        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        private void searchApprovalsTxtBx_Leave(object sender, EventArgs e)
         {
-            // Create an instance of the SearchUsersAdmin form
-            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
-
-            // Show the SearchUsersAdmin form
-            searchUsersAdminForm.Show();
-
-            this.Hide(); //  hide the form
+            // Restore the placeholder text if the user has left it empty
+            if (string.IsNullOrEmpty(searchApprovalsTxtBx.Text))
+            {
+                searchApprovalsTxtBx.Text = "Search pending approvals...";
+                searchApprovalsTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
+            }
         }
 
-        private void searchUsersLabel_MouseClick(object sender, MouseEventArgs e)
+        private void searchApprovalsTxtBx_MouseClick(object sender, MouseEventArgs e)
         {
-            // Create an instance of the SearchUsersAdmin form
-            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
+            // Only clear the placeholder text if it's the default
+            if (searchApprovalsTxtBx.Text == "Search pending approvals...")
+            {
+                searchApprovalsTxtBx.Text = "";
+                searchApprovalsTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
+            }
+        }
 
-            // Show the SearchUsersAdmin form
-            searchUsersAdminForm.Show();
+        private void adminPic_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the eventsMainForm form
+            AdminDashboard adminDashboardForm = new AdminDashboard();
 
-            this.Hide(); //  hide the form
+            // Show the eventsMainForm form
+            adminDashboardForm.Show();
+
+            this.Close(); //  close the form
         }
     }
 }

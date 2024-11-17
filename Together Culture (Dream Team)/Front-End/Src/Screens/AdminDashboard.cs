@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Together_Culture__Dream_Team_.Front_End.Src.ToolBoxItems;
-using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
+using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 using togther_Culture;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
+namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
-    public partial class SearchUsersAdmin : Form
+    public partial class AdminDashboard : Form
     {
-        public SearchUsersAdmin()
+        public AdminDashboard()
         {
             InitializeComponent();
 
-            //top menu buttons mods for hover
             myModulesBtn.FlatAppearance.MouseOverBackColor = myModulesBtn.BackColor; // No background change on hover
             myModulesBtn.FlatAppearance.MouseDownBackColor = myModulesBtn.BackColor; // No background change on click
 
@@ -35,15 +33,42 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
             chatBtn.FlatAppearance.MouseOverBackColor = chatBtn.BackColor; // No background change on hover
             chatBtn.FlatAppearance.MouseDownBackColor = chatBtn.BackColor; // No background change on click
+        }
 
-            RoundedPanel roundedPanel = new RoundedPanel
-            {
-                Size = new Size(300, 200), // Set size of the panel
-                Location = new Point(10, 10), // Set location on the form
-            };
+        private void adminDashboardPanel_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel.BackColor = Color.FromArgb(217, 204, 200);
+        }
 
-            // Add the RoundedPanel to the form's controls
-            this.Controls.Add(roundedPanel);
+        private void adminDashboardPanel_MouseLeave(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel.BackColor = Color.FromArgb(248, 237, 235);
+        }
+
+        private void adminDashboardPanel2_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel2.BackColor = Color.FromArgb(217, 204, 200);
+        }
+
+        private void adminDashboardPanel2_MouseLeave(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel2.BackColor = Color.FromArgb(248, 237, 235);
+        }
+
+        private void adminDashboardPanel3_MouseHover(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel3.BackColor = Color.FromArgb(217, 204, 200);
+        }
+
+        private void adminDashboardPanel3_MouseLeave(object sender, EventArgs e)
+        {
+            // Change text color to black on hover
+            adminDashboardPanel3.BackColor = Color.FromArgb(248, 237, 235);
         }
 
         private void ChatBtn_MouseHover(object sender, EventArgs e)
@@ -106,41 +131,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             myModulesBtn.ForeColor = Color.White;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SearchUsersAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void searchUsersTxtBx_MouseClick(object sender, EventArgs e)
-        {
-            // Only clear the placeholder text if it's the default
-            if (searchUsersTxtBx.Text == "Search Users...")
-            {
-                searchUsersTxtBx.Text = "";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
-            }
-        }
-
-        private void searchUsersTxtBx_Leave(object sender, EventArgs e)
-        {
-            // Restore the placeholder text if the user has left it empty
-            if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
-            {
-                searchUsersTxtBx.Text = "Search Users...";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
-            }
-        }
-
         private void timeBankBtn_MouseClick(object sender, MouseEventArgs e)
         {
             // Create an instance of the skillShare form
@@ -149,7 +139,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // Show the skillShareMain form
             skillShareForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
 
         private void eventsBtn_MouseClick(object sender, MouseEventArgs e)
@@ -160,7 +150,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // Show the eventsMainForm form
             eventsMainForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
 
         private void label7_MouseClick(object sender, MouseEventArgs e)
@@ -171,7 +161,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // Show the eventsMainForm form
             landingPageForm.Show();
 
-            this.Hide(); //  hide the form
+            this.Close(); //  close the form
         }
         private void Label7_MouseLeave(object sender, EventArgs e)
         {
@@ -185,16 +175,53 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             label7.ForeColor = Color.Black;
         }
 
-        private void adminPic_MouseClick(object sender, MouseEventArgs e)
+        private void AdminDashboardcs_Load(object sender, EventArgs e)
         {
-            // Create an instance of the eventsMainForm form
-            AdminDashboard adminDashboardForm = new AdminDashboard();
 
-            // Show the eventsMainForm form
-            adminDashboardForm.Show();
+        }
 
-            this.Hide(); //  hide the form
+        private void adminDashboardPanel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the SearchUsersAdmin form
+            SearchPendingApprovalsAdmin searchPendingApprovalsAdminForm = new SearchPendingApprovalsAdmin();
+
+            // Show the SearchUsersAdmin form
+            searchPendingApprovalsAdminForm.Show();
+
+            this.Close(); //  close the form
+        }
+
+        private void adminDashboardPanel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the SearchUsersAdmin form
+            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
+
+            // Show the SearchUsersAdmin form
+            searchUsersAdminForm.Show();
+
+            this.Close(); //  close the form
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the SearchUsersAdmin form
+            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
+
+            // Show the SearchUsersAdmin form
+            searchUsersAdminForm.Show();
+
+            this.Close(); //  close the form
+        }
+
+        private void searchUsersLabel_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Create an instance of the SearchUsersAdmin form
+            SearchUsersAdmin searchUsersAdminForm = new SearchUsersAdmin();
+
+            // Show the SearchUsersAdmin form
+            searchUsersAdminForm.Show();
+
+            this.Close(); //  close the form
         }
     }
-
 }

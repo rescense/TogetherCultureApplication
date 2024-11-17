@@ -1,8 +1,6 @@
-﻿using Together_Culture__Dream_Team_.Front_End.Src.ToolBoxItems;
-
-namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
+﻿namespace Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen
 {
-    partial class SearchUsersAdmin
+    partial class SearchPendingApprovalsAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,30 +28,39 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsersAdmin));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchPendingApprovalsAdmin));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            searchBarPanel = new RoundedPanel();
-            searchUsersTxtBx = new TextBox();
+            searchBarPanel = new ToolBoxItems.RoundedPanel();
+            searchApprovalsTxtBx = new TextBox();
             pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             userApprovalListing = new Panel();
             userDetailsLbl = new Label();
             userPicBox = new PictureBox();
             tagBtn = new Button();
-            rejectApplicationBtn = new Button();
+            rejectBtn = new Button();
             checkBox1 = new CheckBox();
-            panel1 = new Panel();
             filterBtn = new Button();
             actionsBtn = new Guna.UI2.WinForms.Guna2Button();
             selectAllRadioBtn = new RadioButton();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             chatBtn = new Button();
             forYouBtn = new Button();
             eventsBtn = new Button();
@@ -64,13 +71,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox2 = new PictureBox();
             label7 = new Label();
             pictureBox3 = new PictureBox();
-            calendarBtn = new Button();
             guna2CustomGradientPanel4.SuspendLayout();
             searchBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             userApprovalListing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
-            panel1.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -79,39 +85,37 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // 
             // guna2CustomGradientPanel4
             // 
-            guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel4.Controls.Add(searchBarPanel);
-            guna2CustomGradientPanel4.Controls.Add(userApprovalListing);
             guna2CustomGradientPanel4.Controls.Add(panel1);
-            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges3;
+            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel4.FillColor3 = Color.LightCoral;
-            guna2CustomGradientPanel4.Location = new Point(0, 124);
+            guna2CustomGradientPanel4.Location = new Point(1, 122);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CustomGradientPanel4.Size = new Size(1447, 734);
-            guna2CustomGradientPanel4.TabIndex = 20;
+            guna2CustomGradientPanel4.TabIndex = 24;
             // 
             // searchBarPanel
             // 
             searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
-            searchBarPanel.Controls.Add(searchUsersTxtBx);
+            searchBarPanel.Controls.Add(searchApprovalsTxtBx);
             searchBarPanel.Controls.Add(pictureBox1);
-            searchBarPanel.Location = new Point(200, 42);
+            searchBarPanel.Location = new Point(200, 43);
             searchBarPanel.Name = "searchBarPanel";
             searchBarPanel.Radius = 20;
             searchBarPanel.Size = new Size(1062, 42);
-            searchBarPanel.TabIndex = 2;
+            searchBarPanel.TabIndex = 4;
             // 
-            // searchUsersTxtBx
+            // searchApprovalsTxtBx
             // 
-            searchUsersTxtBx.ForeColor = Color.Gray;
-            searchUsersTxtBx.Location = new Point(8, 10);
-            searchUsersTxtBx.Name = "searchUsersTxtBx";
-            searchUsersTxtBx.Size = new Size(999, 23);
-            searchUsersTxtBx.TabIndex = 4;
-            searchUsersTxtBx.Text = "Search Users...";
-            searchUsersTxtBx.MouseClick += searchUsersTxtBx_MouseClick;
-            searchUsersTxtBx.Leave += searchUsersTxtBx_Leave;
+            searchApprovalsTxtBx.ForeColor = Color.Gray;
+            searchApprovalsTxtBx.Location = new Point(8, 10);
+            searchApprovalsTxtBx.Name = "searchApprovalsTxtBx";
+            searchApprovalsTxtBx.Size = new Size(999, 23);
+            searchApprovalsTxtBx.TabIndex = 4;
+            searchApprovalsTxtBx.Text = "Search pending approvals...";
+            searchApprovalsTxtBx.MouseClick += searchApprovalsTxtBx_MouseClick;
+            searchApprovalsTxtBx.MouseLeave += searchApprovalsTxtBx_Leave;
             // 
             // pictureBox1
             // 
@@ -123,19 +127,53 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(248, 237, 235);
+            panel1.Controls.Add(guna2Button2);
+            panel1.Controls.Add(userApprovalListing);
+            panel1.Controls.Add(filterBtn);
+            panel1.Controls.Add(actionsBtn);
+            panel1.Controls.Add(selectAllRadioBtn);
+            panel1.Location = new Point(200, 100);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1062, 631);
+            panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button2.AutoRoundedCorners = true;
+            guna2Button2.BackColor = Color.Transparent;
+            guna2Button2.BorderRadius = 11;
+            guna2Button2.CustomizableEdges = customizableEdges1;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.Black;
+            guna2Button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(947, 9);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button2.Size = new Size(82, 25);
+            guna2Button2.TabIndex = 36;
+            guna2Button2.Text = "Actions";
+            // 
             // userApprovalListing
             // 
             userApprovalListing.BackColor = Color.FromArgb(248, 237, 235);
             userApprovalListing.Controls.Add(userDetailsLbl);
             userApprovalListing.Controls.Add(userPicBox);
-            userApprovalListing.Controls.Add(calendarBtn);
             userApprovalListing.Controls.Add(tagBtn);
-            userApprovalListing.Controls.Add(rejectApplicationBtn);
+            userApprovalListing.Controls.Add(rejectBtn);
             userApprovalListing.Controls.Add(checkBox1);
-            userApprovalListing.Location = new Point(200, 147);
+            userApprovalListing.Location = new Point(0, 50);
             userApprovalListing.Name = "userApprovalListing";
             userApprovalListing.Size = new Size(1062, 36);
-            userApprovalListing.TabIndex = 1;
+            userApprovalListing.TabIndex = 37;
             // 
             // userDetailsLbl
             // 
@@ -172,20 +210,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             tagBtn.TabIndex = 38;
             tagBtn.UseVisualStyleBackColor = false;
             // 
-            // rejectApplicationBtn
+            // rejectBtn
             // 
-            rejectApplicationBtn.AllowDrop = true;
-            rejectApplicationBtn.BackColor = Color.FromArgb(248, 237, 235);
-            rejectApplicationBtn.BackgroundImage = (Image)resources.GetObject("rejectApplicationBtn.BackgroundImage");
-            rejectApplicationBtn.FlatAppearance.BorderSize = 0;
-            rejectApplicationBtn.FlatStyle = FlatStyle.Flat;
-            rejectApplicationBtn.ForeColor = Color.Transparent;
-            rejectApplicationBtn.Location = new Point(1033, 5);
-            rejectApplicationBtn.Margin = new Padding(0);
-            rejectApplicationBtn.Name = "rejectApplicationBtn";
-            rejectApplicationBtn.Size = new Size(25, 25);
-            rejectApplicationBtn.TabIndex = 37;
-            rejectApplicationBtn.UseVisualStyleBackColor = false;
+            rejectBtn.AllowDrop = true;
+            rejectBtn.BackColor = Color.FromArgb(248, 237, 235);
+            rejectBtn.BackgroundImage = (Image)resources.GetObject("rejectBtn.BackgroundImage");
+            rejectBtn.FlatAppearance.BorderSize = 0;
+            rejectBtn.FlatStyle = FlatStyle.Flat;
+            rejectBtn.ForeColor = Color.Transparent;
+            rejectBtn.Location = new Point(1033, 5);
+            rejectBtn.Margin = new Padding(0);
+            rejectBtn.Name = "rejectBtn";
+            rejectBtn.Size = new Size(25, 25);
+            rejectBtn.TabIndex = 37;
+            rejectBtn.UseVisualStyleBackColor = false;
             // 
             // checkBox1
             // 
@@ -195,18 +233,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             checkBox1.Size = new Size(15, 14);
             checkBox1.TabIndex = 0;
             checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(248, 237, 235);
-            panel1.Controls.Add(filterBtn);
-            panel1.Controls.Add(actionsBtn);
-            panel1.Controls.Add(selectAllRadioBtn);
-            panel1.Location = new Point(200, 100);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1062, 631);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
             // 
             // filterBtn
             // 
@@ -228,7 +254,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             actionsBtn.AutoRoundedCorners = true;
             actionsBtn.BackColor = Color.Transparent;
             actionsBtn.BorderRadius = 11;
-            actionsBtn.CustomizableEdges = customizableEdges1;
+            actionsBtn.CustomizableEdges = customizableEdges3;
             actionsBtn.DisabledState.BorderColor = Color.DarkGray;
             actionsBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             actionsBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -236,9 +262,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             actionsBtn.FillColor = Color.Black;
             actionsBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             actionsBtn.ForeColor = Color.White;
-            actionsBtn.Location = new Point(947, 9);
+            actionsBtn.Location = new Point(1809, 9);
             actionsBtn.Name = "actionsBtn";
-            actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             actionsBtn.Size = new Size(82, 25);
             actionsBtn.TabIndex = 35;
             actionsBtn.Text = "Actions";
@@ -258,6 +284,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.Controls.Add(guna2Button3);
+            guna2CustomGradientPanel1.Controls.Add(guna2Button1);
             guna2CustomGradientPanel1.Controls.Add(chatBtn);
             guna2CustomGradientPanel1.Controls.Add(forYouBtn);
             guna2CustomGradientPanel1.Controls.Add(eventsBtn);
@@ -268,17 +296,59 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             guna2CustomGradientPanel1.Controls.Add(pictureBox2);
             guna2CustomGradientPanel1.Controls.Add(label7);
             guna2CustomGradientPanel1.Controls.Add(pictureBox3);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges13;
             guna2CustomGradientPanel1.FillColor = Color.DarkRed;
             guna2CustomGradientPanel1.FillColor2 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor3 = Color.Maroon;
             guna2CustomGradientPanel1.FillColor4 = Color.Firebrick;
-            guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Location = new Point(-1, 1);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2CustomGradientPanel1.Size = new Size(1447, 127);
-            guna2CustomGradientPanel1.TabIndex = 21;
+            guna2CustomGradientPanel1.TabIndex = 25;
             guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
+            // 
+            // guna2Button3
+            // 
+            guna2Button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button3.AutoRoundedCorners = true;
+            guna2Button3.BackColor = Color.Transparent;
+            guna2Button3.BorderRadius = 17;
+            guna2Button3.CustomizableEdges = customizableEdges7;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.Black;
+            guna2Button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(1208, 70);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button3.Size = new Size(128, 37);
+            guna2Button3.TabIndex = 41;
+            guna2Button3.Text = "Profile";
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button1.AutoRoundedCorners = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 17;
+            guna2Button1.CustomizableEdges = customizableEdges9;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Black;
+            guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(2455, 70);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button1.Size = new Size(128, 37);
+            guna2Button1.TabIndex = 40;
+            guna2Button1.Text = "Profile";
             // 
             // chatBtn
             // 
@@ -380,7 +450,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             profileBtn.AutoRoundedCorners = true;
             profileBtn.BackColor = Color.Transparent;
             profileBtn.BorderRadius = 17;
-            profileBtn.CustomizableEdges = customizableEdges5;
+            profileBtn.CustomizableEdges = customizableEdges11;
             profileBtn.DisabledState.BorderColor = Color.DarkGray;
             profileBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             profileBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -388,9 +458,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             profileBtn.FillColor = Color.Black;
             profileBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             profileBtn.ForeColor = Color.White;
-            profileBtn.Location = new Point(1206, 70);
+            profileBtn.Location = new Point(3700, 70);
             profileBtn.Name = "profileBtn";
-            profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
             profileBtn.Size = new Size(128, 37);
             profileBtn.TabIndex = 28;
             profileBtn.Text = "Profile";
@@ -432,21 +502,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
             // 
-            // calendarBtn
-            // 
-            calendarBtn.AllowDrop = true;
-            calendarBtn.BackColor = Color.FromArgb(248, 237, 235);
-            calendarBtn.BackgroundImage = (Image)resources.GetObject("calendarBtn.BackgroundImage");
-            calendarBtn.FlatAppearance.BorderSize = 0;
-            calendarBtn.FlatStyle = FlatStyle.Flat;
-            calendarBtn.ForeColor = Color.Transparent;
-            calendarBtn.Location = new Point(977, 5);
-            calendarBtn.Name = "calendarBtn";
-            calendarBtn.Size = new Size(25, 25);
-            calendarBtn.TabIndex = 39;
-            calendarBtn.UseVisualStyleBackColor = false;
-            // 
-            // SearchUsersAdmin
+            // SearchPendingApprovalsAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -454,18 +510,18 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2CustomGradientPanel4);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "SearchUsersAdmin";
-            Text = "Search Users";
-            Load += SearchUsersAdmin_Load;
+            Name = "SearchPendingApprovalsAdmin";
+            Text = "Search Pending Approvals";
+            Load += SearchPendingApprovalsAdmin_Load;
             guna2CustomGradientPanel4.ResumeLayout(false);
             searchBarPanel.ResumeLayout(false);
             searchBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             userApprovalListing.ResumeLayout(false);
             userApprovalListing.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)userPicBox).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();
@@ -478,30 +534,31 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private PictureBox pictureBox3;
-        private Label label7;
-        private PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2Button profileBtn;
-        private PictureBox adminPic;
-        private Panel panel1;
-        private RadioButton selectAllRadioBtn;
-        private Panel userApprovalListing;
-        private CheckBox checkBox1;
-        private Guna.UI2.WinForms.Guna2Button actionsBtn;
-        private Button filterBtn;
-        private Button rejectApplicationBtn;
-        private Button tagBtn;
-        private PictureBox userPicBox;
-        private TextBox userDetailsTxtBox;
-        private Button myModulesBtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Button chatBtn;
         private Button forYouBtn;
         private Button eventsBtn;
         private Button timeBankBtn;
-        private RoundedPanel searchBarPanel;
-        private TextBox searchUsersTxtBx;
+        private Button myModulesBtn;
+        private PictureBox adminPic;
+        private Guna.UI2.WinForms.Guna2Button profileBtn;
+        private PictureBox pictureBox2;
+        private Label label7;
+        private PictureBox pictureBox3;
+        private ToolBoxItems.RoundedPanel searchBarPanel;
+        private TextBox searchApprovalsTxtBx;
         private PictureBox pictureBox1;
+        private Panel panel1;
+        private Button filterBtn;
+        private Guna.UI2.WinForms.Guna2Button actionsBtn;
+        private RadioButton selectAllRadioBtn;
+        private Panel userApprovalListing;
         private Label userDetailsLbl;
-        private Button calendarBtn;
+        private PictureBox userPicBox;
+        private Button tagBtn;
+        private Button rejectBtn;
+        private CheckBox checkBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }
