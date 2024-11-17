@@ -106,6 +106,8 @@
             adminDashboardPanel3.Size = new Size(300, 300);
             adminDashboardPanel3.TabIndex = 3;
             adminDashboardPanel3.MouseClick += adminDashboardPanel3_MouseClick;
+            adminDashboardPanel3.MouseLeave += adminDashboardPanel3_MouseLeave;
+            adminDashboardPanel3.MouseHover += adminDashboardPanel3_MouseHover;
             // 
             // searchUsersLabel
             // 
@@ -132,6 +134,8 @@
             adminDashboardPanel2.Size = new Size(300, 300);
             adminDashboardPanel2.TabIndex = 3;
             adminDashboardPanel2.MouseClick += adminDashboardPanel2_MouseClick;
+            adminDashboardPanel2.MouseLeave += adminDashboardPanel2_MouseLeave;
+            adminDashboardPanel2.MouseHover += adminDashboardPanel2_MouseHover;
             // 
             // pendingApprovalsLabel
             // 
@@ -157,6 +161,8 @@
             adminDashboardPanel.Radius = 20;
             adminDashboardPanel.Size = new Size(300, 300);
             adminDashboardPanel.TabIndex = 2;
+            adminDashboardPanel.MouseLeave += adminDashboardPanel_MouseLeave;
+            adminDashboardPanel.MouseHover += adminDashboardPanel_MouseHover;
             // 
             // eventsAdminLabel
             // 
@@ -227,6 +233,8 @@
             chatBtn.TabIndex = 39;
             chatBtn.Text = "Chat";
             chatBtn.UseVisualStyleBackColor = false;
+            chatBtn.MouseLeave += ChatBtn_MouseLeave;
+            chatBtn.MouseHover += ChatBtn_MouseHover;
             // 
             // forYouBtn
             // 
@@ -241,6 +249,8 @@
             forYouBtn.TabIndex = 38;
             forYouBtn.Text = "For You";
             forYouBtn.UseVisualStyleBackColor = false;
+            forYouBtn.MouseLeave += ForYouBtn_MouseLeave;
+            forYouBtn.MouseHover += ForYouBtn_MouseHover;
             // 
             // eventsBtn
             // 
@@ -255,6 +265,9 @@
             eventsBtn.TabIndex = 37;
             eventsBtn.Text = "Events";
             eventsBtn.UseVisualStyleBackColor = false;
+            eventsBtn.MouseClick += eventsBtn_MouseClick;
+            eventsBtn.MouseLeave += EventsBtn_MouseLeave;
+            eventsBtn.MouseHover += EventsBtn_MouseHover;
             // 
             // timeBankBtn
             // 
@@ -269,6 +282,9 @@
             timeBankBtn.TabIndex = 36;
             timeBankBtn.Text = "TimeBank";
             timeBankBtn.UseVisualStyleBackColor = false;
+            timeBankBtn.MouseClick += timeBankBtn_MouseClick;
+            timeBankBtn.MouseLeave += TimeBankBtn_MouseLeave;
+            timeBankBtn.MouseHover += TimeBankBtn_MouseHover;
             // 
             // myModulesBtn
             // 
@@ -283,6 +299,8 @@
             myModulesBtn.TabIndex = 35;
             myModulesBtn.Text = "My Modules";
             myModulesBtn.UseVisualStyleBackColor = false;
+            myModulesBtn.MouseLeave += MyModulesBtn_MouseLeave;
+            myModulesBtn.MouseHover += MyModulesBtn_MouseHover;
             // 
             // adminPic
             // 
@@ -338,6 +356,9 @@
             label7.Size = new Size(171, 99);
             label7.TabIndex = 26;
             label7.Text = "Together\r\nCulture\r\nCambridge";
+            label7.MouseClick += label7_MouseClick;
+            label7.MouseLeave += Label7_MouseLeave;
+            label7.MouseHover += Label7_MouseHover;
             // 
             // pictureBox3
             // 
