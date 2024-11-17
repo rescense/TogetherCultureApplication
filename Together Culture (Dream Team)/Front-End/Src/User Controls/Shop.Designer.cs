@@ -77,10 +77,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(49, 182);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(49, 181);
             label1.Name = "label1";
-            label1.Size = new Size(633, 64);
+            label1.Size = new Size(666, 64);
             label1.TabIndex = 26;
             label1.Text = "You can order your printed copy of the Living Book here,\r\nor buy it in person at Together Culture. ";
             // 

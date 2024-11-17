@@ -20,12 +20,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         }
 
         usrCntrl_AboutUs usrCntrl_AboutUs = new usrCntrl_AboutUs();
-        usrCntrl_Memberships usrCntrl_Memberships = new usrCntrl_Memberships();
         SideMenuBar SideMenuBar = new SideMenuBar();
         AboutUs AboutUs = new AboutUs();
         Memberships Memberships = new Memberships();
         Shop Shop = new Shop();
         Blog Blog = new Blog();
+        UserControlPlaceHire UserControlPlaceHire = new UserControlPlaceHire();
 
         private bool isSideMenuVisible = false;
         private bool colorChange = false;
@@ -86,10 +86,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             usrCntrl_AboutUs usrCntrl_AboutUs = new usrCntrl_AboutUs();
             addUserControl(usrCntrl_AboutUs);
-        }
-        private void guna2ButtonMembership_Click(object sender, EventArgs e)
-        {
-            addUserControl(usrCntrl_Memberships);
         }
 
 
@@ -288,6 +284,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (!colorChange)
             {
+                addUserControl (UserControlPlaceHire);
 
                 // Change PictureBox color when visible
                 label18.BackColor = Color.Black; // Example color

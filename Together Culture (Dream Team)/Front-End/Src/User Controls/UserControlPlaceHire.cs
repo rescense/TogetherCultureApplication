@@ -31,6 +31,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             formOriginalSize = this.Size;
 
             recBut1 = new Rectangle(pictureBox1.Location, pictureBox1.Size);
+            recBut2 = new Rectangle(guna2Button1.Location, guna2Button1.Size);
             rectxt1 = new Rectangle(label1.Location, label1.Size);
             rectxt2 = new Rectangle(label2.Location, label2.Size);
         }
@@ -50,7 +51,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         // Resize the components w.r.t window size
         private void Form1_Resize(object sender, EventArgs e)
         {
-            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 60f; // Adjust the divisor as needed
+            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 40f; // Adjust the divisor as needed
             label2.Font = new Font(label2.Font.FontFamily, newSize, label2.Font.Style);
             label1.Font = new Font(label1.Font.FontFamily, newSize, label1.Font.Style);
         }
@@ -71,6 +72,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }

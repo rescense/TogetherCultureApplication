@@ -37,9 +37,9 @@
             label20 = new Label();
             label19 = new Label();
             pictureBox1 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             label2 = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -97,8 +97,29 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(61, 178);
+            label1.Name = "label1";
+            label1.Size = new Size(668, 128);
+            label1.TabIndex = 35;
+            label1.Text = resources.GetString("label1.Text");
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(61, 326);
+            label2.Name = "label2";
+            label2.Size = new Size(449, 125);
+            label2.TabIndex = 36;
+            label2.Text = resources.GetString("label2.Text");
+            // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button1.CustomizableEdges = customizableEdges3;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -107,32 +128,13 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(61, 487);
+            guna2Button1.Location = new Point(61, 495);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(246, 87);
             guna2Button1.TabIndex = 34;
             guna2Button1.Text = "Learn More";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(61, 178);
-            label1.Name = "label1";
-            label1.Size = new Size(637, 128);
-            label1.TabIndex = 35;
-            label1.Text = resources.GetString("label1.Text");
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(61, 333);
-            label2.Name = "label2";
-            label2.Size = new Size(623, 100);
-            label2.TabIndex = 36;
-            label2.Text = resources.GetString("label2.Text");
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // UserControlPlaceHire
             // 
@@ -159,8 +161,8 @@
         private Label label20;
         private Label label19;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Label label1;
         private Label label2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

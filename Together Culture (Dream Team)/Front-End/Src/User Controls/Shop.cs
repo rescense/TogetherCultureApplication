@@ -54,7 +54,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         // Resize the components w.r.t window size
         private void Form1_Resize(object sender, EventArgs e)
         {
-            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 60f; // Adjust the divisor as needed
+            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 50f; // Adjust the divisor as needed
             label4.Font = new Font(label4.Font.FontFamily, newSize, label4.Font.Style);
             label2.Font = new Font(label2.Font.FontFamily, newSize, label2.Font.Style);
             label1.Font = new Font(label1.Font.FontFamily, newSize, label1.Font.Style);

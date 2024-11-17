@@ -55,7 +55,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel3 = new Panel();
             panel1 = new Panel();
-            userControl11 = new usrCntrl_Memberships();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -109,23 +108,11 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(userControl11);
             panel1.Location = new Point(274, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(884, 475);
             panel1.TabIndex = 1;
             // 
-            // userControl11
-            // 
-            userControl11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            userControl11.AutoScroll = true;
-            userControl11.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            userControl11.BackColor = SystemColors.ButtonFace;
-            userControl11.Location = new Point(0, 0);
-            userControl11.Name = "userControl11";
-            userControl11.Size = new Size(884, 475);
-            userControl11.TabIndex = 0;
-            userControl11.Load += userControl11_Load_1;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -593,6 +580,5 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Panel panel1;
-        private usrCntrl_Memberships userControl11;
     }
 }
