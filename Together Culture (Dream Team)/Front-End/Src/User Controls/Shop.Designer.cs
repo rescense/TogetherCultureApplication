@@ -66,7 +66,7 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(100, 483);
+            guna2Button1.Location = new Point(49, 476);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(246, 87);
@@ -77,20 +77,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(49, 182);
             label1.Name = "label1";
-            label1.Size = new Size(620, 64);
+            label1.Size = new Size(633, 64);
             label1.TabIndex = 26;
             label1.Text = "You can order your printed copy of the Living Book here,\r\nor buy it in person at Together Culture. ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(49, 267);
             label2.Name = "label2";
-            label2.Size = new Size(663, 75);
+            label2.Size = new Size(544, 63);
             label2.TabIndex = 27;
             label2.Text = "Together Culture member and illustrator Lele Saa has designed this collection\r\nbased on Together Culture's vision of a more inclusive and ecological \r\ncreative economy. ";
             // 
@@ -98,7 +98,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(49, 360);
+            label4.Location = new Point(49, 347);
             label4.Name = "label4";
             label4.Size = new Size(525, 42);
             label4.TabIndex = 28;

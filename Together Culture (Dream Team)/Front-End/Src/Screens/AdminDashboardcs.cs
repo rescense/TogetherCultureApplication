@@ -88,5 +88,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             UserControlSearchUsers userControlSearchUsers = new UserControlSearchUsers();
             addUserControl(userControlSearchUsers);
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

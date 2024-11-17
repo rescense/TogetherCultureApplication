@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Label label20;
+            Label label21;
+            Label label22;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardcs));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -55,9 +58,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Label label20;
-            Label label21;
-            Label label22;
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
@@ -114,6 +114,45 @@
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel4.SuspendLayout();
             SuspendLayout();
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(153, 536);
+            label20.Name = "label20";
+            label20.Size = new Size(259, 50);
+            label20.TabIndex = 35;
+            label20.Text = "Events Trends";
+            // 
+            // label21
+            // 
+            label21.Anchor = AnchorStyles.None;
+            label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(560, 536);
+            label21.Name = "label21";
+            label21.Size = new Size(351, 50);
+            label21.TabIndex = 35;
+            label21.Text = "Pending Approvals";
+            // 
+            // label22
+            // 
+            label22.Anchor = AnchorStyles.None;
+            label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
+            label22.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label22.ForeColor = Color.White;
+            label22.Location = new Point(1039, 536);
+            label22.Name = "label22";
+            label22.Size = new Size(311, 50);
+            label22.TabIndex = 35;
+            label22.Text = "Search Members";
             // 
             // label1
             // 
@@ -462,7 +501,7 @@
             guna2Button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button5.AutoRoundedCorners = true;
             guna2Button5.BackColor = Color.Transparent;
-            guna2Button5.BorderRadius = 34;
+            guna2Button5.BorderRadius = 27;
             guna2Button5.CustomizableEdges = customizableEdges13;
             guna2Button5.DisabledState.BorderColor = Color.DarkGray;
             guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -471,24 +510,25 @@
             guna2Button5.FillColor = Color.Black;
             guna2Button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(761, 89);
+            guna2Button5.Location = new Point(761, 103);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button5.Size = new Size(236, 71);
+            guna2Button5.Size = new Size(208, 57);
             guna2Button5.TabIndex = 30;
             guna2Button5.Text = "Profile";
             // 
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1281, 89);
+            pictureBox4.Location = new Point(1288, 89);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(113, 79);
+            pictureBox4.Size = new Size(106, 71);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 31;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -746,45 +786,6 @@
             guna2Button7.Size = new Size(418, 330);
             guna2Button7.TabIndex = 34;
             guna2Button7.Click += guna2Button7_Click;
-            // 
-            // label20
-            // 
-            label20.Anchor = AnchorStyles.None;
-            label20.AutoSize = true;
-            label20.BackColor = Color.Transparent;
-            label20.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.White;
-            label20.Location = new Point(153, 536);
-            label20.Name = "label20";
-            label20.Size = new Size(259, 50);
-            label20.TabIndex = 35;
-            label20.Text = "Events Trends";
-            // 
-            // label21
-            // 
-            label21.Anchor = AnchorStyles.None;
-            label21.AutoSize = true;
-            label21.BackColor = Color.Transparent;
-            label21.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.ForeColor = Color.White;
-            label21.Location = new Point(560, 536);
-            label21.Name = "label21";
-            label21.Size = new Size(351, 50);
-            label21.TabIndex = 35;
-            label21.Text = "Pending Approvals";
-            // 
-            // label22
-            // 
-            label22.Anchor = AnchorStyles.None;
-            label22.AutoSize = true;
-            label22.BackColor = Color.Transparent;
-            label22.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.ForeColor = Color.White;
-            label22.Location = new Point(1039, 536);
-            label22.Name = "label22";
-            label22.Size = new Size(311, 50);
-            label22.TabIndex = 35;
-            label22.Text = "Search Members";
             // 
             // guna2CustomGradientPanel4
             // 
