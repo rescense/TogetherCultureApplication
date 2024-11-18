@@ -284,7 +284,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (!colorChange)
             {
-                addUserControl (UserControlPlaceHire);
+                addUserControl(UserControlPlaceHire);
 
                 // Change PictureBox color when visible
                 label18.BackColor = Color.Black; // Example color
@@ -360,6 +360,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
             pictureBox3.BackColor = Color.Transparent;
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

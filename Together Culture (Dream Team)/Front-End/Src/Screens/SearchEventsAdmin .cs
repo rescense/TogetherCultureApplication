@@ -172,5 +172,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Change text color to black on hover
             label7.ForeColor = Color.Black;
         }
+
+        private void searchEventsTxtBx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

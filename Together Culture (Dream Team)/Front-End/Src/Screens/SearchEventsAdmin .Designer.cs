@@ -95,9 +95,10 @@
             timeBankBtn.FlatStyle = FlatStyle.Flat;
             timeBankBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             timeBankBtn.ForeColor = Color.White;
-            timeBankBtn.Location = new Point(1195, 10);
+            timeBankBtn.Location = new Point(1707, 17);
+            timeBankBtn.Margin = new Padding(4, 5, 4, 5);
             timeBankBtn.Name = "timeBankBtn";
-            timeBankBtn.Size = new Size(106, 38);
+            timeBankBtn.Size = new Size(151, 63);
             timeBankBtn.TabIndex = 36;
             timeBankBtn.Text = "TimeBank";
             timeBankBtn.UseVisualStyleBackColor = false;
@@ -112,9 +113,10 @@
             myModulesBtn.FlatStyle = FlatStyle.Flat;
             myModulesBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             myModulesBtn.ForeColor = Color.White;
-            myModulesBtn.Location = new Point(1307, 10);
+            myModulesBtn.Location = new Point(1867, 17);
+            myModulesBtn.Margin = new Padding(4, 5, 4, 5);
             myModulesBtn.Name = "myModulesBtn";
-            myModulesBtn.Size = new Size(137, 38);
+            myModulesBtn.Size = new Size(196, 63);
             myModulesBtn.TabIndex = 35;
             myModulesBtn.Text = "My Modules";
             myModulesBtn.UseVisualStyleBackColor = false;
@@ -126,9 +128,10 @@
             adminPic.BackColor = Color.Transparent;
             adminPic.Image = (Image)resources.GetObject("adminPic.Image");
             adminPic.InitialImage = (Image)resources.GetObject("adminPic.InitialImage");
-            adminPic.Location = new Point(1364, 47);
+            adminPic.Location = new Point(1949, 78);
+            adminPic.Margin = new Padding(4, 5, 4, 5);
             adminPic.Name = "adminPic";
-            adminPic.Size = new Size(80, 80);
+            adminPic.Size = new Size(114, 133);
             adminPic.TabIndex = 34;
             adminPic.TabStop = false;
             adminPic.MouseClick += adminPic_MouseClick;
@@ -138,7 +141,7 @@
             profileBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             profileBtn.AutoRoundedCorners = true;
             profileBtn.BackColor = Color.Transparent;
-            profileBtn.BorderRadius = 17;
+            profileBtn.BorderRadius = 30;
             profileBtn.CustomizableEdges = customizableEdges1;
             profileBtn.DisabledState.BorderColor = Color.DarkGray;
             profileBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -147,10 +150,11 @@
             profileBtn.FillColor = Color.Black;
             profileBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             profileBtn.ForeColor = Color.White;
-            profileBtn.Location = new Point(4947, 70);
+            profileBtn.Location = new Point(7067, 117);
+            profileBtn.Margin = new Padding(4, 5, 4, 5);
             profileBtn.Name = "profileBtn";
             profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            profileBtn.Size = new Size(128, 37);
+            profileBtn.Size = new Size(183, 62);
             profileBtn.TabIndex = 28;
             profileBtn.Text = "Profile";
             // 
@@ -158,9 +162,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(237, 38);
+            pictureBox2.Location = new Point(339, 63);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(74, 64);
+            pictureBox2.Size = new Size(106, 107);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 27;
             pictureBox2.TabStop = false;
@@ -169,9 +174,10 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(6, 6);
+            pictureBox3.Location = new Point(9, 10);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(30, 25);
+            pictureBox3.Size = new Size(43, 42);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
@@ -181,7 +187,7 @@
             guna2Button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button2.AutoRoundedCorners = true;
             guna2Button2.BackColor = Color.Transparent;
-            guna2Button2.BorderRadius = 11;
+            guna2Button2.BorderRadius = 20;
             guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -190,10 +196,11 @@
             guna2Button2.FillColor = Color.Black;
             guna2Button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(1809, 9);
+            guna2Button2.Location = new Point(2584, 15);
+            guna2Button2.Margin = new Padding(4, 5, 4, 5);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(82, 25);
+            guna2Button2.Size = new Size(117, 42);
             guna2Button2.TabIndex = 36;
             guna2Button2.Text = "Actions";
             // 
@@ -205,9 +212,10 @@
             userApprovalListing.Controls.Add(eventStatsBtn);
             userApprovalListing.Controls.Add(attendanceList);
             userApprovalListing.Controls.Add(checkBox1);
-            userApprovalListing.Location = new Point(0, 50);
+            userApprovalListing.Location = new Point(0, 83);
+            userApprovalListing.Margin = new Padding(4, 5, 4, 5);
             userApprovalListing.Name = "userApprovalListing";
-            userApprovalListing.Size = new Size(1062, 36);
+            userApprovalListing.Size = new Size(1517, 60);
             userApprovalListing.TabIndex = 37;
             // 
             // eventDetailsLbl
@@ -216,18 +224,20 @@
             eventDetailsLbl.BackColor = Color.White;
             eventDetailsLbl.BorderStyle = BorderStyle.FixedSingle;
             eventDetailsLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            eventDetailsLbl.Location = new Point(71, 7);
+            eventDetailsLbl.Location = new Point(101, 12);
+            eventDetailsLbl.Margin = new Padding(4, 0, 4, 0);
             eventDetailsLbl.Name = "eventDetailsLbl";
-            eventDetailsLbl.Size = new Size(148, 23);
+            eventDetailsLbl.Size = new Size(221, 34);
             eventDetailsLbl.TabIndex = 37;
             eventDetailsLbl.Text = "Name of the event";
             // 
             // eventPicBox
             // 
             eventPicBox.BackgroundImage = (Image)resources.GetObject("eventPicBox.BackgroundImage");
-            eventPicBox.Location = new Point(29, 0);
+            eventPicBox.Location = new Point(41, 0);
+            eventPicBox.Margin = new Padding(4, 5, 4, 5);
             eventPicBox.Name = "eventPicBox";
-            eventPicBox.Size = new Size(36, 36);
+            eventPicBox.Size = new Size(51, 60);
             eventPicBox.TabIndex = 40;
             eventPicBox.TabStop = false;
             // 
@@ -239,9 +249,10 @@
             eventStatsBtn.FlatAppearance.BorderSize = 0;
             eventStatsBtn.FlatStyle = FlatStyle.Flat;
             eventStatsBtn.ForeColor = Color.Transparent;
-            eventStatsBtn.Location = new Point(1005, 5);
+            eventStatsBtn.Location = new Point(1436, 8);
+            eventStatsBtn.Margin = new Padding(4, 5, 4, 5);
             eventStatsBtn.Name = "eventStatsBtn";
-            eventStatsBtn.Size = new Size(25, 25);
+            eventStatsBtn.Size = new Size(36, 42);
             eventStatsBtn.TabIndex = 38;
             eventStatsBtn.UseVisualStyleBackColor = false;
             // 
@@ -253,19 +264,20 @@
             attendanceList.FlatAppearance.BorderSize = 0;
             attendanceList.FlatStyle = FlatStyle.Flat;
             attendanceList.ForeColor = Color.Transparent;
-            attendanceList.Location = new Point(1033, 5);
+            attendanceList.Location = new Point(1476, 8);
             attendanceList.Margin = new Padding(0);
             attendanceList.Name = "attendanceList";
-            attendanceList.Size = new Size(25, 25);
+            attendanceList.Size = new Size(36, 42);
             attendanceList.TabIndex = 37;
             attendanceList.UseVisualStyleBackColor = false;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(8, 11);
+            checkBox1.Location = new Point(11, 18);
+            checkBox1.Margin = new Padding(4, 5, 4, 5);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(15, 14);
+            checkBox1.Size = new Size(22, 21);
             checkBox1.TabIndex = 0;
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -274,7 +286,7 @@
             guna2Button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button3.AutoRoundedCorners = true;
             guna2Button3.BackColor = Color.Transparent;
-            guna2Button3.BorderRadius = 17;
+            guna2Button3.BorderRadius = 30;
             guna2Button3.CustomizableEdges = customizableEdges5;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -283,10 +295,11 @@
             guna2Button3.FillColor = Color.Black;
             guna2Button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(2455, 70);
+            guna2Button3.Location = new Point(3507, 117);
+            guna2Button3.Margin = new Padding(4, 5, 4, 5);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(128, 37);
+            guna2Button3.Size = new Size(183, 62);
             guna2Button3.TabIndex = 41;
             guna2Button3.Text = "Profile";
             // 
@@ -295,7 +308,7 @@
             guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button1.AutoRoundedCorners = true;
             guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 17;
+            guna2Button1.BorderRadius = 30;
             guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -304,10 +317,11 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(3702, 70);
+            guna2Button1.Location = new Point(5289, 117);
+            guna2Button1.Margin = new Padding(4, 5, 4, 5);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(128, 37);
+            guna2Button1.Size = new Size(183, 62);
             guna2Button1.TabIndex = 40;
             guna2Button1.Text = "Profile";
             // 
@@ -318,9 +332,10 @@
             chatBtn.FlatStyle = FlatStyle.Flat;
             chatBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             chatBtn.ForeColor = Color.White;
-            chatBtn.Location = new Point(943, 10);
+            chatBtn.Location = new Point(1347, 17);
+            chatBtn.Margin = new Padding(4, 5, 4, 5);
             chatBtn.Name = "chatBtn";
-            chatBtn.Size = new Size(65, 38);
+            chatBtn.Size = new Size(93, 63);
             chatBtn.TabIndex = 39;
             chatBtn.Text = "Chat";
             chatBtn.UseVisualStyleBackColor = false;
@@ -334,9 +349,10 @@
             forYouBtn.FlatStyle = FlatStyle.Flat;
             forYouBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             forYouBtn.ForeColor = Color.White;
-            forYouBtn.Location = new Point(1014, 10);
+            forYouBtn.Location = new Point(1449, 17);
+            forYouBtn.Margin = new Padding(4, 5, 4, 5);
             forYouBtn.Name = "forYouBtn";
-            forYouBtn.Size = new Size(91, 38);
+            forYouBtn.Size = new Size(130, 63);
             forYouBtn.TabIndex = 38;
             forYouBtn.Text = "For You";
             forYouBtn.UseVisualStyleBackColor = false;
@@ -350,9 +366,10 @@
             eventsBtn.FlatStyle = FlatStyle.Flat;
             eventsBtn.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Italic);
             eventsBtn.ForeColor = Color.White;
-            eventsBtn.Location = new Point(1111, 10);
+            eventsBtn.Location = new Point(1587, 17);
+            eventsBtn.Margin = new Padding(4, 5, 4, 5);
             eventsBtn.Name = "eventsBtn";
-            eventsBtn.Size = new Size(78, 38);
+            eventsBtn.Size = new Size(111, 63);
             eventsBtn.TabIndex = 37;
             eventsBtn.Text = "Events";
             eventsBtn.UseVisualStyleBackColor = false;
@@ -368,9 +385,10 @@
             eventsFilterBtn.FlatAppearance.BorderSize = 0;
             eventsFilterBtn.FlatStyle = FlatStyle.Flat;
             eventsFilterBtn.ForeColor = Color.Transparent;
-            eventsFilterBtn.Location = new Point(1032, 9);
+            eventsFilterBtn.Location = new Point(1474, 15);
+            eventsFilterBtn.Margin = new Padding(4, 5, 4, 5);
             eventsFilterBtn.Name = "eventsFilterBtn";
-            eventsFilterBtn.Size = new Size(25, 25);
+            eventsFilterBtn.Size = new Size(36, 42);
             eventsFilterBtn.TabIndex = 36;
             eventsFilterBtn.UseVisualStyleBackColor = false;
             // 
@@ -379,7 +397,7 @@
             actionsBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             actionsBtn.AutoRoundedCorners = true;
             actionsBtn.BackColor = Color.Transparent;
-            actionsBtn.BorderRadius = 11;
+            actionsBtn.BorderRadius = 20;
             actionsBtn.CustomizableEdges = customizableEdges9;
             actionsBtn.DisabledState.BorderColor = Color.DarkGray;
             actionsBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -388,10 +406,11 @@
             actionsBtn.FillColor = Color.Black;
             actionsBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             actionsBtn.ForeColor = Color.White;
-            actionsBtn.Location = new Point(2671, 9);
+            actionsBtn.Location = new Point(3816, 15);
+            actionsBtn.Margin = new Padding(4, 5, 4, 5);
             actionsBtn.Name = "actionsBtn";
             actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            actionsBtn.Size = new Size(82, 25);
+            actionsBtn.Size = new Size(117, 42);
             actionsBtn.TabIndex = 35;
             actionsBtn.Text = "Actions";
             // 
@@ -403,9 +422,10 @@
             panel1.Controls.Add(userApprovalListing);
             panel1.Controls.Add(eventsFilterBtn);
             panel1.Controls.Add(actionsBtn);
-            panel1.Location = new Point(200, 100);
+            panel1.Location = new Point(286, 167);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1062, 631);
+            panel1.Size = new Size(1517, 1052);
             panel1.TabIndex = 3;
             // 
             // eventsAdminActionBtn
@@ -413,7 +433,7 @@
             eventsAdminActionBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             eventsAdminActionBtn.AutoRoundedCorners = true;
             eventsAdminActionBtn.BackColor = Color.Transparent;
-            eventsAdminActionBtn.BorderRadius = 11;
+            eventsAdminActionBtn.BorderRadius = 20;
             eventsAdminActionBtn.CustomizableEdges = customizableEdges11;
             eventsAdminActionBtn.DisabledState.BorderColor = Color.DarkGray;
             eventsAdminActionBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -422,31 +442,35 @@
             eventsAdminActionBtn.FillColor = Color.Black;
             eventsAdminActionBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             eventsAdminActionBtn.ForeColor = Color.White;
-            eventsAdminActionBtn.Location = new Point(947, 9);
+            eventsAdminActionBtn.Location = new Point(1353, 15);
+            eventsAdminActionBtn.Margin = new Padding(4, 5, 4, 5);
             eventsAdminActionBtn.Name = "eventsAdminActionBtn";
             eventsAdminActionBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            eventsAdminActionBtn.Size = new Size(82, 25);
+            eventsAdminActionBtn.Size = new Size(117, 42);
             eventsAdminActionBtn.TabIndex = 38;
             eventsAdminActionBtn.Text = "Actions";
             // 
             // searchEventsTxtBx
             // 
             searchEventsTxtBx.ForeColor = Color.Gray;
-            searchEventsTxtBx.Location = new Point(8, 10);
+            searchEventsTxtBx.Location = new Point(11, 17);
+            searchEventsTxtBx.Margin = new Padding(4, 5, 4, 5);
             searchEventsTxtBx.Name = "searchEventsTxtBx";
-            searchEventsTxtBx.Size = new Size(999, 23);
+            searchEventsTxtBx.Size = new Size(1425, 31);
             searchEventsTxtBx.TabIndex = 4;
             searchEventsTxtBx.Text = "Search events...";
             searchEventsTxtBx.MouseClick += searchEventsTxtBx_MouseClic;
+            searchEventsTxtBx.TextChanged += searchEventsTxtBx_TextChanged;
             searchEventsTxtBx.MouseLeave += searchUsersTxtBx_Leave;
             // 
             // EventsSearch
             // 
             EventsSearch.BackColor = Color.Transparent;
             EventsSearch.BackgroundImage = (Image)resources.GetObject("EventsSearch.BackgroundImage");
-            EventsSearch.Location = new Point(1013, 1);
+            EventsSearch.Location = new Point(1447, 2);
+            EventsSearch.Margin = new Padding(4, 5, 4, 5);
             EventsSearch.Name = "EventsSearch";
-            EventsSearch.Size = new Size(40, 40);
+            EventsSearch.Size = new Size(57, 67);
             EventsSearch.TabIndex = 3;
             EventsSearch.TabStop = false;
             // 
@@ -455,10 +479,11 @@
             searchBarPanel.BackColor = Color.FromArgb(248, 237, 235);
             searchBarPanel.Controls.Add(searchEventsTxtBx);
             searchBarPanel.Controls.Add(EventsSearch);
-            searchBarPanel.Location = new Point(200, 43);
+            searchBarPanel.Location = new Point(286, 72);
+            searchBarPanel.Margin = new Padding(4, 5, 4, 5);
             searchBarPanel.Name = "searchBarPanel";
             searchBarPanel.Radius = 20;
-            searchBarPanel.Size = new Size(1062, 42);
+            searchBarPanel.Size = new Size(1517, 70);
             searchBarPanel.TabIndex = 4;
             // 
             // guna2CustomGradientPanel4
@@ -467,10 +492,11 @@
             guna2CustomGradientPanel4.Controls.Add(panel1);
             guna2CustomGradientPanel4.CustomizableEdges = customizableEdges13;
             guna2CustomGradientPanel4.FillColor3 = Color.LightCoral;
-            guna2CustomGradientPanel4.Location = new Point(0, 121);
+            guna2CustomGradientPanel4.Location = new Point(0, 202);
+            guna2CustomGradientPanel4.Margin = new Padding(4, 5, 4, 5);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2CustomGradientPanel4.Size = new Size(1447, 734);
+            guna2CustomGradientPanel4.Size = new Size(2067, 1223);
             guna2CustomGradientPanel4.TabIndex = 26;
             // 
             // label7
@@ -479,9 +505,10 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial Rounded MT Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(48, 15);
+            label7.Location = new Point(69, 25);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(171, 99);
+            label7.Size = new Size(261, 153);
             label7.TabIndex = 26;
             label7.Text = "Together\r\nCulture\r\nCambridge";
             label7.MouseClick += label7_MouseClick;
@@ -509,9 +536,10 @@
             guna2CustomGradientPanel1.FillColor3 = Color.Maroon;
             guna2CustomGradientPanel1.FillColor4 = Color.Firebrick;
             guna2CustomGradientPanel1.Location = new Point(-1, 0);
+            guna2CustomGradientPanel1.Margin = new Padding(4, 5, 4, 5);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2CustomGradientPanel1.Size = new Size(1447, 127);
+            guna2CustomGradientPanel1.Size = new Size(2067, 212);
             guna2CustomGradientPanel1.TabIndex = 27;
             // 
             // guna2Button5
@@ -519,7 +547,7 @@
             guna2Button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button5.AutoRoundedCorners = true;
             guna2Button5.BackColor = Color.Transparent;
-            guna2Button5.BorderRadius = 17;
+            guna2Button5.BorderRadius = 30;
             guna2Button5.CustomizableEdges = customizableEdges15;
             guna2Button5.DisabledState.BorderColor = Color.DarkGray;
             guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -528,21 +556,23 @@
             guna2Button5.FillColor = Color.Black;
             guna2Button5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(1208, 70);
+            guna2Button5.Location = new Point(1726, 117);
+            guna2Button5.Margin = new Padding(4, 5, 4, 5);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button5.Size = new Size(128, 37);
+            guna2Button5.Size = new Size(183, 62);
             guna2Button5.TabIndex = 42;
             guna2Button5.Text = "Profile";
             // 
             // SearchEventsAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1446, 854);
+            ClientSize = new Size(2066, 1423);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2CustomGradientPanel4);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             Name = "SearchEventsAdmin";
             Text = "Search Events";
             Load += SearchEventsAdmin_Load;
