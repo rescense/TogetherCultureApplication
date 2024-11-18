@@ -43,23 +43,23 @@
             label1 = new Label();
             label2 = new Label();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label16 = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             lblFeedback3 = new Label();
             lblFeedback2 = new Label();
             lblFeedback = new Label();
+            label9 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             label3 = new Label();
             richTextBox5 = new RichTextBox();
             richTextBox4 = new RichTextBox();
             richTextBox3 = new RichTextBox();
             richTextBox2 = new RichTextBox();
             richTextBox1 = new RichTextBox();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label9 = new Label();
-            pictureBox1 = new PictureBox();
-            label16 = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             guna2CustomGradientPanel2.SuspendLayout();
@@ -148,170 +148,11 @@
             guna2CustomGradientPanel2.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel2.FillColor4 = Color.Salmon;
             guna2CustomGradientPanel2.Location = new Point(0, 180);
-            guna2CustomGradientPanel2.Margin = new Padding(2, 2, 2, 2);
+            guna2CustomGradientPanel2.Margin = new Padding(2);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel2.Size = new Size(1440, 671);
             guna2CustomGradientPanel2.TabIndex = 11;
-            // 
-            // lblFeedback3
-            // 
-            lblFeedback3.AutoSize = true;
-            lblFeedback3.Location = new Point(414, 412);
-            lblFeedback3.Margin = new Padding(2, 0, 2, 0);
-            lblFeedback3.Name = "lblFeedback3";
-            lblFeedback3.Size = new Size(0, 15);
-            lblFeedback3.TabIndex = 24;
-            // 
-            // lblFeedback2
-            // 
-            lblFeedback2.AutoSize = true;
-            lblFeedback2.Location = new Point(415, 314);
-            lblFeedback2.Margin = new Padding(2, 0, 2, 0);
-            lblFeedback2.Name = "lblFeedback2";
-            lblFeedback2.Size = new Size(0, 15);
-            lblFeedback2.TabIndex = 23;
-            // 
-            // lblFeedback
-            // 
-            lblFeedback.AutoSize = true;
-            lblFeedback.Location = new Point(414, 216);
-            lblFeedback.Margin = new Padding(2, 0, 2, 0);
-            lblFeedback.Name = "lblFeedback";
-            lblFeedback.Size = new Size(0, 15);
-            lblFeedback.TabIndex = 22;
-            lblFeedback.Click += label9_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(97, 46);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(182, 45);
-            label3.TabIndex = 17;
-            label3.Text = "First Name";
-            label3.Click += label3_Click;
-            // 
-            // richTextBox5
-            // 
-            richTextBox5.Location = new Point(405, 361);
-            richTextBox5.Margin = new Padding(2, 2, 2, 2);
-            richTextBox5.Name = "richTextBox5";
-            richTextBox5.Size = new Size(374, 42);
-            richTextBox5.TabIndex = 16;
-            richTextBox5.Text = "";
-            richTextBox5.TextChanged += richTextBox5_TextChanged;
-            // 
-            // richTextBox4
-            // 
-            richTextBox4.Location = new Point(310, 287);
-            richTextBox4.Margin = new Padding(2, 2, 2, 2);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(469, 42);
-            richTextBox4.TabIndex = 15;
-            richTextBox4.Text = "";
-            richTextBox4.TextChanged += richTextBox4_TextChanged;
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.Location = new Point(358, 216);
-            richTextBox3.Margin = new Padding(2, 2, 2, 2);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(421, 42);
-            richTextBox3.TabIndex = 14;
-            richTextBox3.Text = "";
-            richTextBox3.TextChanged += richTextBox3_TextChanged;
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.Location = new Point(310, 130);
-            richTextBox2.Margin = new Padding(2, 2, 2, 2);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(246, 42);
-            richTextBox2.TabIndex = 13;
-            richTextBox2.Text = "";
-            richTextBox2.TextChanged += richTextBox2_TextChanged;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(310, 49);
-            richTextBox1.Margin = new Padding(2, 2, 2, 2);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(246, 42);
-            richTextBox1.TabIndex = 12;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(97, 130);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(176, 45);
-            label4.TabIndex = 17;
-            label4.Text = "Last Name";
-            label4.Click += label3_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(97, 208);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(231, 45);
-            label5.TabIndex = 17;
-            label5.Text = "Email Address";
-            label5.Click += label3_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(97, 284);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(163, 45);
-            label6.TabIndex = 17;
-            label6.Text = "Password";
-            label6.Click += label3_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(97, 361);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(294, 45);
-            label9.TabIndex = 17;
-            label9.Text = "Re-Type Password";
-            label9.Click += label3_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(784, 18);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(612, 524);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 27;
-            pictureBox1.TabStop = false;
             // 
             // label16
             // 
@@ -367,6 +208,176 @@
             guna2Button9.Size = new Size(187, 70);
             guna2Button9.TabIndex = 29;
             guna2Button9.Text = "Login";
+            guna2Button9.Click += guna2Button9_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(784, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(612, 524);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 27;
+            pictureBox1.TabStop = false;
+            // 
+            // lblFeedback3
+            // 
+            lblFeedback3.AutoSize = true;
+            lblFeedback3.Location = new Point(414, 412);
+            lblFeedback3.Margin = new Padding(2, 0, 2, 0);
+            lblFeedback3.Name = "lblFeedback3";
+            lblFeedback3.Size = new Size(0, 15);
+            lblFeedback3.TabIndex = 24;
+            // 
+            // lblFeedback2
+            // 
+            lblFeedback2.AutoSize = true;
+            lblFeedback2.Location = new Point(415, 314);
+            lblFeedback2.Margin = new Padding(2, 0, 2, 0);
+            lblFeedback2.Name = "lblFeedback2";
+            lblFeedback2.Size = new Size(0, 15);
+            lblFeedback2.TabIndex = 23;
+            // 
+            // lblFeedback
+            // 
+            lblFeedback.AutoSize = true;
+            lblFeedback.Location = new Point(414, 216);
+            lblFeedback.Margin = new Padding(2, 0, 2, 0);
+            lblFeedback.Name = "lblFeedback";
+            lblFeedback.Size = new Size(0, 15);
+            lblFeedback.TabIndex = 22;
+            lblFeedback.Click += label9_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(97, 361);
+            label9.Margin = new Padding(2, 0, 2, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(294, 45);
+            label9.TabIndex = 17;
+            label9.Text = "Re-Type Password";
+            label9.Click += label3_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(97, 284);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(163, 45);
+            label6.TabIndex = 17;
+            label6.Text = "Password";
+            label6.Click += label3_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(97, 208);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(231, 45);
+            label5.TabIndex = 17;
+            label5.Text = "Email Address";
+            label5.Click += label3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(97, 130);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(176, 45);
+            label4.TabIndex = 17;
+            label4.Text = "Last Name";
+            label4.Click += label3_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(97, 46);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(182, 45);
+            label3.TabIndex = 17;
+            label3.Text = "First Name";
+            label3.Click += label3_Click;
+            // 
+            // richTextBox5
+            // 
+            richTextBox5.BorderStyle = BorderStyle.None;
+            richTextBox5.Font = new Font("Segoe UI Light", 20.25F);
+            richTextBox5.Location = new Point(405, 361);
+            richTextBox5.Margin = new Padding(2);
+            richTextBox5.Name = "richTextBox5";
+            richTextBox5.Size = new Size(374, 42);
+            richTextBox5.TabIndex = 16;
+            richTextBox5.Text = "";
+            richTextBox5.TextChanged += richTextBox5_TextChanged;
+            // 
+            // richTextBox4
+            // 
+            richTextBox4.BorderStyle = BorderStyle.None;
+            richTextBox4.Font = new Font("Segoe UI Light", 20.25F);
+            richTextBox4.Location = new Point(310, 287);
+            richTextBox4.Margin = new Padding(2);
+            richTextBox4.Name = "richTextBox4";
+            richTextBox4.Size = new Size(469, 42);
+            richTextBox4.TabIndex = 15;
+            richTextBox4.Text = "";
+            richTextBox4.TextChanged += richTextBox4_TextChanged;
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.BorderStyle = BorderStyle.None;
+            richTextBox3.Font = new Font("Segoe UI Light", 20.25F);
+            richTextBox3.Location = new Point(358, 216);
+            richTextBox3.Margin = new Padding(2);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(421, 42);
+            richTextBox3.TabIndex = 14;
+            richTextBox3.Text = "";
+            richTextBox3.TextChanged += richTextBox3_TextChanged;
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.BorderStyle = BorderStyle.None;
+            richTextBox2.Font = new Font("Segoe UI Light", 20.25F);
+            richTextBox2.Location = new Point(310, 130);
+            richTextBox2.Margin = new Padding(2);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(246, 42);
+            richTextBox2.TabIndex = 13;
+            richTextBox2.Text = "";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BorderStyle = BorderStyle.None;
+            richTextBox1.Font = new Font("Segoe UI Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richTextBox1.Location = new Point(310, 49);
+            richTextBox1.Margin = new Padding(2);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(246, 42);
+            richTextBox1.TabIndex = 12;
+            richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // Sign_up
             // 
@@ -377,6 +388,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(guna2CustomGradientPanel1);
+            MaximumSize = new Size(1456, 888);
+            MinimumSize = new Size(1456, 888);
             Name = "Sign_up";
             Text = "Sign_up";
             Load += Sign_up_Load;

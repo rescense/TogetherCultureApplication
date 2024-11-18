@@ -146,7 +146,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 MessageBox.Show("All fields are valid. Proceeding to the next page.");
 
                 // need to add code so the button proceeds to the next page 
-                
+
             }
             else
             {
@@ -170,6 +170,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             }
         }
 
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Log_in log_In = new Log_in();
+
+            log_In.Show();
+
+            this.Close();
+        }
     }
 }
 

@@ -364,7 +364,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
+            Sign_up sign_Up = new Sign_up();
 
+            sign_Up.Show();
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Log_in log_In = new Log_in();
+            log_In.Show();
         }
     }
 }
