@@ -33,6 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Log_in));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,6 +51,8 @@
             label5 = new Label();
             richTextBox4 = new RichTextBox();
             richTextBox3 = new RichTextBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            label16 = new Label();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -61,7 +65,7 @@
             CheckBox.BackColor = Color.Transparent;
             CheckBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CheckBox.ForeColor = Color.White;
-            CheckBox.Location = new Point(166, 361);
+            CheckBox.Location = new Point(108, 317);
             CheckBox.Name = "CheckBox";
             CheckBox.Size = new Size(208, 41);
             CheckBox.TabIndex = 0;
@@ -123,23 +127,25 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            guna2CustomGradientPanel3.Controls.Add(label16);
             guna2CustomGradientPanel3.Controls.Add(pictureBox1);
+            guna2CustomGradientPanel3.Controls.Add(guna2Button1);
             guna2CustomGradientPanel3.Controls.Add(guna2Button9);
             guna2CustomGradientPanel3.Controls.Add(label6);
             guna2CustomGradientPanel3.Controls.Add(label5);
             guna2CustomGradientPanel3.Controls.Add(CheckBox);
             guna2CustomGradientPanel3.Controls.Add(richTextBox4);
             guna2CustomGradientPanel3.Controls.Add(richTextBox3);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges9;
             guna2CustomGradientPanel3.FillColor = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel3.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor4 = Color.Salmon;
-            guna2CustomGradientPanel3.Location = new Point(-41, 179);
+            guna2CustomGradientPanel3.Location = new Point(0, 179);
             guna2CustomGradientPanel3.Margin = new Padding(2);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2CustomGradientPanel3.Size = new Size(1481, 670);
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CustomGradientPanel3.Size = new Size(1440, 673);
             guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // pictureBox1
@@ -158,8 +164,8 @@
             guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
-            guna2Button9.BorderRadius = 46;
-            guna2Button9.CustomizableEdges = customizableEdges5;
+            guna2Button9.BorderRadius = 34;
+            guna2Button9.CustomizableEdges = customizableEdges7;
             guna2Button9.DisabledState.BorderColor = Color.DarkGray;
             guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -167,10 +173,10 @@
             guna2Button9.FillColor = Color.Black;
             guna2Button9.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(339, 441);
+            guna2Button9.Location = new Point(335, 375);
             guna2Button9.Name = "guna2Button9";
-            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button9.Size = new Size(248, 95);
+            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button9.Size = new Size(187, 70);
             guna2Button9.TabIndex = 25;
             guna2Button9.Text = "Login";
             // 
@@ -180,7 +186,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(166, 251);
+            label6.Location = new Point(108, 207);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(175, 47);
@@ -193,7 +199,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(166, 102);
+            label5.Location = new Point(108, 58);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(128, 50);
@@ -203,7 +209,7 @@
             // richTextBox4
             // 
             richTextBox4.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextBox4.Location = new Point(166, 300);
+            richTextBox4.Location = new Point(108, 256);
             richTextBox4.Margin = new Padding(2);
             richTextBox4.Name = "richTextBox4";
             richTextBox4.Size = new Size(594, 56);
@@ -213,13 +219,47 @@
             // richTextBox3
             // 
             richTextBox3.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextBox3.Location = new Point(166, 154);
+            richTextBox3.Location = new Point(108, 110);
             richTextBox3.Margin = new Padding(2);
             richTextBox3.Name = "richTextBox3";
             richTextBox3.Size = new Size(594, 60);
             richTextBox3.TabIndex = 21;
             richTextBox3.Text = "";
             richTextBox3.TextChanged += richTextBox3_TextChanged;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button1.AutoRoundedCorners = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 28;
+            guna2Button1.CustomizableEdges = customizableEdges5;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Black;
+            guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(335, 539);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button1.Size = new Size(185, 58);
+            guna2Button1.TabIndex = 25;
+            guna2Button1.Text = "Sign Up";
+            // 
+            // label16
+            // 
+            label16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(293, 473);
+            label16.Name = "label16";
+            label16.Size = new Size(272, 37);
+            label16.TabIndex = 27;
+            label16.Text = "Or new to the game ?";
             // 
             // Log_in
             // 
@@ -256,5 +296,7 @@
         private RichTextBox richTextBox3;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Label label16;
     }
 }
