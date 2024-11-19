@@ -16,5 +16,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
