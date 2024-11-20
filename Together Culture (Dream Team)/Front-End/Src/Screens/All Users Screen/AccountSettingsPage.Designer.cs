@@ -61,7 +61,6 @@
             label7 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -72,6 +71,7 @@
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -115,8 +115,8 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel1);
             guna2CustomGradientPanel3.Controls.Add(guna2Button6);
-            guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel3);
             guna2CustomGradientPanel3.Controls.Add(guna2Button10);
             guna2CustomGradientPanel3.Controls.Add(guna2Button9);
             guna2CustomGradientPanel3.Controls.Add(guna2Button8);
@@ -166,17 +166,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 26;
             pictureBox3.TabStop = false;
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.ForeColor = Color.WhiteSmoke;
-            guna2HtmlLabel3.Location = new Point(202, 58);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(123, 39);
-            guna2HtmlLabel3.TabIndex = 3;
-            guna2HtmlLabel3.Text = "username";
             // 
             // guna2Button1
             // 
@@ -348,6 +337,17 @@
             guna2Button10.TabIndex = 9;
             guna2Button10.Text = "Payment";
             // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.White;
+            guna2HtmlLabel1.Location = new Point(104, 142);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(128, 39);
+            guna2HtmlLabel1.TabIndex = 10;
+            guna2HtmlLabel1.Text = "username";
+            // 
             // AccountSettingsPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -376,7 +376,6 @@
         private Label label7;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -387,5 +386,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
