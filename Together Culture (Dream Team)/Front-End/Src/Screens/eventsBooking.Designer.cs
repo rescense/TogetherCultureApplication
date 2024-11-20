@@ -122,7 +122,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(436, 116);
+            button2.Location = new Point(438, 118);
             button2.Name = "button2";
             button2.Size = new Size(123, 43);
             button2.TabIndex = 4;
