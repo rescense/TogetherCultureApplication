@@ -583,6 +583,7 @@
             Controls.Add(guna2CustomGradientPanel2);
             MinimumSize = new Size(1460, 886);
             Name = "landingPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "landingPage";
             Load += landingPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

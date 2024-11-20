@@ -45,6 +45,7 @@
             pictureBox2 = new PictureBox();
             label7 = new Label();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label1 = new Label();
             label16 = new Label();
             pictureBox1 = new PictureBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -127,6 +128,7 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            guna2CustomGradientPanel3.Controls.Add(label1);
             guna2CustomGradientPanel3.Controls.Add(label16);
             guna2CustomGradientPanel3.Controls.Add(pictureBox1);
             guna2CustomGradientPanel3.Controls.Add(guna2Button1);
@@ -148,6 +150,19 @@
             guna2CustomGradientPanel3.Size = new Size(1440, 673);
             guna2CustomGradientPanel3.TabIndex = 2;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(108, 460);
+            label1.Name = "label1";
+            label1.Size = new Size(214, 37);
+            label1.TabIndex = 27;
+            label1.Text = "Forgot Password";
+            // 
             // label16
             // 
             label16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -155,7 +170,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(293, 473);
+            label16.Location = new Point(401, 460);
             label16.Name = "label16";
             label16.Size = new Size(272, 37);
             label16.TabIndex = 27;
@@ -186,7 +201,7 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(335, 539);
+            guna2Button1.Location = new Point(443, 526);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(185, 58);
@@ -208,7 +223,7 @@
             guna2Button9.FillColor = Color.Black;
             guna2Button9.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(335, 375);
+            guna2Button9.Location = new Point(443, 362);
             guna2Button9.Name = "guna2Button9";
             guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button9.Size = new Size(187, 70);
@@ -277,6 +292,7 @@
             MaximumSize = new Size(1456, 888);
             MinimumSize = new Size(1456, 888);
             Name = "Log_in";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Log_in";
             Load += Log_in_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
@@ -304,5 +320,6 @@
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Label label16;
+        private Label label1;
     }
 }
