@@ -41,5 +41,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
 
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
