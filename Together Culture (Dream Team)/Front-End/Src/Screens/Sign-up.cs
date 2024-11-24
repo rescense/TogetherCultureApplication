@@ -44,9 +44,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 richTextBox1.BackColor = Color.Red;  // Red background for invalid email
                 label8.Text = "Please write your First Name";
             }
-            
+
         }
-        
+
         //validate if user has made an input for name
         private bool IsValidFName(string input)
         {
@@ -172,27 +172,53 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-        private void guna2Button10_Click(object sender, EventArgs e)
+       
+
+        private void guna2Button9_Click(object sender, EventArgs e)
         {
+            Log_in log_In = new Log_in();
+
+            log_In.Show();
+
+            this.Close();
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+
             // Check if all fields have a green background (valid)
             bool isEmailValid = richTextBox3.BackColor == Color.LightGreen;
             bool isPasswordValid = richTextBox4.BackColor == Color.LightGreen;
             bool isPasswordMatchValid = richTextBox5.BackColor == Color.LightGreen;
-
+            bool IsValidLName = richTextBox2.BackColor == Color.LightGreen;
+            bool IsValidFName = richTextBox1.BackColor == Color.LightGreen;
             // If all fields are valid (green), proceed to the next page or action
-            if (isEmailValid && isPasswordValid && isPasswordMatchValid)
+            if (isEmailValid && isPasswordValid && isPasswordMatchValid && IsValidFName && IsValidLName)
             {
                 // Proceed to the next page or action
                 MessageBox.Show("All fields are valid. Proceeding to the next page.");
 
-                // need to add code so the button proceeds to the next page 
+                // code to proceed to the profile
+                Profile Profile = new Profile();
 
+                Profile.Show();
+
+                this.Close();
+                //need to add code for data base save later
             }
             else
             {
                 // Notify the user which fields need attention
                 string missingFields = "Please check the following fields:\n";
 
+                if (!IsValidLName)
+                {
+                    missingFields += "- Last name\n";
+                }
+                if (!IsValidFName)
+                {
+                    missingFields += "- First name\n";
+                }
                 if (!isEmailValid)
                 {
                     missingFields += "- Email\n";
@@ -208,15 +234,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
                 MessageBox.Show(missingFields, "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void guna2Button9_Click(object sender, EventArgs e)
-        {
-            Log_in log_In = new Log_in();
-
-            log_In.Show();
-
-            this.Close();
         }
     }
 }
