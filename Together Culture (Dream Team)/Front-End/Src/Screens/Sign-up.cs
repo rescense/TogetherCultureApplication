@@ -16,6 +16,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Sign_up()
         {
             InitializeComponent();
+            this.richTextBox4.TextChanged += new System.EventHandler(this.richTextBox4_TextChanged);
+            this.richTextBox5.TextChanged += new System.EventHandler(this.richTextBox5_TextChanged);
+
         }
 
         private void Sign_up_Load(object sender, EventArgs e)
@@ -148,22 +151,27 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void richTextBox5_TextChanged(object sender, EventArgs e)
         {
-            // Get the password and confirmation password text
-            string password = richTextBox4.Text;  // Password from richTextBox4
-            string confirmPassword = richTextBox5.Text;  // Confirmation password from richTextBox5
+            ValidatePasswords();
+        }
+
+        private void ValidatePasswords()
+        {
+            // Get the current text from both textboxes
+            string password = richTextBox4.Text;
+            string confirmPassword = richTextBox5.Text;
 
             // Check if the passwords match
             if (password == confirmPassword)
             {
                 // Passwords match
                 richTextBox5.BackColor = Color.LightGreen;  // Green background for matching passwords
-                lblFeedback3.Text = "Passwords match.";  // Feedback message for matching passwords
+                lblFeedback3.Text = "Passwords match.";    // Feedback message for matching passwords
             }
             else
             {
                 // Passwords do not match
-                richTextBox5.BackColor = Color.LightCoral;  // Red background for non-matching passwords
-                lblFeedback3.Text = "Passwords do not match.";  // Feedback message for non-matching passwords
+                richTextBox5.BackColor = Color.LightCoral; // Red background for non-matching passwords
+                lblFeedback3.Text = "Passwords do not match."; // Feedback message for non-matching passwords
             }
         }
 
@@ -196,12 +204,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             if (isEmailValid && isPasswordValid && isPasswordMatchValid && IsValidFName && IsValidLName)
             {
                 // Proceed to the next page or action
-                MessageBox.Show("All fields are valid. Proceeding to the next page.");
+                MessageBox.Show("Registered Successfully! Please Login now.");
 
-                // code to proceed to the profile
-                Profile Profile = new Profile();
+                // code to proceed to the Login
+                Log_in log_In = new Log_in();
 
-                Profile.Show();
+                log_In.Show();
 
                 this.Close();
                 //need to add code for data base save later
