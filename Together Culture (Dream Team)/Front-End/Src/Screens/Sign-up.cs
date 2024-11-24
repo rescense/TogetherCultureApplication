@@ -31,8 +31,28 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            richTextBox1.BackColor = Color.LightGreen;  // Green background for when there is character 
-
+            string fNameText = richTextBox1.Text;
+            if (IsValidFName(fNameText))
+            {
+                // Provide feedback for valid First name
+                richTextBox1.BackColor = Color.LightGreen;  // Green background for valid email
+                label8.Text = "Valid First Name";
+            }
+            else
+            {
+                // Provide feedback for invalid name
+                richTextBox1.BackColor = Color.Red;  // Red background for invalid email
+                label8.Text = "Please write your First Name";
+            }
+            
+        }
+        
+        //validate if user has made an input for name
+        private bool IsValidFName(string input)
+        {
+            string pattern = @"^[a-zA-Z]";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(input);
         }
 
         private void richTextBox3_TextChanged(object sender, EventArgs e)
@@ -50,7 +70,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             else
             {
                 // Provide feedback for invalid email
-                richTextBox3.BackColor = Color.LightCoral;  // Red background for invalid email
+                richTextBox3.BackColor = Color.Red;  // Red background for invalid email
                 lblFeedback.Text = "Invalid email address.";
             }
         }
@@ -65,8 +85,28 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            richTextBox2.BackColor = Color.LightGreen;  // Green background for when there is character 
+            string lNameText = richTextBox2.Text;
+            if (IsValidLName(lNameText))
+            {
+                // Provide feedback for valid last name
+                richTextBox2.BackColor = Color.LightGreen;  // Green background for valid last name
+                label10.Text = "Valid Last Name";
+            }
+            else
+            {
+                // Provide feedback for invalid last name
+                richTextBox2.BackColor = Color.Red;  // Red background for invalid Last name
+                label10.Text = "Please write your Last Name";
+            }
+
         }
+        private bool IsValidLName(string input)
+        {
+            string pattern = @"^[a-zA-Z]";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(input);
+        }
+
 
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
@@ -83,7 +123,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             else
             {
                 // Password is invalid
-                richTextBox4.BackColor = Color.LightCoral;  // Red background for invalid password
+                richTextBox4.BackColor = Color.Red;  // Red background for invalid password
                 lblFeedback2.Text = "Password must be at least 8 characters and contain at least 3 symbols.";  // Feedback message for invalid password
             }
         }
