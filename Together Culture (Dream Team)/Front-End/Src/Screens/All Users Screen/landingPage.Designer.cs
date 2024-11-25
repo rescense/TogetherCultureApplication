@@ -581,7 +581,7 @@
             Controls.Add(panel3);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
-            MinimumSize = new Size(1462, 773);
+            MinimumSize = new Size(1462, 893);
             Name = "landingPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "landingPage";
