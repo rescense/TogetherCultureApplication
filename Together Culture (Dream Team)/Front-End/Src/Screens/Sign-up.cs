@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,14 @@ using System.Windows.Forms;
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class Sign_up : Form
+
     {
         public Sign_up()
         {
             InitializeComponent();
-            this.richTextBox4.TextChanged += new System.EventHandler(this.richTextBox4_TextChanged);
-            this.richTextBox5.TextChanged += new System.EventHandler(this.richTextBox5_TextChanged);
+            this.txtPassword.TextChanged += new System.EventHandler(this.richTextBox4_TextChanged);
+            this.txtRpassword.TextChanged += new System.EventHandler(this.richTextBox5_TextChanged);
+
 
         }
 
@@ -34,17 +37,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            string fNameText = richTextBox1.Text;
+            string fNameText = txtFirstname.Text;
             if (IsValidFName(fNameText))
             {
                 // Provide feedback for valid First name
-                richTextBox1.BackColor = Color.LightGreen;  // Green background for valid email
+                txtFirstname.BackColor = Color.LightGreen;  // Green background for valid email
                 label8.Text = "Valid First Name";
             }
             else
             {
                 // Provide feedback for invalid name
-                richTextBox1.BackColor = Color.Red;  // Red background for invalid email
+                txtFirstname.BackColor = Color.Red;  // Red background for invalid email
                 label8.Text = "Please write your First Name";
             }
 
@@ -61,19 +64,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void richTextBox3_TextChanged(object sender, EventArgs e)
         {
 
-            string emailText = richTextBox3.Text;
+            string emailText = txtEmail.Text;
 
             // Validate the email
             if (IsValidEmail(emailText))
             {
                 // Provide feedback for valid email
-                richTextBox3.BackColor = Color.LightGreen;  // Green background for valid email
+                txtEmail.BackColor = Color.LightGreen;  // Green background for valid email
                 lblFeedback.Text = "Valid email address.";
             }
             else
             {
                 // Provide feedback for invalid email
-                richTextBox3.BackColor = Color.Red;  // Red background for invalid email
+                txtEmail.BackColor = Color.Red;  // Red background for invalid email
                 lblFeedback.Text = "Invalid email address.";
             }
         }
@@ -88,17 +91,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            string lNameText = richTextBox2.Text;
+            string lNameText = txtLastname.Text;
             if (IsValidLName(lNameText))
             {
                 // Provide feedback for valid last name
-                richTextBox2.BackColor = Color.LightGreen;  // Green background for valid last name
+                txtLastname.BackColor = Color.LightGreen;  // Green background for valid last name
                 label10.Text = "Valid Last Name";
             }
             else
             {
                 // Provide feedback for invalid last name
-                richTextBox2.BackColor = Color.Red;  // Red background for invalid Last name
+                txtLastname.BackColor = Color.Red;  // Red background for invalid Last name
                 label10.Text = "Please write your Last Name";
             }
 
@@ -114,19 +117,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
 
-            string passwordText = richTextBox4.Text;
+            string passwordText = txtPassword.Text;
 
             // Validate the password
             if (IsValidPassword(passwordText))
             {
                 // Password is valid
-                richTextBox4.BackColor = Color.LightGreen;  // Green background for valid password
+                txtPassword.BackColor = Color.LightGreen;  // Green background for valid password
                 lblFeedback2.Text = "Valid password.";  // Feedback message for valid password
             }
             else
             {
                 // Password is invalid
-                richTextBox4.BackColor = Color.Red;  // Red background for invalid password
+                txtPassword.BackColor = Color.Red;  // Red background for invalid password
                 lblFeedback2.Text = "Password must be at least 8 characters and contain at least 3 symbols.";  // Feedback message for invalid password
             }
         }
@@ -157,20 +160,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void ValidatePasswords()
         {
             // Get the current text from both textboxes
-            string password = richTextBox4.Text;
-            string confirmPassword = richTextBox5.Text;
+            string password = txtPassword.Text;
+            string confirmPassword = txtRpassword.Text;
 
             // Check if the passwords match
             if (password == confirmPassword)
             {
                 // Passwords match
-                richTextBox5.BackColor = Color.LightGreen;  // Green background for matching passwords
+                txtRpassword.BackColor = Color.LightGreen;  // Green background for matching passwords
                 lblFeedback3.Text = "Passwords match.";    // Feedback message for matching passwords
             }
             else
             {
                 // Passwords do not match
-                richTextBox5.BackColor = Color.LightCoral; // Red background for non-matching passwords
+                txtRpassword.BackColor = Color.LightCoral; // Red background for non-matching passwords
                 lblFeedback3.Text = "Passwords do not match."; // Feedback message for non-matching passwords
             }
         }
@@ -180,7 +183,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-       
+
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
@@ -191,58 +194,98 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             this.Close();
         }
 
+
+        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Abbas Haider\\source\\repos\\FBGHaider\\Dream-Team\\Together Culture (Dream Team)\\Database1.mdf\";Integrated Security=True";
+
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
+            bool isEmailValid = txtEmail.BackColor == Color.LightGreen;
+            bool isPasswordValid = txtPassword.BackColor == Color.LightGreen;
+            bool isPasswordMatchValid = txtRpassword.BackColor == Color.LightGreen;
+            bool isValidLastName = txtLastname.BackColor == Color.LightGreen;
+            bool isValidFirstName = txtFirstname.BackColor == Color.LightGreen;
 
-            // Check if all fields have a green background (valid)
-            bool isEmailValid = richTextBox3.BackColor == Color.LightGreen;
-            bool isPasswordValid = richTextBox4.BackColor == Color.LightGreen;
-            bool isPasswordMatchValid = richTextBox5.BackColor == Color.LightGreen;
-            bool IsValidLName = richTextBox2.BackColor == Color.LightGreen;
-            bool IsValidFName = richTextBox1.BackColor == Color.LightGreen;
-            // If all fields are valid (green), proceed to the next page or action
-            if (isEmailValid && isPasswordValid && isPasswordMatchValid && IsValidFName && IsValidLName)
+            if (isEmailValid && isPasswordValid && isPasswordMatchValid && isValidFirstName && isValidLastName)
             {
-                // Proceed to the next page or action
-                MessageBox.Show("Registered Successfully! Please Login now.");
+                try
+                {
+                    if (check(txtEmail.Text) == 0)
+                    {
+                        using (SqlConnection connection = new SqlConnection(_connectionString))
+                        {
+                            connection.Open();
+                            SqlCommand command = new SqlCommand("INSERT INTO info (f_name, l_name, email, password) VALUES (@f_name, @l_name, @Email, @Password)", connection);
+                            command.Parameters.AddWithValue("@f_name", txtFirstname.Text);
+                            command.Parameters.AddWithValue("@l_name", txtLastname.Text);
+                            command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                            command.Parameters.AddWithValue("@Password",txtPassword.Text);
 
-                // code to proceed to the Login
-                Log_in log_In = new Log_in();
+                            command.ExecuteNonQuery();
+                        }
 
-                log_In.Show();
+                        MessageBox.Show("Registered Successfully!");
+                        ResetFormFields();
 
-                this.Close();
-                //need to add code for data base save later
+                        Log_in logInForm = new Log_in();
+                        logInForm.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"The email '{txtEmail.Text}' is already registered. Please use a different email.", "Duplicate Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                // Notify the user which fields need attention
                 string missingFields = "Please check the following fields:\n";
-
-                if (!IsValidLName)
-                {
-                    missingFields += "- Last name\n";
-                }
-                if (!IsValidFName)
-                {
-                    missingFields += "- First name\n";
-                }
-                if (!isEmailValid)
-                {
-                    missingFields += "- Email\n";
-                }
-                if (!isPasswordValid)
-                {
-                    missingFields += "- Password\n";
-                }
-                if (!isPasswordMatchValid)
-                {
-                    missingFields += "- Confirm Password\n";
-                }
+                if (!isValidLastName) missingFields += "- Last Name\n";
+                if (!isValidFirstName) missingFields += "- First Name\n";
+                if (!isEmailValid) missingFields += "- Email\n";
+                if (!isPasswordValid) missingFields += "- Password\n";
+                if (!isPasswordMatchValid) missingFields += "- Confirm Password\n";
 
                 MessageBox.Show(missingFields, "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        int check(String email)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM info WHERE LOWER(email) = LOWER(@Email)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    int count = (int)command.ExecuteScalar();
+                    return count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error checking email: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1; // Indicate an error
+            }
+        }
+
+        private void ResetFormFields()
+        {
+            txtFirstname.Text = "";
+            txtLastname.Text = "";
+            txtEmail.Text = "";
+            txtPassword.Text = "";
+            txtRpassword.Text = "";
+        }
+
+
+
     }
 }
 
