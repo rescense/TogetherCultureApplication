@@ -48,12 +48,12 @@
             label1 = new Label();
             label16 = new Label();
             pictureBox1 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            btnSignUp = new Guna.UI2.WinForms.Guna2Button();
+            btnLogin = new Guna.UI2.WinForms.Guna2Button();
             label6 = new Label();
             label5 = new Label();
-            richTextBox4 = new RichTextBox();
-            richTextBox3 = new RichTextBox();
+            txtPassword = new RichTextBox();
+            txtEmail = new RichTextBox();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -131,13 +131,13 @@
             guna2CustomGradientPanel3.Controls.Add(label1);
             guna2CustomGradientPanel3.Controls.Add(label16);
             guna2CustomGradientPanel3.Controls.Add(pictureBox1);
-            guna2CustomGradientPanel3.Controls.Add(guna2Button1);
-            guna2CustomGradientPanel3.Controls.Add(guna2Button9);
+            guna2CustomGradientPanel3.Controls.Add(btnSignUp);
+            guna2CustomGradientPanel3.Controls.Add(btnLogin);
             guna2CustomGradientPanel3.Controls.Add(label6);
             guna2CustomGradientPanel3.Controls.Add(label5);
             guna2CustomGradientPanel3.Controls.Add(CheckBox);
-            guna2CustomGradientPanel3.Controls.Add(richTextBox4);
-            guna2CustomGradientPanel3.Controls.Add(richTextBox3);
+            guna2CustomGradientPanel3.Controls.Add(txtPassword);
+            guna2CustomGradientPanel3.Controls.Add(txtEmail);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges9;
             guna2CustomGradientPanel3.FillColor = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
@@ -187,48 +187,49 @@
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // btnSignUp
             // 
-            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button1.AutoRoundedCorners = true;
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 28;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Black;
-            guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(443, 526);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(185, 58);
-            guna2Button1.TabIndex = 25;
-            guna2Button1.Text = "Sign Up";
-            guna2Button1.Click += guna2Button1_Click;
+            btnSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSignUp.AutoRoundedCorners = true;
+            btnSignUp.BackColor = Color.Transparent;
+            btnSignUp.BorderRadius = 28;
+            btnSignUp.CustomizableEdges = customizableEdges5;
+            btnSignUp.DisabledState.BorderColor = Color.DarkGray;
+            btnSignUp.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSignUp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSignUp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSignUp.FillColor = Color.Black;
+            btnSignUp.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSignUp.ForeColor = Color.White;
+            btnSignUp.Location = new Point(443, 526);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSignUp.Size = new Size(185, 58);
+            btnSignUp.TabIndex = 25;
+            btnSignUp.Text = "Sign Up";
+            btnSignUp.Click += btnSignUp_click;
             // 
-            // guna2Button9
+            // btnLogin
             // 
-            guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button9.AutoRoundedCorners = true;
-            guna2Button9.BackColor = Color.Transparent;
-            guna2Button9.BorderRadius = 34;
-            guna2Button9.CustomizableEdges = customizableEdges7;
-            guna2Button9.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button9.FillColor = Color.Black;
-            guna2Button9.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(443, 362);
-            guna2Button9.Name = "guna2Button9";
-            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button9.Size = new Size(187, 70);
-            guna2Button9.TabIndex = 25;
-            guna2Button9.Text = "Login";
+            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnLogin.AutoRoundedCorners = true;
+            btnLogin.BackColor = Color.Transparent;
+            btnLogin.BorderRadius = 34;
+            btnLogin.CustomizableEdges = customizableEdges7;
+            btnLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogin.FillColor = Color.Black;
+            btnLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(443, 362);
+            btnLogin.Name = "btnLogin";
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnLogin.Size = new Size(187, 70);
+            btnLogin.TabIndex = 25;
+            btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_click;
             // 
             // label6
             // 
@@ -256,31 +257,31 @@
             label5.TabIndex = 23;
             label5.Text = "Email ";
             // 
-            // richTextBox4
+            // txtPassword
             // 
-            richTextBox4.BorderStyle = BorderStyle.None;
-            richTextBox4.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextBox4.Location = new Point(108, 256);
-            richTextBox4.Margin = new Padding(2);
-            richTextBox4.Multiline = false;
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(594, 56);
-            richTextBox4.TabIndex = 22;
-            richTextBox4.Text = "";
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(108, 256);
+            txtPassword.Margin = new Padding(2);
+            txtPassword.Multiline = false;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(594, 56);
+            txtPassword.TabIndex = 22;
+            txtPassword.Text = "";
             // 
-            // richTextBox3
+            // txtEmail
             // 
-            richTextBox3.BorderStyle = BorderStyle.None;
-            richTextBox3.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextBox3.Location = new Point(108, 110);
-            richTextBox3.Margin = new Padding(2);
-            richTextBox3.Multiline = false;
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ShowSelectionMargin = true;
-            richTextBox3.Size = new Size(594, 60);
-            richTextBox3.TabIndex = 21;
-            richTextBox3.Text = "";
-            richTextBox3.TextChanged += richTextBox3_TextChanged;
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.Font = new Font("Segoe UI Light", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(108, 110);
+            txtEmail.Margin = new Padding(2);
+            txtEmail.Multiline = false;
+            txtEmail.Name = "txtEmail";
+            txtEmail.ShowSelectionMargin = true;
+            txtEmail.Size = new Size(594, 60);
+            txtEmail.TabIndex = 21;
+            txtEmail.Text = "";
+            txtEmail.TextChanged += richTextBox3_TextChanged;
             // 
             // Log_in
             // 
@@ -314,11 +315,11 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Label label6;
         private Label label5;
-        private RichTextBox richTextBox4;
-        private RichTextBox richTextBox3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private RichTextBox txtPassword;
+        private RichTextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSignUp;
         private Label label16;
         private Label label1;
     }
