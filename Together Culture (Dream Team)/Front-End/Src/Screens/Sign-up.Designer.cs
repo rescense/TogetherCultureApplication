@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_up));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             pictureBox2 = new PictureBox();
             label7 = new Label();
@@ -47,16 +47,16 @@
             label8 = new Label();
             label16 = new Label();
             BtnSignUp = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            btnLogin = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             lblFeedback3 = new Label();
             lblFeedback2 = new Label();
             lblFeedback = new Label();
-            label9 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
+            label_RetypePassword = new Label();
+            label_Password = new Label();
+            label_Email = new Label();
+            label_LastName = new Label();
+            label_FirstName = new Label();
             txtRpassword = new RichTextBox();
             txtPassword = new RichTextBox();
             txtEmail = new RichTextBox();
@@ -72,7 +72,7 @@
             // 
             guna2CustomGradientPanel1.Controls.Add(pictureBox2);
             guna2CustomGradientPanel1.Controls.Add(label7);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.FillColor = Color.DarkRed;
             guna2CustomGradientPanel1.FillColor2 = Color.LightCoral;
@@ -80,7 +80,7 @@
             guna2CustomGradientPanel1.FillColor4 = Color.Firebrick;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel1.Size = new Size(1423, 180);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
@@ -131,22 +131,22 @@
             guna2CustomGradientPanel2.Controls.Add(label8);
             guna2CustomGradientPanel2.Controls.Add(label16);
             guna2CustomGradientPanel2.Controls.Add(BtnSignUp);
-            guna2CustomGradientPanel2.Controls.Add(guna2Button9);
+            guna2CustomGradientPanel2.Controls.Add(btnLogin);
             guna2CustomGradientPanel2.Controls.Add(pictureBox1);
             guna2CustomGradientPanel2.Controls.Add(lblFeedback3);
             guna2CustomGradientPanel2.Controls.Add(lblFeedback2);
             guna2CustomGradientPanel2.Controls.Add(lblFeedback);
-            guna2CustomGradientPanel2.Controls.Add(label9);
-            guna2CustomGradientPanel2.Controls.Add(label6);
-            guna2CustomGradientPanel2.Controls.Add(label5);
-            guna2CustomGradientPanel2.Controls.Add(label4);
-            guna2CustomGradientPanel2.Controls.Add(label3);
+            guna2CustomGradientPanel2.Controls.Add(label_RetypePassword);
+            guna2CustomGradientPanel2.Controls.Add(label_Password);
+            guna2CustomGradientPanel2.Controls.Add(label_Email);
+            guna2CustomGradientPanel2.Controls.Add(label_LastName);
+            guna2CustomGradientPanel2.Controls.Add(label_FirstName);
             guna2CustomGradientPanel2.Controls.Add(txtRpassword);
             guna2CustomGradientPanel2.Controls.Add(txtPassword);
             guna2CustomGradientPanel2.Controls.Add(txtEmail);
             guna2CustomGradientPanel2.Controls.Add(txtLastname);
             guna2CustomGradientPanel2.Controls.Add(txtFirstname);
-            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges15;
+            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges7;
             guna2CustomGradientPanel2.FillColor = Color.LightCoral;
             guna2CustomGradientPanel2.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel2.FillColor3 = Color.LightCoral;
@@ -154,7 +154,7 @@
             guna2CustomGradientPanel2.Location = new Point(-6, 180);
             guna2CustomGradientPanel2.Margin = new Padding(2);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel2.Size = new Size(1429, 922);
             guna2CustomGradientPanel2.TabIndex = 11;
             // 
@@ -195,7 +195,7 @@
             BtnSignUp.AutoRoundedCorners = true;
             BtnSignUp.BackColor = Color.Transparent;
             BtnSignUp.BorderRadius = 28;
-            BtnSignUp.CustomizableEdges = customizableEdges11;
+            BtnSignUp.CustomizableEdges = customizableEdges3;
             BtnSignUp.DisabledState.BorderColor = Color.DarkGray;
             BtnSignUp.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnSignUp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -205,33 +205,33 @@
             BtnSignUp.ForeColor = Color.White;
             BtnSignUp.Location = new Point(66, 496);
             BtnSignUp.Name = "BtnSignUp";
-            BtnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BtnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges4;
             BtnSignUp.Size = new Size(185, 58);
             BtnSignUp.TabIndex = 28;
             BtnSignUp.Text = "Sign Up";
-            BtnSignUp.Click += guna2Button1_Click_1;
+            BtnSignUp.Click += btnSignUp_click;
             // 
-            // guna2Button9
+            // btnLogin
             // 
-            guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button9.AutoRoundedCorners = true;
-            guna2Button9.BackColor = Color.Transparent;
-            guna2Button9.BorderRadius = 34;
-            guna2Button9.CustomizableEdges = customizableEdges13;
-            guna2Button9.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button9.FillColor = Color.Black;
-            guna2Button9.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button9.ForeColor = Color.White;
-            guna2Button9.Location = new Point(582, 484);
-            guna2Button9.Name = "guna2Button9";
-            guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button9.Size = new Size(187, 70);
-            guna2Button9.TabIndex = 29;
-            guna2Button9.Text = "Login";
-            guna2Button9.Click += guna2Button9_Click;
+            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnLogin.AutoRoundedCorners = true;
+            btnLogin.BackColor = Color.Transparent;
+            btnLogin.BorderRadius = 34;
+            btnLogin.CustomizableEdges = customizableEdges5;
+            btnLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogin.FillColor = Color.Black;
+            btnLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(582, 484);
+            btnLogin.Name = "btnLogin";
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnLogin.Size = new Size(187, 70);
+            btnLogin.TabIndex = 29;
+            btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_click;
             // 
             // pictureBox1
             // 
@@ -272,75 +272,70 @@
             lblFeedback.TabIndex = 22;
             lblFeedback.Click += label9_Click;
             // 
-            // label9
+            // label_RetypePassword
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(97, 361);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(294, 45);
-            label9.TabIndex = 17;
-            label9.Text = "Re-Type Password";
-            label9.Click += label3_Click;
+            label_RetypePassword.AutoSize = true;
+            label_RetypePassword.BackColor = Color.Transparent;
+            label_RetypePassword.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_RetypePassword.ForeColor = Color.White;
+            label_RetypePassword.Location = new Point(97, 361);
+            label_RetypePassword.Margin = new Padding(2, 0, 2, 0);
+            label_RetypePassword.Name = "label_RetypePassword";
+            label_RetypePassword.Size = new Size(294, 45);
+            label_RetypePassword.TabIndex = 17;
+            label_RetypePassword.Text = "Re-Type Password";
             // 
-            // label6
+            // label_Password
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(97, 284);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(163, 45);
-            label6.TabIndex = 17;
-            label6.Text = "Password";
-            label6.Click += label3_Click;
+            label_Password.AutoSize = true;
+            label_Password.BackColor = Color.Transparent;
+            label_Password.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Password.ForeColor = Color.White;
+            label_Password.Location = new Point(97, 284);
+            label_Password.Margin = new Padding(2, 0, 2, 0);
+            label_Password.Name = "label_Password";
+            label_Password.Size = new Size(163, 45);
+            label_Password.TabIndex = 17;
+            label_Password.Text = "Password";
             // 
-            // label5
+            // label_Email
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(97, 208);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(231, 45);
-            label5.TabIndex = 17;
-            label5.Text = "Email Address";
-            label5.Click += label3_Click;
+            label_Email.AutoSize = true;
+            label_Email.BackColor = Color.Transparent;
+            label_Email.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Email.ForeColor = Color.White;
+            label_Email.Location = new Point(97, 208);
+            label_Email.Margin = new Padding(2, 0, 2, 0);
+            label_Email.Name = "label_Email";
+            label_Email.Size = new Size(231, 45);
+            label_Email.TabIndex = 17;
+            label_Email.Text = "Email Address";
             // 
-            // label4
+            // label_LastName
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(97, 130);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(176, 45);
-            label4.TabIndex = 17;
-            label4.Text = "Last Name";
-            label4.Click += label3_Click;
+            label_LastName.AutoSize = true;
+            label_LastName.BackColor = Color.Transparent;
+            label_LastName.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_LastName.ForeColor = Color.White;
+            label_LastName.Location = new Point(97, 130);
+            label_LastName.Margin = new Padding(2, 0, 2, 0);
+            label_LastName.Name = "label_LastName";
+            label_LastName.Size = new Size(176, 45);
+            label_LastName.TabIndex = 17;
+            label_LastName.Text = "Last Name";
             // 
-            // label3
+            // label_FirstName
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(97, 46);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(182, 45);
-            label3.TabIndex = 17;
-            label3.Text = "First Name";
-            label3.Click += label3_Click;
+            label_FirstName.AutoSize = true;
+            label_FirstName.BackColor = Color.Transparent;
+            label_FirstName.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_FirstName.ForeColor = Color.White;
+            label_FirstName.Location = new Point(97, 46);
+            label_FirstName.Margin = new Padding(2, 0, 2, 0);
+            label_FirstName.Name = "label_FirstName";
+            label_FirstName.Size = new Size(182, 45);
+            label_FirstName.TabIndex = 17;
+            label_FirstName.Text = "First Name";
             // 
             // txtRpassword
             // 
@@ -353,7 +348,7 @@
             txtRpassword.Size = new Size(374, 42);
             txtRpassword.TabIndex = 16;
             txtRpassword.Text = "";
-            txtRpassword.TextChanged += richTextBox5_TextChanged;
+            txtRpassword.TextChanged += txtRetypePassword_TextChanged;
             // 
             // txtPassword
             // 
@@ -366,7 +361,7 @@
             txtPassword.Size = new Size(469, 42);
             txtPassword.TabIndex = 15;
             txtPassword.Text = "";
-            txtPassword.TextChanged += richTextBox4_TextChanged;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtEmail
             // 
@@ -379,7 +374,7 @@
             txtEmail.Size = new Size(421, 42);
             txtEmail.TabIndex = 14;
             txtEmail.Text = "";
-            txtEmail.TextChanged += richTextBox3_TextChanged;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtLastname
             // 
@@ -392,7 +387,7 @@
             txtLastname.Size = new Size(246, 42);
             txtLastname.TabIndex = 13;
             txtLastname.Text = "";
-            txtLastname.TextChanged += richTextBox2_TextChanged;
+            txtLastname.TextChanged += TxtLastName_TextChanged;
             // 
             // txtFirstname
             // 
@@ -405,7 +400,7 @@
             txtFirstname.Size = new Size(246, 42);
             txtFirstname.TabIndex = 12;
             txtFirstname.Text = "";
-            txtFirstname.TextChanged += richTextBox1_TextChanged;
+            txtFirstname.TextChanged += txtFirstName_TextChanged;
             // 
             // Sign_up
             // 
@@ -422,7 +417,6 @@
             Name = "Sign_up";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign_up";
-            Load += Sign_up_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -448,18 +442,18 @@
         private RichTextBox txtEmail;
         private RichTextBox txtLastname;
         private RichTextBox txtFirstname;
-        private Label label3;
+        private Label label_FirstName;
         private Label lblFeedback;
         private Label lblFeedback2;
         private Label lblFeedback3;
-        private Label label9;
-        private Label label6;
-        private Label label5;
-        private Label label4;
+        private Label label_RetypePassword;
+        private Label label_Password;
+        private Label label_Email;
+        private Label label_LastName;
         private PictureBox pictureBox1;
         private Label label16;
         private Guna.UI2.WinForms.Guna2Button BtnSignUp;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Label label8;
         private Label label10;
 
