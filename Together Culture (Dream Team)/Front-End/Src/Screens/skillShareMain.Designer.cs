@@ -132,7 +132,6 @@
             // 
             // guna2Button7
             // 
-            guna2Button7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button7.CustomizableEdges = customizableEdges1;
             guna2Button7.DisabledState.BorderColor = Color.DarkGray;
             guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -151,7 +150,6 @@
             // 
             // guna2Button6
             // 
-            guna2Button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button6.CustomizableEdges = customizableEdges3;
             guna2Button6.DisabledState.BorderColor = Color.DarkGray;
             guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -170,7 +168,6 @@
             // 
             // guna2Button4
             // 
-            guna2Button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button4.CustomizableEdges = customizableEdges5;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -305,7 +302,6 @@
             // 
             // guna2CustomGradientPanel4
             // 
-            guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel4.Controls.Add(comboBox2);
             guna2CustomGradientPanel4.Controls.Add(guna2Button9);
             guna2CustomGradientPanel4.Controls.Add(richTextBox5);
@@ -339,7 +335,6 @@
             // 
             // guna2Button9
             // 
-            guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;
@@ -438,7 +433,6 @@
             // 
             // guna2Button8
             // 
-            guna2Button8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.FromArgb(64, 0, 30);
@@ -463,7 +457,6 @@
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Skills Requested", "Skills Offered" });
@@ -475,7 +468,6 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             richTextBox1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
             richTextBox1.ForeColor = SystemColors.ScrollBar;
             richTextBox1.Location = new Point(29, 28);
@@ -518,7 +510,6 @@
             // 
             // guna2CustomGradientPanel5
             // 
-            guna2CustomGradientPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel5.Controls.Add(guna2CustomGradientPanel7);
             guna2CustomGradientPanel5.Controls.Add(guna2CustomGradientPanel6);
             guna2CustomGradientPanel5.Controls.Add(label4);
@@ -533,7 +524,6 @@
             // 
             // guna2CustomGradientPanel7
             // 
-            guna2CustomGradientPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel7.Controls.Add(label6);
             guna2CustomGradientPanel7.CustomizableEdges = customizableEdges25;
             guna2CustomGradientPanel7.FillColor = Color.FromArgb(64, 0, 30);
@@ -562,7 +552,6 @@
             // 
             // guna2CustomGradientPanel6
             // 
-            guna2CustomGradientPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel6.Controls.Add(label5);
             guna2CustomGradientPanel6.CustomizableEdges = customizableEdges27;
             guna2CustomGradientPanel6.FillColor = Color.FromArgb(64, 0, 30);

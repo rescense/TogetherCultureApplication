@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace togther_Culture
+namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class eventsMain : Form
     {
+        public static int yearVar, monthVar;
         public eventsMain()
         {
             InitializeComponent();
@@ -19,37 +21,27 @@ namespace togther_Culture
 
         private void eventsMain_Load(object sender, EventArgs e)
         {
-            displayDays();
+            showDays(DateTime.Now.Month, DateTime.Now.Year);
         }
 
-        private void displayDays()
-        {
-            DateTime now = DateTime.Now;
-            // getting first day of the month and count of days
-            DateTime startOfTheMonth = new DateTime(now.Year, now.Month, 1);
-            int days = DateTime.DaysInMonth(now.Year, now.Month);
-            int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-
-            // blank user control
-        }
-        // ~~~~~  Header Panel  ~~~~~
-        private void headerPanel(object sender, PaintEventArgs e) { }
-
-        // together culture label on header panel
-        private void Together_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void Culture_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void Cambridge_Click_1(object sender, EventArgs e)
+        // Header Panel
+        private void headerPanel(object sender, PaintEventArgs e)
         {
 
         }
 
-        // Buttons on header Panel
+        // Together Culture Label
+        private void togetherCultureLabel(object sender, EventArgs e)
+        {
+
+        }
+        // Together Culture Logo
+        private void togetherCultureLogoPictureBox(object sender, EventArgs e)
+        {
+
+        }
+
+        // Header Panel buttons
         private void chatSpaceBtn(object sender, EventArgs e)
         {
 
@@ -80,78 +72,125 @@ namespace togther_Culture
 
         }
 
-        // ~~~~~  Events Panel  ~~~~~~
-        private void eventsPanel(object sender, PaintEventArgs e)
+        // Calendar Panel
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        // Calendar labels
+        private void calendarLabel(object sender, EventArgs e)
         {
 
         }
 
-        // ----------- Calendar -----------
-        // ----- label above calender -----
-        private void upcomingMonthsLabel(object sender, EventArgs e)
+        private void MonthLabel_Click(object sender, EventArgs e)
         {
 
         }
-        private void monthLabel(object sender, EventArgs e)
-        {
-
-        }
-        // days label
-        private void mondayLabel(object sender, EventArgs e)
+        // Days Label
+        private void MondayLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void tuesdayLabel(object sender, EventArgs e)
-        {
-
-        }
-        private void wednesdayLabel(object sender, EventArgs e)
+        private void TuesdayLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void thursdayLabel(object sender, EventArgs e)
+        private void WednesdayLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void fridayLabel(object sender, EventArgs e)
+        private void ThursdayLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void saturdayLabel(object sender, EventArgs e)
+        private void FridayLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void sundayLabel(object sender, EventArgs e)
+        private void SaturdayLabel(object sender, EventArgs e)
         {
 
         }
 
+        private void SundayLabel(object sender, EventArgs e)
+        {
 
-        // buttons for calender
+        }
+
+        // filling days in calendar
+        private void showDays(int month, int year)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            yearVar = year;
+            monthVar = month;
+
+            string monthName = new DateTimeFormatInfo().GetMonthName(month);
+            monthLabel.Text = monthName.ToUpper() + " " + year;
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            int day = DateTime.DaysInMonth(year, month);
+            int week = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+            for (int i = 1; i < week; i++)
+            {
+                ucDays uc = new ucDays("");
+                flowLayoutPanel1.Controls.Add(uc);
+            }
+            for (int i = 1; i < day; i++)
+            {
+                ucDays uc = new ucDays(i + "");
+                flowLayoutPanel1.Controls.Add(uc);
+            }
+
+        }
+
+        // buttons for calendar
         private void nextBtn(object sender, EventArgs e)
         {
-
+            monthVar += 1;
+            if (monthVar > 12)
+            {
+                monthVar = 1;
+                yearVar += 1;
+            }
+            showDays(monthVar, yearVar);
         }
 
         private void previousBtn(object sender, EventArgs e)
         {
-
+            monthVar -= 1;
+            if (monthVar < 1)
+            {
+                monthVar = 12;
+                yearVar -= 1;
+            }
+            showDays(monthVar, yearVar);
         }
 
-        private void panel44_Paint(object sender, PaintEventArgs e)
+        // Upcoming events label
+        private void upcomingEventsLabel(object sender, EventArgs e)
+        {
+
+        }
+        // events list
+        private void eventsListDataGridView(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        // calender panel
+        private void eventsListScrollBar(object sender, ScrollEventArgs e)
+        {
 
-        // details of event label
-        // details of event grid view and vertical scroll bar
+        }
 
+        // check events button
+        private void checkEventsBtn(object sender, EventArgs e)
+        {
+
+        }
     }
 }

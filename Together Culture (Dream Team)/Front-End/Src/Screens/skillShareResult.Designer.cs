@@ -72,10 +72,10 @@
             comboBox1 = new ComboBox();
             richTextBox1 = new RichTextBox();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label3 = new Label();
             label2 = new Label();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            label3 = new Label();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             guna2CustomGradientPanel2.SuspendLayout();
@@ -110,7 +110,6 @@
             // 
             // guna2Button7
             // 
-            guna2Button7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button7.CustomizableEdges = customizableEdges1;
             guna2Button7.DisabledState.BorderColor = Color.DarkGray;
             guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -165,7 +164,6 @@
             // 
             // guna2Button6
             // 
-            guna2Button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button6.CustomizableEdges = customizableEdges7;
             guna2Button6.DisabledState.BorderColor = Color.DarkGray;
             guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -201,7 +199,6 @@
             // 
             // guna2Button4
             // 
-            guna2Button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button4.CustomizableEdges = customizableEdges11;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -315,7 +312,6 @@
             // 
             // guna2Button8
             // 
-            guna2Button8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.FromArgb(64, 0, 30);
@@ -340,7 +336,6 @@
             // 
             // comboBox1
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Skills Requested", "Skills Offered" });
@@ -352,7 +347,6 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             richTextBox1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
             richTextBox1.ForeColor = SystemColors.ScrollBar;
             richTextBox1.Location = new Point(30, 22);
@@ -380,6 +374,19 @@
             guna2CustomGradientPanel4.Size = new Size(559, 534);
             guna2CustomGradientPanel4.TabIndex = 34;
             guna2CustomGradientPanel4.Paint += selectedResultPanel;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Firebrick;
+            label3.Location = new Point(321, 155);
+            label3.Name = "label3";
+            label3.Size = new Size(213, 299);
+            label3.TabIndex = 39;
+            label3.Text = "Member Name\r\n\r\nAssistance Offered/\r\nRequested\r\n\r\nAssistance Category\r\n\r\nTime Required\r\n\r\nDescription\r\n\r\n\r\nContact Preference";
+            label3.Click += detailsFetchedFromResultLabel;
             // 
             // label2
             // 
@@ -409,7 +416,6 @@
             // 
             // guna2Button9
             // 
-            guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;
@@ -431,19 +437,6 @@
             guna2Button9.TabIndex = 36;
             guna2Button9.Text = "Show Interest";
             guna2Button9.Click += showInterestBtn;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Firebrick;
-            label3.Location = new Point(321, 155);
-            label3.Name = "label3";
-            label3.Size = new Size(213, 299);
-            label3.TabIndex = 39;
-            label3.Text = "Member Name\r\n\r\nAssistance Offered/\r\nRequested\r\n\r\nAssistance Category\r\n\r\nTime Required\r\n\r\nDescription\r\n\r\n\r\nContact Preference";
-            label3.Click += detailsFetchedFromResultLabel;
             // 
             // skillShareResult
             // 
