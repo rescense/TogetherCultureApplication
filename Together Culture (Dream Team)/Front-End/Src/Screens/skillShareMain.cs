@@ -17,7 +17,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             InitializeComponent();
         }
         // ~~~~~  Header Panel  ~~~~~
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void headerPanel(object sender, PaintEventArgs e)
         {
 
         }

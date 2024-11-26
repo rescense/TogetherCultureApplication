@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace togther_Culture
+namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class skillShareResult : Form
     {
@@ -16,28 +16,36 @@ namespace togther_Culture
         {
             InitializeComponent();
         }
+
         private void skillShareResult_Load(object sender, EventArgs e)
         {
 
         }
-
         // ~~~~~  Header Panel  ~~~~~
-        private void headerPanel(object sender, PaintEventArgs e) { }
+        private void headerPanel(object sender, PaintEventArgs e)
+        {
 
+        }
         // together culture label on header panel
-        private void Together_Click(object sender, EventArgs e) { }
-        private void Culture_Click(object sender, EventArgs e) { }
-        private void Cambridge_Click(object sender, EventArgs e) { }
+        private void togetherCultureLabel(object sender, EventArgs e)
+        {
 
+        }
+        // together culture logo on header panel
+        private void logoOnHeaderPanel(object sender, EventArgs e)
+        {
+
+        }
         // Buttons on header Panel
-        private void chatSpaceBtn(object sender, EventArgs e)
+        private void chatSpace(object sender, EventArgs e)
         {
 
         }
-        private void forYouBtn(object sender, EventArgs e)
+        private void forYou(object sender, EventArgs e)
         {
 
         }
+
         private void eventsBtn(object sender, EventArgs e)
         {
 
@@ -47,7 +55,6 @@ namespace togther_Culture
         {
 
         }
-
         private void myModulesBtn(object sender, EventArgs e)
         {
 
@@ -58,7 +65,56 @@ namespace togther_Culture
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        // Search Panel
+        private void searchPanel(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void searchTextBox(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterComboBox(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBtn(object sender, EventArgs e)
+        {
+
+        }
+        // Results Panel
+        private void resultDataGrideViewCell(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void resultDataScrollBar(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        // selected result panel
+        private void selectedResultPanel(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void profilePictureBox(object sender, EventArgs e)
+        {
+
+        }
+
+        private void detailsLabel(object sender, EventArgs e)
+        {
+
+        }
+        private void detailsFetchedFromResultLabel(object sender, EventArgs e)
+        {
+
+        }
+        private void showInterestBtn(object sender, EventArgs e)
         {
 
         }
