@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -34,7 +35,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         // Buttons on header Panel
         private void chatSpaceBtn(object sender, EventArgs e)
         {
-
+            
         }
 
         private void forYouBtn(object sender, EventArgs e)
@@ -44,12 +45,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void eventsBtn(object sender, EventArgs e)
         {
-
+            eventsMain emSsm = new eventsMain();
+            emSsm.Show();
         }
 
         private void skillShareBtn(object sender, EventArgs e)
         {
-
+            skillShare skSsm = new skillShare();
+            skSsm.Show();
         }
 
         private void myModulesBtn(object sender, EventArgs e)
@@ -59,7 +62,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void profileBtn(object sender, EventArgs e)
         {
-
+            AccountSettingsPage aspSsm = new AccountSettingsPage();
+            aspSsm.Show();
         }
 
         // Search Panel
@@ -80,7 +84,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void searchBtn(object sender, EventArgs e)
         {
-
+            skillShareResult sskSsm = new skillShareResult();
+            sskSsm.Show();
         }
 
         // post a service panel

@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
+using togther_Culture;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -54,12 +57,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void eventsBtn(object sender, EventArgs e)
         {
-
+            eventsMain emEm = new eventsMain();
+            emEm.Show();
         }
 
         private void skillShareBtn(object sender, EventArgs e)
         {
-
+            skillShare skEm = new skillShare();
+            skEm.Show();
         }
 
         private void myModulesBtn(object sender, EventArgs e)
@@ -69,7 +74,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void profileBtn(object sender, EventArgs e)
         {
-
+            AccountSettingsPage aspEm = new AccountSettingsPage();
+            aspEm.Show();
         }
 
         // Calendar Panel
@@ -190,7 +196,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         // check events button
         private void checkEventsBtn(object sender, EventArgs e)
         {
-
+            eventsBooking eb = new eventsBooking();
+            eb.Show();
         }
     }
 }

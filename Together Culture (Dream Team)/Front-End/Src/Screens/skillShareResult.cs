@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -48,12 +49,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void eventsBtn(object sender, EventArgs e)
         {
-
+            eventsMain emSsr = new eventsMain();
+            emSsr.Show();
         }
 
         private void skillShareBtn(object sender, EventArgs e)
         {
-
+            skillShare skSsr = new skillShare();
+            skSsr.Show();
         }
         private void myModulesBtn(object sender, EventArgs e)
         {
@@ -62,7 +65,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void profileBtn(object sender, EventArgs e)
         {
-
+            AccountSettingsPage aspSsr = new AccountSettingsPage();
+            aspSsr.Show();
         }
 
         // Search Panel
@@ -82,7 +86,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void searchBtn(object sender, EventArgs e)
         {
-
+            skillShareResult ssk2 = new skillShareResult();
         }
         // Results Panel
         private void resultDataGrideViewCell(object sender, DataGridViewCellEventArgs e)
