@@ -1,5 +1,6 @@
 ﻿
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
@@ -12,6 +13,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Log_in()
         {
             InitializeComponent();
+
+            // Attach KeyPress event
+            txtPassword.KeyPress += txtPassword_KeyPress;
         }
 
         private void btnLogin_click(object sender, EventArgs e)
@@ -89,5 +93,18 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
+        //masking the characters for the password
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the input is a valid character (e.g., alphabet, number, etc.)
+            if (!char.IsControl(e.KeyChar))
+            {
+                // Prevent showing the actual character
+                e.Handled = true;
+
+                // Insert the password masking character (e.g., '*')
+                txtPassword.SelectedText = "*";
+            }
+        }
     }
 }

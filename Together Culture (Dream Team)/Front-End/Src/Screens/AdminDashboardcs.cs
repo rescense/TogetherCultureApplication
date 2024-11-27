@@ -109,49 +109,49 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void eventsLbl_MouseHover(object sender, EventArgs e)
         {
             // Change text color to black on hover
-            timeBankLbl.ForeColor = Color.Black;
+            eventsLbl.ForeColor = Color.Black;
         }
 
         private void eventsLbl_MouseLeave(object sender, EventArgs e)
         {
             // Change text color to white when mouse leaves
-            timeBankLbl.ForeColor = Color.White;
+            eventsLbl.ForeColor = Color.White;
         }
 
         private void forYouLbl_MouseHover(object sender, EventArgs e)
         {
             // Change text color to black on hover
-            timeBankLbl.ForeColor = Color.Black;
+            forYouLbl.ForeColor = Color.Black;
         }
 
         private void forYouLbl_MouseLeave(object sender, EventArgs e)
         {
             // Change text color to white when mouse leaves
-            timeBankLbl.ForeColor = Color.White;
+            forYouLbl.ForeColor = Color.White;
         }
 
         private void chatSpaceLbl_MouseHover(object sender, EventArgs e)
         {
             // Change text color to black on hover
-            timeBankLbl.ForeColor = Color.Black;
+            chatSpaceLbl.ForeColor = Color.Black;
         }
 
         private void chatSpaceLbl_MouseLeave(object sender, EventArgs e)
         {
             // Change text color to white when mouse leaves
-            timeBankLbl.ForeColor = Color.White;
+            chatSpaceLbl.ForeColor = Color.White;
         }
 
         private void togetherCultureLbl_MouseHover(object sender, EventArgs e)
         {
             // Change text color to black on hover
-            timeBankLbl.ForeColor = Color.Black;
+            togetherCultureLbl.ForeColor = Color.Black;
         }
 
         private void togetherCultureLbl_MouseLeave(object sender, EventArgs e)
         {
             // Change text color to white when mouse leaves
-            timeBankLbl.ForeColor = Color.White;
+            togetherCultureLbl.ForeColor = Color.White;
         }
 
         private void eventsLbl_MouseClick(object sender, MouseEventArgs e)
@@ -168,10 +168,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void togetherCultureLbl_MouseClick(object sender, MouseEventArgs e)
         {
             // Create an instance of the eventsMainForm form
-            eventsMain eventsMainForm = new eventsMain();
+            landingPage landingPageForm = new landingPage();
 
             // Show the eventsMainForm form
-            eventsMainForm.Show();
+            landingPageForm.Show();
 
             this.Close(); //  close the form
         }
@@ -183,6 +183,29 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             // Show the skillShareMain form
             skillShareForm.Show();
+
+            this.Close(); //  close the form
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            UserControlSearchPendingApprovals userControlSearchPendingApprovals = new UserControlSearchPendingApprovals();
+            addUserControl(userControlSearchPendingApprovals);
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            UserControlSearchEventsAdmin userControlSearchEventsAdmin = new UserControlSearchEventsAdmin();
+            addUserControl(userControlSearchEventsAdmin);
+        }
+
+        private void adminPic_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the AdminDashboardcs form
+            AdminDashboardcs adminDashboardcsForm = new AdminDashboardcs();
+
+            // Show the eventsMainForm form
+            adminDashboardcsForm.Show();
 
             this.Close(); //  close the form
         }

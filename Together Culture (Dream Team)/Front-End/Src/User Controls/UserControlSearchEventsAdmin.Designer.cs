@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    partial class UserControlSearchUsers
+    partial class UserControlSearchEventsAdmin
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,18 +32,21 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlSearchUsers));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlSearchEventsAdmin));
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            searchUsersTxtBx = new TextBox();
-            pictureBox1 = new PictureBox();
+            searchEventsTxtBx = new TextBox();
             panel1 = new Panel();
+            filterBtn = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             selectAllCheckBox = new CheckBox();
             panel2 = new Panel();
+            pictureBox37 = new PictureBox();
+            pictureBox38 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
@@ -51,6 +54,8 @@
             pictureBox8 = new PictureBox();
             checkBox2 = new CheckBox();
             panel7 = new Panel();
+            pictureBox35 = new PictureBox();
+            pictureBox36 = new PictureBox();
             pictureBox25 = new PictureBox();
             pictureBox26 = new PictureBox();
             pictureBox27 = new PictureBox();
@@ -58,6 +63,8 @@
             pictureBox28 = new PictureBox();
             checkBox7 = new CheckBox();
             panel6 = new Panel();
+            pictureBox33 = new PictureBox();
+            pictureBox34 = new PictureBox();
             pictureBox21 = new PictureBox();
             pictureBox22 = new PictureBox();
             pictureBox23 = new PictureBox();
@@ -65,6 +72,8 @@
             pictureBox24 = new PictureBox();
             checkBox6 = new CheckBox();
             panel5 = new Panel();
+            pictureBox31 = new PictureBox();
+            pictureBox32 = new PictureBox();
             pictureBox17 = new PictureBox();
             pictureBox18 = new PictureBox();
             pictureBox19 = new PictureBox();
@@ -72,6 +81,8 @@
             pictureBox20 = new PictureBox();
             checkBox5 = new CheckBox();
             panel4 = new Panel();
+            pictureBox29 = new PictureBox();
+            pictureBox30 = new PictureBox();
             pictureBox13 = new PictureBox();
             pictureBox14 = new PictureBox();
             pictureBox15 = new PictureBox();
@@ -79,6 +90,8 @@
             pictureBox16 = new PictureBox();
             checkBox4 = new CheckBox();
             panel3 = new Panel();
+            pictureBox1 = new PictureBox();
+            pictureBox4 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
             pictureBox11 = new PictureBox();
@@ -86,54 +99,63 @@
             pictureBox12 = new PictureBox();
             checkBox3 = new CheckBox();
             userApprovalListing = new Panel();
-            pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             userDetailsLbl = new Label();
-            userPicBox = new PictureBox();
+            eventPicBox = new PictureBox();
             checkBox1 = new CheckBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            filterBtn = new Button();
             actionsBtn = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox39 = new PictureBox();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
             panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             userApprovalListing.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)eventPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel4
@@ -150,14 +172,13 @@
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel4.Size = new Size(1447, 681);
-            guna2CustomGradientPanel4.TabIndex = 24;
-            guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint;
+            guna2CustomGradientPanel4.TabIndex = 25;
             // 
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            guna2CustomGradientPanel1.Controls.Add(searchUsersTxtBx);
-            guna2CustomGradientPanel1.Controls.Add(pictureBox1);
+            guna2CustomGradientPanel1.Controls.Add(pictureBox39);
+            guna2CustomGradientPanel1.Controls.Add(searchEventsTxtBx);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel1.FillColor = Color.IndianRed;
             guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
@@ -169,36 +190,26 @@
             guna2CustomGradientPanel1.Size = new Size(1357, 82);
             guna2CustomGradientPanel1.TabIndex = 5;
             // 
-            // searchUsersTxtBx
+            // searchEventsTxtBx
             // 
-            searchUsersTxtBx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            searchUsersTxtBx.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchUsersTxtBx.ForeColor = Color.Gray;
-            searchUsersTxtBx.Location = new Point(16, 24);
-            searchUsersTxtBx.Name = "searchUsersTxtBx";
-            searchUsersTxtBx.Size = new Size(1253, 35);
-            searchUsersTxtBx.TabIndex = 6;
-            searchUsersTxtBx.Text = "Search users...";
-            searchUsersTxtBx.MouseClick += searchUsersTxtBx_MouseClic;
-            searchUsersTxtBx.Leave += searchUsersTxtBx_Leave;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1293, 24);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 35);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            searchEventsTxtBx.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            searchEventsTxtBx.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            searchEventsTxtBx.ForeColor = Color.Gray;
+            searchEventsTxtBx.Location = new Point(16, 24);
+            searchEventsTxtBx.Name = "searchEventsTxtBx";
+            searchEventsTxtBx.Size = new Size(1253, 35);
+            searchEventsTxtBx.TabIndex = 6;
+            searchEventsTxtBx.Text = "Search events...";
+            searchEventsTxtBx.MouseClick += searchEventsTxtBx_MouseClic;
+            searchEventsTxtBx.Leave += searchEventsTxtBxx_Leave;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoScroll = true;
             panel1.BackColor = Color.FromArgb(248, 237, 235);
+            panel1.Controls.Add(filterBtn);
+            panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(selectAllCheckBox);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panel7);
@@ -207,13 +218,48 @@
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(userApprovalListing);
-            panel1.Controls.Add(guna2Button1);
-            panel1.Controls.Add(filterBtn);
             panel1.Controls.Add(actionsBtn);
             panel1.Location = new Point(46, 131);
             panel1.Name = "panel1";
             panel1.Size = new Size(1357, 520);
             panel1.TabIndex = 4;
+            panel1.Paint += panel1_Paint;
+            // 
+            // filterBtn
+            // 
+            filterBtn.AllowDrop = true;
+            filterBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            filterBtn.BackColor = Color.FromArgb(248, 237, 235);
+            filterBtn.FlatAppearance.BorderSize = 0;
+            filterBtn.FlatStyle = FlatStyle.Flat;
+            filterBtn.ForeColor = Color.Transparent;
+            filterBtn.Image = (Image)resources.GetObject("filterBtn.Image");
+            filterBtn.Location = new Point(1233, 20);
+            filterBtn.Name = "filterBtn";
+            filterBtn.Size = new Size(52, 47);
+            filterBtn.TabIndex = 44;
+            filterBtn.UseVisualStyleBackColor = false;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button1.AutoRoundedCorners = true;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 19;
+            guna2Button1.CustomizableEdges = customizableEdges3;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Black;
+            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(1125, 27);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button1.Size = new Size(92, 40);
+            guna2Button1.TabIndex = 43;
+            guna2Button1.Text = "Actions";
             // 
             // selectAllCheckBox
             // 
@@ -232,6 +278,8 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.FromArgb(248, 237, 235);
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(pictureBox37);
+            panel2.Controls.Add(pictureBox38);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox7);
@@ -243,12 +291,36 @@
             panel2.Size = new Size(1290, 64);
             panel2.TabIndex = 38;
             // 
+            // pictureBox37
+            // 
+            pictureBox37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox37.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox37.Image = Properties.Resources.uil__chart;
+            pictureBox37.Location = new Point(1176, 9);
+            pictureBox37.Name = "pictureBox37";
+            pictureBox37.Size = new Size(48, 48);
+            pictureBox37.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox37.TabIndex = 44;
+            pictureBox37.TabStop = false;
+            // 
+            // pictureBox38
+            // 
+            pictureBox38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox38.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox38.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox38.Location = new Point(1230, 9);
+            pictureBox38.Name = "pictureBox38";
+            pictureBox38.Size = new Size(48, 48);
+            pictureBox38.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox38.TabIndex = 45;
+            pictureBox38.TabStop = false;
+            // 
             // pictureBox5
             // 
             pictureBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox5.BorderStyle = BorderStyle.FixedSingle;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(1122, 9);
+            pictureBox5.Location = new Point(2210, 9);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(48, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -260,7 +332,7 @@
             pictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox6.BorderStyle = BorderStyle.FixedSingle;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1176, 9);
+            pictureBox6.Location = new Point(2264, 9);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(48, 48);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -272,7 +344,7 @@
             pictureBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox7.BorderStyle = BorderStyle.FixedSingle;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1230, 9);
+            pictureBox7.Location = new Point(2318, 9);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 48);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -287,9 +359,9 @@
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(123, 20);
             label1.Name = "label1";
-            label1.Size = new Size(262, 23);
+            label1.Size = new Size(154, 23);
             label1.TabIndex = 37;
-            label1.Text = "Name Surname, details of the user";
+            label1.Text = "Details of the event";
             // 
             // pictureBox8
             // 
@@ -316,6 +388,8 @@
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel7.BackColor = Color.FromArgb(248, 237, 235);
             panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(pictureBox35);
+            panel7.Controls.Add(pictureBox36);
             panel7.Controls.Add(pictureBox25);
             panel7.Controls.Add(pictureBox26);
             panel7.Controls.Add(pictureBox27);
@@ -327,12 +401,36 @@
             panel7.Size = new Size(1290, 64);
             panel7.TabIndex = 38;
             // 
+            // pictureBox35
+            // 
+            pictureBox35.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox35.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox35.Image = Properties.Resources.uil__chart;
+            pictureBox35.Location = new Point(1176, 9);
+            pictureBox35.Name = "pictureBox35";
+            pictureBox35.Size = new Size(48, 48);
+            pictureBox35.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox35.TabIndex = 44;
+            pictureBox35.TabStop = false;
+            // 
+            // pictureBox36
+            // 
+            pictureBox36.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox36.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox36.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox36.Location = new Point(1230, 9);
+            pictureBox36.Name = "pictureBox36";
+            pictureBox36.Size = new Size(48, 48);
+            pictureBox36.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox36.TabIndex = 45;
+            pictureBox36.TabStop = false;
+            // 
             // pictureBox25
             // 
             pictureBox25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox25.BorderStyle = BorderStyle.FixedSingle;
             pictureBox25.Image = (Image)resources.GetObject("pictureBox25.Image");
-            pictureBox25.Location = new Point(1122, 9);
+            pictureBox25.Location = new Point(2210, 9);
             pictureBox25.Name = "pictureBox25";
             pictureBox25.Size = new Size(48, 48);
             pictureBox25.SizeMode = PictureBoxSizeMode.Zoom;
@@ -344,7 +442,7 @@
             pictureBox26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox26.BorderStyle = BorderStyle.FixedSingle;
             pictureBox26.Image = (Image)resources.GetObject("pictureBox26.Image");
-            pictureBox26.Location = new Point(1176, 9);
+            pictureBox26.Location = new Point(2264, 9);
             pictureBox26.Name = "pictureBox26";
             pictureBox26.Size = new Size(48, 48);
             pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
@@ -356,7 +454,7 @@
             pictureBox27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox27.BorderStyle = BorderStyle.FixedSingle;
             pictureBox27.Image = (Image)resources.GetObject("pictureBox27.Image");
-            pictureBox27.Location = new Point(1230, 9);
+            pictureBox27.Location = new Point(2318, 9);
             pictureBox27.Name = "pictureBox27";
             pictureBox27.Size = new Size(48, 48);
             pictureBox27.SizeMode = PictureBoxSizeMode.Zoom;
@@ -371,9 +469,9 @@
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(123, 20);
             label6.Name = "label6";
-            label6.Size = new Size(262, 23);
+            label6.Size = new Size(154, 23);
             label6.TabIndex = 37;
-            label6.Text = "Name Surname, details of the user";
+            label6.Text = "Details of the event";
             // 
             // pictureBox28
             // 
@@ -400,6 +498,8 @@
             panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel6.BackColor = Color.FromArgb(248, 237, 235);
             panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Controls.Add(pictureBox33);
+            panel6.Controls.Add(pictureBox34);
             panel6.Controls.Add(pictureBox21);
             panel6.Controls.Add(pictureBox22);
             panel6.Controls.Add(pictureBox23);
@@ -411,12 +511,36 @@
             panel6.Size = new Size(1290, 64);
             panel6.TabIndex = 38;
             // 
+            // pictureBox33
+            // 
+            pictureBox33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox33.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox33.Image = Properties.Resources.uil__chart;
+            pictureBox33.Location = new Point(1176, 9);
+            pictureBox33.Name = "pictureBox33";
+            pictureBox33.Size = new Size(48, 48);
+            pictureBox33.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox33.TabIndex = 44;
+            pictureBox33.TabStop = false;
+            // 
+            // pictureBox34
+            // 
+            pictureBox34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox34.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox34.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox34.Location = new Point(1230, 9);
+            pictureBox34.Name = "pictureBox34";
+            pictureBox34.Size = new Size(48, 48);
+            pictureBox34.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox34.TabIndex = 45;
+            pictureBox34.TabStop = false;
+            // 
             // pictureBox21
             // 
             pictureBox21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox21.BorderStyle = BorderStyle.FixedSingle;
             pictureBox21.Image = (Image)resources.GetObject("pictureBox21.Image");
-            pictureBox21.Location = new Point(1122, 9);
+            pictureBox21.Location = new Point(2210, 9);
             pictureBox21.Name = "pictureBox21";
             pictureBox21.Size = new Size(48, 48);
             pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
@@ -428,7 +552,7 @@
             pictureBox22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox22.BorderStyle = BorderStyle.FixedSingle;
             pictureBox22.Image = (Image)resources.GetObject("pictureBox22.Image");
-            pictureBox22.Location = new Point(1176, 9);
+            pictureBox22.Location = new Point(2264, 9);
             pictureBox22.Name = "pictureBox22";
             pictureBox22.Size = new Size(48, 48);
             pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
@@ -440,7 +564,7 @@
             pictureBox23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox23.BorderStyle = BorderStyle.FixedSingle;
             pictureBox23.Image = (Image)resources.GetObject("pictureBox23.Image");
-            pictureBox23.Location = new Point(1230, 9);
+            pictureBox23.Location = new Point(2318, 9);
             pictureBox23.Name = "pictureBox23";
             pictureBox23.Size = new Size(48, 48);
             pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
@@ -455,9 +579,9 @@
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(123, 20);
             label5.Name = "label5";
-            label5.Size = new Size(262, 23);
+            label5.Size = new Size(154, 23);
             label5.TabIndex = 37;
-            label5.Text = "Name Surname, details of the user";
+            label5.Text = "Details of the event";
             // 
             // pictureBox24
             // 
@@ -484,6 +608,8 @@
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.BackColor = Color.FromArgb(248, 237, 235);
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(pictureBox31);
+            panel5.Controls.Add(pictureBox32);
             panel5.Controls.Add(pictureBox17);
             panel5.Controls.Add(pictureBox18);
             panel5.Controls.Add(pictureBox19);
@@ -495,12 +621,36 @@
             panel5.Size = new Size(1290, 64);
             panel5.TabIndex = 38;
             // 
+            // pictureBox31
+            // 
+            pictureBox31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox31.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox31.Image = Properties.Resources.uil__chart;
+            pictureBox31.Location = new Point(1176, 9);
+            pictureBox31.Name = "pictureBox31";
+            pictureBox31.Size = new Size(48, 48);
+            pictureBox31.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox31.TabIndex = 44;
+            pictureBox31.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            pictureBox32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox32.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox32.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox32.Location = new Point(1230, 9);
+            pictureBox32.Name = "pictureBox32";
+            pictureBox32.Size = new Size(48, 48);
+            pictureBox32.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox32.TabIndex = 45;
+            pictureBox32.TabStop = false;
+            // 
             // pictureBox17
             // 
             pictureBox17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox17.BorderStyle = BorderStyle.FixedSingle;
             pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(1122, 9);
+            pictureBox17.Location = new Point(2210, 9);
             pictureBox17.Name = "pictureBox17";
             pictureBox17.Size = new Size(48, 48);
             pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
@@ -512,7 +662,7 @@
             pictureBox18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox18.BorderStyle = BorderStyle.FixedSingle;
             pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
-            pictureBox18.Location = new Point(1176, 9);
+            pictureBox18.Location = new Point(2264, 9);
             pictureBox18.Name = "pictureBox18";
             pictureBox18.Size = new Size(48, 48);
             pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
@@ -524,7 +674,7 @@
             pictureBox19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox19.BorderStyle = BorderStyle.FixedSingle;
             pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(1230, 9);
+            pictureBox19.Location = new Point(2318, 9);
             pictureBox19.Name = "pictureBox19";
             pictureBox19.Size = new Size(48, 48);
             pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
@@ -539,9 +689,9 @@
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(123, 20);
             label4.Name = "label4";
-            label4.Size = new Size(262, 23);
+            label4.Size = new Size(154, 23);
             label4.TabIndex = 37;
-            label4.Text = "Name Surname, details of the user";
+            label4.Text = "Details of the event";
             // 
             // pictureBox20
             // 
@@ -568,6 +718,8 @@
             panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.BackColor = Color.FromArgb(248, 237, 235);
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(pictureBox29);
+            panel4.Controls.Add(pictureBox30);
             panel4.Controls.Add(pictureBox13);
             panel4.Controls.Add(pictureBox14);
             panel4.Controls.Add(pictureBox15);
@@ -579,12 +731,36 @@
             panel4.Size = new Size(1290, 64);
             panel4.TabIndex = 38;
             // 
+            // pictureBox29
+            // 
+            pictureBox29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox29.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox29.Image = Properties.Resources.uil__chart;
+            pictureBox29.Location = new Point(1176, 9);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(48, 48);
+            pictureBox29.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox29.TabIndex = 44;
+            pictureBox29.TabStop = false;
+            // 
+            // pictureBox30
+            // 
+            pictureBox30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox30.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox30.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox30.Location = new Point(1230, 9);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(48, 48);
+            pictureBox30.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox30.TabIndex = 45;
+            pictureBox30.TabStop = false;
+            // 
             // pictureBox13
             // 
             pictureBox13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox13.BorderStyle = BorderStyle.FixedSingle;
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(1122, 9);
+            pictureBox13.Location = new Point(2210, 9);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(48, 48);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
@@ -596,7 +772,7 @@
             pictureBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox14.BorderStyle = BorderStyle.FixedSingle;
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(1176, 9);
+            pictureBox14.Location = new Point(2264, 9);
             pictureBox14.Name = "pictureBox14";
             pictureBox14.Size = new Size(48, 48);
             pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
@@ -608,7 +784,7 @@
             pictureBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox15.BorderStyle = BorderStyle.FixedSingle;
             pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(1230, 9);
+            pictureBox15.Location = new Point(2318, 9);
             pictureBox15.Name = "pictureBox15";
             pictureBox15.Size = new Size(48, 48);
             pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
@@ -623,9 +799,9 @@
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(123, 20);
             label3.Name = "label3";
-            label3.Size = new Size(262, 23);
+            label3.Size = new Size(154, 23);
             label3.TabIndex = 37;
-            label3.Text = "Name Surname, details of the user";
+            label3.Text = "Details of the event";
             // 
             // pictureBox16
             // 
@@ -652,6 +828,8 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.FromArgb(248, 237, 235);
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(pictureBox1);
+            panel3.Controls.Add(pictureBox4);
             panel3.Controls.Add(pictureBox9);
             panel3.Controls.Add(pictureBox10);
             panel3.Controls.Add(pictureBox11);
@@ -663,12 +841,36 @@
             panel3.Size = new Size(1290, 64);
             panel3.TabIndex = 38;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources.uil__chart;
+            pictureBox1.Location = new Point(1176, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(48, 48);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 44;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox4.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox4.Image = Properties.Resources.ph__user_list_fill__1_;
+            pictureBox4.Location = new Point(1230, 9);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(48, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 45;
+            pictureBox4.TabStop = false;
+            // 
             // pictureBox9
             // 
             pictureBox9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox9.BorderStyle = BorderStyle.FixedSingle;
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(1122, 9);
+            pictureBox9.Location = new Point(2210, 9);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(48, 48);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
@@ -680,7 +882,7 @@
             pictureBox10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox10.BorderStyle = BorderStyle.FixedSingle;
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(1176, 9);
+            pictureBox10.Location = new Point(2264, 9);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(48, 48);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
@@ -692,7 +894,7 @@
             pictureBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox11.BorderStyle = BorderStyle.FixedSingle;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(1230, 9);
+            pictureBox11.Location = new Point(2318, 9);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(48, 48);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
@@ -707,9 +909,9 @@
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(123, 20);
             label2.Name = "label2";
-            label2.Size = new Size(262, 23);
+            label2.Size = new Size(154, 23);
             label2.TabIndex = 37;
-            label2.Text = "Name Surname, details of the user";
+            label2.Text = "Details of the event";
             // 
             // pictureBox12
             // 
@@ -736,51 +938,38 @@
             userApprovalListing.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             userApprovalListing.BackColor = Color.FromArgb(248, 237, 235);
             userApprovalListing.BorderStyle = BorderStyle.FixedSingle;
-            userApprovalListing.Controls.Add(pictureBox4);
             userApprovalListing.Controls.Add(pictureBox3);
             userApprovalListing.Controls.Add(pictureBox2);
             userApprovalListing.Controls.Add(userDetailsLbl);
-            userApprovalListing.Controls.Add(userPicBox);
+            userApprovalListing.Controls.Add(eventPicBox);
             userApprovalListing.Controls.Add(checkBox1);
             userApprovalListing.Location = new Point(36, 73);
             userApprovalListing.Name = "userApprovalListing";
             userApprovalListing.Size = new Size(1290, 64);
             userApprovalListing.TabIndex = 38;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox4.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1122, 9);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 48);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 41;
-            pictureBox4.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Image = Properties.Resources.uil__chart;
             pictureBox3.Location = new Point(1176, 9);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(48, 48);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 41;
+            pictureBox3.TabIndex = 42;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Image = Properties.Resources.ph__user_list_fill__1_;
             pictureBox2.Location = new Point(1230, 9);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(48, 48);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 41;
+            pictureBox2.TabIndex = 43;
             pictureBox2.TabStop = false;
             // 
             // userDetailsLbl
@@ -791,19 +980,19 @@
             userDetailsLbl.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             userDetailsLbl.Location = new Point(123, 20);
             userDetailsLbl.Name = "userDetailsLbl";
-            userDetailsLbl.Size = new Size(262, 23);
+            userDetailsLbl.Size = new Size(154, 23);
             userDetailsLbl.TabIndex = 37;
-            userDetailsLbl.Text = "Name Surname, details of the user";
+            userDetailsLbl.Text = "Details of the event";
             // 
-            // userPicBox
+            // eventPicBox
             // 
-            userPicBox.Image = (Image)resources.GetObject("userPicBox.Image");
-            userPicBox.Location = new Point(51, 9);
-            userPicBox.Name = "userPicBox";
-            userPicBox.Size = new Size(52, 45);
-            userPicBox.SizeMode = PictureBoxSizeMode.Zoom;
-            userPicBox.TabIndex = 40;
-            userPicBox.TabStop = false;
+            eventPicBox.Image = (Image)resources.GetObject("eventPicBox.Image");
+            eventPicBox.Location = new Point(51, 9);
+            eventPicBox.Name = "eventPicBox";
+            eventPicBox.Size = new Size(52, 45);
+            eventPicBox.SizeMode = PictureBoxSizeMode.Zoom;
+            eventPicBox.TabIndex = 40;
+            eventPicBox.TabStop = false;
             // 
             // checkBox1
             // 
@@ -814,42 +1003,6 @@
             checkBox1.TabIndex = 0;
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += otherCheckBox_CheckedChanged;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button1.AutoRoundedCorners = true;
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 19;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Black;
-            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1125, 27);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(92, 40);
-            guna2Button1.TabIndex = 37;
-            guna2Button1.Text = "Actions";
-            // 
-            // filterBtn
-            // 
-            filterBtn.AllowDrop = true;
-            filterBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            filterBtn.BackColor = Color.FromArgb(248, 237, 235);
-            filterBtn.FlatAppearance.BorderSize = 0;
-            filterBtn.FlatStyle = FlatStyle.Flat;
-            filterBtn.ForeColor = Color.Transparent;
-            filterBtn.Image = (Image)resources.GetObject("filterBtn.Image");
-            filterBtn.Location = new Point(1233, 20);
-            filterBtn.Name = "filterBtn";
-            filterBtn.Size = new Size(52, 47);
-            filterBtn.TabIndex = 36;
-            filterBtn.UseVisualStyleBackColor = false;
             // 
             // actionsBtn
             // 
@@ -865,88 +1018,101 @@
             actionsBtn.FillColor = Color.Black;
             actionsBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             actionsBtn.ForeColor = Color.White;
-            actionsBtn.Location = new Point(2036, 9);
+            actionsBtn.Location = new Point(3176, 9);
             actionsBtn.Name = "actionsBtn";
             actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             actionsBtn.Size = new Size(82, 25);
             actionsBtn.TabIndex = 35;
             actionsBtn.Text = "Actions";
             // 
-            // UserControlSearchUsers
+            // pictureBox39
+            // 
+            pictureBox39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox39.BackColor = Color.Transparent;
+            pictureBox39.Image = (Image)resources.GetObject("pictureBox39.Image");
+            pictureBox39.Location = new Point(1293, 24);
+            pictureBox39.Name = "pictureBox39";
+            pictureBox39.Size = new Size(47, 35);
+            pictureBox39.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox39.TabIndex = 7;
+            pictureBox39.TabStop = false;
+            // 
+            // UserControlSearchEventsAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2CustomGradientPanel4);
-            Name = "UserControlSearchUsers";
+            Name = "UserControlSearchEventsAdmin";
             Size = new Size(1447, 681);
             guna2CustomGradientPanel4.ResumeLayout(false);
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox31).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox30).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             userApprovalListing.ResumeLayout(false);
             userApprovalListing.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)eventPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private Panel panel1;
-        private Panel userApprovalListing;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private Label userDetailsLbl;
-        private PictureBox userPicBox;
-        private CheckBox checkBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Button filterBtn;
-        private Guna.UI2.WinForms.Guna2Button actionsBtn;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private TextBox searchUsersTxtBx;
-        private PictureBox pictureBox1;
+        private TextBox searchEventsTxtBx;
+        private Panel panel1;
+        private CheckBox selectAllCheckBox;
         private Panel panel2;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
@@ -989,6 +1155,27 @@
         private Label label2;
         private PictureBox pictureBox12;
         private CheckBox checkBox3;
-        private CheckBox selectAllCheckBox;
+        private Panel userApprovalListing;
+        private Label userDetailsLbl;
+        private PictureBox eventPicBox;
+        private CheckBox checkBox1;
+        private Guna.UI2.WinForms.Guna2Button actionsBtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Button filterBtn;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox37;
+        private PictureBox pictureBox38;
+        private PictureBox pictureBox35;
+        private PictureBox pictureBox36;
+        private PictureBox pictureBox33;
+        private PictureBox pictureBox34;
+        private PictureBox pictureBox31;
+        private PictureBox pictureBox32;
+        private PictureBox pictureBox29;
+        private PictureBox pictureBox30;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox39;
     }
 }

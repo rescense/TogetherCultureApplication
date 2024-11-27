@@ -10,40 +10,35 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class UserControlSearchUsers : UserControl
+    public partial class UserControlSearchEventsAdmin : UserControl
     {
-        public UserControlSearchUsers()
+        public UserControlSearchEventsAdmin()
         {
             InitializeComponent();
         }
 
-        private void searchBarPanel_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void searchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
+        private void searchEventsTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
             // Only clear the placeholder text if it's the default
-            if (searchUsersTxtBx.Text == "Search users...")
+            if (searchEventsTxtBx.Text == "Search events...")
             {
-                searchUsersTxtBx.Text = "";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
+                searchEventsTxtBx.Text = "";
+                searchEventsTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
             }
         }
 
-        private void searchUsersTxtBx_Leave(object sender, EventArgs e)
+        private void searchEventsTxtBxx_Leave(object sender, EventArgs e)
         {
             // Restore the placeholder text if the user has left it empty
-            if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
+            if (string.IsNullOrEmpty(searchEventsTxtBx.Text))
             {
-                searchUsersTxtBx.Text = "Search users....";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
+                searchEventsTxtBx.Text = "Search events...";
+                searchEventsTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
             }
         }
 

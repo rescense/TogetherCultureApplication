@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class UserControlSearchUsers : UserControl
+    public partial class UserControlSearchPendingApprovals : UserControl
     {
-        public UserControlSearchUsers()
+        public UserControlSearchPendingApprovals()
         {
             InitializeComponent();
+        }
+
+        private void UserControlSearchPendingApprovals_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void searchBarPanel_Paint(object sender, PaintEventArgs e)
@@ -27,23 +33,38 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         }
 
-        private void searchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void searchPendingApprovals_MouseClic(object sender, MouseEventArgs e)
         {
             // Only clear the placeholder text if it's the default
-            if (searchUsersTxtBx.Text == "Search users...")
+            if (searchPendingApprovalsTxtBx.Text == "Search pending approvals...")
             {
-                searchUsersTxtBx.Text = "";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
+                searchPendingApprovalsTxtBx.Text = "";
+                searchPendingApprovalsTxtBx.ForeColor = System.Drawing.Color.Black; // Change text color to black when editing
             }
         }
 
-        private void searchUsersTxtBx_Leave(object sender, EventArgs e)
+        private void searchPendingApprovalsTxtBx_Leave(object sender, EventArgs e)
         {
             // Restore the placeholder text if the user has left it empty
-            if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
+            if (string.IsNullOrEmpty(searchPendingApprovalsTxtBx.Text))
             {
-                searchUsersTxtBx.Text = "Search users....";
-                searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
+                searchPendingApprovalsTxtBx.Text = "Search pending approvals...";
+                searchPendingApprovalsTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
             }
         }
 
