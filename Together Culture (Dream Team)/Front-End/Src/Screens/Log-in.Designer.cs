@@ -268,6 +268,7 @@
             txtPassword.Size = new Size(594, 56);
             txtPassword.TabIndex = 22;
             txtPassword.Text = "";
+            txtPassword.KeyPress += txtPassword_KeyPress;
             // 
             // txtEmail
             // 
