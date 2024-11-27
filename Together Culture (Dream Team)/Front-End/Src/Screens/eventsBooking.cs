@@ -137,7 +137,8 @@ namespace togther_Culture
         }
         private void payForOrderButton(object sender, EventArgs e)
         {
-
+            Payment payment = new Payment();
+            payment.Show();
         }
 
         private void attendeeListDataGrideView(object sender, DataGridViewCellEventArgs e)
