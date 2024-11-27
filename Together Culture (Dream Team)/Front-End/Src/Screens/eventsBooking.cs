@@ -17,21 +17,24 @@ namespace togther_Culture
             InitializeComponent();
         }
 
+        private void eventsBooking_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // ~~~~~  Header Panel  ~~~~~
-        private void headerPanel(object sender, PaintEventArgs e) { }
+        private void headerPanel(object sender, PaintEventArgs e)
+        {
+
+        }
 
         // together culture label on header panel
-        private void Together_Click(object sender, EventArgs e)
+        private void togetherCultureLabel(object sender, EventArgs e)
         {
 
         }
 
-        private void Culture_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cambridge_Click(object sender, EventArgs e)
+        private void togetherCulturePictureBox(object sender, EventArgs e)
         {
 
         }
