@@ -136,9 +136,10 @@
             guna2CustomGradientPanel1.FillColor3 = Color.Red;
             guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(192, 0, 0);
             guna2CustomGradientPanel1.Location = new Point(0, -1);
+            guna2CustomGradientPanel1.Margin = new Padding(3, 2, 3, 2);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2CustomGradientPanel1.Size = new Size(1445, 158);
+            guna2CustomGradientPanel1.Size = new Size(1264, 118);
             guna2CustomGradientPanel1.TabIndex = 2;
             guna2CustomGradientPanel1.Paint += headerPanel;
             // 
@@ -152,11 +153,12 @@
             guna2Button7.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button7.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button7.ForeColor = Color.White;
-            guna2Button7.Location = new Point(1252, 105);
-            guna2Button7.MaximumSize = new Size(160, 47);
+            guna2Button7.Location = new Point(1096, 79);
+            guna2Button7.Margin = new Padding(3, 2, 3, 2);
+            guna2Button7.MaximumSize = new Size(140, 35);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button7.Size = new Size(160, 47);
+            guna2Button7.Size = new Size(140, 35);
             guna2Button7.TabIndex = 39;
             guna2Button7.Text = "Profile";
             guna2Button7.Click += profileBtn;
@@ -171,11 +173,12 @@
             guna2Button6.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button6.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2Button6.ForeColor = Color.White;
-            guna2Button6.Location = new Point(1072, 105);
-            guna2Button6.MaximumSize = new Size(160, 49);
+            guna2Button6.Location = new Point(938, 79);
+            guna2Button6.Margin = new Padding(3, 2, 3, 2);
+            guna2Button6.MaximumSize = new Size(140, 37);
             guna2Button6.Name = "guna2Button6";
             guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button6.Size = new Size(160, 49);
+            guna2Button6.Size = new Size(140, 37);
             guna2Button6.TabIndex = 38;
             guna2Button6.Text = "My Modules";
             guna2Button6.Click += myModulesBtn;
@@ -190,11 +193,12 @@
             guna2Button4.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button4.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(894, 106);
-            guna2Button4.MaximumSize = new Size(160, 48);
+            guna2Button4.Location = new Point(782, 80);
+            guna2Button4.Margin = new Padding(3, 2, 3, 2);
+            guna2Button4.MaximumSize = new Size(140, 36);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button4.Size = new Size(160, 48);
+            guna2Button4.Size = new Size(140, 36);
             guna2Button4.TabIndex = 37;
             guna2Button4.Text = "Skill Share";
             guna2Button4.Click += skillShareBtn;
@@ -209,11 +213,12 @@
             guna2Button3.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button3.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(716, 106);
-            guna2Button3.MaximumSize = new Size(160, 47);
+            guna2Button3.Location = new Point(626, 80);
+            guna2Button3.Margin = new Padding(3, 2, 3, 2);
+            guna2Button3.MaximumSize = new Size(140, 35);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(160, 47);
+            guna2Button3.Size = new Size(140, 35);
             guna2Button3.TabIndex = 36;
             guna2Button3.Text = "Events";
             guna2Button3.Click += eventsBtn;
@@ -228,11 +233,12 @@
             guna2Button2.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button2.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(531, 105);
-            guna2Button2.MaximumSize = new Size(160, 49);
+            guna2Button2.Location = new Point(465, 79);
+            guna2Button2.Margin = new Padding(3, 2, 3, 2);
+            guna2Button2.MaximumSize = new Size(140, 37);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button2.Size = new Size(160, 49);
+            guna2Button2.Size = new Size(140, 37);
             guna2Button2.TabIndex = 35;
             guna2Button2.Text = "For you";
             guna2Button2.Click += forYouBtn;
@@ -241,10 +247,9 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(247, 72);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(216, 54);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(79, 80);
+            pictureBox2.Size = new Size(69, 60);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 29;
             pictureBox2.TabStop = false;
@@ -257,9 +262,9 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(30, 34);
+            label7.Location = new Point(26, 26);
             label7.Name = "label7";
-            label7.Size = new Size(199, 117);
+            label7.Size = new Size(160, 96);
             label7.TabIndex = 28;
             label7.Text = "Together\r\nCulture\r\nCambridge";
             label7.Click += togetherCultureLabel;
@@ -274,11 +279,12 @@
             guna2Button5.FillColor = Color.FromArgb(192, 0, 0);
             guna2Button5.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(349, 105);
-            guna2Button5.MaximumSize = new Size(160, 47);
+            guna2Button5.Location = new Point(305, 79);
+            guna2Button5.Margin = new Padding(3, 2, 3, 2);
+            guna2Button5.MaximumSize = new Size(140, 35);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button5.Size = new Size(160, 47);
+            guna2Button5.Size = new Size(140, 35);
             guna2Button5.TabIndex = 34;
             guna2Button5.Text = "Chat Space";
             guna2Button5.Click += chatSpaceBtn;
@@ -307,10 +313,11 @@
             guna2CustomGradientPanel2.FillColor2 = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor3 = Color.Red;
             guna2CustomGradientPanel2.FillColor4 = Color.DarkRed;
-            guna2CustomGradientPanel2.Location = new Point(0, 157);
+            guna2CustomGradientPanel2.Location = new Point(0, 123);
+            guna2CustomGradientPanel2.Margin = new Padding(3, 2, 3, 2);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2CustomGradientPanel2.Size = new Size(1442, 569);
+            guna2CustomGradientPanel2.Size = new Size(1264, 427);
             guna2CustomGradientPanel2.TabIndex = 4;
             // 
             // guna2Button1
@@ -318,7 +325,7 @@
             guna2Button1.AutoRoundedCorners = true;
             guna2Button1.BackColor = Color.Transparent;
             guna2Button1.BorderColor = Color.White;
-            guna2Button1.BorderRadius = 13;
+            guna2Button1.BorderRadius = 10;
             guna2Button1.CustomizableEdges = customizableEdges15;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -327,21 +334,20 @@
             guna2Button1.FillColor = Color.White;
             guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.FromArgb(64, 0, 64);
-            guna2Button1.Location = new Point(1231, 105);
-            guna2Button1.Margin = new Padding(3, 4, 3, 4);
+            guna2Button1.Location = new Point(1077, 79);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.White;
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button1.Size = new Size(145, 29);
+            guna2Button1.Size = new Size(127, 22);
             guna2Button1.TabIndex = 42;
             guna2Button1.Text = "Check Event";
             guna2Button1.Click += checkEventsBtn;
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(1348, 156);
+            vScrollBar1.Location = new Point(1180, 117);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(28, 343);
+            vScrollBar1.Size = new Size(28, 257);
             vScrollBar1.TabIndex = 41;
             vScrollBar1.Scroll += eventsListScrollBar;
             // 
@@ -349,10 +355,11 @@
             // 
             dataGridView1.BackgroundColor = Color.FromArgb(255, 128, 128);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(785, 156);
+            dataGridView1.Location = new Point(687, 117);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(563, 343);
+            dataGridView1.Size = new Size(493, 257);
             dataGridView1.TabIndex = 40;
             dataGridView1.CellContentClick += eventsListDataGridView;
             // 
@@ -362,9 +369,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(975, 59);
+            label2.Location = new Point(853, 44);
             label2.Name = "label2";
-            label2.Size = new Size(207, 29);
+            label2.Size = new Size(170, 24);
             label2.TabIndex = 39;
             label2.Text = "Upcoming Events";
             label2.Click += upcomingEventsLabel;
@@ -374,7 +381,7 @@
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.White;
-            guna2Button8.BorderRadius = 11;
+            guna2Button8.BorderRadius = 8;
             guna2Button8.CustomizableEdges = customizableEdges17;
             guna2Button8.DisabledState.BorderColor = Color.DarkGray;
             guna2Button8.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -383,12 +390,11 @@
             guna2Button8.FillColor = Color.White;
             guna2Button8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button8.ForeColor = Color.FromArgb(64, 0, 64);
-            guna2Button8.Location = new Point(30, 79);
-            guna2Button8.Margin = new Padding(3, 4, 3, 4);
+            guna2Button8.Location = new Point(26, 59);
             guna2Button8.Name = "guna2Button8";
             guna2Button8.PressedColor = Color.White;
             guna2Button8.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button8.Size = new Size(108, 24);
+            guna2Button8.Size = new Size(94, 18);
             guna2Button8.TabIndex = 38;
             guna2Button8.Text = "Previous";
             guna2Button8.Click += previousBtn;
@@ -398,7 +404,7 @@
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;
-            guna2Button9.BorderRadius = 11;
+            guna2Button9.BorderRadius = 8;
             guna2Button9.CustomizableEdges = customizableEdges19;
             guna2Button9.DisabledState.BorderColor = Color.DarkGray;
             guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -407,12 +413,11 @@
             guna2Button9.FillColor = Color.White;
             guna2Button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button9.ForeColor = Color.FromArgb(64, 0, 64);
-            guna2Button9.Location = new Point(616, 79);
-            guna2Button9.Margin = new Padding(3, 4, 3, 4);
+            guna2Button9.Location = new Point(539, 59);
             guna2Button9.Name = "guna2Button9";
             guna2Button9.PressedColor = Color.White;
             guna2Button9.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button9.Size = new Size(108, 24);
+            guna2Button9.Size = new Size(94, 18);
             guna2Button9.TabIndex = 37;
             guna2Button9.Text = "Next";
             guna2Button9.Click += nextBtn;
@@ -454,255 +459,291 @@
             flowLayoutPanel1.Controls.Add(panel33);
             flowLayoutPanel1.Controls.Add(panel34);
             flowLayoutPanel1.Controls.Add(panel35);
-            flowLayoutPanel1.Location = new Point(30, 156);
+            flowLayoutPanel1.Location = new Point(26, 117);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(694, 343);
+            flowLayoutPanel1.Size = new Size(616, 257);
             flowLayoutPanel1.TabIndex = 20;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // panel1
             // 
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(93, 62);
+            panel1.Size = new Size(81, 46);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.Location = new Point(102, 3);
+            panel2.Location = new Point(90, 2);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(93, 62);
+            panel2.Size = new Size(81, 46);
             panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            panel3.Location = new Point(201, 3);
+            panel3.Location = new Point(177, 2);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(93, 62);
+            panel3.Size = new Size(81, 46);
             panel3.TabIndex = 1;
             // 
             // panel4
             // 
-            panel4.Location = new Point(300, 3);
+            panel4.Location = new Point(264, 2);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(93, 62);
+            panel4.Size = new Size(81, 46);
             panel4.TabIndex = 1;
             // 
             // panel5
             // 
-            panel5.Location = new Point(399, 3);
+            panel5.Location = new Point(351, 2);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(93, 62);
+            panel5.Size = new Size(81, 46);
             panel5.TabIndex = 1;
             // 
             // panel6
             // 
-            panel6.Location = new Point(498, 3);
+            panel6.Location = new Point(438, 2);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(93, 62);
+            panel6.Size = new Size(81, 46);
             panel6.TabIndex = 1;
             // 
             // panel7
             // 
-            panel7.Location = new Point(597, 3);
+            panel7.Location = new Point(525, 2);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(93, 62);
+            panel7.Size = new Size(81, 46);
             panel7.TabIndex = 2;
             // 
             // panel12
             // 
-            panel12.Location = new Point(3, 71);
+            panel12.Location = new Point(3, 52);
+            panel12.Margin = new Padding(3, 2, 3, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(93, 62);
+            panel12.Size = new Size(81, 46);
             panel12.TabIndex = 7;
             // 
             // panel14
             // 
-            panel14.Location = new Point(102, 71);
+            panel14.Location = new Point(90, 52);
+            panel14.Margin = new Padding(3, 2, 3, 2);
             panel14.Name = "panel14";
-            panel14.Size = new Size(93, 62);
+            panel14.Size = new Size(81, 46);
             panel14.TabIndex = 9;
             // 
             // panel13
             // 
-            panel13.Location = new Point(201, 71);
+            panel13.Location = new Point(177, 52);
+            panel13.Margin = new Padding(3, 2, 3, 2);
             panel13.Name = "panel13";
-            panel13.Size = new Size(93, 62);
+            panel13.Size = new Size(81, 46);
             panel13.TabIndex = 8;
             // 
             // panel11
             // 
-            panel11.Location = new Point(300, 71);
+            panel11.Location = new Point(264, 52);
+            panel11.Margin = new Padding(3, 2, 3, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(93, 62);
+            panel11.Size = new Size(81, 46);
             panel11.TabIndex = 6;
             // 
             // panel10
             // 
-            panel10.Location = new Point(399, 71);
+            panel10.Location = new Point(351, 52);
+            panel10.Margin = new Padding(3, 2, 3, 2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(93, 62);
+            panel10.Size = new Size(81, 46);
             panel10.TabIndex = 5;
             // 
             // panel9
             // 
-            panel9.Location = new Point(498, 71);
+            panel9.Location = new Point(438, 52);
+            panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(93, 62);
+            panel9.Size = new Size(81, 46);
             panel9.TabIndex = 4;
             // 
             // panel8
             // 
-            panel8.Location = new Point(597, 71);
+            panel8.Location = new Point(525, 52);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(93, 62);
+            panel8.Size = new Size(81, 46);
             panel8.TabIndex = 3;
             // 
             // panel15
             // 
-            panel15.Location = new Point(3, 139);
+            panel15.Location = new Point(3, 102);
+            panel15.Margin = new Padding(3, 2, 3, 2);
             panel15.Name = "panel15";
-            panel15.Size = new Size(93, 62);
+            panel15.Size = new Size(81, 46);
             panel15.TabIndex = 10;
             // 
             // panel16
             // 
-            panel16.Location = new Point(102, 139);
+            panel16.Location = new Point(90, 102);
+            panel16.Margin = new Padding(3, 2, 3, 2);
             panel16.Name = "panel16";
-            panel16.Size = new Size(93, 62);
+            panel16.Size = new Size(81, 46);
             panel16.TabIndex = 11;
             // 
             // panel17
             // 
-            panel17.Location = new Point(201, 139);
+            panel17.Location = new Point(177, 102);
+            panel17.Margin = new Padding(3, 2, 3, 2);
             panel17.Name = "panel17";
-            panel17.Size = new Size(93, 62);
+            panel17.Size = new Size(81, 46);
             panel17.TabIndex = 12;
             // 
             // panel18
             // 
-            panel18.Location = new Point(300, 139);
+            panel18.Location = new Point(264, 102);
+            panel18.Margin = new Padding(3, 2, 3, 2);
             panel18.Name = "panel18";
-            panel18.Size = new Size(93, 62);
+            panel18.Size = new Size(81, 46);
             panel18.TabIndex = 13;
             // 
             // panel19
             // 
-            panel19.Location = new Point(399, 139);
+            panel19.Location = new Point(351, 102);
+            panel19.Margin = new Padding(3, 2, 3, 2);
             panel19.Name = "panel19";
-            panel19.Size = new Size(93, 62);
+            panel19.Size = new Size(81, 46);
             panel19.TabIndex = 14;
             // 
             // panel20
             // 
-            panel20.Location = new Point(498, 139);
+            panel20.Location = new Point(438, 102);
+            panel20.Margin = new Padding(3, 2, 3, 2);
             panel20.Name = "panel20";
-            panel20.Size = new Size(93, 62);
+            panel20.Size = new Size(81, 46);
             panel20.TabIndex = 15;
             // 
             // panel21
             // 
-            panel21.Location = new Point(597, 139);
+            panel21.Location = new Point(525, 102);
+            panel21.Margin = new Padding(3, 2, 3, 2);
             panel21.Name = "panel21";
-            panel21.Size = new Size(93, 62);
+            panel21.Size = new Size(81, 46);
             panel21.TabIndex = 16;
             // 
             // panel22
             // 
-            panel22.Location = new Point(3, 207);
+            panel22.Location = new Point(3, 152);
+            panel22.Margin = new Padding(3, 2, 3, 2);
             panel22.Name = "panel22";
-            panel22.Size = new Size(93, 62);
+            panel22.Size = new Size(81, 46);
             panel22.TabIndex = 21;
             // 
             // panel23
             // 
-            panel23.Location = new Point(102, 207);
+            panel23.Location = new Point(90, 152);
+            panel23.Margin = new Padding(3, 2, 3, 2);
             panel23.Name = "panel23";
-            panel23.Size = new Size(93, 62);
+            panel23.Size = new Size(81, 46);
             panel23.TabIndex = 23;
             // 
             // panel24
             // 
-            panel24.Location = new Point(201, 207);
+            panel24.Location = new Point(177, 152);
+            panel24.Margin = new Padding(3, 2, 3, 2);
             panel24.Name = "panel24";
-            panel24.Size = new Size(93, 62);
+            panel24.Size = new Size(81, 46);
             panel24.TabIndex = 22;
             // 
             // panel25
             // 
-            panel25.Location = new Point(300, 207);
+            panel25.Location = new Point(264, 152);
+            panel25.Margin = new Padding(3, 2, 3, 2);
             panel25.Name = "panel25";
-            panel25.Size = new Size(93, 62);
+            panel25.Size = new Size(81, 46);
             panel25.TabIndex = 20;
             // 
             // panel26
             // 
-            panel26.Location = new Point(399, 207);
+            panel26.Location = new Point(351, 152);
+            panel26.Margin = new Padding(3, 2, 3, 2);
             panel26.Name = "panel26";
-            panel26.Size = new Size(93, 62);
+            panel26.Size = new Size(81, 46);
             panel26.TabIndex = 19;
             // 
             // panel27
             // 
-            panel27.Location = new Point(498, 207);
+            panel27.Location = new Point(438, 152);
+            panel27.Margin = new Padding(3, 2, 3, 2);
             panel27.Name = "panel27";
-            panel27.Size = new Size(93, 62);
+            panel27.Size = new Size(81, 46);
             panel27.TabIndex = 18;
             // 
             // panel28
             // 
-            panel28.Location = new Point(597, 207);
+            panel28.Location = new Point(525, 152);
+            panel28.Margin = new Padding(3, 2, 3, 2);
             panel28.Name = "panel28";
-            panel28.Size = new Size(93, 62);
+            panel28.Size = new Size(81, 46);
             panel28.TabIndex = 17;
             // 
             // panel29
             // 
-            panel29.Location = new Point(3, 275);
+            panel29.Location = new Point(3, 202);
+            panel29.Margin = new Padding(3, 2, 3, 2);
             panel29.Name = "panel29";
-            panel29.Size = new Size(93, 62);
+            panel29.Size = new Size(81, 46);
             panel29.TabIndex = 28;
             // 
             // panel30
             // 
-            panel30.Location = new Point(102, 275);
+            panel30.Location = new Point(90, 202);
+            panel30.Margin = new Padding(3, 2, 3, 2);
             panel30.Name = "panel30";
-            panel30.Size = new Size(93, 62);
+            panel30.Size = new Size(81, 46);
             panel30.TabIndex = 30;
             // 
             // panel31
             // 
-            panel31.Location = new Point(201, 275);
+            panel31.Location = new Point(177, 202);
+            panel31.Margin = new Padding(3, 2, 3, 2);
             panel31.Name = "panel31";
-            panel31.Size = new Size(93, 62);
+            panel31.Size = new Size(81, 46);
             panel31.TabIndex = 29;
             // 
             // panel32
             // 
-            panel32.Location = new Point(300, 275);
+            panel32.Location = new Point(264, 202);
+            panel32.Margin = new Padding(3, 2, 3, 2);
             panel32.Name = "panel32";
-            panel32.Size = new Size(93, 62);
+            panel32.Size = new Size(81, 46);
             panel32.TabIndex = 27;
             // 
             // panel33
             // 
-            panel33.Location = new Point(399, 275);
+            panel33.Location = new Point(351, 202);
+            panel33.Margin = new Padding(3, 2, 3, 2);
             panel33.Name = "panel33";
-            panel33.Size = new Size(93, 62);
+            panel33.Size = new Size(81, 46);
             panel33.TabIndex = 26;
             // 
             // panel34
             // 
-            panel34.Location = new Point(498, 275);
+            panel34.Location = new Point(438, 202);
+            panel34.Margin = new Padding(3, 2, 3, 2);
             panel34.Name = "panel34";
-            panel34.Size = new Size(93, 62);
+            panel34.Size = new Size(81, 46);
             panel34.TabIndex = 25;
             // 
             // panel35
             // 
-            panel35.Location = new Point(597, 275);
+            panel35.Location = new Point(525, 202);
+            panel35.Margin = new Padding(3, 2, 3, 2);
             panel35.Name = "panel35";
-            panel35.Size = new Size(93, 62);
+            panel35.Size = new Size(81, 46);
             panel35.TabIndex = 24;
             // 
             // label11
@@ -711,9 +752,9 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(638, 125);
+            label11.Location = new Point(558, 94);
             label11.Name = "label11";
-            label11.Size = new Size(62, 19);
+            label11.Size = new Size(49, 15);
             label11.TabIndex = 19;
             label11.Text = "Sunday";
             label11.Click += SundayLabel;
@@ -724,9 +765,9 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(537, 125);
+            label9.Location = new Point(470, 94);
             label9.Name = "label9";
-            label9.Size = new Size(72, 19);
+            label9.Size = new Size(57, 15);
             label9.TabIndex = 17;
             label9.Text = "Saturday";
             label9.Click += SaturdayLabel;
@@ -737,9 +778,9 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(447, 125);
+            label8.Location = new Point(391, 94);
             label8.Name = "label8";
-            label8.Size = new Size(53, 19);
+            label8.Size = new Size(41, 15);
             label8.TabIndex = 16;
             label8.Text = "Friday";
             label8.Click += FridayLabel;
@@ -750,9 +791,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(338, 125);
+            label6.Location = new Point(296, 94);
             label6.Name = "label6";
-            label6.Size = new Size(74, 19);
+            label6.Size = new Size(58, 15);
             label6.TabIndex = 15;
             label6.Text = "Thursday";
             label6.Click += ThursdayLabel;
@@ -763,9 +804,9 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(232, 125);
+            label5.Location = new Point(203, 94);
             label5.Name = "label5";
-            label5.Size = new Size(92, 19);
+            label5.Size = new Size(74, 15);
             label5.TabIndex = 14;
             label5.Text = "Wednesday";
             label5.Click += WednesdayLabel;
@@ -776,9 +817,9 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(144, 125);
+            label4.Location = new Point(126, 94);
             label4.Name = "label4";
-            label4.Size = new Size(67, 19);
+            label4.Size = new Size(54, 15);
             label4.TabIndex = 13;
             label4.Text = "Tuesday";
             label4.Click += TuesdayLabel;
@@ -789,9 +830,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(49, 125);
+            label3.Location = new Point(43, 94);
             label3.Name = "label3";
-            label3.Size = new Size(67, 19);
+            label3.Size = new Size(55, 15);
             label3.TabIndex = 12;
             label3.Text = "Monday";
             label3.Click += MondayLabel;
@@ -803,9 +844,9 @@
             monthLabel.BackColor = Color.Transparent;
             monthLabel.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             monthLabel.ForeColor = Color.White;
-            monthLabel.Location = new Point(317, 73);
+            monthLabel.Location = new Point(277, 55);
             monthLabel.Name = "monthLabel";
-            monthLabel.Size = new Size(140, 25);
+            monthLabel.Size = new Size(110, 20);
             monthLabel.TabIndex = 11;
             monthLabel.Text = "Month - Year";
             monthLabel.Click += MonthLabel_Click;
@@ -817,21 +858,22 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(343, 25);
+            label1.Location = new Point(300, 19);
             label1.Name = "label1";
-            label1.Size = new Size(111, 29);
+            label1.Size = new Size(93, 24);
             label1.TabIndex = 10;
             label1.Text = "Calendar";
             label1.Click += calendarLabel;
             // 
             // eventsMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1442, 726);
+            ClientSize = new Size(1264, 550);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel1);
-            MinimumSize = new Size(1460, 773);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(1280, 589);
             Name = "eventsMain";
             Text = "eventsMain";
             Load += eventsMain_Load;
