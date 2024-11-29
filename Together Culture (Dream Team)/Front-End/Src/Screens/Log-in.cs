@@ -14,10 +14,23 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Log_in()
         {
             InitializeComponent();
-
+            // Attach KeyPress event
+            txtPassword.KeyPress += txtPassword_KeyPress;
         }
 
+        //masking the characters for the password
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the input is a valid character (e.g., alphabet, number, etc.)
+            if (!char.IsControl(e.KeyChar))
+            {
+                // Prevent showing the actual character
+                e.Handled = true;
 
+                // Insert the password masking character (e.g., '*')
+                txtPassword.SelectedText = "*";
+            }
+        }
 
         private void btnLogin_click(object sender, EventArgs e)
         {
