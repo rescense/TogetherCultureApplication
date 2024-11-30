@@ -67,7 +67,6 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel1);
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel2);
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel4);
