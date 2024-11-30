@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen
+namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class AccountSettingsPage : Form
+    public partial class UserControlSecurity : UserControl
     {
-        public AccountSettingsPage()
+        public UserControlSecurity()
         {
             InitializeComponent();
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
@@ -27,12 +22,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen
 
         }
 
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Button12_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,7 +32,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen
 
         }
 
-        private void richTextBox7_TextChanged(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
 
         }
