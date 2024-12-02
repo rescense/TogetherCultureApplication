@@ -417,6 +417,7 @@
             Name = "Sign_up";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign_up";
+            Load += Sign_up_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

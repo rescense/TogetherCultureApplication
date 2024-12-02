@@ -9,15 +9,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class Sign_up : Form
 
     {
-        // Connection String for the database
-        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Abbas Haider\\source\\repos\\FBGHaider\\Dream-Team\\Together Culture (Dream Team)\\Database1.mdf\";Integrated Security=True";
-        
+
         public Sign_up()
         {
             InitializeComponent();
@@ -192,10 +191,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 {
                     if (check(txtEmail.Text) == 0)
                     {
-                        using (SqlConnection connection = new SqlConnection(_connectionString))
+                        using (DatabaseConnect database = new DatabaseConnect())
                         {
-                            connection.Open();
-                            SqlCommand command = new SqlCommand("INSERT INTO info (f_name, l_name, email, password) VALUES (@f_name, @l_name, @Email, @Password)", connection);
+                            database.Open();
+                            SqlCommand command = new SqlCommand("INSERT INTO info (f_name, l_name, email, password) VALUES (@f_name, @l_name, @Email, @Password)", database.Connection);
                             command.Parameters.AddWithValue("@f_name", txtFirstname.Text);
                             command.Parameters.AddWithValue("@l_name", txtLastname.Text);
                             command.Parameters.AddWithValue("@Email", txtEmail.Text);
@@ -238,11 +237,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(_connectionString))
+                using (DatabaseConnect database = new DatabaseConnect())
                 {
-                    connection.Open();
+                    database.Open();
                     string query = "SELECT COUNT(*) FROM info WHERE LOWER(email) = LOWER(@Email)";
-                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, database.Connection);
                     command.Parameters.AddWithValue("@Email", email);
 
                     int count = (int)command.ExecuteScalar();
@@ -270,10 +269,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-        
+        private void Sign_up_Load(object sender, EventArgs e)
+        {
 
-
-        
+        }
     }
 
 }

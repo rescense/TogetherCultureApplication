@@ -1,6 +1,8 @@
 ﻿
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
@@ -8,28 +10,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class Log_in : Form
     {
-
-        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Abbas Haider\\source\\repos\\FBGHaider\\Dream-Team\\Together Culture (Dream Team)\\Database1.mdf\";Integrated Security=True";
-
         public Log_in()
         {
             InitializeComponent();
             // Attach KeyPress event
-            txtPassword.KeyPress += txtPassword_KeyPress;
-        }
-
-        //masking the characters for the password
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Check if the input is a valid character (e.g., alphabet, number, etc.)
-            if (!char.IsControl(e.KeyChar))
-            {
-                // Prevent showing the actual character
-                e.Handled = true;
-
-                // Insert the password masking character (e.g., '*')
-                txtPassword.SelectedText = "*";
-            }
         }
 
         private void btnLogin_click(object sender, EventArgs e)
@@ -38,20 +22,27 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             bool isEmailEntered = !string.IsNullOrWhiteSpace(txtEmail.Text);
             bool isPasswordEntered = !string.IsNullOrWhiteSpace(txtPassword.Text);
 
-            if (isEmailEntered && isPasswordEntered)
+            if (!isEmailEntered || !isPasswordEntered)
             {
-                try
-                {
-                    using (SqlConnection connection = new SqlConnection(_connectionString))
-                    {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(
-                            "SELECT COUNT(*) FROM info WHERE email = @Email AND password = @Password",
-                            connection
-                        );
+                string missingFields = "Please fill in the following fields:\n";
+                if (!isEmailEntered) missingFields += "- Email\n";
+                if (!isPasswordEntered) missingFields += "- Password\n";
 
-                        command.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                MessageBox.Show(missingFields, "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                
+                using (DatabaseConnect database = new DatabaseConnect())
+                {
+                    database.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM [user] WHERE Email = @email AND Password = @password", database.Connection))
+                    {
+                        // Securely add parameters to avoid SQL injection
+                        command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
+                        command.Parameters.Add("@Password", SqlDbType.VarChar).Value = txtPassword.Text; // Use hashed password in a real scenario.
 
                         int userCount = (int)command.ExecuteScalar();
 
@@ -67,23 +58,23 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                         else
                         {
                             MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"Email: {txtEmail.Text}, Password: {txtPassword.Text}");
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    database.Close();
+
                 }
             }
-            else
+            catch (SqlException sqlEx)
             {
-                string missingFields = "Please fill in the following fields:\n";
-                if (!isEmailEntered) missingFields += "- Email\n";
-                if (!isPasswordEntered) missingFields += "- Password\n";
-
-                MessageBox.Show(missingFields, "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnSignUp_click(object sender, EventArgs e)
         {
             Sign_up sign_Up = new Sign_up();
@@ -106,8 +97,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void txtPassword_TextChanged_1(object sender, EventArgs e)
         {
+
         }
     }
 }
