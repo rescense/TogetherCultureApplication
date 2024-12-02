@@ -64,7 +64,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(304, 601);
+            tableLayoutPanel1.Size = new Size(194, 420);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // guna2Button1
@@ -80,7 +80,7 @@
             guna2Button1.Location = new Point(3, 3);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(298, 144);
+            guna2Button1.Size = new Size(182, 99);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Profile";
             // 
@@ -94,10 +94,10 @@
             guna2Button2.FillColor = Color.Transparent;
             guna2Button2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(3, 153);
+            guna2Button2.Location = new Point(3, 108);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(298, 144);
+            guna2Button2.Size = new Size(182, 99);
             guna2Button2.TabIndex = 0;
             guna2Button2.Text = "Settings";
             // 
@@ -111,10 +111,10 @@
             guna2Button3.FillColor = Color.Transparent;
             guna2Button3.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(3, 303);
+            guna2Button3.Location = new Point(3, 213);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(298, 144);
+            guna2Button3.Size = new Size(182, 99);
             guna2Button3.TabIndex = 0;
             guna2Button3.Text = "Events";
             // 
@@ -128,10 +128,10 @@
             guna2Button4.FillColor = Color.Transparent;
             guna2Button4.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(3, 453);
+            guna2Button4.Location = new Point(3, 318);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button4.Size = new Size(298, 144);
+            guna2Button4.Size = new Size(182, 99);
             guna2Button4.TabIndex = 0;
             guna2Button4.Text = "Logout";
             // 
@@ -155,7 +155,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2CustomGradientPanel1);
             Name = "SideMenuBar";
-            Size = new Size(310, 607);
+            Size = new Size(197, 426);
             tableLayoutPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);

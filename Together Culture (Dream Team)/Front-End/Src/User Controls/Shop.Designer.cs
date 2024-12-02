@@ -49,9 +49,9 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(773, 147);
+            pictureBox2.Location = new Point(819, 147);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(673, 470);
+            pictureBox2.Size = new Size(627, 416);
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
@@ -112,12 +112,12 @@
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.FillColor = Color.Brown;
             guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
-            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.Size = new Size(1446, 113);
             guna2CustomGradientPanel1.TabIndex = 31;
             // 
             // label20
@@ -127,7 +127,7 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(421, 104);
+            label20.Location = new Point(400, 65);
             label20.Name = "label20";
             label20.Size = new Size(605, 21);
             label20.TabIndex = 32;
@@ -138,11 +138,11 @@
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.White;
-            label19.Location = new Point(643, 23);
+            label19.Location = new Point(639, 18);
             label19.Name = "label19";
-            label19.Size = new Size(143, 65);
+            label19.Size = new Size(104, 47);
             label19.TabIndex = 31;
             label19.Text = "Shop";
             // 

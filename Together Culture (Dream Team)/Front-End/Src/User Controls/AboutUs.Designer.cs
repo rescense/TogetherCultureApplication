@@ -50,7 +50,7 @@
             // 
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(831, 141);
+            pictureBox3.Location = new Point(828, 115);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(615, 475);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -110,12 +110,12 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Black;
-            guna2Button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(52, 464);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(246, 87);
+            guna2Button1.Size = new Size(186, 71);
             guna2Button1.TabIndex = 24;
             guna2Button1.Text = "Learn more";
             guna2Button1.Click += guna2Button1_Click;
@@ -128,12 +128,12 @@
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.FillColor = Color.Brown;
             guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
-            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.Size = new Size(1446, 113);
             guna2CustomGradientPanel1.TabIndex = 25;
             // 
             // label20
@@ -143,7 +143,7 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(417, 102);
+            label20.Location = new Point(400, 65);
             label20.Name = "label20";
             label20.Size = new Size(612, 21);
             label20.TabIndex = 12;
@@ -154,11 +154,11 @@
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.White;
-            label19.Location = new Point(601, 25);
+            label19.Location = new Point(618, 18);
             label19.Name = "label19";
-            label19.Size = new Size(232, 65);
+            label19.Size = new Size(169, 47);
             label19.TabIndex = 11;
             label19.Text = "About us";
             // 

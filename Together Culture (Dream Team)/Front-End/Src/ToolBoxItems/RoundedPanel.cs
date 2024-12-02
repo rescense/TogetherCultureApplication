@@ -12,7 +12,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.ToolBoxItems
     public class RoundedPanel : Panel
     {
         // Adjustable radius to control the roundness of the corners
-        private int _radius = 20;
+        private int _radius = 0;
 
         public int Radius
         {

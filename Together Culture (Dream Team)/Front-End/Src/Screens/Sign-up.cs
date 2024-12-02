@@ -20,98 +20,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Sign_up()
         {
             InitializeComponent();
-
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            this.txtRpassword.TextChanged += new System.EventHandler(this.txtRetypePassword_TextChanged);
-
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-            string fNameText = txtFirstname.Text;
-            if (IsValidFName(fNameText))
-            {
-                // Provide feedback for valid First name
-                txtFirstname.BackColor = Color.LightGreen;  // Green background for valid email
-                label8.Text = "Valid First Name";
-            }
-            else
-            {
-                // Provide feedback for invalid name
-                txtFirstname.BackColor = Color.Red;  // Red background for invalid email
-                label8.Text = "Please write your First Name";
-            }
-        }
-
-        private void TxtLastName_TextChanged(object sender, EventArgs e)
-        {
-            string lNameText = txtLastname.Text;
-            if (IsValidLName(lNameText))
-            {
-                // Provide feedback for valid last name
-                txtLastname.BackColor = Color.LightGreen;  // Green background for valid last name
-                label10.Text = "Valid Last Name";
-            }
-            else
-            {
-                // Provide feedback for invalid last name
-                txtLastname.BackColor = Color.Red;  // Red background for invalid Last name
-                label10.Text = "Please write your Last Name";
-            }
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-            string emailText = txtEmail.Text;
-
-            // Validate the email
-            if (IsValidEmail(emailText))
-            {
-                // Provide feedback for valid email
-                txtEmail.BackColor = Color.LightGreen;  // Green background for valid email
-                lblFeedback.Text = "Valid email address.";
-            }
-            else
-            {
-                // Provide feedback for invalid email
-                txtEmail.BackColor = Color.Red;  // Red background for invalid email
-                lblFeedback.Text = "Invalid email address.";
-            }
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            string passwordText = txtPassword.Text;
-
-            // Validate the password
-            if (IsValidPassword(passwordText))
-            {
-                // Password is valid
-                txtPassword.BackColor = Color.LightGreen;  // Green background for valid password
-                lblFeedback2.Text = "Valid password.";  // Feedback message for valid password
-            }
-
-            else
-            {
-                // Password is invalid
-                txtPassword.BackColor = Color.Red;  // Red background for invalid password
-                lblFeedback2.Text = "Password must be at least 8 characters and contain at least 3 symbols.";  // Feedback message for invalid password
-            }
-        }
-
-        private void txtRetypePassword_TextChanged(object sender, EventArgs e)
-        {
-            ValidatePasswords();
-        }
-
-        //validate if user has made an input for First Name
-        private bool IsValidFName(string input)
-        {
-            string pattern = @"^[a-zA-Z]";
-            Regex regex = new Regex(pattern);
-            return regex.IsMatch(input);
         }
 
         //validate if user has made an input for Last Name
@@ -144,30 +52,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             int symbolCount = regex.Matches(password).Count;
 
             // Check if the password contains at least 3 symbols
-            return symbolCount >= 3;
+            return symbolCount >= 1;
         }
 
         // Password and Confirm Password Validation
-        private void ValidatePasswords()
-        {
-            // Get the current text from both textboxes
-            string password = txtPassword.Text;
-            string confirmPassword = txtRpassword.Text;
-
-            // Check if the passwords match
-            if (password == confirmPassword)
-            {
-                // Passwords match
-                txtRpassword.BackColor = Color.LightGreen;  // Green background for matching passwords
-                lblFeedback3.Text = "Passwords match.";    // Feedback message for matching passwords
-            }
-            else
-            {
-                // Passwords do not match
-                txtRpassword.BackColor = Color.LightCoral; // Red background for non-matching passwords
-                lblFeedback3.Text = "Passwords do not match."; // Feedback message for non-matching passwords
-            }
-        }
         private void btnLogin_click(object sender, EventArgs e)
         {
             Log_in log_In = new Log_in();
@@ -182,8 +70,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             bool isEmailValid = txtEmail.BackColor == Color.LightGreen;
             bool isPasswordValid = txtPassword.BackColor == Color.LightGreen;
             bool isPasswordMatchValid = txtRpassword.BackColor == Color.LightGreen;
-            bool isValidLastName = txtLastname.BackColor == Color.LightGreen;
-            bool isValidFirstName = txtFirstname.BackColor == Color.LightGreen;
+            bool isValidLastName = txtLastName.BackColor == Color.LightGreen;
+            bool isValidFirstName = txtFirstName.BackColor == Color.LightGreen;
 
             if (isEmailValid && isPasswordValid && isPasswordMatchValid && isValidFirstName && isValidLastName)
             {
@@ -195,8 +83,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                         {
                             database.Open();
                             SqlCommand command = new SqlCommand("INSERT INTO info (f_name, l_name, email, password) VALUES (@f_name, @l_name, @Email, @Password)", database.Connection);
-                            command.Parameters.AddWithValue("@f_name", txtFirstname.Text);
-                            command.Parameters.AddWithValue("@l_name", txtLastname.Text);
+                            command.Parameters.AddWithValue("@f_name", txtFirstName.Text);
+                            command.Parameters.AddWithValue("@l_name", txtLastName.Text);
                             command.Parameters.AddWithValue("@Email", txtEmail.Text);
                             command.Parameters.AddWithValue("@Password", txtPassword.Text);
 
@@ -257,19 +145,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void ResetFormFields()
         {
-            txtFirstname.Text = "";
-            txtLastname.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
             txtRpassword.Text = "";
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void Sign_up_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Sign_up_Load(object sender, EventArgs e)
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

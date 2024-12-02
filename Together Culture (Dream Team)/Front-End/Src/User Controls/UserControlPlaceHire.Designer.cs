@@ -52,12 +52,12 @@
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.FillColor = Color.Brown;
             guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
-            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.Size = new Size(1446, 113);
             guna2CustomGradientPanel1.TabIndex = 32;
             // 
             // label20
@@ -67,7 +67,7 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(442, 102);
+            label20.Location = new Point(400, 65);
             label20.Name = "label20";
             label20.Size = new Size(594, 21);
             label20.TabIndex = 32;
@@ -78,20 +78,20 @@
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.White;
-            label19.Location = new Point(620, 23);
+            label19.Location = new Point(618, 18);
             label19.Name = "label19";
-            label19.Size = new Size(255, 65);
+            label19.Size = new Size(187, 47);
             label19.TabIndex = 31;
             label19.Text = "Place Hire";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(826, 149);
+            pictureBox1.Location = new Point(837, 171);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(618, 466);
+            pictureBox1.Size = new Size(667, 411);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;

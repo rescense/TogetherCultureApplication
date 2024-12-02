@@ -57,12 +57,12 @@
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.FillColor = Color.Brown;
             guna2CustomGradientPanel1.FillColor2 = Color.IndianRed;
-            guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
+            guna2CustomGradientPanel1.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor4 = Color.LightCoral;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel1.Size = new Size(1446, 149);
+            guna2CustomGradientPanel1.Size = new Size(1446, 113);
             guna2CustomGradientPanel1.TabIndex = 26;
             // 
             // label20
@@ -72,7 +72,7 @@
             label20.BackColor = Color.Transparent;
             label20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(309, 87);
+            label20.Location = new Point(351, 59);
             label20.Name = "label20";
             label20.Size = new Size(762, 42);
             label20.TabIndex = 12;
@@ -84,11 +84,11 @@
             label19.Anchor = AnchorStyles.None;
             label19.AutoSize = true;
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.White;
-            label19.Location = new Point(632, 9);
+            label19.Location = new Point(676, 12);
             label19.Name = "label19";
-            label19.Size = new Size(132, 65);
+            label19.Size = new Size(95, 47);
             label19.TabIndex = 11;
             label19.Text = "Blog";
             // 
