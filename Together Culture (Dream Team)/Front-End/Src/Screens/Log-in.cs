@@ -20,7 +20,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             // Check if the email and password fields are not empty
             bool isEmailEntered = !string.IsNullOrWhiteSpace(txtEmail.Text);
-            bool isPasswordEntered = !string.IsNullOrWhiteSpace(txtPassword.Text);
+            bool isPasswordEntered = !string.IsNullOrWhiteSpace(txtPassword2.Text);
 
             if (!isEmailEntered || !isPasswordEntered)
             {
