@@ -8,35 +8,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class Log_in : Form
     {
-
-        private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Abbas Haider\\source\\repos\\FBGHaider\\Dream-Team\\Together Culture (Dream Team)\\Database1.mdf\";Integrated Security=True";
+        //amend this connectionString if you want to connect to the main DB
+        private readonly string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\mysza\source\repos\Dream-Team02\12\Together Culture (Dream Team)\Database\db_TogetherCulture.mdf"";Integrated Security=True";
 
         public Log_in()
         {
             InitializeComponent();
-            // Attach KeyPress event
-            txtPassword.KeyPress += txtPassword_KeyPress;
-        }
-
-        //masking the characters for the password
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Check if the input is a valid character (e.g., alphabet, number, etc.)
-            if (!char.IsControl(e.KeyChar))
-            {
-                // Prevent showing the actual character
-                e.Handled = true;
-
-                // Insert the password masking character (e.g., '*')
-                txtPassword.SelectedText = "*";
-            }
         }
 
         private void btnLogin_click(object sender, EventArgs e)
         {
             // Check if the email and password fields are not empty
             bool isEmailEntered = !string.IsNullOrWhiteSpace(txtEmail.Text);
-            bool isPasswordEntered = !string.IsNullOrWhiteSpace(txtPassword.Text);
+            bool isPasswordEntered = !string.IsNullOrWhiteSpace(txtPassword2.Text);
 
             if (isEmailEntered && isPasswordEntered)
             {
@@ -46,12 +30,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                     {
                         connection.Open();
                         SqlCommand command = new SqlCommand(
-                            "SELECT COUNT(*) FROM info WHERE email = @Email AND password = @Password",
+                            "SELECT COUNT(*) FROM [user] WHERE email = @Email AND password = @Password",
                             connection
                         );
 
-                        command.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        command.Parameters.AddWithValue("@Password", txtPassword.Text);
+                        command.Parameters.AddWithValue("@email", txtEmail.Text);
+                        command.Parameters.AddWithValue("@password", txtPassword2.Text);
 
                         int userCount = (int)command.ExecuteScalar();
 
