@@ -374,5 +374,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             Log_in log_In = new Log_in();
             log_In.Show();
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

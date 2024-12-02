@@ -16,11 +16,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Front-End\Src\ToolBoxItems\RoundedPanel.cs" />
+    <None Remove="Front-End\Assets\Fonts\BebasNeue-Regular.ttf" />
+    <None Remove="Front-End\Assets\Fonts\ClashGrotesk-Variable.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <compile Include="Front-End\Src\ToolBoxItems\RoundedPanel.cs" />
+    <Content Include="Front-End\Assets\Fonts\BebasNeue-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Front-End\Assets\Fonts\ClashGrotesk-Variable.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
