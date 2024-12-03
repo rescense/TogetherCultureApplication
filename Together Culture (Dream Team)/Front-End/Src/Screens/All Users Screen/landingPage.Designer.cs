@@ -286,6 +286,7 @@
             guna2Button10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button10.AutoRoundedCorners = true;
             guna2Button10.BackColor = Color.Transparent;
+            guna2Button10.BorderRadius = 15;
             guna2Button10.CustomizableEdges = customizableEdges9;
             guna2Button10.DisabledState.BorderColor = Color.DarkGray;
             guna2Button10.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -307,6 +308,7 @@
             guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
+            guna2Button9.BorderRadius = 15;
             guna2Button9.CustomizableEdges = customizableEdges11;
             guna2Button9.DisabledState.BorderColor = Color.DarkGray;
             guna2Button9.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -566,6 +568,7 @@
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "landingPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "landingPage";

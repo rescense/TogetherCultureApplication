@@ -16,6 +16,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
     public partial class Sign_up : Form
 
     {
+        bool isEmailValid = false;
+        bool isPasswordValid = false;
+        bool isPasswordMatchValid = false;
+        bool isValidLastName = false;
+        bool isValidFirstName = false;
 
         public Sign_up()
         {
