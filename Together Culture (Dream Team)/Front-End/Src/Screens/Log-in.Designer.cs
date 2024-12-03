@@ -39,7 +39,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            CheckBox = new CheckBox();
+            CheckBoxShowPassword = new CheckBox();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             label7 = new Label();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -58,19 +58,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // CheckBox
+            // CheckBoxShowPassword
             // 
-            CheckBox.AutoSize = true;
-            CheckBox.BackColor = Color.Transparent;
-            CheckBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CheckBox.ForeColor = Color.White;
-            CheckBox.Location = new Point(53, 141);
-            CheckBox.Name = "CheckBox";
-            CheckBox.Size = new Size(138, 25);
-            CheckBox.TabIndex = 0;
-            CheckBox.Text = "Show Password";
-            CheckBox.UseVisualStyleBackColor = false;
-            CheckBox.CheckedChanged += checkBox1_CheckedChanged;
+            CheckBoxShowPassword.AutoSize = true;
+            CheckBoxShowPassword.BackColor = Color.Transparent;
+            CheckBoxShowPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CheckBoxShowPassword.ForeColor = Color.White;
+            CheckBoxShowPassword.Location = new Point(53, 141);
+            CheckBoxShowPassword.Name = "CheckBoxShowPassword";
+            CheckBoxShowPassword.Size = new Size(138, 25);
+            CheckBoxShowPassword.TabIndex = 0;
+            CheckBoxShowPassword.Text = "Show Password";
+            CheckBoxShowPassword.UseVisualStyleBackColor = false;
+            CheckBoxShowPassword.CheckedChanged += checkBoxShowPassword_CheckedChanged;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -123,7 +123,7 @@
             guna2CustomGradientPanel3.Controls.Add(pictureBox1);
             guna2CustomGradientPanel3.Controls.Add(btnSignUp);
             guna2CustomGradientPanel3.Controls.Add(btnLogin);
-            guna2CustomGradientPanel3.Controls.Add(CheckBox);
+            guna2CustomGradientPanel3.Controls.Add(CheckBoxShowPassword);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges9;
             guna2CustomGradientPanel3.FillColor = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
@@ -283,7 +283,7 @@
 
         #endregion
 
-        private CheckBox CheckBox;
+        private CheckBox CheckBoxShowPassword;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;

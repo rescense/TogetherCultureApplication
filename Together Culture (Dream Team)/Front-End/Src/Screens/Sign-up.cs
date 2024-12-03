@@ -244,13 +244,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                             );
 
                             // Adding parameters with AddWithValue
-                            command.Parameters.AddWithValue("@Username", txtUserName.Text.Trim()); // Ensure no leading/trailing spaces
-                            command.Parameters.AddWithValue("@Password", txtPassword.Text.Trim()); // Assuming txtPassword is a TextBox
+                            command.Parameters.AddWithValue("@Username", txtUserName.Text.Trim());
+                            command.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                             command.Parameters.AddWithValue("@FirstName", txtFirstName.Text.Trim());
                             command.Parameters.AddWithValue("@LastName", txtLastName.Text.Trim());
                             command.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                             command.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text.Trim());
-                            command.Parameters.AddWithValue("@DateOfBirth", txtDateOfBirth.Value); // Assuming txtDateOfBirth is a DateTimePicker
+                            command.Parameters.AddWithValue("@DateOfBirth", txtDateOfBirth.Value);
                             command.Parameters.AddWithValue("@DateJoined", DateTime.Now.Date); // Set current date
 
                             // Execute the query

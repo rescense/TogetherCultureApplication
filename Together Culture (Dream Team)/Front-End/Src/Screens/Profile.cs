@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -17,44 +9,37 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel8_Click(object sender, EventArgs e)
+        private string firstName;
+        private string lastName;
+        private string userType;
+
+        // Constructor to accept username
+        public Profile(string FirstName, String LastName, String UserType)
         {
+            InitializeComponent();
+            this.firstName = FirstName;
+            this.lastName = LastName;
+            this.userType = UserType;
 
         }
 
-        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        private void Profile_Load(object sender, EventArgs e)
         {
+            lblUserName.Text = $"{firstName}";
+            lblUserType.Text = $"{userType}";
 
+            // Create a copy of the Application.OpenForms collection
+            var openFormsList = new List<Form>(Application.OpenForms.Cast<Form>());
+
+            // Close LandingPage form from the copied list, but not Profile
+            foreach (Form form in openFormsList)
+            {
+                if (form.Name == "landingPage") // Check for the LandingPage form by its Name
+                {
+                    form.Close();
+                }
+            }
         }
 
-        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

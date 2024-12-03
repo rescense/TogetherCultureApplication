@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
@@ -34,35 +35,49 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             try
             {
-                
                 using (DatabaseConnect database = new DatabaseConnect())
                 {
                     database.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM [user] WHERE Email = @email AND Password = @password", database.Connection))
+
+                    // Modify the SQL query to retrieve both the first name, last name, and user type
+                    using (SqlCommand command = new SqlCommand("SELECT first_name, last_name, user_type FROM [user] WHERE Email = @Email AND Password = @Password", database.Connection))
                     {
-                        // Securely add parameters to avoid SQL injection
+                        // Add parameters to avoid SQL injection
                         command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
-                        command.Parameters.Add("@Password", SqlDbType.VarChar).Value = txtPassword.Text; // Use hashed password in a real scenario.
+                        command.Parameters.Add("@Password", SqlDbType.VarChar).Value = txtPassword.Text;
 
-                        int userCount = (int)command.ExecuteScalar();
+                        // Execute the query and fetch the data
+                        SqlDataReader reader = command.ExecuteReader();
 
-                        if (userCount > 0)
+                        // Check if any rows were returned
+                        if (reader.HasRows)
                         {
+                            // Read the data from the reader (the first record)
+                            reader.Read(); // You must call Read() to move to the first row
+
+                            string firstName = reader["first_name"].ToString();
+                            string lastName = reader["last_name"].ToString();
+                            string userType = reader["user_type"].ToString();
+
                             MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Navigate to the next form or main application window
-                            Profile profile = new Profile();
+                            // Pass the user data (firstName, lastName, userType) to the Profile form   
+                            Profile profile = new Profile(firstName, lastName, userType);
                             profile.Show();
                             this.Hide();
+
                         }
                         else
                         {
+                            // If no user is found, show a failure message
                             MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            MessageBox.Show($"Email: {txtEmail.Text}, Password: {txtPassword.Text}");
                         }
-                    }
-                    database.Close();
 
+                        // Always close the reader after usage
+                        reader.Close();
+                    }
+
+                    database.Close();
                 }
             }
             catch (SqlException sqlEx)
@@ -74,6 +89,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void btnSignUp_click(object sender, EventArgs e)
         {
@@ -87,19 +104,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void richTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged_1(object sender, EventArgs e)
-        {
-
+            // If the checkbox is checked, show the password
+            if (CheckBoxShowPassword.Checked)
+            {
+                txtPassword.PasswordChar = '\0'; // Empty string means no masking
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*'; // Use '*' to mask the password
+            }
         }
     }
 }
