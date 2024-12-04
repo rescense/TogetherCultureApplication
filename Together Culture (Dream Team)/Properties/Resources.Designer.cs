@@ -63,6 +63,36 @@ namespace Together_Culture__Dream_Team_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caring {
+            get {
+                object obj = ResourceManager.GetObject("caring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap creating {
+            get {
+                object obj = ResourceManager.GetObject("creating", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap experiencing {
+            get {
+                object obj = ResourceManager.GetObject("experiencing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ph__user_list_fill__1_ {
             get {
                 object obj = ResourceManager.GetObject("ph--user-list-fill (1)", resourceCulture);
@@ -73,9 +103,29 @@ namespace Together_Culture__Dream_Team_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sharing {
+            get {
+                object obj = ResourceManager.GetObject("Sharing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap uil__chart {
             get {
                 object obj = ResourceManager.GetObject("uil--chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Working_Pic {
+            get {
+                object obj = ResourceManager.GetObject("Working Pic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

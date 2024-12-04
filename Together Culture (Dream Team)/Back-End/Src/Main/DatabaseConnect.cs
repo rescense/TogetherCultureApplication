@@ -11,7 +11,7 @@ namespace Together_Culture__Dream_Team_.Back_End.Src.Main
         public DatabaseConnect()
         {
             // Construct the connection string dynamically
-            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Development\Latest Clone\2\Together Culture (Dream Team)\Database\db_TogetherCulture.mdf"";Integrated Security=True;Connect Timeout=30";
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\delete\Together Culture (Dream Team)\Together Culture (Dream Team)\Database\db_TogetherCulture.mdf"";Integrated Security=True;Connect Timeout=30"";Integrated Security=True;Connect Timeout=30";
 
             // Initialize the connection
             _connection = new SqlConnection(connectionString);
