@@ -836,6 +836,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1462, 893);
             Name = "AdminDashboardcs";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Mode";
             Load += AdminDashboardcs_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

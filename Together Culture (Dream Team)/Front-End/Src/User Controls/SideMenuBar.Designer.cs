@@ -40,7 +40,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel1 = new TableLayoutPanel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnAdminLogin = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -54,7 +54,7 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(guna2Button1, 0, 0);
-            tableLayoutPanel1.Controls.Add(guna2Button2, 0, 1);
+            tableLayoutPanel1.Controls.Add(btnAdminLogin, 0, 1);
             tableLayoutPanel1.Controls.Add(guna2Button3, 0, 2);
             tableLayoutPanel1.Controls.Add(guna2Button4, 0, 3);
             tableLayoutPanel1.Location = new Point(3, 3);
@@ -84,22 +84,23 @@
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Profile";
             // 
-            // guna2Button2
+            // btnAdminLogin
             // 
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Transparent;
-            guna2Button2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(3, 108);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(182, 99);
-            guna2Button2.TabIndex = 0;
-            guna2Button2.Text = "Settings";
+            btnAdminLogin.CustomizableEdges = customizableEdges3;
+            btnAdminLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnAdminLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAdminLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAdminLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAdminLogin.FillColor = Color.Transparent;
+            btnAdminLogin.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdminLogin.ForeColor = Color.White;
+            btnAdminLogin.Location = new Point(3, 108);
+            btnAdminLogin.Name = "btnAdminLogin";
+            btnAdminLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAdminLogin.Size = new Size(182, 99);
+            btnAdminLogin.TabIndex = 0;
+            btnAdminLogin.Text = "Admin";
+            btnAdminLogin.Click += btnAdminLogin_Click;
             // 
             // guna2Button3
             // 
@@ -165,7 +166,7 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnAdminLogin;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;

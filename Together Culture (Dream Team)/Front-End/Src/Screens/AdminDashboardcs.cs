@@ -23,7 +23,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void AdminDashboardcs_Load(object sender, EventArgs e)
         {
+            // Create a copy of the Application.OpenForms collection
+            var openFormsList = new List<Form>(Application.OpenForms.Cast<Form>());
 
+            // Close LandingPage form from the copied list, but not Profile
+            foreach (Form form in openFormsList)
+            {
+                if (form.Name == "landingPage") // Check for the LandingPage form by its Name
+                {
+                    form.Close();
+                }
+            }
         }
 
         private void showSideMenu(UserControl userControl)
