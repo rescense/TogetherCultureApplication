@@ -17,11 +17,8 @@
 
   <ItemGroup>
     <Compile Remove="Front-End\Assets\GIFS\**" />
-    <Compile Remove="Front-End\Src\Navigator\**" />
     <EmbeddedResource Remove="Front-End\Assets\GIFS\**" />
-    <EmbeddedResource Remove="Front-End\Src\Navigator\**" />
     <None Remove="Front-End\Assets\GIFS\**" />
-    <None Remove="Front-End\Src\Navigator\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,10 +33,6 @@
     <Content Include="Front-End\Assets\Fonts\ClashGrotesk-Variable.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Front-End\Src\Test\" />
   </ItemGroup>
 
   <ItemGroup>

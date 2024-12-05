@@ -19,7 +19,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             InitializeComponent();
         }
 
-        usrCntrl_AboutUs usrCntrl_AboutUs = new usrCntrl_AboutUs();
         SideMenuBar SideMenuBar = new SideMenuBar();
         AboutUs AboutUs = new AboutUs();
         Memberships Memberships = new Memberships();
@@ -82,116 +81,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            usrCntrl_AboutUs usrCntrl_AboutUs = new usrCntrl_AboutUs();
-            addUserControl(usrCntrl_AboutUs);
-        }
-
-
-
-
-        private void landingPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usrCntrl_AboutUs1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void userControl11_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userControl11_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usrCntrl_Memberships1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2CustomGradientPanel4_Paint_1(object sender, PaintEventArgs e)
         {
             addUserControl(AboutUs);
-        }
-
-        // Community Member button redirect to website
-        private void communityMemberButton_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        // Creative Workspace Member button redirect to website
-        private void creativeWorkspaceButton_Click_1(object sender, EventArgs e)
-        {
-            String url = "https://www.togetherculture.com/creative-workspace";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
-        }
-
-        // Organization Member button redirect to website
-        private void organizationMemberButton_Click(object sender, EventArgs e)
-        {
-            String url = "https://www.togetherculture.com/business-unusual-membership";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
         }
 
         private void aboutUsLabel_Click(object sender, EventArgs e)

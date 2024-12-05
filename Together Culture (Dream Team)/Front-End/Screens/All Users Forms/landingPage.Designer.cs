@@ -251,7 +251,6 @@
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2CustomGradientPanel2.Size = new Size(1008, 143);
             guna2CustomGradientPanel2.TabIndex = 4;
-            guna2CustomGradientPanel2.Paint += guna2CustomGradientPanel2_Paint;
             // 
             // label16
             // 
@@ -406,7 +405,6 @@
             label7.Size = new Size(171, 108);
             label7.TabIndex = 16;
             label7.Text = "Together\r\nCulture\r\nCambridge";
-            label7.Click += label7_Click;
             // 
             // guna2CustomGradientPanel3
             // 
@@ -572,7 +570,6 @@
             Name = "landingPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "landingPage";
-            Load += landingPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
