@@ -84,7 +84,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void searchBtn(object sender, EventArgs e)
         {
-            skillShareResult sskSsm = new skillShareResult();
+            SkillShareResults sskSsm = new SkillShareResults();
             sskSsm.Show();
         }
 

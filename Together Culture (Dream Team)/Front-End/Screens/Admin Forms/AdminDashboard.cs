@@ -12,11 +12,11 @@ using togther_Culture;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
-    public partial class AdminDashboardcs : Form
+    public partial class AdminDashboard : Form
     {
 
         SideMenuBar SideMenuBar = new SideMenuBar();
-        public AdminDashboardcs()
+        public AdminDashboard()
         {
             InitializeComponent();
         }
@@ -95,7 +95,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            UserControlSearchUsers userControlSearchUsers = new UserControlSearchUsers();
+            SearchUsers userControlSearchUsers = new SearchUsers();
             addUserControl(userControlSearchUsers);
         }
 
@@ -199,20 +199,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            UserControlSearchPendingApprovals userControlSearchPendingApprovals = new UserControlSearchPendingApprovals();
+            SearchPendingApprovals userControlSearchPendingApprovals = new SearchPendingApprovals();
             addUserControl(userControlSearchPendingApprovals);
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            UserControlSearchEventsAdmin userControlSearchEventsAdmin = new UserControlSearchEventsAdmin();
+            SearchEventsAdmin userControlSearchEventsAdmin = new SearchEventsAdmin();
             addUserControl(userControlSearchEventsAdmin);
         }
 
         private void adminPic_Click(object sender, EventArgs e)
         {
             // Create an instance of the AdminDashboardcs form
-            AdminDashboardcs adminDashboardcsForm = new AdminDashboardcs();
+            AdminDashboard adminDashboardcsForm = new AdminDashboard();
 
             // Show the eventsMainForm form
             adminDashboardcsForm.Show();

@@ -11,9 +11,9 @@ using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
-    public partial class skillShareResult : Form
+    public partial class SkillShareResults : Form
     {
-        public skillShareResult()
+        public SkillShareResults()
         {
             InitializeComponent();
         }
@@ -86,7 +86,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void searchBtn(object sender, EventArgs e)
         {
-            skillShareResult ssk2 = new skillShareResult();
+            SkillShareResults ssk2 = new SkillShareResults();
         }
         // Results Panel
         private void resultDataGrideViewCell(object sender, DataGridViewCellEventArgs e)

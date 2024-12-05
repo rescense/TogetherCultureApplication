@@ -24,7 +24,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         Memberships Memberships = new Memberships();
         Shop Shop = new Shop();
         Blog Blog = new Blog();
-        UserControlPlaceHire UserControlPlaceHire = new UserControlPlaceHire();
+        PlaceHire UserControlPlaceHire = new PlaceHire();
 
         private bool isSideMenuVisible = false;
         private bool colorChange = false;

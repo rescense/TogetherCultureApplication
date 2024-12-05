@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class UserControlPlaceHire : UserControl
+    public partial class PlaceHire : UserControl
     {
 
         private Size formOriginalSize;
@@ -21,7 +21,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private Rectangle rectxt1;
         private Rectangle rectxt2;
 
-        public UserControlPlaceHire()
+        public PlaceHire()
         {
             InitializeComponent();
 

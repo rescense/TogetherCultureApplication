@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class UserControlSearchPendingApprovals : UserControl
+    public partial class SearchPendingApprovals : UserControl
     {
-        public UserControlSearchPendingApprovals()
+        public SearchPendingApprovals()
         {
             InitializeComponent();
         }

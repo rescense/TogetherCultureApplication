@@ -66,7 +66,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                             {
                                 MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                AdminDashboardcs adminDashboardcs = new AdminDashboardcs();
+                                AdminDashboard adminDashboardcs = new AdminDashboard();
                                 adminDashboardcs.Show();
 
                                 this.Close();

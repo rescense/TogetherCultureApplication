@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
-    public partial class UserControlSearchEventsAdmin : UserControl
+    public partial class SearchEventsAdmin : UserControl
     {
-        public UserControlSearchEventsAdmin()
+        public SearchEventsAdmin()
         {
             InitializeComponent();
         }
