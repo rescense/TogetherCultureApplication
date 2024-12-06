@@ -16,5 +16,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
