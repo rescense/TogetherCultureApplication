@@ -14,10 +14,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class SearchUsers : UserControl
     {
+
+        private DataTable userDataTable;
+
         public SearchUsers()
         {
             InitializeComponent();
             LoadDataIntoDataGridView();
+            AddCheckBoxColumn();
         }
 
 
@@ -43,23 +47,35 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void selectAllCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (selectAllCheckBox.Focused) // Ensure triggered by user action
+            // Ensure DataGridView contains rows
+            if (dataGridView1.Rows.Count > 0)
             {
-                // Get the state of the "Select All" checkbox
                 bool selectAll = selectAllCheckBox.Checked;
 
-                // Loop through all child controls recursively
-                foreach (CheckBox checkBox in GetAllCheckBoxes(panel1))
+                // Iterate through rows and set checkbox state
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (checkBox != selectAllCheckBox)
+                    DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
+                    if (checkBoxCell != null)
                     {
-                        checkBox.CheckedChanged -= otherCheckBox_CheckedChanged; // Detach event
-                        checkBox.Checked = selectAll; // Set state
-                        checkBox.CheckedChanged += otherCheckBox_CheckedChanged; // Reattach event
+                        checkBoxCell.Value = selectAll; // Check or Uncheck based on Select All state
                     }
                 }
+            }
+        }
 
-                UpdateSelectAllText();
+        private void AddCheckBoxColumn()
+        {
+            // Add a checkbox column if not already present
+            if (!dataGridView1.Columns.Contains("Select"))
+            {
+                DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
+                {
+                    HeaderText = "Select",
+                    Name = "Select",
+                    Width = 50
+                };
+                dataGridView1.Columns.Insert(0, checkBoxColumn);
             }
         }
 
@@ -122,7 +138,25 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Ensure the clicked column is the checkbox column
+            if (e.ColumnIndex == dataGridView1.Columns["Select"].Index)
+            {
+                // Check if all rows are selected or not
+                bool allChecked = true;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["Select"].Value == null || !(bool)row.Cells["Select"].Value)
+                    {
+                        allChecked = false;
+                        break;
+                    }
+                }
 
+                // Update the "Select All" checkbox state
+                selectAllCheckBox.CheckedChanged -= selectAllCheckBox_CheckedChanged; // Temporarily unsubscribe
+                selectAllCheckBox.Checked = allChecked;
+                selectAllCheckBox.CheckedChanged += selectAllCheckBox_CheckedChanged; // Re-subscribe
+            }
         }
 
         private void LoadDataIntoDataGridView()
@@ -139,16 +173,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.Connection);
 
                     // Fill the DataTable with the retrieved data
-                    DataTable dataTable = new DataTable();
-                    dataAdapter.Fill(dataTable);
+                    userDataTable = new DataTable();
+                    dataAdapter.Fill(userDataTable);
 
                     // Bind the DataTable to the DataGridView
-                    dataGridView1.DataSource = dataTable;
+                    dataGridView1.DataSource = userDataTable;
 
-                    // Adjust header height
-                    dataGridView1.ColumnHeadersHeight = 40; // Set to a suitable value
-
-                    // Optionally, customize DataGridView columns
+                    // Set column headers
                     dataGridView1.Columns["user_id"].HeaderText = "ID";
                     dataGridView1.Columns["username"].HeaderText = "Username";
                     dataGridView1.Columns["first_name"].HeaderText = "First Name";
@@ -157,6 +188,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     dataGridView1.Columns["phone_number"].HeaderText = "Phone Number";
                     dataGridView1.Columns["date_of_birth"].HeaderText = "Date of Birth";
                     dataGridView1.Columns["date_joined"].HeaderText = "Date Joined";
+
+                    // Set default header height
+                    dataGridView1.ColumnHeadersHeight = 40;
                 }
             }
             catch (Exception ex)
@@ -165,5 +199,25 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
+        private void searchUsersTxtBx_TextChanged(object sender, EventArgs e)
+        {
+            if (userDataTable != null)
+            {
+                string searchValue = searchUsersTxtBx.Text.Trim();
+
+                // Use DataView to filter the DataTable
+                DataView dv = userDataTable.DefaultView;
+
+                // Filter rows where any relevant column contains the search value
+                dv.RowFilter = $"username LIKE '%{searchValue}%' OR " +
+                               $"first_name LIKE '%{searchValue}%' OR " +
+                               $"last_name LIKE '%{searchValue}%' OR " +
+                               $"email LIKE '%{searchValue}%' OR " +
+                               $"phone_number LIKE '%{searchValue}%'";
+
+                // Update DataGridView with the filtered view
+                dataGridView1.DataSource = dv;
+            }
+        }
     }
 }
