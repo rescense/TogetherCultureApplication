@@ -184,6 +184,7 @@
             searchUsersTxtBx.TabIndex = 6;
             searchUsersTxtBx.Text = "Search users...";
             searchUsersTxtBx.MouseClick += searchUsersTxtBx_MouseClic;
+            searchUsersTxtBx.TextChanged += searchUsersTxtBx_TextChanged;
             searchUsersTxtBx.Leave += searchUsersTxtBx_Leave;
             // 
             // pictureBox1
@@ -201,7 +202,6 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.AutoScroll = true;
             panel1.BackColor = Color.FromArgb(248, 237, 235);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(selectAllCheckBox);
@@ -243,10 +243,10 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            dataGridView1.Location = new Point(10, 12);
+            dataGridView1.Location = new Point(0, 73);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(1330, 499);
+            dataGridView1.Size = new Size(1357, 447);
             dataGridView1.TabIndex = 43;
             dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -275,7 +275,7 @@
             // 
             selectAllCheckBox.AutoSize = true;
             selectAllCheckBox.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            selectAllCheckBox.Location = new Point(56, 27);
+            selectAllCheckBox.Location = new Point(26, 27);
             selectAllCheckBox.Name = "selectAllCheckBox";
             selectAllCheckBox.Size = new Size(123, 34);
             selectAllCheckBox.TabIndex = 42;
@@ -296,7 +296,7 @@
             panel2.Controls.Add(checkBox2);
             panel2.Location = new Point(36, 493);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1290, 64);
+            panel2.Size = new Size(1307, 64);
             panel2.TabIndex = 38;
             // 
             // pictureBox5
@@ -304,7 +304,7 @@
             pictureBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox5.BorderStyle = BorderStyle.FixedSingle;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(1122, 9);
+            pictureBox5.Location = new Point(1139, 9);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(48, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -316,7 +316,7 @@
             pictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox6.BorderStyle = BorderStyle.FixedSingle;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1176, 9);
+            pictureBox6.Location = new Point(1193, 9);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(48, 48);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -328,7 +328,7 @@
             pictureBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox7.BorderStyle = BorderStyle.FixedSingle;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1230, 9);
+            pictureBox7.Location = new Point(1247, 9);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(48, 48);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -380,7 +380,7 @@
             panel7.Controls.Add(checkBox7);
             panel7.Location = new Point(36, 423);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1290, 64);
+            panel7.Size = new Size(1307, 64);
             panel7.TabIndex = 38;
             // 
             // pictureBox25
@@ -388,7 +388,7 @@
             pictureBox25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox25.BorderStyle = BorderStyle.FixedSingle;
             pictureBox25.Image = (Image)resources.GetObject("pictureBox25.Image");
-            pictureBox25.Location = new Point(1122, 9);
+            pictureBox25.Location = new Point(1139, 9);
             pictureBox25.Name = "pictureBox25";
             pictureBox25.Size = new Size(48, 48);
             pictureBox25.SizeMode = PictureBoxSizeMode.Zoom;
@@ -400,7 +400,7 @@
             pictureBox26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox26.BorderStyle = BorderStyle.FixedSingle;
             pictureBox26.Image = (Image)resources.GetObject("pictureBox26.Image");
-            pictureBox26.Location = new Point(1176, 9);
+            pictureBox26.Location = new Point(1193, 9);
             pictureBox26.Name = "pictureBox26";
             pictureBox26.Size = new Size(48, 48);
             pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
@@ -412,7 +412,7 @@
             pictureBox27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox27.BorderStyle = BorderStyle.FixedSingle;
             pictureBox27.Image = (Image)resources.GetObject("pictureBox27.Image");
-            pictureBox27.Location = new Point(1230, 9);
+            pictureBox27.Location = new Point(1247, 9);
             pictureBox27.Name = "pictureBox27";
             pictureBox27.Size = new Size(48, 48);
             pictureBox27.SizeMode = PictureBoxSizeMode.Zoom;
@@ -464,7 +464,7 @@
             panel6.Controls.Add(checkBox6);
             panel6.Location = new Point(36, 353);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1290, 64);
+            panel6.Size = new Size(1307, 64);
             panel6.TabIndex = 38;
             // 
             // pictureBox21
@@ -472,7 +472,7 @@
             pictureBox21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox21.BorderStyle = BorderStyle.FixedSingle;
             pictureBox21.Image = (Image)resources.GetObject("pictureBox21.Image");
-            pictureBox21.Location = new Point(1122, 9);
+            pictureBox21.Location = new Point(1139, 9);
             pictureBox21.Name = "pictureBox21";
             pictureBox21.Size = new Size(48, 48);
             pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
@@ -484,7 +484,7 @@
             pictureBox22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox22.BorderStyle = BorderStyle.FixedSingle;
             pictureBox22.Image = (Image)resources.GetObject("pictureBox22.Image");
-            pictureBox22.Location = new Point(1176, 9);
+            pictureBox22.Location = new Point(1193, 9);
             pictureBox22.Name = "pictureBox22";
             pictureBox22.Size = new Size(48, 48);
             pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
@@ -496,7 +496,7 @@
             pictureBox23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox23.BorderStyle = BorderStyle.FixedSingle;
             pictureBox23.Image = (Image)resources.GetObject("pictureBox23.Image");
-            pictureBox23.Location = new Point(1230, 9);
+            pictureBox23.Location = new Point(1247, 9);
             pictureBox23.Name = "pictureBox23";
             pictureBox23.Size = new Size(48, 48);
             pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
@@ -548,7 +548,7 @@
             panel5.Controls.Add(checkBox5);
             panel5.Location = new Point(36, 283);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1290, 64);
+            panel5.Size = new Size(1307, 64);
             panel5.TabIndex = 38;
             // 
             // pictureBox17
@@ -556,7 +556,7 @@
             pictureBox17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox17.BorderStyle = BorderStyle.FixedSingle;
             pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(1122, 9);
+            pictureBox17.Location = new Point(1139, 9);
             pictureBox17.Name = "pictureBox17";
             pictureBox17.Size = new Size(48, 48);
             pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
@@ -568,7 +568,7 @@
             pictureBox18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox18.BorderStyle = BorderStyle.FixedSingle;
             pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
-            pictureBox18.Location = new Point(1176, 9);
+            pictureBox18.Location = new Point(1193, 9);
             pictureBox18.Name = "pictureBox18";
             pictureBox18.Size = new Size(48, 48);
             pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
@@ -580,7 +580,7 @@
             pictureBox19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox19.BorderStyle = BorderStyle.FixedSingle;
             pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(1230, 9);
+            pictureBox19.Location = new Point(1247, 9);
             pictureBox19.Name = "pictureBox19";
             pictureBox19.Size = new Size(48, 48);
             pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
@@ -632,7 +632,7 @@
             panel4.Controls.Add(checkBox4);
             panel4.Location = new Point(36, 213);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1290, 64);
+            panel4.Size = new Size(1307, 64);
             panel4.TabIndex = 38;
             // 
             // pictureBox13
@@ -640,7 +640,7 @@
             pictureBox13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox13.BorderStyle = BorderStyle.FixedSingle;
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(1122, 9);
+            pictureBox13.Location = new Point(1139, 9);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(48, 48);
             pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
@@ -652,7 +652,7 @@
             pictureBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox14.BorderStyle = BorderStyle.FixedSingle;
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(1176, 9);
+            pictureBox14.Location = new Point(1193, 9);
             pictureBox14.Name = "pictureBox14";
             pictureBox14.Size = new Size(48, 48);
             pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
@@ -664,7 +664,7 @@
             pictureBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox15.BorderStyle = BorderStyle.FixedSingle;
             pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(1230, 9);
+            pictureBox15.Location = new Point(1247, 9);
             pictureBox15.Name = "pictureBox15";
             pictureBox15.Size = new Size(48, 48);
             pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
@@ -716,7 +716,7 @@
             panel3.Controls.Add(checkBox3);
             panel3.Location = new Point(36, 143);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1290, 64);
+            panel3.Size = new Size(1307, 64);
             panel3.TabIndex = 38;
             // 
             // pictureBox9
@@ -724,7 +724,7 @@
             pictureBox9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox9.BorderStyle = BorderStyle.FixedSingle;
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(1122, 9);
+            pictureBox9.Location = new Point(1139, 9);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(48, 48);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
@@ -736,7 +736,7 @@
             pictureBox10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox10.BorderStyle = BorderStyle.FixedSingle;
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(1176, 9);
+            pictureBox10.Location = new Point(1193, 9);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(48, 48);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
@@ -748,7 +748,7 @@
             pictureBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox11.BorderStyle = BorderStyle.FixedSingle;
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(1230, 9);
+            pictureBox11.Location = new Point(1247, 9);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(48, 48);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
@@ -800,7 +800,7 @@
             userApprovalListing.Controls.Add(checkBox1);
             userApprovalListing.Location = new Point(36, 73);
             userApprovalListing.Name = "userApprovalListing";
-            userApprovalListing.Size = new Size(1290, 64);
+            userApprovalListing.Size = new Size(1307, 64);
             userApprovalListing.TabIndex = 38;
             // 
             // pictureBox4
@@ -808,7 +808,7 @@
             pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox4.BorderStyle = BorderStyle.FixedSingle;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1122, 9);
+            pictureBox4.Location = new Point(1139, 9);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(48, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -820,7 +820,7 @@
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(1176, 9);
+            pictureBox3.Location = new Point(1193, 9);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(48, 48);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -832,7 +832,7 @@
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1230, 9);
+            pictureBox2.Location = new Point(1247, 9);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(48, 48);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -885,7 +885,7 @@
             guna2Button1.FillColor = Color.Black;
             guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1125, 27);
+            guna2Button1.Location = new Point(1176, 21);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(92, 40);
@@ -901,7 +901,7 @@
             filterBtn.FlatStyle = FlatStyle.Flat;
             filterBtn.ForeColor = Color.Transparent;
             filterBtn.Image = (Image)resources.GetObject("filterBtn.Image");
-            filterBtn.Location = new Point(1233, 20);
+            filterBtn.Location = new Point(1280, 14);
             filterBtn.Name = "filterBtn";
             filterBtn.Size = new Size(52, 47);
             filterBtn.TabIndex = 36;
@@ -921,7 +921,7 @@
             actionsBtn.FillColor = Color.Black;
             actionsBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             actionsBtn.ForeColor = Color.White;
-            actionsBtn.Location = new Point(2036, 9);
+            actionsBtn.Location = new Point(2053, 9);
             actionsBtn.Name = "actionsBtn";
             actionsBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             actionsBtn.Size = new Size(82, 25);
