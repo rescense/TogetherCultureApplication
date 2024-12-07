@@ -126,7 +126,7 @@
             guna2CustomGradientPanel1.Location = new Point(0, -1);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel1.Size = new Size(1441, 193);
+            guna2CustomGradientPanel1.Size = new Size(1443, 192);
             guna2CustomGradientPanel1.TabIndex = 1;
             guna2CustomGradientPanel1.Paint += headerPanel;
             // 
@@ -296,7 +296,7 @@
             guna2CustomGradientPanel2.Location = new Point(1, 189);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2CustomGradientPanel2.Size = new Size(875, 535);
+            guna2CustomGradientPanel2.Size = new Size(877, 655);
             guna2CustomGradientPanel2.TabIndex = 2;
             guna2CustomGradientPanel2.Paint += searchPanel;
             // 
@@ -315,7 +315,7 @@
             guna2CustomGradientPanel4.FillColor2 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel4.FillColor3 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel4.FillColor4 = Color.FromArgb(64, 0, 60);
-            guna2CustomGradientPanel4.Location = new Point(29, 99);
+            guna2CustomGradientPanel4.Location = new Point(29, 113);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2CustomGradientPanel4.Size = new Size(814, 416);
@@ -491,7 +491,7 @@
             guna2CustomGradientPanel3.Location = new Point(875, 189);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            guna2CustomGradientPanel3.Size = new Size(566, 535);
+            guna2CustomGradientPanel3.Size = new Size(568, 655);
             guna2CustomGradientPanel3.TabIndex = 3;
             guna2CustomGradientPanel3.Paint += timeBankPanel;
             // 
@@ -627,11 +627,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1442, 726);
+            ClientSize = new Size(1444, 846);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel1);
-            MinimumSize = new Size(1460, 773);
+            MinimumSize = new Size(1462, 893);
             Name = "skillShare";
             Text = "SkillShareMain";
             guna2CustomGradientPanel1.ResumeLayout(false);
