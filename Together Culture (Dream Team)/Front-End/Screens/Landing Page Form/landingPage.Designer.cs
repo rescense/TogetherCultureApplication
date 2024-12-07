@@ -398,11 +398,11 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Clash Grotesk", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
             label7.Location = new Point(73, 21);
             label7.Name = "label7";
-            label7.Size = new Size(171, 108);
+            label7.Size = new Size(174, 111);
             label7.TabIndex = 16;
             label7.Text = "Together\r\nCulture\r\nCambridge";
             // 

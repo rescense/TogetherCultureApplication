@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Controls;
+
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
@@ -24,6 +26,44 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             AddCheckBoxColumn();
         }
 
+        ActionsSearchUsers actionsSearchUsers = new ActionsSearchUsers();
+
+        private bool isActionsSearchUsersVisible = false;
+
+        private void showActionsSearchUsers(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            actionsPanel.Controls.Clear();
+            actionsPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void actionsSearchUsersBtn_Click(object sender, EventArgs e)
+        {
+            if (!isActionsSearchUsersVisible)
+            {
+                //show the actions mmenu bar
+                actionsPanel.Visible = true;
+                showActionsSearchUsers(actionsSearchUsers);
+                isActionsSearchUsersVisible = true;
+                BringToFront();
+            }
+            else
+            {
+                //hide the actions bar
+                actionsPanel.Controls.Clear();
+                actionsPanel.Visible = false;
+                isActionsSearchUsersVisible = false;
+            }
+        }
+
+        private void actionsPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isActionsSearchUsersVisible)
+            {
+                actionsPanel.Visible = false;
+            }
+        }
 
         private void searchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
