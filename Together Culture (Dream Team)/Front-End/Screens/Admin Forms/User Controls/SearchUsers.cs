@@ -134,7 +134,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     database.Open();
 
                     // Query to fetch all user data
-                    string query = "SELECT username, first_name, last_name, email, phone_number, date_of_birth, date_joined FROM [user]";
+                    string query = "SELECT user_id, username, first_name, last_name, email, phone_number, date_of_birth, date_joined FROM [user]";
 
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.Connection);
 
@@ -145,7 +145,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     // Bind the DataTable to the DataGridView
                     dataGridView1.DataSource = dataTable;
 
+                    // Adjust header height
+                    dataGridView1.ColumnHeadersHeight = 40; // Set to a suitable value
+
                     // Optionally, customize DataGridView columns
+                    dataGridView1.Columns["user_id"].HeaderText = "ID";
                     dataGridView1.Columns["username"].HeaderText = "Username";
                     dataGridView1.Columns["first_name"].HeaderText = "First Name";
                     dataGridView1.Columns["last_name"].HeaderText = "Last Name";
