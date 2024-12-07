@@ -49,5 +49,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             Profilepage profilePage = new Profilepage();
             profilePage.Show();
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            // Open the ProfilePage form
+            Profilepage profilePage = new Profilepage();
+            profilePage.Show();
+            // Close the current form
+            this.Close();
+
+        }
     }
 }

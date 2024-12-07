@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
 {
@@ -50,6 +51,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
         private void guna2HtmlLabel4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            // Open the Profile form
+            Profile profile = new Profile();
+            profile.Show();
+
+            // Close the current form
+            this.Close();
         }
     }
 }
