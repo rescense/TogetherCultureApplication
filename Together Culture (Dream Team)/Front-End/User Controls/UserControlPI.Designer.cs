@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,12 +62,10 @@
             richTextBox7 = new RichTextBox();
             richTextBox8 = new RichTextBox();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel5.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
-            guna2CustomGradientPanel4.SuspendLayout();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel5
@@ -82,14 +78,14 @@
             guna2CustomGradientPanel5.Controls.Add(guna2HtmlLabel11);
             guna2CustomGradientPanel5.Controls.Add(guna2HtmlLabel7);
             guna2CustomGradientPanel5.Controls.Add(guna2HtmlLabel1);
-            guna2CustomGradientPanel5.CustomizableEdges = customizableEdges11;
+            guna2CustomGradientPanel5.CustomizableEdges = customizableEdges9;
             guna2CustomGradientPanel5.FillColor = Color.Red;
             guna2CustomGradientPanel5.FillColor2 = Color.LightCoral;
             guna2CustomGradientPanel5.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel5.Location = new Point(0, 0);
             guna2CustomGradientPanel5.MinimumSize = new Size(800, 808);
             guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2CustomGradientPanel5.Size = new Size(800, 808);
             guna2CustomGradientPanel5.TabIndex = 0;
             // 
@@ -284,13 +280,13 @@
             guna2CustomGradientPanel1.Controls.Add(richTextBox1);
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel3);
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel4);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges7;
             guna2CustomGradientPanel1.FillColor = Color.DarkRed;
             guna2CustomGradientPanel1.FillColor2 = Color.Red;
             guna2CustomGradientPanel1.FillColor3 = Color.DarkRed;
             guna2CustomGradientPanel1.Location = new Point(52, 83);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel1.Size = new Size(664, 170);
             guna2CustomGradientPanel1.TabIndex = 16;
             // 
@@ -301,13 +297,13 @@
             guna2CustomGradientPanel2.Controls.Add(guna2HtmlLabel5);
             guna2CustomGradientPanel2.Controls.Add(richTextBox3);
             guna2CustomGradientPanel2.Controls.Add(richTextBox2);
-            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges7;
+            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.Red;
             guna2CustomGradientPanel2.FillColor3 = Color.DarkRed;
             guna2CustomGradientPanel2.Location = new Point(52, 332);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CustomGradientPanel2.Size = new Size(664, 104);
             guna2CustomGradientPanel2.TabIndex = 17;
             // 
@@ -320,13 +316,13 @@
             guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel10);
             guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel9);
             guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel8);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges5;
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges3;
             guna2CustomGradientPanel3.FillColor = Color.DarkRed;
             guna2CustomGradientPanel3.FillColor2 = Color.Red;
             guna2CustomGradientPanel3.FillColor3 = Color.DarkRed;
             guna2CustomGradientPanel3.Location = new Point(52, 511);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2CustomGradientPanel3.Size = new Size(664, 170);
             guna2CustomGradientPanel3.TabIndex = 18;
             // 
@@ -362,34 +358,15 @@
             // guna2CustomGradientPanel4
             // 
             guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2CustomGradientPanel4.Controls.Add(guna2Button1);
-            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges3;
+            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel4.FillColor = Color.Maroon;
             guna2CustomGradientPanel4.FillColor2 = Color.Red;
             guna2CustomGradientPanel4.FillColor3 = Color.Firebrick;
             guna2CustomGradientPanel4.Location = new Point(0, 738);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel4.Size = new Size(800, 70);
             guna2CustomGradientPanel4.TabIndex = 19;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(192, 0, 0);
-            guna2Button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(304, 12);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(204, 47);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Back to Profile";
             // 
             // UserControlPI
             // 
@@ -408,7 +385,6 @@
             guna2CustomGradientPanel2.PerformLayout();
             guna2CustomGradientPanel3.ResumeLayout(false);
             guna2CustomGradientPanel3.PerformLayout();
-            guna2CustomGradientPanel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -438,6 +414,5 @@
         private RichTextBox richTextBox7;
         private RichTextBox richTextBox6;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
