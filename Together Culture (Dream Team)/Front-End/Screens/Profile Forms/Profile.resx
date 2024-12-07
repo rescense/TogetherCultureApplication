@@ -178,6 +178,30 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAUVJREFUSEvt
+        ldERgjAQRCmBEiyBEijBDqQz7cASsAMtwQ60g7ibbBhnBJJw8Y83czPhcrsx4YjNTgrn3IC4I8gLcUWc
+        NF0fmLeIuOAcnGtVXg+YPry9c0/EEcEfwuCYOXJXeR1gyOMlXOBnV8xpjgxK24FZ3O1RqR84F0oq7lqG
+        ZPEdYu4QSpxTyo78koYqq78w6BFnxOifAhwz1/knIJkd+WUjmQ34TDspoJN8GzBgw/B2KoWag2zKgfjm
+        bbYxyqYMCNlIVnrZ5QPRJWhNXGSXD0TxtpqDr4Dvn7H2Om6yy0fCJabG4Tik5lFZPtIt8deF1456+iPA
+        eK3uobJ8IFptLpWlTmZTc6U+J95oqVut/HMiEFoukPKOjkDMHb29TRnUmO/r0sXti0ZohMg5dtbUWfQb
+        mLLh2O3fnxDHzG1rpJ3/0jQfg7jX/GHfyN4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAZtJREFUaEPt
+        2b8rRWEcx/ErEwYm/gT/grJI+THIRBlkUIoMVopNKZllI/EH2JVZGTBJiZAMEotB+fF+9k/HeZ7n8P2q
+        867X+tzP7d7uPafTqKv7X01gF2d4xQtOsYNxuG8YV/j6wSX64LJlfEINVz6wAFetQI0tYx4uGoIaGKMH
+        prXgDmpcjAs0w6wZqGEpRmDWAdSoFJsw6xZqVIoTmPUONSrFM8xSg3KYpcbkMEuNyWGWGpPDLDUmh1lq
+        TA6zwn2GGpQinGXWOdSoFOHGy6xwF6hGpdiGWeFCT41KMQjTHqCGxbiBeWNQ42IMwEX7UAPL2IKbmhDu
+        J9TQIutwmRpbxG1qbBG3qbFF3KbGFnFZF9TYIp1w1RRS/hjDtVo3zAtv4BhqZIxDTOJP68ASHqFG5Qhn
+        LqIdv1YbNqAGVO0Na2hFpfXjNz6Bn9yjF5UUvkbqRf7SLLIKF3TqYAurSGoa6kBL0Zf74ZcpPMRUh1kK
+        z2KimoM6yINRlO4I6hAP9lC6a6hDPIh6jlLlc4+qPaF06gBP6urqomo0vgF//Z1I6PDiRAAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="PicBoxMembershipType.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAfRJREFUaEPt

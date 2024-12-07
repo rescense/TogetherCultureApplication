@@ -100,9 +100,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             this.Close();
         }
-        private void Log_in_Load(object sender, EventArgs e)
-        {
-        }
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {

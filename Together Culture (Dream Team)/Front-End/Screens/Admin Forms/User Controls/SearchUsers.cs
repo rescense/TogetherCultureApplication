@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
@@ -15,17 +17,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         public SearchUsers()
         {
             InitializeComponent();
+            LoadDataIntoDataGridView();
         }
 
-        private void searchBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void searchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
@@ -125,5 +119,47 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 }
             }
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LoadDataIntoDataGridView()
+        {
+            try
+            {
+                using (DatabaseConnect database = new DatabaseConnect())
+                {
+                    database.Open();
+
+                    // Query to fetch all user data
+                    string query = "SELECT username, first_name, last_name, email, phone_number, date_of_birth, date_joined FROM [user]";
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.Connection);
+
+                    // Fill the DataTable with the retrieved data
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    dataGridView1.DataSource = dataTable;
+
+                    // Optionally, customize DataGridView columns
+                    dataGridView1.Columns["username"].HeaderText = "Username";
+                    dataGridView1.Columns["first_name"].HeaderText = "First Name";
+                    dataGridView1.Columns["last_name"].HeaderText = "Last Name";
+                    dataGridView1.Columns["email"].HeaderText = "Email";
+                    dataGridView1.Columns["phone_number"].HeaderText = "Phone Number";
+                    dataGridView1.Columns["date_of_birth"].HeaderText = "Date of Birth";
+                    dataGridView1.Columns["date_joined"].HeaderText = "Date Joined";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

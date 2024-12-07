@@ -33,6 +33,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUsers));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,6 +45,7 @@
             searchUsersTxtBx = new TextBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             selectAllCheckBox = new CheckBox();
             panel2 = new Panel();
             pictureBox5 = new PictureBox();
@@ -99,6 +103,7 @@
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -151,7 +156,6 @@
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel4.Size = new Size(1447, 681);
             guna2CustomGradientPanel4.TabIndex = 24;
-            guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -199,6 +203,7 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoScroll = true;
             panel1.BackColor = Color.FromArgb(248, 237, 235);
+            panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(selectAllCheckBox);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panel7);
@@ -214,6 +219,57 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1357, 520);
             panel1.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.ColumnHeadersHeight = 4;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.GridColor = Color.FromArgb(231, 229, 255);
+            dataGridView1.Location = new Point(10, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(1330, 499);
+            dataGridView1.TabIndex = 43;
+            dataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dataGridView1.ThemeStyle.BackColor = Color.White;
+            dataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            dataGridView1.ThemeStyle.ReadOnly = false;
+            dataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridView1.ThemeStyle.RowsStyle.Height = 25;
+            dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
             // selectAllCheckBox
             // 
@@ -872,12 +928,12 @@
             actionsBtn.TabIndex = 35;
             actionsBtn.Text = "Actions";
             // 
-            // UserControlSearchUsers
+            // SearchUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2CustomGradientPanel4);
-            Name = "UserControlSearchUsers";
+            Name = "SearchUsers";
             Size = new Size(1447, 681);
             guna2CustomGradientPanel4.ResumeLayout(false);
             guna2CustomGradientPanel1.ResumeLayout(false);
@@ -885,6 +941,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -990,5 +1047,6 @@
         private PictureBox pictureBox12;
         private CheckBox checkBox3;
         private CheckBox selectAllCheckBox;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
     }
 }
