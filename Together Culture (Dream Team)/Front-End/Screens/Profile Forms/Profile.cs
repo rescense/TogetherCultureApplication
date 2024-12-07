@@ -1,7 +1,5 @@
 ﻿
 
-using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
-
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class Profile : Form
@@ -46,13 +44,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            // Open the ProfilePage form
-            Profilepage profilePage = new Profilepage();
-            profilePage.Show();
         }
     }
 }
