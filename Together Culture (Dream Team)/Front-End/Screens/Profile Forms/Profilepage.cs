@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
 {
@@ -31,6 +32,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
+            // Create an instance of UserControlPI
+            UserControlPI personalInfoControl = new UserControlPI();
+
+            // Set the Dock property to fill the panel (optional)
+            personalInfoControl.Dock = DockStyle.Fill;
+
+            // Add the UserControlPI to the panel
+            guna2CustomGradientPanel1.Controls.Add(personalInfoControl);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -61,6 +70,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
 
             // Close the current form
             this.Close();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

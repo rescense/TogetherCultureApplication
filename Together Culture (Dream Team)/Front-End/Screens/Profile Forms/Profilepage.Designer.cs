@@ -146,6 +146,7 @@
             guna2Button3.TabIndex = 2;
             guna2Button3.Text = "Security";
             guna2Button3.TextAlign = HorizontalAlignment.Left;
+            guna2Button3.Click += guna2Button3_Click_1;
             // 
             // guna2Button2
             // 
