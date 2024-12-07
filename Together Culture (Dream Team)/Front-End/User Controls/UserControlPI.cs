@@ -36,5 +36,40 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
 
         }
+
+        private void richTextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
