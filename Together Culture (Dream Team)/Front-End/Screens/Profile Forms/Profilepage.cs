@@ -41,5 +41,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
         {
 
         }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
