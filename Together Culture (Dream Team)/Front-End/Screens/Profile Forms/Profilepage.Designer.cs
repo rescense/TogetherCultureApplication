@@ -280,5 +280,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Src.User_Controls.UserControlPI userControlpi1;
+        private Src.User_Controls.UserControlSecurity userControlSecurity1;
+        private Src.User_Controls.UserControlChPassword userControlChPassword1;
     }
 }
