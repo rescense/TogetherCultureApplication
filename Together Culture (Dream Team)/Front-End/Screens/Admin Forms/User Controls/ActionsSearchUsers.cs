@@ -9,44 +9,40 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
 {
     public partial class ActionsSearchUsers : UserControl
     {
-        private SearchUsers searchUsersControl;  // Reference to the SearchUsers control
-        private List<string> attendedEvents = new List<string>();  // List to store attended events
-        private Guna2DataGridView dataGridView1;
+    private SearchUsers searchUsersControl;  // Instance variable for SearchUsers
+    private List<string> attendedEvents = new List<string>();  // List to store attended events
+    private Guna2DataGridView dataGridView1;
 
-        public ActionsSearchUsers(SearchUsers searchUsersControl)
+    // Constructor that takes a SearchUsers control as a parameter
+    public ActionsSearchUsers()
+    {
+        InitializeComponent();
+        this.searchUsersControl = searchUsersControl;
+        confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
+    }
+
+    // Event handler for the button click
+    private void confirmActionBtn_Click(object sender, EventArgs e)
+    { 
+        List<string> selectedUsers = searchUsersControl.GetSelectedUsers();
+        if (seeEventsRadioBtn.Checked)
         {
-            InitializeComponent();
-            searchUsersControl = searchUsersControl;
-            this.dataGridView1 = searchUsersControl.dataGridView1;
-            confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
+            HandleSeeEventsAction(selectedUsers);
         }
-
-        // Event handler for Confirm button click
-        private void confirmActionBtn_Click(object sender, EventArgs e)
+        else if (addTagsRadioBtn.Checked)
         {
-            // Get the selected users from the SearchUsers control
-            List<string> selectedUsers = searchUsersControl.GetSelectedUsers();
-
-            // Determine which radio button is checked and trigger the appropriate action
-            if (seeEventsRadioBtn.Checked)
-            {
-                HandleSeeEventsAction(selectedUsers);
-            }
-            else if (addTagsRadioBtn.Checked)
-            {
-                HandleAddTagsAction(selectedUsers);
-            }
-            else if (removeUsersRadioBtn.Checked)
-            {
-                HandleRemoveUsersAction(selectedUsers);
-            }
-            else
-            {
-                MessageBox.Show("Please select an action first.");
-            }
+            HandleAddTagsAction(selectedUsers);
         }
+        else if (removeUsersRadioBtn.Checked)
+        {
+            HandleRemoveUsersAction(selectedUsers);
+        }
+        else
+        {
+            MessageBox.Show("Please select an action first.");
+        }
+    }
 
-        // Action to view events for selected users
         // Action to view events for selected users
         private void HandleSeeEventsAction(List<string> selectedUsers)
         {
@@ -64,10 +60,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             {
                 // Example SQL query to fetch events for each selected user
                 string query = @"
-        SELECT e.event_name, e.date, e.time, e.location 
-        FROM event_orders eo
-        JOIN events e ON eo.event_id = e.event_id
-        WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";  // Replace with actual user ID query
+                SELECT e.event_name, e.date, e.time, e.location 
+                FROM event_orders eo
+                JOIN events e ON eo.event_id = e.event_id
+                WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";  // Replace with actual user ID query
 
                 // Execute the query and get the results
                 var results = ExecuteQuery(query, new SqlParameter("@username", user));

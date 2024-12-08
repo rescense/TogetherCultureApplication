@@ -101,9 +101,9 @@
             searchUsersTxtBx.Size = new Size(1253, 35);
             searchUsersTxtBx.TabIndex = 6;
             searchUsersTxtBx.Text = "Search users...";
-            searchUsersTxtBx.MouseClick += searchUsersTxtBx_MouseClic;
-            searchUsersTxtBx.TextChanged += searchUsersTxtBx_TextChanged;
-            searchUsersTxtBx.Leave += searchUsersTxtBx_Leave;
+            searchUsersTxtBx.MouseClick += SearchUsersTxtBx_MouseClic;
+            searchUsersTxtBx.TextChanged += SearchUsersTxtBx_TextChanged;
+            searchUsersTxtBx.Leave += SearchUsersTxtBx_Leave;
             // 
             // pictureBox1
             // 
@@ -141,7 +141,7 @@
             filterPanel.Name = "filterPanel";
             filterPanel.Size = new Size(181, 81);
             filterPanel.TabIndex = 45;
-            filterPanel.Paint += filterPanel_Paint;
+            filterPanel.Paint += FilterPanel_Paint;
             // 
             // actionsPanel
             // 
@@ -151,7 +151,7 @@
             actionsPanel.Name = "actionsPanel";
             actionsPanel.Size = new Size(181, 155);
             actionsPanel.TabIndex = 44;
-            actionsPanel.Paint += actionsPanel_Paint;
+            actionsPanel.Paint += ActionsPanel_Paint;
             // 
             // dataGridView1
             // 
@@ -203,7 +203,7 @@
             dataGridView1.ThemeStyle.RowsStyle.Height = 25;
             dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
+            dataGridView1.CellContentClick += Guna2DataGridView1_CellContentClick;
             // 
             // selectAllCheckBox
             // 
@@ -215,7 +215,7 @@
             selectAllCheckBox.TabIndex = 42;
             selectAllCheckBox.Text = "Select All";
             selectAllCheckBox.UseVisualStyleBackColor = true;
-            selectAllCheckBox.CheckedChanged += selectAllCheckBox_CheckedChanged;
+            selectAllCheckBox.CheckedChanged += SelectAllCheckBox_CheckedChanged;
             // 
             // actionsSearchUsersBtn
             // 
@@ -237,7 +237,7 @@
             actionsSearchUsersBtn.Size = new Size(92, 40);
             actionsSearchUsersBtn.TabIndex = 37;
             actionsSearchUsersBtn.Text = "Actions";
-            actionsSearchUsersBtn.Click += actionsSearchUsersBtn_Click;
+            actionsSearchUsersBtn.Click += ActionsSearchUsersBtn_Click;
             // 
             // filterBtn
             // 
@@ -253,7 +253,7 @@
             filterBtn.Size = new Size(52, 47);
             filterBtn.TabIndex = 36;
             filterBtn.UseVisualStyleBackColor = false;
-            filterBtn.Click += filterBtn_Click;
+            filterBtn.Click += FilterBtn_Click;
             // 
             // actionsBtn
             // 

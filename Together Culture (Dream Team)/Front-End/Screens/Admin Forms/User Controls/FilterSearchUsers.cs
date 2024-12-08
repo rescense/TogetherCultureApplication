@@ -18,6 +18,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         {
             InitializeComponent();
 
+
+
             // Initialize the radio button event handlers
             nameAscRadioBtn.CheckedChanged += RadioButton_CheckedChanged;
             nameDescRadioBtn.CheckedChanged += RadioButton_CheckedChanged;
