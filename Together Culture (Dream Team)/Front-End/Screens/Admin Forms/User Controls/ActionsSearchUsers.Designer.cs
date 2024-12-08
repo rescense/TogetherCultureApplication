@@ -28,90 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             actionsSearchUsersGradientPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            seeEventsDataBtn = new Guna.UI2.WinForms.Guna2Button();
-            addTagBtn = new Guna.UI2.WinForms.Guna2Button();
-            removeUserBtn = new Guna.UI2.WinForms.Guna2Button();
+            confirmActionBtn = new Button();
+            removeUsersRadioBtn = new RadioButton();
+            addTagsRadioBtn = new RadioButton();
+            seeEventsRadioBtn = new RadioButton();
             actionsSearchUsersGradientPanel.SuspendLayout();
             SuspendLayout();
             // 
             // actionsSearchUsersGradientPanel
             // 
-            actionsSearchUsersGradientPanel.Controls.Add(removeUserBtn);
-            actionsSearchUsersGradientPanel.Controls.Add(addTagBtn);
-            actionsSearchUsersGradientPanel.Controls.Add(seeEventsDataBtn);
-            actionsSearchUsersGradientPanel.CustomizableEdges = customizableEdges7;
+            actionsSearchUsersGradientPanel.Controls.Add(confirmActionBtn);
+            actionsSearchUsersGradientPanel.Controls.Add(removeUsersRadioBtn);
+            actionsSearchUsersGradientPanel.Controls.Add(addTagsRadioBtn);
+            actionsSearchUsersGradientPanel.Controls.Add(seeEventsRadioBtn);
+            actionsSearchUsersGradientPanel.CustomizableEdges = customizableEdges1;
             actionsSearchUsersGradientPanel.FillColor = Color.Firebrick;
             actionsSearchUsersGradientPanel.FillColor2 = Color.Salmon;
             actionsSearchUsersGradientPanel.FillColor3 = Color.Firebrick;
             actionsSearchUsersGradientPanel.FillColor4 = Color.RosyBrown;
             actionsSearchUsersGradientPanel.Location = new Point(0, 0);
             actionsSearchUsersGradientPanel.Name = "actionsSearchUsersGradientPanel";
-            actionsSearchUsersGradientPanel.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            actionsSearchUsersGradientPanel.Size = new Size(181, 297);
+            actionsSearchUsersGradientPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            actionsSearchUsersGradientPanel.Size = new Size(181, 155);
             actionsSearchUsersGradientPanel.TabIndex = 2;
             // 
-            // seeEventsDataBtn
+            // confirmActionBtn
             // 
-            seeEventsDataBtn.BackColor = Color.Transparent;
-            seeEventsDataBtn.CustomizableEdges = customizableEdges5;
-            seeEventsDataBtn.DisabledState.BorderColor = Color.DarkGray;
-            seeEventsDataBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            seeEventsDataBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            seeEventsDataBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            seeEventsDataBtn.FillColor = Color.Transparent;
-            seeEventsDataBtn.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            seeEventsDataBtn.ForeColor = Color.White;
-            seeEventsDataBtn.Location = new Point(0, 0);
-            seeEventsDataBtn.Name = "seeEventsDataBtn";
-            seeEventsDataBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            seeEventsDataBtn.Size = new Size(182, 99);
-            seeEventsDataBtn.TabIndex = 1;
-            seeEventsDataBtn.Text = "Events Data";
+            confirmActionBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            confirmActionBtn.BackColor = Color.Black;
+            confirmActionBtn.FlatAppearance.BorderSize = 0;
+            confirmActionBtn.FlatStyle = FlatStyle.Flat;
+            confirmActionBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            confirmActionBtn.ForeColor = Color.White;
+            confirmActionBtn.Location = new Point(30, 122);
+            confirmActionBtn.Name = "confirmActionBtn";
+            confirmActionBtn.Size = new Size(121, 24);
+            confirmActionBtn.TabIndex = 3;
+            confirmActionBtn.Text = "Confirm";
+            confirmActionBtn.UseVisualStyleBackColor = false;
+            confirmActionBtn.Click += confirmActionBtn_Click;
             // 
-            // addTagBtn
+            // removeUsersRadioBtn
             // 
-            addTagBtn.BackColor = Color.Transparent;
-            addTagBtn.CustomizableEdges = customizableEdges3;
-            addTagBtn.DisabledState.BorderColor = Color.DarkGray;
-            addTagBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            addTagBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            addTagBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            addTagBtn.FillColor = Color.Transparent;
-            addTagBtn.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addTagBtn.ForeColor = Color.White;
-            addTagBtn.Location = new Point(0, 99);
-            addTagBtn.Name = "addTagBtn";
-            addTagBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            addTagBtn.Size = new Size(182, 99);
-            addTagBtn.TabIndex = 2;
-            addTagBtn.Text = "Add Tag";
+            removeUsersRadioBtn.AutoSize = true;
+            removeUsersRadioBtn.BackColor = Color.Transparent;
+            removeUsersRadioBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            removeUsersRadioBtn.Location = new Point(13, 82);
+            removeUsersRadioBtn.Name = "removeUsersRadioBtn";
+            removeUsersRadioBtn.Size = new Size(158, 34);
+            removeUsersRadioBtn.TabIndex = 2;
+            removeUsersRadioBtn.TabStop = true;
+            removeUsersRadioBtn.Text = "Remove User";
+            removeUsersRadioBtn.UseVisualStyleBackColor = false;
             // 
-            // removeUserBtn
+            // addTagsRadioBtn
             // 
-            removeUserBtn.BackColor = Color.Transparent;
-            removeUserBtn.CustomizableEdges = customizableEdges1;
-            removeUserBtn.DisabledState.BorderColor = Color.DarkGray;
-            removeUserBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            removeUserBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            removeUserBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            removeUserBtn.FillColor = Color.Transparent;
-            removeUserBtn.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            removeUserBtn.ForeColor = Color.White;
-            removeUserBtn.Location = new Point(0, 198);
-            removeUserBtn.Name = "removeUserBtn";
-            removeUserBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            removeUserBtn.Size = new Size(182, 99);
-            removeUserBtn.TabIndex = 3;
-            removeUserBtn.Text = "Remove User";
+            addTagsRadioBtn.AutoSize = true;
+            addTagsRadioBtn.BackColor = Color.Transparent;
+            addTagsRadioBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            addTagsRadioBtn.Location = new Point(13, 42);
+            addTagsRadioBtn.Name = "addTagsRadioBtn";
+            addTagsRadioBtn.Size = new Size(112, 34);
+            addTagsRadioBtn.TabIndex = 1;
+            addTagsRadioBtn.TabStop = true;
+            addTagsRadioBtn.Text = "Add Tag";
+            addTagsRadioBtn.UseVisualStyleBackColor = false;
+            // 
+            // seeEventsRadioBtn
+            // 
+            seeEventsRadioBtn.AutoSize = true;
+            seeEventsRadioBtn.BackColor = Color.Transparent;
+            seeEventsRadioBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            seeEventsRadioBtn.Location = new Point(13, 3);
+            seeEventsRadioBtn.Name = "seeEventsRadioBtn";
+            seeEventsRadioBtn.Size = new Size(134, 34);
+            seeEventsRadioBtn.TabIndex = 0;
+            seeEventsRadioBtn.TabStop = true;
+            seeEventsRadioBtn.Text = "See Events";
+            seeEventsRadioBtn.UseVisualStyleBackColor = false;
             // 
             // ActionsSearchUsers
             // 
@@ -119,16 +116,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(actionsSearchUsersGradientPanel);
             Name = "ActionsSearchUsers";
-            Size = new Size(181, 297);
+            Size = new Size(181, 155);
             actionsSearchUsersGradientPanel.ResumeLayout(false);
+            actionsSearchUsersGradientPanel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel actionsSearchUsersGradientPanel;
-        private Guna.UI2.WinForms.Guna2Button seeEventsDataBtn;
-        private Guna.UI2.WinForms.Guna2Button removeUserBtn;
-        private Guna.UI2.WinForms.Guna2Button addTagBtn;
+        private RadioButton seeEventsRadioBtn;
+        private RadioButton removeUsersRadioBtn;
+        private RadioButton addTagsRadioBtn;
+        private Button confirmActionBtn;
     }
 }

@@ -45,12 +45,13 @@
             searchUsersTxtBx = new TextBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            filterPanel = new Panel();
+            actionsPanel = new Panel();
             dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             selectAllCheckBox = new CheckBox();
             actionsSearchUsersBtn = new Guna.UI2.WinForms.Guna2Button();
             filterBtn = new Button();
             actionsBtn = new Guna.UI2.WinForms.Guna2Button();
-            actionsPanel = new Panel();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -120,6 +121,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(248, 237, 235);
+            panel1.Controls.Add(filterPanel);
             panel1.Controls.Add(actionsPanel);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(selectAllCheckBox);
@@ -130,6 +132,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1357, 520);
             panel1.TabIndex = 4;
+            // 
+            // filterPanel
+            // 
+            filterPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            filterPanel.BackColor = SystemColors.Control;
+            filterPanel.Location = new Point(1176, 73);
+            filterPanel.Name = "filterPanel";
+            filterPanel.Size = new Size(181, 81);
+            filterPanel.TabIndex = 45;
+            filterPanel.Paint += filterPanel_Paint;
+            // 
+            // actionsPanel
+            // 
+            actionsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            actionsPanel.BackColor = SystemColors.Control;
+            actionsPanel.Location = new Point(1176, 73);
+            actionsPanel.Name = "actionsPanel";
+            actionsPanel.Size = new Size(181, 155);
+            actionsPanel.TabIndex = 44;
+            actionsPanel.Paint += actionsPanel_Paint;
             // 
             // dataGridView1
             // 
@@ -155,7 +177,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            dataGridView1.Location = new Point(0, 73);
+            dataGridView1.Location = new Point(-3, 73);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.Size = new Size(1357, 447);
@@ -231,6 +253,7 @@
             filterBtn.Size = new Size(52, 47);
             filterBtn.TabIndex = 36;
             filterBtn.UseVisualStyleBackColor = false;
+            filterBtn.Click += filterBtn_Click;
             // 
             // actionsBtn
             // 
@@ -252,16 +275,6 @@
             actionsBtn.Size = new Size(82, 25);
             actionsBtn.TabIndex = 35;
             actionsBtn.Text = "Actions";
-            // 
-            // actionsPanel
-            // 
-            actionsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            actionsPanel.BackColor = SystemColors.Control;
-            actionsPanel.Location = new Point(1176, 73);
-            actionsPanel.Name = "actionsPanel";
-            actionsPanel.Size = new Size(181, 297);
-            actionsPanel.TabIndex = 44;
-            actionsPanel.Paint += actionsPanel_Paint;
             // 
             // SearchUsers
             // 
@@ -291,7 +304,8 @@
         private TextBox searchUsersTxtBx;
         private PictureBox pictureBox1;
         private CheckBox selectAllCheckBox;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
+        public Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
         private Panel actionsPanel;
+        private Panel filterPanel;
     }
 }

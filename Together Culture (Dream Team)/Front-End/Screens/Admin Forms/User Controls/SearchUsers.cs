@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,16 +18,72 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
     {
 
         private DataTable userDataTable;
+        //public Guna2DataGridView dataGridView1;
 
         public SearchUsers()
         {
             InitializeComponent();
             LoadDataIntoDataGridView();
             AddCheckBoxColumn();
+
+            dataGridView1 = new Guna2DataGridView();
+            dataGridView1.Dock = DockStyle.Fill;
+
+            this.Controls.Add(dataGridView1);
+
+            // Subscribe to the FilterApplied event from FilterSearchUsers
+            filterSearchUsers.FilterApplied += FilterSearchUsers_FilterApplied;
         }
 
-        ActionsSearchUsers actionsSearchUsers = new ActionsSearchUsers();
+        // Event handler for FilterApplied from FilterSearchUsers
+        private void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
+        {
+            // Check if the filter is sorting by name and if it's ascending or descending
+            bool isAscending = filterSearchUsers.IsAscending;
 
+            // Apply the sort to the DataGridView based on the selected radio button
+            SortDataGridView(isAscending);
+        }
+
+        public List<string> GetSelectedUsers()
+        {
+            List<string> selectedUsers = new List<string>();
+
+            // Loop through each row in the DataGridView
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Check if the checkbox is selected (i.e., the "Select" column is checked)
+                if (row.Cells["Select"].Value != null && (bool)row.Cells["Select"].Value)
+                {
+                    // Assuming "username" column contains the username you want
+                    string username = row.Cells["username"].Value.ToString();
+                    selectedUsers.Add(username);
+                }
+            }
+
+            return selectedUsers;
+        }
+
+        private void SortDataGridView(bool isAscending)
+        {
+            // Sort the DataGridView based on the selected column (username in this case)
+            if (userDataTable != null)
+            {
+                string sortOrder = isAscending ? "ASC" : "DESC";
+                DataView dataView = userDataTable.DefaultView;
+
+                // Apply sorting on the last_name column
+                dataView.Sort = $"last_name {sortOrder}";
+
+                // Update the DataGridView's data source with the sorted data
+                dataGridView1.DataSource = dataView;
+            }
+        }
+
+        private ActionsSearchUsers actionsSearchUsers;
+        FilterSearchUsers filterSearchUsers = new FilterSearchUsers();
+
+        private bool isFilterSearchUsersVisible = false;
         private bool isActionsSearchUsersVisible = false;
 
         private void showActionsSearchUsers(UserControl userControl)
@@ -38,8 +94,21 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userControl.BringToFront();
         }
 
+        private void showFilterSearchUsersVisible(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            filterPanel.Controls.Clear();
+            filterPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
         private void actionsSearchUsersBtn_Click(object sender, EventArgs e)
         {
+            if (actionsSearchUsers == null)
+            {
+                actionsSearchUsers = new ActionsSearchUsers(this); // Lazy initialization
+            }
+
             if (!isActionsSearchUsersVisible)
             {
                 //show the actions mmenu bar
@@ -57,11 +126,38 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            if (!isFilterSearchUsersVisible)
+            {
+                //show the filter menu bar
+                filterPanel.Visible = true;
+                showFilterSearchUsersVisible(filterSearchUsers);
+                isFilterSearchUsersVisible = true;
+                BringToFront();
+            }
+            else
+            {
+                //hide the filter panel
+                filterPanel.Controls.Clear();
+                filterPanel.Visible = false;
+                isFilterSearchUsersVisible = false;
+            }
+        }
+
         private void actionsPanel_Paint(object sender, PaintEventArgs e)
         {
             if (!isActionsSearchUsersVisible)
             {
                 actionsPanel.Visible = false;
+            }
+        }
+
+        private void filterPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isFilterSearchUsersVisible)
+            {
+                filterPanel.Visible = false;
             }
         }
 
@@ -208,7 +304,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     database.Open();
 
                     // Query to fetch all user data
-                    string query = "SELECT user_id, username, first_name, last_name, email, phone_number, date_of_birth, date_joined FROM [user]";
+                    string query = "SELECT username, first_name, last_name, date_joined FROM [user]";
 
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.Connection);
 
@@ -220,13 +316,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                     dataGridView1.DataSource = userDataTable;
 
                     // Set column headers
-                    dataGridView1.Columns["user_id"].HeaderText = "ID";
                     dataGridView1.Columns["username"].HeaderText = "Username";
                     dataGridView1.Columns["first_name"].HeaderText = "First Name";
                     dataGridView1.Columns["last_name"].HeaderText = "Last Name";
-                    dataGridView1.Columns["email"].HeaderText = "Email";
-                    dataGridView1.Columns["phone_number"].HeaderText = "Phone Number";
-                    dataGridView1.Columns["date_of_birth"].HeaderText = "Date of Birth";
                     dataGridView1.Columns["date_joined"].HeaderText = "Date Joined";
 
                     // Set default header height
@@ -238,6 +330,52 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void HandleSeeEventsAction(List<string> selectedUsers)
+        {
+            if (selectedUsers.Count == 0)
+            {
+                MessageBox.Show("Please select at least one user.");
+                return;
+            }
+
+            // Clear existing rows in DataGridView to make room for event data
+            dataGridView1.Rows.Clear();
+
+            // Loop through the selected users and fetch events
+            foreach (var username in selectedUsers)
+            {
+                string query = @"
+            SELECT e.event_name, eo.event_date, eo.event_time, eo.event_location 
+            FROM event_orders eo
+            JOIN events e ON eo.event_id = e.event_id
+            JOIN [user] u ON eo.user_id = u.user_id
+            WHERE u.username = @username";  // Filter by selected user
+
+                // Execute the query and get event data
+                using (DatabaseConnect database = new DatabaseConnect())
+                {
+                    database.Open();
+                    SqlCommand command = new SqlCommand(query, database.Connection);
+                    command.Parameters.AddWithValue("@username", username);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    // Display the user's events
+                    while (reader.Read())
+                    {
+                        dataGridView1.Rows.Add(
+                            username,                         // Username
+                            reader["event_name"].ToString(),   // Event Name
+                            reader["event_date"].ToString(),   // Event Date
+                            reader["event_time"].ToString(),   // Event Time
+                            reader["event_location"].ToString()// Event Location
+                        );
+                    }
+                }
+            }
+        }
+
 
         private void searchUsersTxtBx_TextChanged(object sender, EventArgs e)
         {
@@ -251,9 +389,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 // Filter rows where any relevant column contains the search value
                 dv.RowFilter = $"username LIKE '%{searchValue}%' OR " +
                                $"first_name LIKE '%{searchValue}%' OR " +
-                               $"last_name LIKE '%{searchValue}%' OR " +
-                               $"email LIKE '%{searchValue}%' OR " +
-                               $"phone_number LIKE '%{searchValue}%'";
+                               $"last_name LIKE '%{searchValue}%' OR ";
 
                 // Update DataGridView with the filtered view
                 dataGridView1.DataSource = dv;
