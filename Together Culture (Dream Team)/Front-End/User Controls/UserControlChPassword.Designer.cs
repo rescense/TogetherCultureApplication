@@ -33,16 +33,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             richTextBox1 = new RichTextBox();
             richTextBox2 = new RichTextBox();
             richTextBox3 = new RichTextBox();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             SuspendLayout();
@@ -60,6 +60,18 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2CustomGradientPanel1.Size = new Size(800, 808);
             guna2CustomGradientPanel1.TabIndex = 0;
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.White;
+            guna2HtmlLabel1.Location = new Point(64, 60);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(229, 39);
+            guna2HtmlLabel1.TabIndex = 1;
+            guna2HtmlLabel1.Text = "Change Password";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -81,49 +93,25 @@
             guna2CustomGradientPanel2.Size = new Size(659, 612);
             guna2CustomGradientPanel2.TabIndex = 1;
             // 
-            // guna2HtmlLabel1
+            // guna2HtmlLabel5
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(64, 60);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(229, 39);
-            guna2HtmlLabel1.TabIndex = 1;
-            guna2HtmlLabel1.Text = "Change Password";
+            guna2HtmlLabel5.BackColor = Color.Transparent;
+            guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel5.Location = new Point(156, 59);
+            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            guna2HtmlLabel5.Size = new Size(289, 30);
+            guna2HtmlLabel5.TabIndex = 1;
+            guna2HtmlLabel5.Text = "of letters and special characters";
             // 
-            // guna2HtmlLabel2
+            // guna2HtmlLabel6
             // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(49, 173);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(191, 33);
-            guna2HtmlLabel2.TabIndex = 2;
-            guna2HtmlLabel2.Text = "Current Password";
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.ForeColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(49, 304);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(158, 33);
-            guna2HtmlLabel3.TabIndex = 3;
-            guna2HtmlLabel3.Text = "New Password";
-            // 
-            // guna2HtmlLabel4
-            // 
-            guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel4.ForeColor = Color.White;
-            guna2HtmlLabel4.Location = new Point(49, 429);
-            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(198, 33);
-            guna2HtmlLabel4.TabIndex = 1;
-            guna2HtmlLabel4.Text = "Confirm Password\r\n";
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel6.Location = new Point(23, 23);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(616, 30);
+            guna2HtmlLabel6.TabIndex = 2;
+            guna2HtmlLabel6.Text = "Your passwod should be at least 8 character long with combination\r\n";
             // 
             // richTextBox1
             // 
@@ -149,25 +137,38 @@
             richTextBox3.TabIndex = 3;
             richTextBox3.Text = "";
             // 
-            // guna2HtmlLabel6
+            // guna2HtmlLabel4
             // 
-            guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.Location = new Point(23, 23);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(616, 30);
-            guna2HtmlLabel6.TabIndex = 2;
-            guna2HtmlLabel6.Text = "Your passwod should be at least 8 character long with combination\r\n";
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel4.ForeColor = Color.White;
+            guna2HtmlLabel4.Location = new Point(49, 429);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(198, 33);
+            guna2HtmlLabel4.TabIndex = 1;
+            guna2HtmlLabel4.Text = "Confirm Password\r\n";
             // 
-            // guna2HtmlLabel5
+            // guna2HtmlLabel2
             // 
-            guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.Location = new Point(156, 59);
-            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(289, 30);
-            guna2HtmlLabel5.TabIndex = 1;
-            guna2HtmlLabel5.Text = "of letters and special characters";
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.ForeColor = Color.White;
+            guna2HtmlLabel2.Location = new Point(49, 173);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(191, 33);
+            guna2HtmlLabel2.TabIndex = 2;
+            guna2HtmlLabel2.Text = "Current Password";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.ForeColor = Color.White;
+            guna2HtmlLabel3.Location = new Point(49, 304);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(158, 33);
+            guna2HtmlLabel3.TabIndex = 3;
+            guna2HtmlLabel3.Text = "New Password";
             // 
             // UserControlChPassword
             // 

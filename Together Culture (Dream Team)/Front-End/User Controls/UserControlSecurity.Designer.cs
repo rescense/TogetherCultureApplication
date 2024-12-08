@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,9 +44,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,7 +58,6 @@
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -82,6 +82,20 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2CustomGradientPanel1.Size = new Size(800, 808);
             guna2CustomGradientPanel1.TabIndex = 0;
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
+            // 
+            // guna2CustomGradientPanel5
+            // 
+            guna2CustomGradientPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel5.CustomizableEdges = customizableEdges1;
+            guna2CustomGradientPanel5.FillColor = Color.Maroon;
+            guna2CustomGradientPanel5.FillColor2 = Color.Red;
+            guna2CustomGradientPanel5.FillColor3 = Color.Firebrick;
+            guna2CustomGradientPanel5.Location = new Point(0, 735);
+            guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
+            guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2CustomGradientPanel5.Size = new Size(800, 73);
+            guna2CustomGradientPanel5.TabIndex = 9;
             // 
             // guna2CustomGradientPanel4
             // 
@@ -251,19 +265,6 @@
             guna2HtmlLabel1.Size = new Size(292, 39);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Password and Security";
-            // 
-            // guna2CustomGradientPanel5
-            // 
-            guna2CustomGradientPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2CustomGradientPanel5.CustomizableEdges = customizableEdges1;
-            guna2CustomGradientPanel5.FillColor = Color.Maroon;
-            guna2CustomGradientPanel5.FillColor2 = Color.Red;
-            guna2CustomGradientPanel5.FillColor3 = Color.Firebrick;
-            guna2CustomGradientPanel5.Location = new Point(0, 735);
-            guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel5.Size = new Size(800, 73);
-            guna2CustomGradientPanel5.TabIndex = 9;
             // 
             // UserControlSecurity
             // 

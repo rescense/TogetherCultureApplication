@@ -12,6 +12,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class UserControlPI : UserControl
     {
+        private static UserControlPI _instance;
+        public static UserControlPI Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new UserControlPI();
+                return _instance;
+
+            }
+        }
         public UserControlPI()
         {
             InitializeComponent();
@@ -68,6 +79,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         }
 
         private void richTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

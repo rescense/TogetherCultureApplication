@@ -31,13 +31,27 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            
-          
+            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlPI.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(UserControlPI.Instance);
+                UserControlPI.Instance.Dock = DockStyle.Fill;
+                UserControlPI.Instance.BringToFront();
+            }
+            else
+                UserControlPI.Instance.BringToFront();
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlChPassword.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(UserControlChPassword.Instance);
+                UserControlChPassword.Instance.Dock = DockStyle.Fill;
+                UserControlChPassword.Instance.BringToFront();
+            }
+            else
+                UserControlChPassword.Instance.BringToFront();
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -72,7 +86,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-           
+            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlSecurity.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(UserControlSecurity.Instance);
+                UserControlSecurity.Instance.Dock = DockStyle.Fill;
+                UserControlSecurity.Instance.BringToFront();
+            }
+            else
+                UserControlSecurity.Instance.BringToFront();
 
         }
     }

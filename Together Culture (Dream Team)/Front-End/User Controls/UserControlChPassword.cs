@@ -12,6 +12,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class UserControlChPassword : UserControl
     {
+        private static UserControlChPassword _instance;
+        public static UserControlChPassword Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new UserControlChPassword();
+                return _instance;
+
+            }
+        }
         public UserControlChPassword()
         {
             InitializeComponent();
@@ -43,6 +54,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         }
 
         private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

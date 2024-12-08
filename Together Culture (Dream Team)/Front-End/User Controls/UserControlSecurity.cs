@@ -12,12 +12,28 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class UserControlSecurity : UserControl
     {
+        private static UserControlSecurity _instance;
+        public static UserControlSecurity Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new UserControlSecurity();
+                return _instance;
+
+            }
+        }
         public UserControlSecurity()
         {
             InitializeComponent();
         }
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

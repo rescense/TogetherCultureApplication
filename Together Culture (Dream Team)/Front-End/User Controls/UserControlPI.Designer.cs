@@ -88,6 +88,7 @@
             guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2CustomGradientPanel5.Size = new Size(800, 808);
             guna2CustomGradientPanel5.TabIndex = 0;
+            guna2CustomGradientPanel5.Paint += guna2CustomGradientPanel5_Paint;
             // 
             // guna2CustomGradientPanel4
             // 
