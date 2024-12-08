@@ -35,6 +35,7 @@
             removeUsersRadioBtn = new RadioButton();
             addTagsRadioBtn = new RadioButton();
             seeEventsRadioBtn = new RadioButton();
+            addTagPanel = new Panel();
             actionsSearchUsersGradientPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,13 +111,23 @@
             seeEventsRadioBtn.Text = "See Events";
             seeEventsRadioBtn.UseVisualStyleBackColor = false;
             // 
+            // addTagPanel
+            // 
+            addTagPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            addTagPanel.BackColor = Color.White;
+            addTagPanel.Location = new Point(0, 155);
+            addTagPanel.Name = "addTagPanel";
+            addTagPanel.Size = new Size(181, 84);
+            addTagPanel.TabIndex = 47;
+            // 
             // ActionsSearchUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(addTagPanel);
             Controls.Add(actionsSearchUsersGradientPanel);
             Name = "ActionsSearchUsers";
-            Size = new Size(181, 155);
+            Size = new Size(181, 239);
             actionsSearchUsersGradientPanel.ResumeLayout(false);
             actionsSearchUsersGradientPanel.PerformLayout();
             ResumeLayout(false);
@@ -129,5 +140,6 @@
         private RadioButton removeUsersRadioBtn;
         private RadioButton addTagsRadioBtn;
         private Button confirmActionBtn;
+        private Panel addTagPanel;
     }
 }

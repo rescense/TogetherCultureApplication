@@ -16,21 +16,68 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
     public partial class SearchUsers : UserControl
     {
         private DataTable userDataTable;
-        ActionsSearchUsers ActionsSearchUsers = new ActionsSearchUsers();
+        ActionsSearchUsers actionsSearchUsers;
         FilterSearchUsers FilterSearchUsers = new FilterSearchUsers();
 
         private bool isFilterSearchUsersVisible = false;
         private bool isActionsSearchUsersVisible = false;
 
+        public DataGridView DataGridView1 => dataGridView1;
         public SearchUsers()
         {
             InitializeComponent();
+
+            // Ensure dataGridView1 is initialized
+            if (dataGridView1 == null)
+            {
+                dataGridView1 = new Guna2DataGridView();
+                this.Controls.Add(dataGridView1);
+            }
+
             LoadDataIntoDataGridView();
             AddCheckBoxColumn();
 
-            // Subscribe to the FilterApplied event from FilterSearchUsers
+            actionsSearchUsers = new ActionsSearchUsers(this);
             FilterSearchUsers.FilterApplied += FilterSearchUsers_FilterApplied;
         }
+
+
+        public void ClearDataGridView()
+        {
+            // Clear rows in the DataGridView
+            if (dataGridView1 != null)
+            {
+                dataGridView1.Rows.Clear();
+            }
+
+            // Ensure DataGridView is not in a read-only state
+            dataGridView1.ReadOnly = false;
+
+            // Check if DataGridView is data-bound
+            if (dataGridView1.DataSource != null)
+            {
+                // Clear the data source (e.g., if using a BindingSource)
+                BindingSource bindingSource = dataGridView1.DataSource as BindingSource;
+                if (bindingSource != null)
+                {
+                    bindingSource.Clear(); // Clear data in the binding source
+                }
+                else
+                {
+                    // Remove the data source completely if it's not a BindingSource
+                    dataGridView1.DataSource = null;
+                }
+            }
+            else
+            {
+                // Directly clear rows if not bound to any data source
+                dataGridView1.Rows.Clear();
+            }
+
+            // Optionally, reset other properties if necessary
+            dataGridView1.Refresh();  // Refresh the DataGridView after clearing
+        }
+
 
         // Event handler for FilterApplied from FilterSearchUsers
         private void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
@@ -56,7 +103,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void showActionsSearchUsers(UserControl userControl)
+        private void ShowActionsSearchUsers(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             actionsPanel.Controls.Clear();
@@ -64,7 +111,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userControl.BringToFront();
         }
 
-        private void showFilterSearchUsersVisible(UserControl userControl)
+        private void ShowFilterSearchUsersVisible(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             filterPanel.Controls.Clear();
@@ -78,7 +125,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             {
                 //show the actions mmenu bar
                 actionsPanel.Visible = true;
-                showActionsSearchUsers(ActionsSearchUsers);
+                ShowActionsSearchUsers(actionsSearchUsers);
                 isActionsSearchUsersVisible = true;
                 BringToFront();
             }
@@ -97,7 +144,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             {
                 //show the filter menu bar
                 filterPanel.Visible = true;
-                showFilterSearchUsersVisible(FilterSearchUsers);
+                ShowFilterSearchUsersVisible(FilterSearchUsers);
                 isFilterSearchUsersVisible = true;
                 BringToFront();
             }
@@ -207,6 +254,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void LoadDataIntoDataGridView()
         {
+            // Ensure dataGridView1 is initialized
+            if (dataGridView1 == null)
+            {
+                dataGridView1 = new Guna2DataGridView();
+                this.Controls.Add(dataGridView1);
+            }
+
             try
             {
                 using (DatabaseConnect database = new DatabaseConnect())
@@ -314,22 +368,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
             List<string> selectedUsers = new List<string>();
 
-            // Ensure DataGridView contains rows
-            if (dataGridView1.Rows.Count > 0)
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                // Iterate through the rows to get selected users
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                var checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
+                if (checkBoxCell != null && checkBoxCell.Value != null && (bool)checkBoxCell.Value)
                 {
-                    DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
-                    if (checkBoxCell != null && checkBoxCell.Value != null && (bool)checkBoxCell.Value)
+                    // Adjust column index or name based on your DataGridView configuration
+                    var userIdCell = row.Cells["username"] ?? row.Cells[1]; // Fallback to column index
+                    if (userIdCell != null)
                     {
-                        // Assuming the user_id column is the first column
-                        string userId = row.Cells["user_id"].Value.ToString();
-                        selectedUsers.Add(userId);
+                        selectedUsers.Add(userIdCell.Value.ToString());
                     }
                 }
             }
-
             return selectedUsers;
         }
     }

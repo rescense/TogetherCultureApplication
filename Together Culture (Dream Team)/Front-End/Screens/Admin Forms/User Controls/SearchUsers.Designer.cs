@@ -149,7 +149,7 @@
             actionsPanel.BackColor = SystemColors.Control;
             actionsPanel.Location = new Point(1176, 73);
             actionsPanel.Name = "actionsPanel";
-            actionsPanel.Size = new Size(181, 155);
+            actionsPanel.Size = new Size(181, 239);
             actionsPanel.TabIndex = 44;
             actionsPanel.Paint += ActionsPanel_Paint;
             // 
@@ -157,7 +157,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);

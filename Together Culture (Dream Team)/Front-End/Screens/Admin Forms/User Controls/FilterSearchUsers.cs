@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Controls
 {
     public partial class FilterSearchUsers : UserControl
     {
         public event EventHandler FilterApplied;
+        private SearchUsers _searchUsers;  // Instance variable for SearchUsers
 
         public FilterSearchUsers()
         {

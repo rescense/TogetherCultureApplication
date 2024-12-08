@@ -3,45 +3,82 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Controls
 {
     public partial class ActionsSearchUsers : UserControl
     {
-    private SearchUsers searchUsersControl;  // Instance variable for SearchUsers
-    private List<string> attendedEvents = new List<string>();  // List to store attended events
-    private Guna2DataGridView dataGridView1;
+        private SearchUsers _searchUsers;  // Instance variable for SearchUsers
+        private List<string> attendedEvents = new List<string>();  // List to store attended events
+        private Guna2DataGridView dataGridView1;
 
-    // Constructor that takes a SearchUsers control as a parameter
-    public ActionsSearchUsers()
-    {
-        InitializeComponent();
-        this.searchUsersControl = searchUsersControl;
-        confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
-    }
+        private AddTag AddTagControl = new AddTag();
+        private bool isAddTagVisible = false;
 
-    // Event handler for the button click
-    private void confirmActionBtn_Click(object sender, EventArgs e)
-    { 
-        List<string> selectedUsers = searchUsersControl.GetSelectedUsers();
-        if (seeEventsRadioBtn.Checked)
+        // Constructor that takes a SearchUsers control as a parameter
+        public ActionsSearchUsers(SearchUsers searchUsers)
         {
-            HandleSeeEventsAction(selectedUsers);
+            InitializeComponent();
+            _searchUsers = searchUsers;
+
+            AddTagControl.OnTagAdded += TagInputControl_OnTagAdded;  // Event for when a tag is added
+            confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
         }
-        else if (addTagsRadioBtn.Checked)
+
+        // Expose the tag input from the TextBox in AddTag UserControl
+        public string TagInput => AddTagControl.TagInput;
+
+        // Event handler for when the tag is added
+        private void TagInputControl_OnTagAdded(object sender, EventArgs e)
         {
+            var selectedUsers = _searchUsers.GetSelectedUsers();
             HandleAddTagsAction(selectedUsers);
         }
-        else if (removeUsersRadioBtn.Checked)
+        private void ShowAddTag(UserControl userControl)
         {
-            HandleRemoveUsersAction(selectedUsers);
+            userControl.Dock = DockStyle.Fill;
+            addTagPanel.Controls.Clear();
+            addTagPanel.Controls.Add(userControl);
+            userControl.BringToFront();
         }
-        else
+
+        // Event handler for the button click
+        private void confirmActionBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please select an action first.");
+            var selectedUsers = _searchUsers.GetSelectedUsers();
+
+            if (seeEventsRadioBtn.Checked)
+            {
+                HandleSeeEventsAction(selectedUsers);
+            }
+            else if (addTagsRadioBtn.Checked)
+            {
+                if (!isAddTagVisible)
+                {
+                    addTagPanel.Visible = true;
+                    ShowAddTag(AddTagControl);
+                    isAddTagVisible = true;
+                    BringToFront();
+                }
+                /* else
+                {
+                    // Hide the AddTagControl by clearing the panel
+                    addTagPanel.Controls.Clear();
+                    isAddTagVisible = false;
+                } */
+            }
+            else if (removeUsersRadioBtn.Checked)
+            {
+                HandleRemoveUsersAction(selectedUsers);
+            }
+            else
+            {
+                MessageBox.Show("Please select an action first.");
+            }
         }
-    }
+
 
         // Action to view events for selected users
         private void HandleSeeEventsAction(List<string> selectedUsers)
@@ -52,18 +89,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
                 return;
             }
 
-            // Clear the attended events list before adding new data
-            attendedEvents.Clear();
+            attendedEvents.Clear(); // Clear the attended events list before adding new data
 
-            // Loop through the selected users and fetch events
             foreach (var user in selectedUsers)
             {
-                // Example SQL query to fetch events for each selected user
                 string query = @"
                 SELECT e.event_name, e.date, e.time, e.location 
                 FROM event_orders eo
-                JOIN events e ON eo.event_id = e.event_id
-                WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";  // Replace with actual user ID query
+                JOIN event e ON eo.event_id = e.event_id
+                WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";
 
                 // Execute the query and get the results
                 var results = ExecuteQuery(query, new SqlParameter("@username", user));
@@ -82,32 +116,25 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
             else
             {
-                // Populate the DataGridView
                 DisplayEventsInDataGridView(attendedEvents);
             }
         }
 
         private void DisplayEventsInDataGridView(List<string> attendedEvents)
         {
-            // Clear existing rows in the DataGridView
-            dataGridView1.Rows.Clear();
-
-            // Add columns if they are not already added
-            if (dataGridView1.Columns.Count == 0)
+            if (dataGridView1 == null)
             {
-                dataGridView1.Columns.Add("EventName", "Event Name");
-                dataGridView1.Columns.Add("Date", "Date");
-                dataGridView1.Columns.Add("Time", "Time");
-                dataGridView1.Columns.Add("Location", "Location");
+                dataGridView1 = new Guna2DataGridView();
+                this.Controls.Add(dataGridView1);
+                dataGridView1.Dock = DockStyle.Fill;  // Set docking style to fill the parent container
             }
 
-            // Loop through the attended events and add them to the DataGridView
+            dataGridView1.Rows.Clear(); // Clear any existing rows
+
+            // Populate the DataGridView with attended events
             foreach (var eventInfo in attendedEvents)
             {
-                // You can split the eventInfo string if needed or use the result data directly
-                // For simplicity, assuming each entry in attendedEvents contains a string with the event details
-                string[] eventDetails = eventInfo.Split(" - "); // Adjust the split logic based on your data format
-
+                string[] eventDetails = eventInfo.Split(" - "); // Adjust the split logic as per your data format
                 if (eventDetails.Length >= 4)
                 {
                     dataGridView1.Rows.Add(eventDetails[0], eventDetails[1], eventDetails[2], eventDetails[3]);
@@ -115,14 +142,35 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
         }
 
-
         // Action to add tags to selected users
         private void HandleAddTagsAction(List<string> selectedUsers)
         {
             if (selectedUsers.Count == 0)
             {
                 MessageBox.Show("Please select at least one user.");
+                return;
             }
+
+            string tagInput = TagInput; // Get the tag input from the user control
+            if (string.IsNullOrEmpty(tagInput))
+            {
+                MessageBox.Show("Please provide a tag.");
+                return;
+            }
+
+            string[] tags = tagInput.Split(','); // Split the input if multiple tags are provided
+
+            foreach (var user in selectedUsers)
+            {
+                int userId = GetUserIdByUsername(user); // Implement this method to get user ID by username
+
+                foreach (var tag in tags)
+                {
+                    AddTagToDatabase(userId, tag.Trim()); // Add the tag for each user
+                }
+            }
+
+            MessageBox.Show("Tags added successfully.");
         }
 
         // Action to remove selected users
@@ -132,33 +180,77 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             {
                 MessageBox.Show("Please select at least one user.");
             }
+            else
+            {
+                // Implement removal logic here
+                MessageBox.Show("Users removed successfully.");
+            }
         }
 
-        // Execute the query and return the results
+        // Helper method to execute a SQL query and return the results
         private List<Dictionary<string, object>> ExecuteQuery(string query, SqlParameter parameter)
         {
             var results = new List<Dictionary<string, object>>();
 
-            using (SqlConnection connection = new SqlConnection("YourConnectionStringHere"))
+            using (var dbConnect = new DatabaseConnect())
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.Add(parameter);
-                connection.Open();
+                dbConnect.Open();
 
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                using (SqlCommand command = new SqlCommand(query, dbConnect.Connection))
                 {
-                    var result = new Dictionary<string, object>();
-                    for (int i = 0; i < reader.FieldCount; i++)
+                    command.Parameters.Add(parameter);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        result[reader.GetName(i)] = reader[i];
+                        while (reader.Read())
+                        {
+                            var result = new Dictionary<string, object>();
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                result[reader.GetName(i)] = reader[i];
+                            }
+                            results.Add(result);
+                        }
                     }
-                    results.Add(result);
                 }
+
+                dbConnect.Close();
             }
 
             return results;
+        }
+
+        // Helper method to add a tag to a user in the database
+        private void AddTagToDatabase(int userId, string tag)
+        {
+            string query = "INSERT INTO user_tags (user_id, tag) VALUES (@userId, @tag)";
+
+            using (var dbConnect = new DatabaseConnect())
+            {
+                dbConnect.Open();
+
+                using (SqlCommand command = new SqlCommand(query, dbConnect.Connection))
+                {
+                    command.Parameters.AddWithValue("@userId", userId);
+                    command.Parameters.AddWithValue("@tag", tag);
+                    command.ExecuteNonQuery();
+                }
+
+                dbConnect.Close();
+            }
+        }
+
+        // Helper method to get the user ID by username
+        private int GetUserIdByUsername(string username)
+        {
+            string query = "SELECT user_id FROM [user] WHERE username = @username";
+            var results = ExecuteQuery(query, new SqlParameter("@username", username));
+
+            if (results.Count > 0)
+            {
+                return Convert.ToInt32(results[0]["user_id"]);
+            }
+            return -1; // Return an invalid ID if not found
         }
     }
 }
