@@ -1,6 +1,10 @@
 ﻿
 
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Data.SqlClient;
+using System.Data;
+using System.Text;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
@@ -44,7 +48,45 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                     form.Close();
                 }
             }
+            //displays the user's interests
+            LoadUserInterests();
         }
+        private void LoadUserInterests()
+        {
+            // Create a database connection and retrieve the interests
+            string query = "SELECT interest FROM interests WHERE user_id = @userId";
+
+            using (DatabaseConnect database = new DatabaseConnect())
+            {
+                try
+                {
+                    database.Open();
+                    using (SqlCommand command = new SqlCommand(query, database.Connection))
+                    {
+                        command.Parameters.Add(new SqlParameter("@userId", SqlDbType.Int)).Value = userId;
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            // Build a string of interests
+                            StringBuilder interests = new StringBuilder();
+                            while (reader.Read())
+                            {
+                                // Append each interest followed by a new line
+                                interests.AppendLine(reader["interest"].ToString());
+                            }
+
+                            // Display the interests in the TextBox (each on a new line)
+                            txtInterest.Text = interests.ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+            }
+        }
+
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
