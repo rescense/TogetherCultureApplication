@@ -138,6 +138,7 @@
             btnWorking.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnWorking.Size = new Size(410, 160);
             btnWorking.TabIndex = 29;
+            btnWorking.Click += btnWorking_Click;
             // 
             // btnCaring
             // 
@@ -161,6 +162,7 @@
             btnCaring.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnCaring.Size = new Size(410, 160);
             btnCaring.TabIndex = 28;
+            btnCaring.Click += btnCaring_Click;
             // 
             // btnSharing
             // 
@@ -185,6 +187,7 @@
             btnSharing.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnSharing.Size = new Size(410, 160);
             btnSharing.TabIndex = 27;
+            btnSharing.Click += btnSharing_Click;
             // 
             // btnCreating
             // 
@@ -208,6 +211,7 @@
             btnCreating.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnCreating.Size = new Size(410, 160);
             btnCreating.TabIndex = 26;
+            btnCreating.Click += btnCreating_Click;
             // 
             // btnExperiencing
             // 
@@ -231,6 +235,7 @@
             btnExperiencing.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnExperiencing.Size = new Size(410, 160);
             btnExperiencing.TabIndex = 25;
+            btnExperiencing.Click += btnExperiencing_Click;
             // 
             // Interests
             // 
@@ -242,7 +247,8 @@
             MaximumSize = new Size(1362, 863);
             MinimumSize = new Size(1362, 863);
             Name = "Interests";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Interests";
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             guna2CustomGradientPanel3.ResumeLayout(false);
