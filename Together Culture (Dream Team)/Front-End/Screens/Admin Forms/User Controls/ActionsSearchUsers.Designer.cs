@@ -70,7 +70,7 @@
             confirmActionBtn.TabIndex = 3;
             confirmActionBtn.Text = "Confirm";
             confirmActionBtn.UseVisualStyleBackColor = false;
-            confirmActionBtn.Click += confirmActionBtn_Click;
+            confirmActionBtn.Click += ConfirmActionBtn_Click;
             // 
             // removeUsersRadioBtn
             // 

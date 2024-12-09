@@ -188,7 +188,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             // Restore the placeholder text if the user has left it empty
             if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
             {
-                //searchUsersTxtBx.Text = "Search users....";
                 searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
             }
         }
@@ -347,19 +346,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 string searchValue = searchUsersTxtBx.Text.Trim().Replace("'", "''");
 
                 // Prevent the placeholder text from being used in the search
-                if (searchValue != "Search users..." && !string.IsNullOrEmpty(searchValue))
+                if (string.IsNullOrEmpty(searchValue) || searchValue == "Search users...")
                 {
-                    DataView dv = userDataTable.DefaultView;
-                    dv.RowFilter = $@"
-                    username LIKE '%{searchValue}%' OR
-                    first_name LIKE '%{searchValue}%' OR
-                    last_name LIKE '%{searchValue}%'";
-                    dataGridView1.DataSource = dv;
+                    // Reset the data grid to the original data when no search text is entered
+                    dataGridView1.DataSource = userDataTable;
                 }
                 else
                 {
-                    // Reset the data grid when no search text is entered
-                    dataGridView1.DataSource = userDataTable;
+                    // Apply filter only when there's actual input in the search box
+                    DataView dv = userDataTable.DefaultView;
+                    dv.RowFilter = $@"
+                username LIKE '%{searchValue}%' OR
+                first_name LIKE '%{searchValue}%' OR
+                last_name LIKE '%{searchValue}%'";
+                    dataGridView1.DataSource = dv;
                 }
             }
         }

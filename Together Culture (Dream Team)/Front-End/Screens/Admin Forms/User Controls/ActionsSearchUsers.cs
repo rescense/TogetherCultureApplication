@@ -28,14 +28,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             AddTagControl = new AddTag(_searchUsers);
 
             // Prevent the button event from happening twice
-            confirmActionBtn.Click -= confirmActionBtn_Click;  // Detach
-            confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
+            confirmActionBtn.Click -= ConfirmActionBtn_Click;  // Detach
+            confirmActionBtn.Click += ConfirmActionBtn_Click;  // Button click event handler
         }
 
 
         // Expose the tag input from the TextBox in AddTag UserControl
         public string TagInput => AddTagControl.TagInput;
-        
+
         // Event handler for when the tag is added
         private void TagInputControl_OnTagAdded(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         }
 
         // Event handler for the button click
-        private void confirmActionBtn_Click(object sender, EventArgs e)
+        private void ConfirmActionBtn_Click(object sender, EventArgs e)
         {
             var selectedUsers = _searchUsers.GetSelectedUsers();
 
