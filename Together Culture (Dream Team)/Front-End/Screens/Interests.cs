@@ -82,11 +82,21 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 }
             }
 
-            //
+            // Update UI buttons based on the loaded interests
+               UpdateButtonStates();
 
         }
 
-        
+        private void UpdateButtonStates()
+        {
+            // Update the button states to reflect the selected interests
+            btnExperiencing.BackColor = isExperiencingSelected ? Color.LightBlue : Color.Transparent;
+            btnCreating.BackColor = isCreatingSelected ? Color.LightBlue : Color.Transparent;
+            btnSharing.BackColor = isSharingSelected ? Color.LightBlue : Color.Transparent;
+            btnCaring.BackColor = isCaringSelected ? Color.LightBlue : Color.Transparent;
+            btnWorking.BackColor = isWorkingSelected ? Color.LightBlue : Color.Transparent;
+        }
+
         // a method to be used for every button to select or unselect
         private void ToggleInterest(string interest, ref bool isSelected)
         {
@@ -97,12 +107,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 selectedInterests.Add(interest);
                 MessageBox.Show($"{interest} selected!");
                 AddInterest(interest);
+                // Update UI buttons based on the loaded interests
+                UpdateButtonStates();
             }
             else
             {
                 selectedInterests.Remove(interest);
                 MessageBox.Show($"{interest} unselected!");
                 RemoveInterest(interest);
+                // Update UI buttons based on the loaded interests
+                UpdateButtonStates();
             }
         }
 
