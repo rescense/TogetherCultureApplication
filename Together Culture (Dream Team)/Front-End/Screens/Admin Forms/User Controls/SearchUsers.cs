@@ -15,7 +15,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class SearchUsers : UserControl
     {
-        private DataTable userDataTable;
+        public DataTable userDataTable;
         ActionsSearchUsers actionsSearchUsers;
         FilterSearchUsers FilterSearchUsers = new FilterSearchUsers();
 

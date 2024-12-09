@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
@@ -25,8 +27,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
 
             AddTagControl = new AddTag(_searchUsers);
 
+            // Prevent the button event from happening twice
+            confirmActionBtn.Click -= confirmActionBtn_Click;  // Detach
             confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
         }
+
 
         // Expose the tag input from the TextBox in AddTag UserControl
         public string TagInput => AddTagControl.TagInput;
@@ -138,17 +143,115 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
         }
 
-        // Action to remove selected users
         private void HandleRemoveUsersAction(List<string> selectedUsers)
         {
             if (selectedUsers.Count == 0)
             {
-                MessageBox.Show("Please select at least one user.");
+                MessageBox.Show("Please select at least one user.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var result = MessageBox.Show("Are you sure you want to remove the selected users?",
+                                          "Confirm Removal",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    // Remove users from the database
+                    RemoveUser(selectedUsers);
+
+                    // Update the grid
+                    RemoveUsersFromGrid(selectedUsers);
+
+                    MessageBox.Show("Users removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error removing users: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                // Implement removal logic here
-                MessageBox.Show("Users removed successfully.");
+                MessageBox.Show("User removal cancelled.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        // Method to remove users
+        private void RemoveUser(List<string> selectedUsers)
+        {
+            // Start a single transaction for removing all users
+            using (var dbConnect = new DatabaseConnect())
+            {
+                dbConnect.Open();
+                using (var transaction = dbConnect.Connection.BeginTransaction())
+                {
+                    try
+                    {
+                        foreach (var username in selectedUsers)
+                        {
+                            // Delete the user from the user table
+                            string deleteUserQuery = @"
+                        DELETE FROM [user]
+                        WHERE username = @username";
+
+                            using (var command = new SqlCommand(deleteUserQuery, dbConnect.Connection, transaction))
+                            {
+                                command.Parameters.AddWithValue("@username", username);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Commit the transaction if all deletions were successful
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Rollback the transaction in case of an error
+                        transaction.Rollback();
+                        throw new Exception($"Error removing users: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+
+        private void RemoveUsersFromGrid(List<string> selectedUsers)
+        {
+            try
+            {
+                // Ensure the userDataTable exists
+                if (_searchUsers?.userDataTable != null)
+                {
+                    foreach (var username in selectedUsers)
+                    {
+                        // Find rows in the DataTable with the matching username
+                        DataRow[] rowsToRemove = _searchUsers.userDataTable.Select($"username = '{username}'"); // Replace "username" with the actual column name
+                        foreach (DataRow row in rowsToRemove)
+                        {
+                            _searchUsers.userDataTable.Rows.Remove(row); // Remove rows from the DataTable
+                        }
+                    }
+
+                    // Ensure dataGridView1 is initialised
+                    if (dataGridView1 != null)
+                    {
+                        // Rebind the updated DataTable to the DataGridView
+                        dataGridView1.DataSource = null; // Clear current data
+                        dataGridView1.DataSource = _searchUsers.userDataTable; // Rebind updated DataTable
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data table is not loaded. Please reload the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating the grid: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
