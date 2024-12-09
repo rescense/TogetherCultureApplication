@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.VisualBasic.ApplicationServices;
 using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
@@ -14,14 +15,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private string firstName;
         private string lastName;
         private string userType;
+        private int userId;
 
         // Constructor to accept username
-        public Profile(string FirstName, String LastName, String UserType)
+        public Profile(int userId, string FirstName, String LastName, String UserType)
         {
             InitializeComponent();
             this.firstName = FirstName;
             this.lastName = LastName;
             this.userType = UserType;
+            this.userId = userId;
 
         }
 
@@ -58,6 +61,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Close the current form
             this.Close();
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            // Open the Interests page for the current user to update their interests
+            Interests interestsPage = new Interests(userId, firstName, lastName, userType);
+            interestsPage.Show();
+
+            // Close the current profile form
+            this.Close();
         }
     }
 }

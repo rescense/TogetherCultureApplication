@@ -39,8 +39,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                 {
                     database.Open();
 
-                    // Modify the SQL query to retrieve both the first name, last name, and user type
-                    using (SqlCommand command = new SqlCommand("SELECT first_name, last_name, user_type FROM [user] WHERE Email = @Email AND Password = @Password", database.Connection))
+                    // Modify the SQL query to retrieve: the user id, the first name, last name, and user type
+                    using (SqlCommand command = new SqlCommand("SELECT user_id, first_name, last_name, user_type FROM [user] WHERE Email = @Email AND Password = @Password", database.Connection))
                     {
                         // Add parameters to avoid SQL injection
                         command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txtEmail.Text;
@@ -55,16 +55,36 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                             // Read the data from the reader (the first record)
                             reader.Read(); // You must call Read() to move to the first row
 
+                            int userId = Convert.ToInt32(reader["user_id"]);
                             string firstName = reader["first_name"].ToString();
                             string lastName = reader["last_name"].ToString();
                             string userType = reader["user_type"].ToString();
+                            // Always close the reader after usage
+                            reader.Close();
 
-                            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //Check if user has selected any interests
+                            using (SqlCommand interestCheckCmd = new SqlCommand("SELECT COUNT(*) FROM interests WHERE user_id = @UserId", database.Connection))
+                            {
+                                interestCheckCmd.Parameters.Add("@UserId", SqlDbType.Int).Value = userId;
+                                int interestCount = (int)interestCheckCmd.ExecuteScalar();
 
-                            // Pass the user data (firstName, lastName, userType) to the Profile form   
-                            Profile profile = new Profile(firstName, lastName, userType);
-                            profile.Show();
-                            this.Hide();
+                                if (interestCount == 0)
+                                {
+                                    // If no interests are found, redirect to Interests Form
+                                    MessageBox.Show("You need to select your interests before proceeding.", "Interests Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Interests interestsForm = new Interests(userId, firstName, lastName, userType);
+                                    interestsForm.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    // If any Interests are found, proceed to Profile Form
+                                    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Profile profile = new Profile(userId, firstName, lastName, userType);
+                                    profile.Show();
+                                    this.Hide();
+                                }
+                            }
 
                         }
                         else
@@ -73,8 +93,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                             MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
-                        // Always close the reader after usage
-                        reader.Close();
+                        
                     }
 
                     database.Close();
