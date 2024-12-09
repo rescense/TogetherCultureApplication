@@ -19,6 +19,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         private AddTag AddTagControl;
         private bool isAddTagVisible = false;
 
+        public string eventQuery = @"
+                SELECT e.event_name, e.date, e.time, e.location 
+                FROM event_orders eo
+                JOIN event e ON eo.event_id = e.event_id
+                WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";
+
         // Constructor that takes a SearchUsers control as a parameter
         public ActionsSearchUsers(SearchUsers searchUsers)
         {
@@ -94,14 +100,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
 
             foreach (var user in selectedUsers)
             {
-                string query = @"
-                SELECT e.event_name, e.date, e.time, e.location 
-                FROM event_orders eo
-                JOIN event e ON eo.event_id = e.event_id
-                WHERE eo.user_id = (SELECT user_id FROM [user] WHERE username = @username)";
-
                 // Execute the query and get the results
-                var results = ExecuteQuery(query, new SqlParameter("@username", user));
+                var results = ExecuteQuery(eventQuery, new SqlParameter("@username", user));
 
                 // Add the fetched events to the attendedEvents list
                 foreach (var result in results)
