@@ -59,7 +59,7 @@
             confirmAddingTagBtn.FlatStyle = FlatStyle.Flat;
             confirmAddingTagBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             confirmAddingTagBtn.ForeColor = Color.White;
-            confirmAddingTagBtn.Location = new Point(26, 47);
+            confirmAddingTagBtn.Location = new Point(33, 47);
             confirmAddingTagBtn.Name = "confirmAddingTagBtn";
             confirmAddingTagBtn.Size = new Size(121, 24);
             confirmAddingTagBtn.TabIndex = 4;

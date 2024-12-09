@@ -14,7 +14,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         private List<string> attendedEvents = new List<string>();  // List to store attended events
         private Guna2DataGridView dataGridView1;
 
-        private AddTag AddTagControl = new AddTag();
+        private AddTag AddTagControl;
         private bool isAddTagVisible = false;
 
         // Constructor that takes a SearchUsers control as a parameter
@@ -23,19 +23,21 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             InitializeComponent();
             _searchUsers = searchUsers;
 
-            AddTagControl.OnTagAdded += TagInputControl_OnTagAdded;  // Event for when a tag is added
+            AddTagControl = new AddTag(_searchUsers);
+
             confirmActionBtn.Click += confirmActionBtn_Click;  // Button click event handler
         }
 
         // Expose the tag input from the TextBox in AddTag UserControl
         public string TagInput => AddTagControl.TagInput;
-
+        
         // Event handler for when the tag is added
         private void TagInputControl_OnTagAdded(object sender, EventArgs e)
         {
             var selectedUsers = _searchUsers.GetSelectedUsers();
-            HandleAddTagsAction(selectedUsers);
+            AddTagControl.HandleAddTagsAction(selectedUsers);
         }
+
         private void ShowAddTag(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -62,12 +64,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
                     isAddTagVisible = true;
                     BringToFront();
                 }
-                /* else
-                {
-                    // Hide the AddTagControl by clearing the panel
-                    addTagPanel.Controls.Clear();
-                    isAddTagVisible = false;
-                } */
             }
             else if (removeUsersRadioBtn.Checked)
             {
@@ -142,37 +138,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
         }
 
-        // Action to add tags to selected users
-        private void HandleAddTagsAction(List<string> selectedUsers)
-        {
-            if (selectedUsers.Count == 0)
-            {
-                MessageBox.Show("Please select at least one user.");
-                return;
-            }
-
-            string tagInput = TagInput; // Get the tag input from the user control
-            if (string.IsNullOrEmpty(tagInput))
-            {
-                MessageBox.Show("Please provide a tag.");
-                return;
-            }
-
-            string[] tags = tagInput.Split(','); // Split the input if multiple tags are provided
-
-            foreach (var user in selectedUsers)
-            {
-                int userId = GetUserIdByUsername(user); // Implement this method to get user ID by username
-
-                foreach (var tag in tags)
-                {
-                    AddTagToDatabase(userId, tag.Trim()); // Add the tag for each user
-                }
-            }
-
-            MessageBox.Show("Tags added successfully.");
-        }
-
         // Action to remove selected users
         private void HandleRemoveUsersAction(List<string> selectedUsers)
         {
@@ -218,39 +183,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
 
             return results;
-        }
-
-        // Helper method to add a tag to a user in the database
-        private void AddTagToDatabase(int userId, string tag)
-        {
-            string query = "INSERT INTO user_tags (user_id, tag) VALUES (@userId, @tag)";
-
-            using (var dbConnect = new DatabaseConnect())
-            {
-                dbConnect.Open();
-
-                using (SqlCommand command = new SqlCommand(query, dbConnect.Connection))
-                {
-                    command.Parameters.AddWithValue("@userId", userId);
-                    command.Parameters.AddWithValue("@tag", tag);
-                    command.ExecuteNonQuery();
-                }
-
-                dbConnect.Close();
-            }
-        }
-
-        // Helper method to get the user ID by username
-        private int GetUserIdByUsername(string username)
-        {
-            string query = "SELECT user_id FROM [user] WHERE username = @username";
-            var results = ExecuteQuery(query, new SqlParameter("@username", username));
-
-            if (results.Count > 0)
-            {
-                return Convert.ToInt32(results[0]["user_id"]);
-            }
-            return -1; // Return an invalid ID if not found
         }
     }
 }
