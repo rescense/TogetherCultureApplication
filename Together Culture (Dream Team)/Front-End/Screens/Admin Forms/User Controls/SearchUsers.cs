@@ -251,7 +251,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void LoadDataIntoDataGridView()
+        public void LoadDataIntoDataGridView()
         {
             // Ensure dataGridView1 is initialized
             if (dataGridView1 == null)

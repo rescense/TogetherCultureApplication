@@ -1,28 +1,209 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class SearchEventsAdmin : UserControl
     {
+        public DataTable eventDataTable;
+
+        FilterSearchUsers FilterSearchUsers = new FilterSearchUsers();
+        private bool isFilterSearchUsersVisible = false;
+
         public SearchEventsAdmin()
         {
             InitializeComponent();
+
+            // Ensure dataGridView1 is initialized
+            if (eventDataGridView == null)
+            {
+                eventDataGridView = new Guna2DataGridView();
+                this.Controls.Add(eventDataGridView);
+            }
+
+            LoadDataIntoDataGridView();
+            AddCheckBoxColumn();
+            FilterSearchUsers.FilterApplied += FilterSearchUsers_FilterApplied;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void AddCheckBoxColumn()
         {
-
+            // Add a checkbox column if not already present
+            if (!eventDataGridView.Columns.Contains("Select"))
+            {
+                DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
+                {
+                    HeaderText = "Select",
+                    Name = "Select",
+                    Width = 50,
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+                };
+                eventDataGridView.Columns.Insert(0, checkBoxColumn);
+            }
         }
 
-        private void searchEventsTxtBx_MouseClic(object sender, MouseEventArgs e)
+
+        private void Guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the clicked column is the checkbox column
+            if (e.ColumnIndex == eventDataGridView.Columns["Select"].Index)
+            {
+                // Check if all rows are selected or not
+                bool allChecked = true;
+                foreach (DataGridViewRow row in eventDataGridView.Rows)
+                {
+                    if (row.Cells["Select"].Value == null || !(bool)row.Cells["Select"].Value)
+                    {
+                        allChecked = false;
+                        break;
+                    }
+                }
+
+                // Update the "Select All" checkbox state
+                selectAllCheckBox.CheckedChanged -= SelectAllCheckBox_CheckedChanged; // Temporarily unsubscribe
+                selectAllCheckBox.Checked = allChecked;
+                selectAllCheckBox.CheckedChanged += SelectAllCheckBox_CheckedChanged; // Re-subscribe
+            }
+        }
+
+        private void LoadDataIntoDataGridView()
+        {
+            // Ensure pendingApprovalsDataGridView is initialized
+            if (eventDataGridView == null)
+            {
+                eventDataGridView = new Guna2DataGridView();
+                this.Controls.Add(eventDataGridView);
+            }
+
+            try
+            {
+                using (DatabaseConnect database = new DatabaseConnect())
+                {
+                    database.Open();
+
+                    // Query to fetch all user data
+                    string query = "SELECT event_name, date, time, location " +
+                                   "FROM [event];";
+
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.Connection);
+
+                    // Fill the DataTable with the retrieved data
+                    eventDataTable = new DataTable();
+                    dataAdapter.Fill(eventDataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    eventDataGridView.DataSource = eventDataTable;
+
+                    // Set column headers
+                    eventDataGridView.Columns["event_name"].HeaderText = "Event Name";
+                    eventDataGridView.Columns["date"].HeaderText = "Event Date";
+                    eventDataGridView.Columns["time"].HeaderText = "Event Time";
+                    eventDataGridView.Columns["location"].HeaderText = "Event Location";
+
+                    // Set default header height
+                    eventDataGridView.ColumnHeadersHeight = 40;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void FilterPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isFilterSearchUsersVisible)
+            {
+                filterPanel.Visible = false;
+            }
+        }
+
+        private void ShowFilterSearchUsersVisible(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            filterPanel.Controls.Clear();
+            filterPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void FilterBtn_Click(object sender, EventArgs e)
+        {
+            if (!isFilterSearchUsersVisible)
+            {
+                //show the filter menu bar
+                filterPanel.Visible = true;
+                ShowFilterSearchUsersVisible(FilterSearchUsers);
+                isFilterSearchUsersVisible = true;
+                BringToFront();
+            }
+            else
+            {
+                //hide the filter panel
+                filterPanel.Controls.Clear();
+                filterPanel.Visible = false;
+                isFilterSearchUsersVisible = false;
+            }
+        }
+
+        private void SearchEventsTxtBx_TextChanged(object sender, EventArgs e)
+        {
+            if (eventDataTable != null)
+            {
+                string searchValue = searchEventsTxtBx.Text.Trim().Replace("'", "''");
+
+                // Prevent the placeholder text from being used in the search
+                if (string.IsNullOrEmpty(searchValue) || searchValue == "Search events...")
+                {
+                    // Reset the data grid to the original data when no search text is entered
+                    eventDataGridView.DataSource = eventDataTable;
+                }
+                else
+                {
+                    // Apply filter only when there's actual input in the search box
+                    DataView dv = eventDataTable.DefaultView;
+                    dv.RowFilter = $@"
+                event_name LIKE '%{searchValue}%' OR
+                location LIKE '%{searchValue}%'";
+                    eventDataGridView.DataSource = dv;
+                }
+            }
+        }
+
+        private void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
+        {
+            // Check if the filter is sorting by name and if it's ascending or descending
+            bool isAscending = FilterSearchUsers.IsAscending;
+
+            // Apply the sort to the DataGridView based on the selected radio button
+            SortDataGridView(isAscending);
+        }
+
+        private void SortDataGridView(bool isAscending)
+        {
+            if (eventDataTable != null)
+            {
+                string sortOrder = isAscending ? "ASC" : "DESC";
+                eventDataTable.DefaultView.Sort = $"event_name {sortOrder}";
+                eventDataGridView.DataSource = eventDataTable.DefaultView;
+            }
+            else
+            {
+                MessageBox.Show("No data available to sort.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SearchEventsTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
             // Only clear the placeholder text if it's the default
             if (searchEventsTxtBx.Text == "Search events...")
@@ -32,7 +213,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void searchEventsTxtBxx_Leave(object sender, EventArgs e)
+        private void SearchEventsTxtBxx_Leave(object sender, EventArgs e)
         {
             // Restore the placeholder text if the user has left it empty
             if (string.IsNullOrEmpty(searchEventsTxtBx.Text))
@@ -42,35 +223,36 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void selectAllCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void SelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (selectAllCheckBox.Focused) // Ensure triggered by user action
             {
-                // Get the state of the "Select All" checkbox
-                bool selectAll = selectAllCheckBox.Checked;
-
-                // Loop through all child controls recursively
-                foreach (CheckBox checkBox in GetAllCheckBoxes(panel1))
+                // Ensure DataGridView contains rows
+                if (eventDataGridView.Rows.Count > 0)
                 {
-                    if (checkBox != selectAllCheckBox)
+                    bool selectAll = selectAllCheckBox.Checked;
+
+
+                    // Iterate through rows and set checkbox state
+                    foreach (DataGridViewRow row in eventDataGridView.Rows)
                     {
-                        checkBox.CheckedChanged -= otherCheckBox_CheckedChanged; // Detach event
-                        checkBox.Checked = selectAll; // Set state
-                        checkBox.CheckedChanged += otherCheckBox_CheckedChanged; // Reattach event
+                        DataGridViewCheckBoxCell checkBoxCell = row.Cells["Select"] as DataGridViewCheckBoxCell;
+                        if (checkBoxCell != null)
+                        {
+                            checkBoxCell.Value = selectAll; // Check or Uncheck based on Select All state
+                        }
                     }
                 }
-
-                UpdateSelectAllText();
             }
         }
 
-        private void otherCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void OtherCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             // Determine if all or none are checked
             bool allChecked = true;
             bool noneChecked = true;
 
-            foreach (CheckBox checkBox in GetAllCheckBoxes(panel1))
+            foreach (CheckBox checkBox in GetAllCheckBoxes(eventDataGridView))
             {
                 if (checkBox != selectAllCheckBox)
                 {
@@ -82,9 +264,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
 
             // Update "Select All" checkbox state
-            selectAllCheckBox.CheckedChanged -= selectAllCheckBox_CheckedChanged; // Detach event
+            selectAllCheckBox.CheckedChanged -= SelectAllCheckBox_CheckedChanged; // Detach event
             selectAllCheckBox.Checked = allChecked; // Update state
-            selectAllCheckBox.CheckedChanged += selectAllCheckBox_CheckedChanged; // Reattach event
+            selectAllCheckBox.CheckedChanged += SelectAllCheckBox_CheckedChanged; // Reattach event
 
             UpdateSelectAllText();
         }
