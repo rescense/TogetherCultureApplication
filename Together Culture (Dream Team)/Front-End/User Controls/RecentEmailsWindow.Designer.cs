@@ -74,6 +74,7 @@
             guna2Button1.Size = new Size(66, 49);
             guna2Button1.TabIndex = 2;
             guna2Button1.Text = "OK";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2HtmlLabel2
             // 

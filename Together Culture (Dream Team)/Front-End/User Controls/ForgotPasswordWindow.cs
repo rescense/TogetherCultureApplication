@@ -31,11 +31,12 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
+
 
         }
     }

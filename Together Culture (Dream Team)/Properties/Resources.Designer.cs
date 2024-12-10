@@ -93,6 +93,36 @@ namespace Together_Culture__Dream_Team_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_841152680_1024x1024 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-841152680-1024x1024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_841152680_1024x10241 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-841152680-1024x10241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_841152680_1024x10242 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-841152680-1024x10242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ph__user_list_fill__1_ {
             get {
                 object obj = ResourceManager.GetObject("ph--user-list-fill (1)", resourceCulture);

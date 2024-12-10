@@ -121,6 +121,12 @@
   <data name="creating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Front-End\Assets\Images\creating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="istockphoto-841152680-1024x10241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-841152680-1024x10241.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Front-End\Assets\Images\caring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Working Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Front-End\Assets\Images\Working Pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,13 +136,16 @@
   <data name="uil--chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Front-End\Assets\Icons\uil--chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="istockphoto-841152680-1024x1024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-841152680-1024x1024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ph--user-list-fill (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Front-End\Assets\Icons\ph--user-list-fill (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="experiencing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Front-End\Assets\Images\experiencing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Front-End\Assets\Images\caring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="istockphoto-841152680-1024x10242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-841152680-1024x10242.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

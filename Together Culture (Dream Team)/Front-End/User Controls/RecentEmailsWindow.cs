@@ -13,17 +13,17 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
     public partial class RecentEmailsWindow : UserControl
     {
 
-            private static RecentEmailsWindow _instance;
-            public static RecentEmailsWindow Instance
+        private static RecentEmailsWindow _instance;
+        public static RecentEmailsWindow Instance
+        {
+            get
             {
-                get
-                {
-                    if (_instance == null)
-                        _instance = new RecentEmailsWindow();
-                    return _instance;
+                if (_instance == null)
+                    _instance = new RecentEmailsWindow();
+                return _instance;
 
-                }
             }
+        }
         public RecentEmailsWindow()
         {
             InitializeComponent();
@@ -36,6 +36,12 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
 
         }
     }

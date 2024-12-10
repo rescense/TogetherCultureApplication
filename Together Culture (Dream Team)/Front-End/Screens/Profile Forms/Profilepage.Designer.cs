@@ -63,11 +63,13 @@
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel1.BackgroundImage = Properties.Resources.istockphoto_841152680_1024x1024;
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel1.FillColor2 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel1.FillColor4 = Color.Red;
             guna2CustomGradientPanel1.Location = new Point(351, 1);
+            guna2CustomGradientPanel1.MinimumSize = new Size(800, 808);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel1.Size = new Size(800, 808);
