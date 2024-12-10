@@ -62,5 +62,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         {
 
         }
+
+        private void richTextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox3_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
