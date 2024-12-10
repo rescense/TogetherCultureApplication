@@ -12,6 +12,7 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
 {
     public partial class LoginAlertWindow : UserControl
     {
+       
         public LoginAlertWindow()
         {
             InitializeComponent();

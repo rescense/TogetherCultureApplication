@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
+using Together_Culture__Dream_Team_.Front_End.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
@@ -70,6 +72,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void richTextBox3_TextChanged_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (!guna2CustomGradientPanel2.Controls.Contains(ForgotPasswordWindow.Instance))
+            {
+                guna2CustomGradientPanel2.Controls.Add(ForgotPasswordWindow.Instance);
+              
+                ForgotPasswordWindow.Instance.BringToFront();
+            }
+            else
+                ForgotPasswordWindow.Instance.BringToFront();
 
         }
     }
