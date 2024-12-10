@@ -36,6 +36,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
             if (!guna2CustomGradientPanel1.Controls.Contains(LoginAlertWindow.Instance))
             {
                 guna2CustomGradientPanel1.Controls.Add(LoginAlertWindow.Instance);
@@ -44,6 +49,18 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
             else
                 LoginAlertWindow.Instance.BringToFront();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (!guna2CustomGradientPanel1.Controls.Contains(RecentEmailsWindow.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(RecentEmailsWindow.Instance);
+
+                RecentEmailsWindow.Instance.BringToFront();
+            }
+            else
+                RecentEmailsWindow.Instance.BringToFront();
         }
     }
 }

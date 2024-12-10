@@ -128,6 +128,7 @@
             guna2Button2.Size = new Size(71, 52);
             guna2Button2.TabIndex = 7;
             guna2Button2.Text = ">";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2HtmlLabel6
             // 
@@ -172,6 +173,7 @@
             guna2Button1.Size = new Size(71, 52);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = ">";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2HtmlLabel5
             // 

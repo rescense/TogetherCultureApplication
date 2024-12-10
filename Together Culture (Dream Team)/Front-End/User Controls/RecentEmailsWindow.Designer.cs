@@ -33,9 +33,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,29 +55,7 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2CustomGradientPanel1.Size = new Size(262, 232);
             guna2CustomGradientPanel1.TabIndex = 0;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(62, 80);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(143, 27);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "No recent Emails";
-            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(82, 44);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(85, 30);
-            guna2HtmlLabel2.TabIndex = 1;
-            guna2HtmlLabel2.Text = "Message";
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
             // 
             // guna2Button1
             // 
@@ -96,6 +74,29 @@
             guna2Button1.Size = new Size(66, 49);
             guna2Button1.TabIndex = 2;
             guna2Button1.Text = "OK";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(82, 44);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(85, 30);
+            guna2HtmlLabel2.TabIndex = 1;
+            guna2HtmlLabel2.Text = "Message";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(62, 80);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(143, 27);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "No recent Emails";
+            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
             // 
             // RecentEmailsWindow
             // 
