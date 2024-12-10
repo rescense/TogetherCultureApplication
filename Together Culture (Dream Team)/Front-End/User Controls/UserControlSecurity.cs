@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
@@ -35,7 +36,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
+            if (!guna2CustomGradientPanel1.Controls.Contains(LoginAlertWindow.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(LoginAlertWindow.Instance);
 
+                LoginAlertWindow.Instance.BringToFront();
+            }
+            else
+                LoginAlertWindow.Instance.BringToFront();
         }
     }
 }
