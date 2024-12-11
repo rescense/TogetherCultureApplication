@@ -21,6 +21,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 
         private void InitializeComponents()
         {
+            /*
             var searchBox = new RichTextBox { PlaceholderText = "Search..." };
             var categoryFilter = new ComboBox { Items = { "Skills Offered", "Skills Requested" } };
             var searchButton = new Button { Text = "Search" };
@@ -48,6 +49,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             layout.Controls.Add(postButton);
 
             Controls.Add(layout);
+            */
         }
 
         private void PostService(string title, string category, string description, string time, string contact)

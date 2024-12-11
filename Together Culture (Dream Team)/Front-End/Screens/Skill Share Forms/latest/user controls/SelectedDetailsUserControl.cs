@@ -12,17 +12,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 {
     public partial class SelectedDetailsUserControl : UserControl
     {
-        public SelectedDetailsUserControl(EventDetails eventDetails = null)
+        public SelectedDetailsUserControl(/*EventDetails eventDetails = null*/)
         {
-            InitializeComponents(eventDetails);
+            InitializeComponents(/*eventDetails*/);
         }
 
-        private void InitializeComponents(EventDetails eventDetails)
+        private void InitializeComponents(/*EventDetails eventDetails*/)
         {
+            /*
             var description = new Label { Text = eventDetails?.Description ?? "Description" };
             var contact = new Label { Text = eventDetails?.ContactPreference ?? "Contact Preference" };
             var memberName = new Label { Text = eventDetails?.MemberName ?? "Member Name" };
             var showInterestButton = new Button { Text = "Show Interest" };
+            
 
             showInterestButton.Click += (s, e) =>
             {
@@ -36,7 +38,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             layout.Controls.Add(memberName);
             layout.Controls.Add(showInterestButton);
 
-            Controls.Add(layout);
+            Controls.Add(layout);*/
         }
         private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
         {
