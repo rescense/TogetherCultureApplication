@@ -218,6 +218,7 @@
             guna2Button3.Size = new Size(71, 52);
             guna2Button3.TabIndex = 8;
             guna2Button3.Text = ">";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2HtmlLabel3
             // 
