@@ -33,14 +33,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            richTextBox1 = new RichTextBox();
-            richTextBox2 = new RichTextBox();
-            richTextBox3 = new RichTextBox();
-            richTextBox4 = new RichTextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            richTextBox4 = new RichTextBox();
+            richTextBox3 = new RichTextBox();
+            richTextBox2 = new RichTextBox();
+            richTextBox1 = new RichTextBox();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,78 +65,7 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2CustomGradientPanel1.Size = new Size(381, 320);
             guna2CustomGradientPanel1.TabIndex = 0;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(45, 52);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(283, 30);
-            guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "A code has been sent on your";
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(95, 79);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(194, 30);
-            guna2HtmlLabel2.TabIndex = 1;
-            guna2HtmlLabel2.Text = " registered Phone no";
-            guna2HtmlLabel2.Click += guna2HtmlLabel2_Click;
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(104, 130);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(153, 30);
-            guna2HtmlLabel3.TabIndex = 2;
-            guna2HtmlLabel3.Text = "Enter your code";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richTextBox1.Location = new Point(257, 191);
-            richTextBox1.MinimumSize = new Size(46, 37);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(46, 37);
-            richTextBox1.TabIndex = 3;
-            richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richTextBox2.Location = new Point(191, 191);
-            richTextBox2.MinimumSize = new Size(46, 37);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(46, 37);
-            richTextBox2.TabIndex = 4;
-            richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richTextBox3.Location = new Point(129, 191);
-            richTextBox3.MinimumSize = new Size(46, 37);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(46, 37);
-            richTextBox3.TabIndex = 5;
-            richTextBox3.Text = "";
-            // 
-            // richTextBox4
-            // 
-            richTextBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            richTextBox4.Location = new Point(62, 191);
-            richTextBox4.MinimumSize = new Size(46, 37);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(46, 37);
-            richTextBox4.TabIndex = 6;
-            richTextBox4.Text = "";
-            richTextBox4.TextChanged += richTextBox4_TextChanged;
+            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
             // 
             // guna2Button1
             // 
@@ -156,6 +85,78 @@
             guna2Button1.TabIndex = 7;
             guna2Button1.Text = "Submit";
             guna2Button1.Click += guna2Button1_Click;
+            // 
+            // richTextBox4
+            // 
+            richTextBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox4.Location = new Point(62, 191);
+            richTextBox4.MinimumSize = new Size(46, 37);
+            richTextBox4.Name = "richTextBox4";
+            richTextBox4.Size = new Size(46, 37);
+            richTextBox4.TabIndex = 6;
+            richTextBox4.Text = "";
+            richTextBox4.TextChanged += richTextBox4_TextChanged;
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox3.Location = new Point(129, 191);
+            richTextBox3.MinimumSize = new Size(46, 37);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(46, 37);
+            richTextBox3.TabIndex = 5;
+            richTextBox3.Text = "";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox2.Location = new Point(191, 191);
+            richTextBox2.MinimumSize = new Size(46, 37);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(46, 37);
+            richTextBox2.TabIndex = 4;
+            richTextBox2.Text = "";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox1.Location = new Point(257, 191);
+            richTextBox1.MinimumSize = new Size(46, 37);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(46, 37);
+            richTextBox1.TabIndex = 3;
+            richTextBox1.Text = "";
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.Location = new Point(104, 130);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(153, 30);
+            guna2HtmlLabel3.TabIndex = 2;
+            guna2HtmlLabel3.Text = "Enter your code";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(95, 79);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(194, 30);
+            guna2HtmlLabel2.TabIndex = 1;
+            guna2HtmlLabel2.Text = " registered Phone no";
+            guna2HtmlLabel2.Click += guna2HtmlLabel2_Click;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(45, 52);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(283, 30);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "A code has been sent on your";
             // 
             // PhoneCodeWindow
             // 

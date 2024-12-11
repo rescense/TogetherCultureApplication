@@ -12,6 +12,17 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
 {
     public partial class PhoneCodeWindow : UserControl
     {
+        private static PhoneCodeWindow _instance;
+        public static PhoneCodeWindow Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new PhoneCodeWindow();
+                return _instance;
+
+            }
+        }
         public PhoneCodeWindow()
         {
             InitializeComponent();
@@ -30,6 +41,11 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

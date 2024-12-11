@@ -12,6 +12,17 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
 {
     public partial class EmailCodeWindow : UserControl
     {
+        private static EmailCodeWindow _instance;
+        public static EmailCodeWindow Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new EmailCodeWindow();
+                return _instance;
+
+            }
+        }
         public EmailCodeWindow()
         {
             InitializeComponent();
@@ -30,6 +41,11 @@ namespace Together_Culture__Dream_Team_.Front_End.User_Controls
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
