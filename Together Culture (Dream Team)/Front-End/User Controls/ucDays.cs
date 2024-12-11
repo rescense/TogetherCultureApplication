@@ -12,7 +12,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class ucDays : UserControl
     {
+        public event EventHandler<string> DateSelected;
+        public event EventHandler<string> DateDeselected;
         string dayVar, dateVar, weekDaysVar;
+        public bool IsSelected { get; private set; } = false;
         public ucDays(string day)
         {
             InitializeComponent();
@@ -28,18 +31,33 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void panel_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
+            if (!string.IsNullOrEmpty(dayVar))
             {
-                checkBox1.Checked = true;
-                this.BackColor = Color.Yellow;
-            }
-            else
-            {
-                checkBox1.Checked = false;
-                this.BackColor = Color.White;
+                if (!IsSelected)
+                {
+                    IsSelected = true;
+                    this.BackColor = Color.Yellow;
+                    DateSelected?.Invoke(this, dayVar);
+                }
+                else
+                {
+                    IsSelected = false;
+                    this.BackColor = Color.White;
+                    DateDeselected?.Invoke(this, dayVar);
+                }
             }
 
 
+
+        }
+
+        public void Deselect() 
+        {
+            IsSelected = false;
+            this.BackColor = Color.White;
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

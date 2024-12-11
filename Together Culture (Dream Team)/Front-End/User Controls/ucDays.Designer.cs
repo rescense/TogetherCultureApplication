@@ -66,6 +66,7 @@
             label1.Size = new Size(56, 42);
             label1.TabIndex = 0;
             label1.Text = "00";
+            label1.Click += label1_Click;
             // 
             // ucDays
             // 
