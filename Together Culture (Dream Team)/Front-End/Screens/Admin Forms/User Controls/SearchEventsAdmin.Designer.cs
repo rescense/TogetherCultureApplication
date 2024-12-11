@@ -295,15 +295,15 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private TextBox searchEventsTxtBx;
+        public TextBox searchEventsTxtBx;
         private Panel panel1;
-        private CheckBox selectAllCheckBox;
+        public CheckBox selectAllCheckBox;
         private Guna.UI2.WinForms.Guna2Button actionsBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Button filterBtn;
         private PictureBox pictureBox39;
         public Guna.UI2.WinForms.Guna2DataGridView eventDataGridView;
-        private Panel filterPanel;
+        public Panel filterPanel;
         private Panel actionsPanel;
     }
 }

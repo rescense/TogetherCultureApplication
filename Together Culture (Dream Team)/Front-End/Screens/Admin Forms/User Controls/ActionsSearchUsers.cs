@@ -12,12 +12,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
 {
     public partial class ActionsSearchUsers : UserControl
     {
-        private SearchUsers _searchUsers;  // Instance variable for SearchUsers
+        public SearchUsers _searchUsers;  // Instance variable for SearchUsers
         private List<string> attendedEvents = new List<string>();  // List to store attended events
-        private Guna2DataGridView dataGridView1;
+        public Guna2DataGridView dataGridView1;
 
         private AddTag AddTagControl;
-        private bool isAddTagVisible = false;
+        public bool isAddTagVisible = false;
 
         public string eventQuery = @"
                 SELECT e.event_name, e.date, e.time, e.location 
@@ -58,7 +58,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         }
 
         // Event handler for the button click
-        private void ConfirmActionBtn_Click(object sender, EventArgs e)
+        public void ConfirmActionBtn_Click(object sender, EventArgs e)
         {
             var selectedUsers = _searchUsers.GetSelectedUsers();
 
@@ -88,7 +88,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
 
 
         // Action to view events for selected users
-        private void HandleSeeEventsAction(List<string> selectedUsers)
+        public void HandleSeeEventsAction(List<string> selectedUsers)
         {
             if (selectedUsers.Count == 0)
             {
@@ -256,7 +256,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         }
 
         // Helper method to execute a SQL query and return the results
-        private List<Dictionary<string, object>> ExecuteQuery(string query, SqlParameter parameter)
+        public List<Dictionary<string, object>> ExecuteQuery(string query, SqlParameter parameter)
         {
             var results = new List<Dictionary<string, object>>();
 
@@ -286,6 +286,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
             }
 
             return results;
+        }
+
+        public void ExecuteQuery(string v1, object v2)
+        {
+            throw new NotImplementedException();
         }
     }
 }

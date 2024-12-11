@@ -136,10 +136,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel actionsSearchUsersGradientPanel;
-        private RadioButton seeEventsRadioBtn;
-        private RadioButton removeUsersRadioBtn;
-        private RadioButton addTagsRadioBtn;
+        public RadioButton seeEventsRadioBtn;
+        public RadioButton removeUsersRadioBtn;
+        public RadioButton addTagsRadioBtn;
         private Button confirmActionBtn;
-        private Panel addTagPanel;
+        public Panel addTagPanel;
     }
 }

@@ -25,7 +25,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         public string TagInput => addTagTxtBox.Text.Trim();
 
         // Button click event handler for adding a tag
-        private void AddTagButton_Click(object sender, EventArgs e)
+        public void AddTagButton_Click(object sender, EventArgs e)
         {
             string tag = TagInput;
             var selectedUsers = _searchUsers.GetSelectedUsers();

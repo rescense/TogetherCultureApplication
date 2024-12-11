@@ -1,15 +1,20 @@
 ﻿CREATE TABLE [user] (
-  [user_id] INT IDENTITY(1,1) PRIMARY KEY CLUSTERED,
-  [username] VARCHAR(50) NOT NULL UNIQUE,
-  [user_type] VARCHAR(20) NOT NULL DEFAULT 'non_member',
-  [password] VARCHAR(50) NOT NULL,
-  [first_name] VARCHAR(100) NOT NULL,
-  [last_name] VARCHAR(100) NOT NULL,
-  [email] VARCHAR(254) NOT NULL UNIQUE,
-  [phone_number] VARCHAR(15) NOT NULL,
-  [date_of_birth] DATE NOT NULL,
-  [date_joined] DATE NOT NULL,
-  CONSTRAINT chk_user_type CHECK ([user_type] IN ('member', 'non_member'))
+    [user_id]       INT           IDENTITY (1, 1) NOT NULL,
+    [username]      VARCHAR (50)  NOT NULL,
+    [user_type]     VARCHAR (20)  DEFAULT ('non_member') NOT NULL,
+    [password]      VARCHAR (50)  NOT NULL,
+    [first_name]    VARCHAR (100) NOT NULL,
+    [last_name]     VARCHAR (100) NOT NULL,
+    [email]         VARCHAR (254) NOT NULL,
+    [phone_number]  VARCHAR (15)  NOT NULL,
+    [date_of_birth] DATE          NOT NULL,
+    [date_joined]   DATE          NOT NULL,
+    [Id]            INT           DEFAULT (NULL) NULL,
+    PRIMARY KEY CLUSTERED ([user_id] ASC),
+    UNIQUE NONCLUSTERED ([email] ASC),
+    UNIQUE NONCLUSTERED ([username] ASC),
+    FOREIGN KEY ([Id]) REFERENCES [dbo].[Admin] ([Id]),
+    CONSTRAINT [chk_user_type] CHECK ([user_type]='non_member' OR [user_type]='member')
 );
 GO
 
@@ -186,3 +191,33 @@ CREATE TABLE [comments] (
   [post_id] INT NOT NULL,
   [comment_contents] TEXT
   );
+GO
+
+CREATE TABLE [Admin] (
+    [Id]         INT          IDENTITY (1, 1) NOT NULL,
+    [first_name] VARCHAR (50) NOT NULL,
+    [last_name]  VARCHAR (50) NOT NULL,
+    [password]   VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+GO
+
+CREATE TABLE [admin_approvals] (
+    [approval_id] INT IDENTITY (1, 1) NOT NULL,
+    [admin_id]    INT NOT NULL,
+    [is_approved] BIT DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([approval_id] ASC),
+    FOREIGN KEY ([admin_id]) REFERENCES [dbo].[Admin] ([Id]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+GO
+
+CREATE TABLE [interests] (
+    [user_id]  INT           NOT NULL,
+    [interest] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([user_id] ASC, [interest] ASC),
+    FOREIGN KEY ([user_id]) REFERENCES [dbo].[user] ([user_id]) ON DELETE CASCADE ON UPDATE CASCADE,
+    CHECK ([interest]='working' OR [interest]='experiencing' OR [interest]='creating' OR [interest]='sharing' OR [interest]='caring')
+);
+GO
+
+

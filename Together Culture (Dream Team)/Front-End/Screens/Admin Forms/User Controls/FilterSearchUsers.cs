@@ -35,7 +35,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Admin_Forms.User_Contr
         }
 
         // Add methods for your filtering logic (this could be for sorting users, etc.)
-        public bool IsAscending => nameAscRadioBtn.Checked;
+        public virtual bool IsAscending => nameAscRadioBtn.Checked;
     }
 }
 
