@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls;
+using static Guna.UI2.WinForms.Suite.Descriptions;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest
 {
@@ -18,13 +19,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             InitializeComponent();
             LoadInitialUserControls();
         }
+
         // Load the initial state with Search and Post user control in Panel1 and Time Bank in Panel2
         private void LoadInitialUserControls()
         {
-            
             var searchAndPostUC = new SearchAndPostUserControl();
             searchAndPostUC.Dock = DockStyle.Fill;
-            searchAndPostUC.SearchClicked += SearchAndPostUC_SearchClicked;
+            
 
             panel1.Controls.Clear();
             panel1.Controls.Add(searchAndPostUC);
@@ -32,12 +33,16 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             var timeBankUC = new TimeBankUserControl();
             timeBankUC.Dock = DockStyle.Fill;
 
-            //panel2.Controls.Clear();
-            //panel2.Controls.Add(timeBankUC);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(timeBankUC);
+
+            searchAndPostUC.SearchEventClicked += SearchAndPostUC_SearchClicked; // Hook up the event for search
         }
+
         // Event handler for when the search button is clicked
         private void SearchAndPostUC_SearchClicked(object sender, EventArgs e)
         {
+            // When search is clicked, load the search results in both panels
             LoadSearchResultUserControls();
         }
 
@@ -46,7 +51,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         {
             var searchResultsUC = new SearchResultsUserControl();
             searchResultsUC.Dock = DockStyle.Fill;
-            //searchResultsUC.ResultSelected += SearchResultsUC_ResultSelected;
+            searchResultsUC.ResultSelected += SearchResultsUC_ResultSelected;  // Hook up event for result selection
 
             panel1.Controls.Clear();
             panel1.Controls.Add(searchResultsUC);
@@ -54,20 +59,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             var selectedDetailsUC = new SelectedDetailsUserControl();
             selectedDetailsUC.Dock = DockStyle.Fill;
 
-            //panel2.Controls.Clear();
-            //panel2.Controls.Add(selectedDetailsUC);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(selectedDetailsUC);
         }
 
-        // Event handler for when a result is selected
-        private void SearchResultsUC_ResultSelected(object sender, EventDetails eventDetails)
+        // Event handler for when a result is selected in SearchResultsUserControl
+        private void SearchResultsUC_ResultSelected(object sender, skillShareForm.EventDetails eventDetails)
         {
-            /*
+            // Load selected event details into the details user control
             var selectedDetailsUC = new SelectedDetailsUserControl(eventDetails);
             selectedDetailsUC.Dock = DockStyle.Fill;
 
             panel2.Controls.Clear();
             panel2.Controls.Add(selectedDetailsUC);
-            */
         }
 
         // Event details class to store event data
@@ -81,4 +85,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             public int TimeRequired { get; set; }
         }
     }
+
 }
+
+
+

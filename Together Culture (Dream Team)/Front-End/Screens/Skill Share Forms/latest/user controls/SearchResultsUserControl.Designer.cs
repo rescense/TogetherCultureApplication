@@ -33,12 +33,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            textBox1 = new TextBox();
             vScrollBar1 = new VScrollBar();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             comboBox1 = new ComboBox();
-            richTextBox1 = new RichTextBox();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -46,12 +46,12 @@
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel2.Controls.Add(textBox1);
             guna2CustomGradientPanel2.Controls.Add(vScrollBar1);
             guna2CustomGradientPanel2.Controls.Add(dataGridView1);
             guna2CustomGradientPanel2.Controls.Add(label1);
             guna2CustomGradientPanel2.Controls.Add(guna2Button8);
             guna2CustomGradientPanel2.Controls.Add(comboBox1);
-            guna2CustomGradientPanel2.Controls.Add(richTextBox1);
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges3;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.DarkRed;
@@ -63,6 +63,16 @@
             guna2CustomGradientPanel2.Size = new Size(863, 524);
             guna2CustomGradientPanel2.TabIndex = 5;
             guna2CustomGradientPanel2.Paint += guna2CustomGradientPanel2_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(35, 22);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Search";
+            textBox1.Size = new Size(479, 47);
+            textBox1.TabIndex = 36;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // vScrollBar1
             // 
@@ -80,6 +90,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(770, 362);
             dataGridView1.TabIndex = 34;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
@@ -126,16 +137,6 @@
             comboBox1.Size = new Size(160, 45);
             comboBox1.TabIndex = 3;
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
-            richTextBox1.ForeColor = SystemColors.ScrollBar;
-            richTextBox1.Location = new Point(30, 22);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(479, 45);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = "Search";
-            // 
             // SearchResultsUserControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,6 +158,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private ComboBox comboBox1;
-        private RichTextBox richTextBox1;
+        public TextBox textBox1;
     }
 }

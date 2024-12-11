@@ -103,10 +103,10 @@
             guna2CustomGradientPanel7.FillColor2 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel7.FillColor3 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel7.FillColor4 = Color.FromArgb(64, 0, 60);
-            guna2CustomGradientPanel7.Location = new Point(265, 96);
+            guna2CustomGradientPanel7.Location = new Point(235, 96);
             guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
             guna2CustomGradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel7.Size = new Size(78, 65);
+            guna2CustomGradientPanel7.Size = new Size(173, 65);
             guna2CustomGradientPanel7.TabIndex = 40;
             // 
             // label6
@@ -129,10 +129,10 @@
             guna2CustomGradientPanel6.FillColor2 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel6.FillColor3 = Color.FromArgb(64, 0, 60);
             guna2CustomGradientPanel6.FillColor4 = Color.FromArgb(64, 0, 60);
-            guna2CustomGradientPanel6.Location = new Point(265, 14);
+            guna2CustomGradientPanel6.Location = new Point(235, 14);
             guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             guna2CustomGradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel6.Size = new Size(78, 65);
+            guna2CustomGradientPanel6.Size = new Size(173, 65);
             guna2CustomGradientPanel6.TabIndex = 39;
             // 
             // label5

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,58 +8,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls
 {
     public partial class SearchAndPostUserControl : UserControl
     {
-        public event EventHandler SearchClicked;
+        public event EventHandler SearchEventClicked;
 
         public SearchAndPostUserControl()
         {
-            InitializeComponents();
+            InitializeComponent();
+            guna2Button8.Click += (s, e) => SearchEventClicked?.Invoke(this, EventArgs.Empty);  // Raise event when search is clicked
         }
 
-        private void InitializeComponents()
+        private void PostService()
         {
-            /*
-            var searchBox = new RichTextBox { PlaceholderText = "Search..." };
-            var categoryFilter = new ComboBox { Items = { "Skills Offered", "Skills Requested" } };
-            var searchButton = new Button { Text = "Search" };
+            // Gather the values entered by the user in the form
+            string title = textBox2.Text;
+            string category = comboBox2.SelectedItem.ToString();
+            string description = textBox3.Text;
+            string time = textBox4.Text;
+            string contact = textBox5.Text;
 
-            searchButton.Click += (s, e) => SearchClicked?.Invoke(this, EventArgs.Empty);
-
-            var postTitle = new RichTextBox { PlaceholderText = "Service Title" };
-            var postCategory = new ComboBox { Items = { "Request", "Offering" } };
-            var postDescription = new RichTextBox { PlaceholderText = "Description" };
-            var postTime = new TextBox { PlaceholderText = "Time Required (hours)" };
-            var postContact = new TextBox { PlaceholderText = "Contact Preference" };
-            var postButton = new Button { Text = "Post" };
-
-            postButton.Click += (s, e) => PostService(postTitle.Text, postCategory.Text, postDescription.Text, postTime.Text, postContact.Text);
-
-            var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, AutoSize = true };
-            layout.Controls.Add(searchBox);
-            layout.Controls.Add(categoryFilter);
-            layout.Controls.Add(searchButton);
-            layout.Controls.Add(postTitle);
-            layout.Controls.Add(postCategory);
-            layout.Controls.Add(postDescription);
-            layout.Controls.Add(postTime);
-            layout.Controls.Add(postContact);
-            layout.Controls.Add(postButton);
-
-            Controls.Add(layout);
-            */
-        }
-
-        private void PostService(string title, string category, string description, string time, string contact)
-        {
-            // Code to save service/skill in the database
+            // Code to save service/skill in the database (you would add actual database code here)
             MessageBox.Show("Service posted successfully!");
         }
-    }
 
-    // User control for displaying time bank
-    
+        // tools
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // search box
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // combo box for filtering search
+        }
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            // search button
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            //service title 
+        }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // offering or requesting combo box
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            // offering or request
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            // time required
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            // contact preference
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            // post button
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

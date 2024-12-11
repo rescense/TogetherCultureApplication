@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,34 +13,33 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 {
     public partial class SelectedDetailsUserControl : UserControl
     {
-        public SelectedDetailsUserControl(/*EventDetails eventDetails = null*/)
+        public SelectedDetailsUserControl(skillShareForm.EventDetails eventDetails = null)
         {
-            InitializeComponents(/*eventDetails*/);
+            InitializeComponent();
+            InitializeComponents(eventDetails);
         }
 
-        private void InitializeComponents(/*EventDetails eventDetails*/)
+        private void InitializeComponents(skillShareForm.EventDetails eventDetails)
         {
-            /*
-            var description = new Label { Text = eventDetails?.Description ?? "Description" };
-            var contact = new Label { Text = eventDetails?.ContactPreference ?? "Contact Preference" };
-            var memberName = new Label { Text = eventDetails?.MemberName ?? "Member Name" };
-            var showInterestButton = new Button { Text = "Show Interest" };
-            
+            if (eventDetails != null)
+            {
+                var ServiceTitle = eventDetails.ServiceTitle ?? "Service Title";
+                var Category = eventDetails.Category ?? "Category";
+                var TimeRequired = eventDetails.TimeRequired.ToString() + " hours";
+                var description = eventDetails.Description ?? "Description";
+                var contact = eventDetails.ContactPreference ?? "Contact Preference";
+                var memberName = eventDetails.MemberName ?? "Member Name";
 
-            showInterestButton.Click += (s, e) =>
+                label3.Text = $"{memberName}\n\nAssistance Type\n\n{Category}\n\n{TimeRequired}\n\n{description}\n\n\n{contact}";
+            }
+
+            guna2Button9.Click += (s, e) =>
             {
                 // Code to log interest in the database
                 MessageBox.Show("Interest shown successfully!");
             };
-
-            var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, AutoSize = true };
-            layout.Controls.Add(description);
-            layout.Controls.Add(contact);
-            layout.Controls.Add(memberName);
-            layout.Controls.Add(showInterestButton);
-
-            Controls.Add(layout);*/
         }
+
         private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
         {
 

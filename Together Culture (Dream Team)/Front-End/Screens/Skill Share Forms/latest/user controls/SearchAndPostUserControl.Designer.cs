@@ -37,18 +37,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            textBox1 = new TextBox();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
             comboBox2 = new ComboBox();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            richTextBox5 = new RichTextBox();
-            richTextBox4 = new RichTextBox();
-            richTextBox3 = new RichTextBox();
-            richTextBox2 = new RichTextBox();
             label2 = new Label();
             label1 = new Label();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             comboBox1 = new ComboBox();
-            richTextBox1 = new RichTextBox();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel4.SuspendLayout();
             SuspendLayout();
@@ -56,10 +56,10 @@
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel2.Controls.Add(textBox1);
             guna2CustomGradientPanel2.Controls.Add(guna2CustomGradientPanel4);
             guna2CustomGradientPanel2.Controls.Add(guna2Button8);
             guna2CustomGradientPanel2.Controls.Add(comboBox1);
-            guna2CustomGradientPanel2.Controls.Add(richTextBox1);
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges7;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.DarkRed;
@@ -71,14 +71,24 @@
             guna2CustomGradientPanel2.Size = new Size(863, 524);
             guna2CustomGradientPanel2.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(29, 22);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Search";
+            textBox1.Size = new Size(479, 47);
+            textBox1.TabIndex = 37;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // guna2CustomGradientPanel4
             // 
+            guna2CustomGradientPanel4.Controls.Add(textBox5);
+            guna2CustomGradientPanel4.Controls.Add(textBox4);
+            guna2CustomGradientPanel4.Controls.Add(textBox3);
+            guna2CustomGradientPanel4.Controls.Add(textBox2);
             guna2CustomGradientPanel4.Controls.Add(comboBox2);
             guna2CustomGradientPanel4.Controls.Add(guna2Button9);
-            guna2CustomGradientPanel4.Controls.Add(richTextBox5);
-            guna2CustomGradientPanel4.Controls.Add(richTextBox4);
-            guna2CustomGradientPanel4.Controls.Add(richTextBox3);
-            guna2CustomGradientPanel4.Controls.Add(richTextBox2);
             guna2CustomGradientPanel4.Controls.Add(label2);
             guna2CustomGradientPanel4.Controls.Add(label1);
             guna2CustomGradientPanel4.CustomizableEdges = customizableEdges3;
@@ -92,6 +102,46 @@
             guna2CustomGradientPanel4.Size = new Size(814, 416);
             guna2CustomGradientPanel4.TabIndex = 32;
             // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(392, 348);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Contact Preference";
+            textBox5.Size = new Size(371, 38);
+            textBox5.TabIndex = 41;
+            textBox5.TextChanged += textBox5_TextChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(392, 285);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Time Required";
+            textBox4.Size = new Size(371, 38);
+            textBox4.TabIndex = 40;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(392, 220);
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Description Of Skill";
+            textBox3.Size = new Size(371, 38);
+            textBox3.TabIndex = 39;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(392, 96);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Service Title";
+            textBox2.Size = new Size(371, 38);
+            textBox2.TabIndex = 38;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
             // comboBox2
             // 
             comboBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -101,6 +151,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(371, 45);
             comboBox2.TabIndex = 36;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // guna2Button9
             // 
@@ -124,50 +175,7 @@
             guna2Button9.Size = new Size(128, 45);
             guna2Button9.TabIndex = 35;
             guna2Button9.Text = "Post";
-            // 
-            // richTextBox5
-            // 
-            richTextBox5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            richTextBox5.ForeColor = Color.Gray;
-            richTextBox5.Location = new Point(392, 347);
-            richTextBox5.Name = "richTextBox5";
-            richTextBox5.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox5.Size = new Size(371, 39);
-            richTextBox5.TabIndex = 34;
-            richTextBox5.Text = "Contact Preference";
-            // 
-            // richTextBox4
-            // 
-            richTextBox4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            richTextBox4.ForeColor = Color.Gray;
-            richTextBox4.Location = new Point(392, 286);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox4.Size = new Size(371, 39);
-            richTextBox4.TabIndex = 33;
-            richTextBox4.Text = "Time Required";
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            richTextBox3.ForeColor = Color.Gray;
-            richTextBox3.Location = new Point(392, 220);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox3.Size = new Size(371, 39);
-            richTextBox3.TabIndex = 32;
-            richTextBox3.Text = "Description of skill";
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            richTextBox2.ForeColor = Color.Gray;
-            richTextBox2.Location = new Point(392, 96);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox2.Size = new Size(371, 39);
-            richTextBox2.TabIndex = 31;
-            richTextBox2.Text = "Service Title";
+            guna2Button9.Click += guna2Button9_Click;
             // 
             // label2
             // 
@@ -215,6 +223,7 @@
             guna2Button8.Size = new Size(128, 45);
             guna2Button8.TabIndex = 31;
             guna2Button8.Text = "Search";
+            guna2Button8.Click += search_Click;
             // 
             // comboBox1
             // 
@@ -225,16 +234,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(160, 45);
             comboBox1.TabIndex = 2;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
-            richTextBox1.ForeColor = SystemColors.ScrollBar;
-            richTextBox1.Location = new Point(29, 21);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(479, 45);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "Search";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // SearchAndPostUserControl
             // 
@@ -244,6 +244,7 @@
             Name = "SearchAndPostUserControl";
             Size = new Size(863, 524);
             guna2CustomGradientPanel2.ResumeLayout(false);
+            guna2CustomGradientPanel2.PerformLayout();
             guna2CustomGradientPanel4.ResumeLayout(false);
             guna2CustomGradientPanel4.PerformLayout();
             ResumeLayout(false);
@@ -255,14 +256,14 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private ComboBox comboBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private RichTextBox richTextBox5;
-        private RichTextBox richTextBox4;
-        private RichTextBox richTextBox3;
-        private RichTextBox richTextBox2;
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private ComboBox comboBox1;
-        private RichTextBox richTextBox1;
+        private TextBox textBox1;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
     }
 }

@@ -12,63 +12,71 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 {
     public partial class SearchResultsUserControl : UserControl
     {
-        //public event EventHandler<EventDetails> ResultSelected;
+        public event EventHandler<skillShareForm.EventDetails> ResultSelected;
 
         public SearchResultsUserControl()
         {
-            InitializeComponents();
+            InitializeComponent();
+            LoadResult();
         }
 
-        private void InitializeComponents()
+        private void LoadResult()
         {
-            //var searchBox = new RichTextBox { PlaceholderText = "Search..." };
-            var categoryFilter = new ComboBox { Items = { "Skills Offered", "Skills Requested" } };
-            var searchButton = new Button { Text = "Search" };
-            var resultsGrid = new DataGridView
-            {
-                ColumnCount = 3,
-                Columns =
-                {
-                    [0] = { Name = "Service Title" },
-                    [1] = { Name = "Time Required" },
-                    [2] = { Name = "Category" }
-                }
-            };
+            // Populate the DataGridView with sample results
+            DataGridViewTextBoxColumn ServiceColumn = new DataGridViewTextBoxColumn();
+            ServiceColumn.Name = "ServiceColumn";
+            ServiceColumn.HeaderText = "Service";
+            ServiceColumn.Width = 400;
 
-            searchButton.Click += (s, e) =>
-            {
-                // Example data population
-                resultsGrid.Rows.Add("Plumbing Help", "3 hours", "Request");
-                resultsGrid.Rows.Add("Gardening Tips", "1 hour", "Offering");
-            };
+            DataGridViewTextBoxColumn timeColumn = new DataGridViewTextBoxColumn();
+            timeColumn.Name = "timeColumn";
+            timeColumn.HeaderText = "Time";
+            timeColumn.Width = 160;
 
-            resultsGrid.SelectionChanged += (s, e) =>
+            DataGridViewTextBoxColumn categoryColumn = new DataGridViewTextBoxColumn();
+            categoryColumn.Name = "categoryColumn";
+            categoryColumn.HeaderText = "Category";
+            categoryColumn.Width = 170;
+
+            dataGridView1.Columns.Add(ServiceColumn);
+            dataGridView1.Columns.Add(timeColumn);
+            dataGridView1.Columns.Add(categoryColumn);
+
+            // Add sample rows
+            dataGridView1.Rows.Add("Plumbing Help", "3 hours", "Request");
+            dataGridView1.Rows.Add("Gardening Tips", "1 hour", "Offering");
+
+            // When selection is changed, raise the ResultSelected event
+            dataGridView1.SelectionChanged += (s, e) =>
             {
-                if (resultsGrid.SelectedRows.Count > 0)
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    var selectedRow = resultsGrid.SelectedRows[0];
-                    /*
-                    var eventDetails = new EventDetails
+                    var selectedRow = dataGridView1.SelectedRows[0];
+
+                    var eventDetails = new skillShareForm.EventDetails
                     {
                         ServiceTitle = selectedRow.Cells[0].Value.ToString(),
-                        TimeRequired = int.Parse(selectedRow.Cells[1].Value.ToString()),
+                        TimeRequired = int.Parse(selectedRow.Cells[1].Value.ToString().Split(' ')[0]),  // Remove "hours" and parse integer
                         Category = selectedRow.Cells[2].Value.ToString()
                     };
-                    ResultSelected?.Invoke(this, eventDetails);*/
-                }
+                    ResultSelected?.Invoke(this, eventDetails);  // Trigger the ResultSelected event
+                } 
             };
-
-            var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, AutoSize = true };
-            //layout.Controls.Add(searchBox);
-            layout.Controls.Add(categoryFilter);
-            layout.Controls.Add(searchButton);
-            layout.Controls.Add(resultsGrid);
-
-            Controls.Add(layout);
         }
+
         private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }
