@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,11 +81,23 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             if (!guna2CustomGradientPanel2.Controls.Contains(ForgotPasswordWindow.Instance))
             {
                 guna2CustomGradientPanel2.Controls.Add(ForgotPasswordWindow.Instance);
-              
+
                 ForgotPasswordWindow.Instance.BringToFront();
             }
             else
                 ForgotPasswordWindow.Instance.BringToFront();
+
+        }
+
+
+
+        private void richTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

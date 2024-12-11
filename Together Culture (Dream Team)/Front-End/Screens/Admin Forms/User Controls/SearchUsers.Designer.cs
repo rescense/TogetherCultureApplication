@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -141,6 +141,7 @@
             filterPanel.Name = "filterPanel";
             filterPanel.Size = new Size(181, 81);
             filterPanel.TabIndex = 45;
+            filterPanel.Visible = false;
             filterPanel.Paint += FilterPanel_Paint;
             // 
             // actionsPanel
@@ -151,6 +152,7 @@
             actionsPanel.Name = "actionsPanel";
             actionsPanel.Size = new Size(181, 239);
             actionsPanel.TabIndex = 44;
+            actionsPanel.Visible = false;
             actionsPanel.Paint += ActionsPanel_Paint;
             // 
             // dataGridView1
@@ -301,11 +303,11 @@
         private Button filterBtn;
         private Guna.UI2.WinForms.Guna2Button actionsBtn;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private TextBox searchUsersTxtBx;
+        public TextBox searchUsersTxtBx;
         private PictureBox pictureBox1;
-        private CheckBox selectAllCheckBox;
+        public CheckBox selectAllCheckBox;
         public Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
-        private Panel actionsPanel;
-        private Panel filterPanel;
+        public Panel actionsPanel;
+        public Panel filterPanel;
     }
 }

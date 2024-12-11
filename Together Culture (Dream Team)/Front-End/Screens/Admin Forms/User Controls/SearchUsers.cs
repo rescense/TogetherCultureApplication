@@ -41,46 +41,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             FilterSearchUsers.FilterApplied += FilterSearchUsers_FilterApplied;
         }
 
-
-        public void ClearDataGridView()
-        {
-            // Clear rows in the DataGridView
-            if (dataGridView1 != null)
-            {
-                dataGridView1.Rows.Clear();
-            }
-
-            // Ensure DataGridView is not in a read-only state
-            dataGridView1.ReadOnly = false;
-
-            // Check if DataGridView is data-bound
-            if (dataGridView1.DataSource != null)
-            {
-                // Clear the data source (e.g., if using a BindingSource)
-                BindingSource bindingSource = dataGridView1.DataSource as BindingSource;
-                if (bindingSource != null)
-                {
-                    bindingSource.Clear(); // Clear data in the binding source
-                }
-                else
-                {
-                    // Remove the data source completely if it's not a BindingSource
-                    dataGridView1.DataSource = null;
-                }
-            }
-            else
-            {
-                // Directly clear rows if not bound to any data source
-                dataGridView1.Rows.Clear();
-            }
-
-            // Optionally, reset other properties if necessary
-            dataGridView1.Refresh();  // Refresh the DataGridView after clearing
-        }
-
-
         // Event handler for FilterApplied from FilterSearchUsers
-        private void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
+        public void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
         {
             // Check if the filter is sorting by name and if it's ascending or descending
             bool isAscending = FilterSearchUsers.IsAscending;
@@ -119,7 +81,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userControl.BringToFront();
         }
 
-        private void ActionsSearchUsersBtn_Click(object sender, EventArgs e)
+        public void ActionsSearchUsersBtn_Click(object sender, EventArgs e)
         {
             if (!isActionsSearchUsersVisible)
             {
@@ -138,7 +100,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void FilterBtn_Click(object sender, EventArgs e)
+        public void FilterBtn_Click(object sender, EventArgs e)
         {
             if (!isFilterSearchUsersVisible)
             {
@@ -173,7 +135,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SearchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
+        public void SearchUsersTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
             // Only clear the placeholder text if it's the default
             if (searchUsersTxtBx.Text == "Search users...")
@@ -183,16 +145,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SearchUsersTxtBx_Leave(object sender, EventArgs e)
+        public void SearchUsersTxtBx_Leave(object sender, EventArgs e)
         {
             // Restore the placeholder text if the user has left it empty
             if (string.IsNullOrEmpty(searchUsersTxtBx.Text))
             {
+                searchUsersTxtBx.Text = "Search users...";  // Set the placeholder text
                 searchUsersTxtBx.ForeColor = System.Drawing.Color.Gray; // Change color back to gray
             }
         }
 
-        private void SelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
+        public void SelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             // Ensure DataGridView contains rows
             if (dataGridView1.Rows.Count > 0)
@@ -294,52 +257,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void HandleSeeEventsAction(List<string> selectedUsers)
-        {
-            if (selectedUsers.Count == 0)
-            {
-                MessageBox.Show("Please select at least one user.");
-                return;
-            }
-
-            // Clear existing rows in DataGridView to make room for event data
-            dataGridView1.Rows.Clear();
-
-            // Loop through the selected users and fetch events
-            foreach (var username in selectedUsers)
-            {
-                string query = @"
-            SELECT e.event_name, eo.event_date, eo.event_time, eo.event_location 
-            FROM event_orders eo
-            JOIN events e ON eo.event_id = e.event_id
-            JOIN [user] u ON eo.user_id = u.user_id
-            WHERE u.username = @username";  // Filter by selected user
-
-                // Execute the query and get event data
-                using (DatabaseConnect database = new DatabaseConnect())
-                {
-                    database.Open();
-                    SqlCommand command = new SqlCommand(query, database.Connection);
-                    command.Parameters.AddWithValue("@username", username);
-
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    // Display the user's events
-                    while (reader.Read())
-                    {
-                        dataGridView1.Rows.Add(
-                            username,                         // Username
-                            reader["event_name"].ToString(),   // Event Name
-                            reader["event_date"].ToString(),   // Event Date
-                            reader["event_time"].ToString(),   // Event Time
-                            reader["event_location"].ToString()// Event Location
-                        );
-                    }
-                }
-            }
-        }
-
-        private void SearchUsersTxtBx_TextChanged(object sender, EventArgs e)
+        public void SearchUsersTxtBx_TextChanged(object sender, EventArgs e)
         {
             if (userDataTable != null)
             {
@@ -364,7 +282,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        public List<string> GetSelectedUsers()
+        public virtual List<string> GetSelectedUsers()
         {
             List<string> selectedUsers = new List<string>();
 

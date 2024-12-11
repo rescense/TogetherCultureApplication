@@ -90,7 +90,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel addTagsGradientPanel;
-        private TextBox addTagTxtBox;
+        public TextBox addTagTxtBox;
         private Button confirmAddingTagBtn;
     }
 }

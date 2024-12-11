@@ -165,6 +165,7 @@
             richTextBox1.Size = new Size(431, 49);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged_1;
             // 
             // richTextBox2
             // 
@@ -202,9 +203,10 @@
             guna2HtmlLabel2.ForeColor = Color.White;
             guna2HtmlLabel2.Location = new Point(56, 116);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(191, 33);
+            guna2HtmlLabel2.Size = new Size(110, 33);
             guna2HtmlLabel2.TabIndex = 2;
-            guna2HtmlLabel2.Text = "Current Password";
+            guna2HtmlLabel2.Text = "Username";
+            guna2HtmlLabel2.Click += guna2HtmlLabel2_Click_1;
             // 
             // guna2HtmlLabel3
             // 

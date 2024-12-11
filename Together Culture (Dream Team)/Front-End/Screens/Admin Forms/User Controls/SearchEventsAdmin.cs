@@ -77,7 +77,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void LoadDataIntoDataGridView()
+        public void LoadDataIntoDataGridView()
         {
             // Ensure pendingApprovalsDataGridView is initialized
             if (eventDataGridView == null)
@@ -137,7 +137,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             userControl.BringToFront();
         }
 
-        private void FilterBtn_Click(object sender, EventArgs e)
+        public void FilterBtn_Click(object sender, EventArgs e)
         {
             if (!isFilterSearchUsersVisible)
             {
@@ -156,7 +156,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SearchEventsTxtBx_TextChanged(object sender, EventArgs e)
+        public void SearchEventsTxtBx_TextChanged(object sender, EventArgs e)
         {
             if (eventDataTable != null)
             {
@@ -180,7 +180,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
+        public void FilterSearchUsers_FilterApplied(object sender, EventArgs e)
         {
             // Check if the filter is sorting by name and if it's ascending or descending
             bool isAscending = FilterSearchUsers.IsAscending;
@@ -203,7 +203,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SearchEventsTxtBx_MouseClic(object sender, MouseEventArgs e)
+        public void SearchEventsTxtBx_MouseClic(object sender, MouseEventArgs e)
         {
             // Only clear the placeholder text if it's the default
             if (searchEventsTxtBx.Text == "Search events...")
@@ -213,7 +213,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SearchEventsTxtBxx_Leave(object sender, EventArgs e)
+        public void SearchEventsTxtBxx_Leave(object sender, EventArgs e)
         {
             // Restore the placeholder text if the user has left it empty
             if (string.IsNullOrEmpty(searchEventsTxtBx.Text))
@@ -223,7 +223,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-        private void SelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
+        public void SelectAllCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (selectAllCheckBox.Focused) // Ensure triggered by user action
             {
