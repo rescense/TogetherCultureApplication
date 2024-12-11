@@ -1,6 +1,6 @@
 ﻿namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls
 {
-    partial class SearchAndPostUserControlcs
+    partial class SearchAndPostUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -236,12 +236,12 @@
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "Search";
             // 
-            // SearchAndPostUserControlcs
+            // SearchAndPostUserControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2CustomGradientPanel2);
-            Name = "SearchAndPostUserControlcs";
+            Name = "SearchAndPostUserControl";
             Size = new Size(863, 524);
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel4.ResumeLayout(false);
