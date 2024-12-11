@@ -62,5 +62,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             else
                 RecentEmailsWindow.Instance.BringToFront();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (!guna2CustomGradientPanel1.Controls.Contains(AuthenticationWindow.Instance))
+            {
+                guna2CustomGradientPanel1.Controls.Add(AuthenticationWindow.Instance);
+
+                AuthenticationWindow.Instance.BringToFront();
+            }
+            else
+                AuthenticationWindow.Instance.BringToFront();
+        }
     }
 }
