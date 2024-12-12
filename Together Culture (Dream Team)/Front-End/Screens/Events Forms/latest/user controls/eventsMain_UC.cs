@@ -14,7 +14,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventsMain_UC : UserControl
     {
-        public event EventHandler<EventDetails> EventSelected;
+        public event EventHandler<eventsForm.EventDetails> EventSelected;
         public static int yearVar, monthVar;
         private ucDays currentlySelectedDay;
         public eventsMain_UC()
@@ -38,18 +38,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             {
                 var selectedRow = dataGridView1.SelectedRows[0];
                 // turn selected items into Event details
-                // var eventDetails = selectedRow.DataBoundItem as EventDetails;
+                var eventDetails = selectedRow.DataBoundItem as eventsForm.EventDetails;
 
                 //raise event with eventDetails
-                //EventSelected?.Invoke(this, eventDetails);
+                guna2Button1.Click += (s, e) => EventSelected?.Invoke(this, eventDetails);
+                EventSelected?.Invoke(this, eventDetails);
             }
             else
             {
                 MessageBox.Show("Please select one event");
             }
         }
-        
-        
+
+
         //  Calendar
         // filling days in calendar
         private void showDays(int month, int year)
@@ -101,8 +102,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             // Simulated data for demonstration purposes
             var events = new List<EventDetails>
             {
-                //new EventDetails { EventName = "Meeting", EventDate = DateTime.Today, EventDescription = "Team meeting" },
-                //new EventDetails { EventName = "Workshop", EventDate = DateTime.Today.AddDays(1), EventDescription = "Coding workshop" },
+                new EventDetails { EventName = "Meeting", EventDate = DateTime.Today, EventDescription = "Team meeting" },
+                new EventDetails { EventName = "Workshop", EventDate = DateTime.Today.AddDays(1), EventDescription = "Coding workshop" },
             };
 
             // Filter events based on the selected date
@@ -115,8 +116,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             }
         }
 
-            // buttons for calendar
-            // next btn
+        // buttons for calendar
+        // next btn
         private void guna2Button9_Click(object sender, EventArgs e)
         {
             monthVar += 1;
@@ -137,6 +138,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
                 yearVar -= 1;
             }
             showDays(monthVar, yearVar);
+        }
+
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

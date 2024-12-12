@@ -22,16 +22,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             this.eventDetails = eventDetails;
             attendeeList = new BindingList<Attendee>();
 
-            LoadEventDetails();
+            LoadEventDetails(eventDetails);
             InitializeAttendeeSection();
         }
 
         // Load event details into the appropriate panel
-        private void LoadEventDetails()
+        private void LoadEventDetails(eventsForm.EventDetails currentEvent)
         {
-            //lblEventName.Text = $"Event Name: {currentEvent.EventName}";
-            //lblEventDate.Text = $"Date: {currentEvent.EventDate.ToShortDateString()}";
-            //lblEventDescription.Text = $"Description: {currentEvent.EventDescription}";
+            label4.Text = currentEvent.EventName + "\n\n\n" + currentEvent.EventDate.ToShortDateString() + "\n\n\n" + currentEvent.EventDate.ToShortDateString();
         }
 
         // Initialize attendee section

@@ -31,37 +31,38 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             eventsMainUC.Dock = DockStyle.Fill;
 
             // after database
-            // eventsMainUC.EventSelected += eventsMain_UC_EventSelected;
+            eventsMainUC.EventSelected += eventsMain_UC_EventSelected;
 
             panel1.Controls.Clear();
             panel1.Controls.Add(eventsMainUC);
 
         }
-        private void eventsMain_UC_EventSelected(object sender, EventDetails e) 
+        private void eventsMain_UC_EventSelected(object sender, eventsForm.EventDetails eventDetails) 
         {
-            if (e.EventDate.Date <= DateTime.Today)
+            var check = DateTime.Compare(eventDetails.EventDate.Date, DateTime.Today);
+            if (check < 0)
             {
-                LoadEventFeedbackUC(e);
+                LoadEventFeedbackUC(eventDetails);
             }
             else 
             {
-                LoadEventDetailsOrBookingUC(e);
+                LoadEventDetailsOrBookingUC(eventDetails);
             }
         }
 
-        private void LoadEventFeedbackUC(EventDetails eventDetails) 
+        private void LoadEventFeedbackUC(eventsForm.EventDetails eventDetails) 
         {
             var eventFeedbackUC = new eventFeedback_UC(eventDetails);
             eventFeedbackUC.Dock = DockStyle.Fill;
 
             // back to main page
-            // eventFeedbackUC.BackToEvents += (s, args) => LoadEventMainUserControl();
+            //eventFeedbackUC.BackToEvents += (s, args) => LoadEventMainUserControl();
 
             panel1.Controls.Clear();
             panel1.Controls.Add(eventFeedbackUC);
 
         }
-        private void LoadEventDetailsOrBookingUC( EventDetails eventDetails)
+        private void LoadEventDetailsOrBookingUC(eventsForm.EventDetails eventDetails)
         {
             var eventBookingUC = new eventDetailsOrBooking_UC (eventDetails);
             eventBookingUC.Dock = DockStyle.Fill;
