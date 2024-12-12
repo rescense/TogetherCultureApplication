@@ -1,11 +1,9 @@
-﻿
-
-using Microsoft.VisualBasic.ApplicationServices;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
 using System.Text;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
+using System.Diagnostics;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -14,6 +12,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Profile()
         {
             InitializeComponent();
+
+            lblStatus.Visible = false;
         }
 
         private string firstName;
@@ -34,6 +34,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            LoadProfilePicture(userId);
+
+            MakePictureBoxRound(profilePictureBox);
+
             lblUserName.Text = $"{firstName}";
             lblUserType.Text = $"{userType}";
 
@@ -50,6 +54,18 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             }
             //displays the user's interests
             LoadUserInterests();
+
+            if (lblUserType.Text == "non_member")
+            {
+                lblStatus.Visible = true;
+                btnBuyMembership.Visible = true;
+            }
+            else
+            {
+                btnBuyMembership.Visible = false;
+                lblStatus.Visible = false;
+                picLock.Visible = false;
+            }
         }
         private void LoadUserInterests()
         {
@@ -100,9 +116,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Open the ProfilePage form
             Profilepage profilePage = new Profilepage();
             profilePage.Show();
-            // Close the current form
-            this.Close();
-
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -113,6 +126,153 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             // Close the current profile form
             this.Close();
+        }
+
+        private void lblEditPhoto_MouseHover(object sender, EventArgs e)
+        {
+            lblEditPhoto.ForeColor = Color.Black;
+        }
+
+        private void lblEditPhoto_MouseLeave(object sender, EventArgs e)
+        {
+            lblEditPhoto.ForeColor = Color.White;
+        }
+
+        private void lblEditPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Set filter to show image files only
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+
+            // Show the dialog and check if the user selected a file
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Load the selected image into the PictureBox
+                    string selectedFilePath = openFileDialog.FileName;
+                    profilePictureBox.Image = Image.FromFile(selectedFilePath);
+
+                    profilePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    // Save to database
+                    SaveImageToDatabase(selectedFilePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void SaveImageToDatabase(string imagePath)
+        {
+            try
+            {
+                // Read the image file into a byte array
+                byte[] imageBytes = File.ReadAllBytes(imagePath);
+
+                // SQL query to update the ProfilePicture column
+                string query = "UPDATE [user] SET profile_picture = @ProfilePicture WHERE user_id = @UserId";
+
+                using (var db = new DatabaseConnect())
+                {
+                    db.Open();
+
+                    using (var command = new SqlCommand(query, db.Connection))
+                    {
+                        // Add parameters to the query
+                        command.Parameters.AddWithValue("@ProfilePicture", imageBytes);
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Profile picture updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update profile picture.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    db.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving image to database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void LoadProfilePicture(int userId)
+        {
+            try
+            {
+                // SQL query to retrieve the profile picture
+                string query = "SELECT profile_picture FROM [user] WHERE user_id = @UserId";
+
+                using (var db = new DatabaseConnect())
+                {
+                    db.Open();
+
+                    using (var command = new SqlCommand(query, db.Connection))
+                    {
+                        // Add the user ID as a parameter
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        // Execute the query and retrieve the image
+                        var result = command.ExecuteScalar();
+                        if (result != DBNull.Value && result != null)
+                        {
+                            byte[] imageBytes = (byte[])result;
+
+                            // Convert the byte array to an Image and display it in the PictureBox
+                            using (MemoryStream ms = new MemoryStream(imageBytes))
+                            {
+                                profilePictureBox.Image = Image.FromStream(ms);
+                                profilePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                            }
+                        }
+
+                    }
+
+                    db.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading profile picture: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MakePictureBoxRound(PictureBox pictureBox)
+        {
+            // Create a circular region
+            System.Drawing.Drawing2D.GraphicsPath graphicsPath = new System.Drawing.Drawing2D.GraphicsPath();
+            graphicsPath.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
+
+            // Apply the circular region to the PictureBox
+            pictureBox.Region = new Region(graphicsPath);
+        }
+
+        private void btnBuyMembership_Click(object sender, EventArgs e)
+        {
+            String url = "https://www.togetherculture.com/about-our-membership";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Ensures compatibility with modern systems
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unable to open the link: {ex.Message}");
+            }
         }
     }
 }

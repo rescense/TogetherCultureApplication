@@ -35,8 +35,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -45,17 +45,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             lblLogo = new Label();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            pictureBox2 = new PictureBox();
+            profilePictureBox = new PictureBox();
             PicBoxEdit = new PictureBox();
             lblEditPhoto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            pictureBox1 = new PictureBox();
+            picLock = new PictureBox();
             panel1 = new Panel();
             txtInterest = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -63,16 +65,18 @@
             lblUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblWelcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            lblStatus = new Label();
             lblUserType = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblMembershiptype = new Guna.UI2.WinForms.Guna2HtmlLabel();
             PicBoxMembershipType = new PictureBox();
+            btnBuyMembership = new Guna.UI2.WinForms.Guna2Button();
             btnContinueToDash = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)profilePictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PicBoxEdit).BeginInit();
             guna2CustomGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picLock).BeginInit();
             panel1.SuspendLayout();
             guna2CustomGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicBoxMembershipType).BeginInit();
@@ -125,7 +129,7 @@
             // 
             guna2CustomGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2CustomGradientPanel2.Controls.Add(btnProfile);
-            guna2CustomGradientPanel2.Controls.Add(pictureBox2);
+            guna2CustomGradientPanel2.Controls.Add(profilePictureBox);
             guna2CustomGradientPanel2.Controls.Add(PicBoxEdit);
             guna2CustomGradientPanel2.Controls.Add(lblEditPhoto);
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges5;
@@ -164,20 +168,20 @@
             btnProfile.Text = "Profile";
             btnProfile.Click += btnProfile_Click;
             // 
-            // pictureBox2
+            // profilePictureBox
             // 
-            pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
-            pictureBox2.Location = new Point(81, 22);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(143, 95);
-            pictureBox2.TabIndex = 33;
-            pictureBox2.TabStop = false;
+            profilePictureBox.InitialImage = (Image)resources.GetObject("profilePictureBox.InitialImage");
+            profilePictureBox.Location = new Point(63, 20);
+            profilePictureBox.Name = "profilePictureBox";
+            profilePictureBox.Size = new Size(191, 171);
+            profilePictureBox.TabIndex = 33;
+            profilePictureBox.TabStop = false;
             // 
             // PicBoxEdit
             // 
             PicBoxEdit.BackColor = Color.Transparent;
             PicBoxEdit.Image = (Image)resources.GetObject("PicBoxEdit.Image");
-            PicBoxEdit.Location = new Point(192, 134);
+            PicBoxEdit.Location = new Point(192, 197);
             PicBoxEdit.Name = "PicBoxEdit";
             PicBoxEdit.Size = new Size(25, 28);
             PicBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
@@ -189,24 +193,28 @@
             lblEditPhoto.BackColor = Color.Transparent;
             lblEditPhoto.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblEditPhoto.ForeColor = Color.White;
-            lblEditPhoto.Location = new Point(90, 134);
+            lblEditPhoto.Location = new Point(90, 197);
             lblEditPhoto.Margin = new Padding(3, 2, 3, 2);
             lblEditPhoto.Name = "lblEditPhoto";
             lblEditPhoto.Size = new Size(99, 32);
             lblEditPhoto.TabIndex = 31;
             lblEditPhoto.Text = "Edit Photo";
+            lblEditPhoto.Click += lblEditPhoto_Click;
+            lblEditPhoto.MouseLeave += lblEditPhoto_MouseLeave;
+            lblEditPhoto.MouseHover += lblEditPhoto_MouseHover;
             // 
             // guna2CustomGradientPanel3
             // 
             guna2CustomGradientPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel3.Controls.Add(guna2HtmlLabel2);
-            guna2CustomGradientPanel3.Controls.Add(pictureBox1);
+            guna2CustomGradientPanel3.Controls.Add(picLock);
             guna2CustomGradientPanel3.Controls.Add(panel1);
             guna2CustomGradientPanel3.Controls.Add(lblUserName);
             guna2CustomGradientPanel3.Controls.Add(lblWelcome);
             guna2CustomGradientPanel3.Controls.Add(guna2CustomGradientPanel4);
+            guna2CustomGradientPanel3.Controls.Add(btnBuyMembership);
             guna2CustomGradientPanel3.Controls.Add(btnContinueToDash);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges15;
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges17;
             guna2CustomGradientPanel3.FillColor = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel3.FillColor3 = Color.LightCoral;
@@ -216,7 +224,7 @@
             guna2CustomGradientPanel3.Location = new Point(308, 1);
             guna2CustomGradientPanel3.Margin = new Padding(3, 2, 3, 2);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2CustomGradientPanel3.Size = new Size(701, 606);
             guna2CustomGradientPanel3.TabIndex = 0;
             // 
@@ -233,20 +241,21 @@
             guna2HtmlLabel2.Text = null;
             guna2HtmlLabel2.Click += guna2HtmlLabel2_Click;
             // 
-            // pictureBox1
+            // picLock
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(293, 394);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(63, 55);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 35;
-            pictureBox1.TabStop = false;
+            picLock.BackColor = Color.Transparent;
+            picLock.Image = (Image)resources.GetObject("picLock.Image");
+            picLock.InitialImage = (Image)resources.GetObject("picLock.InitialImage");
+            picLock.Location = new Point(293, 394);
+            picLock.Name = "picLock";
+            picLock.Size = new Size(63, 55);
+            picLock.SizeMode = PictureBoxSizeMode.Zoom;
+            picLock.TabIndex = 35;
+            picLock.TabStop = false;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.IndianRed;
             panel1.Controls.Add(txtInterest);
             panel1.Controls.Add(guna2Button2);
             panel1.Controls.Add(guna2HtmlLabel1);
@@ -304,7 +313,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.Black;
+            guna2HtmlLabel1.ForeColor = Color.White;
             guna2HtmlLabel1.Location = new Point(13, 3);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
@@ -339,6 +348,7 @@
             // guna2CustomGradientPanel4
             // 
             guna2CustomGradientPanel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2CustomGradientPanel4.Controls.Add(lblStatus);
             guna2CustomGradientPanel4.Controls.Add(lblUserType);
             guna2CustomGradientPanel4.Controls.Add(lblMembershiptype);
             guna2CustomGradientPanel4.Controls.Add(PicBoxMembershipType);
@@ -352,6 +362,17 @@
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2CustomGradientPanel4.Size = new Size(701, 141);
             guna2CustomGradientPanel4.TabIndex = 33;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.Transparent;
+            lblStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStatus.Location = new Point(420, 30);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(238, 63);
+            lblStatus.TabIndex = 33;
+            lblStatus.Text = "You are currently a non member \r\nplease buy a membership to \r\ncontinue to dashboard";
             // 
             // lblUserType
             // 
@@ -375,9 +396,9 @@
             lblMembershiptype.Location = new Point(127, 27);
             lblMembershiptype.Margin = new Padding(3, 2, 3, 2);
             lblMembershiptype.Name = "lblMembershiptype";
-            lblMembershiptype.Size = new Size(218, 32);
+            lblMembershiptype.Size = new Size(198, 32);
             lblMembershiptype.TabIndex = 32;
-            lblMembershiptype.Text = "Your Membership Type";
+            lblMembershiptype.Text = "Your Member Status:";
             // 
             // PicBoxMembershipType
             // 
@@ -391,13 +412,35 @@
             PicBoxMembershipType.TabIndex = 0;
             PicBoxMembershipType.TabStop = false;
             // 
+            // btnBuyMembership
+            // 
+            btnBuyMembership.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBuyMembership.AutoRoundedCorners = true;
+            btnBuyMembership.BackColor = Color.Transparent;
+            btnBuyMembership.BorderRadius = 27;
+            btnBuyMembership.CustomizableEdges = customizableEdges13;
+            btnBuyMembership.DisabledState.BorderColor = Color.DarkGray;
+            btnBuyMembership.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBuyMembership.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBuyMembership.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBuyMembership.FillColor = Color.Brown;
+            btnBuyMembership.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBuyMembership.ForeColor = Color.White;
+            btnBuyMembership.Location = new Point(431, 393);
+            btnBuyMembership.Name = "btnBuyMembership";
+            btnBuyMembership.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnBuyMembership.Size = new Size(239, 56);
+            btnBuyMembership.TabIndex = 32;
+            btnBuyMembership.Text = "Buy Membership";
+            btnBuyMembership.Click += btnBuyMembership_Click;
+            // 
             // btnContinueToDash
             // 
             btnContinueToDash.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnContinueToDash.AutoRoundedCorners = true;
             btnContinueToDash.BackColor = Color.Transparent;
             btnContinueToDash.BorderRadius = 27;
-            btnContinueToDash.CustomizableEdges = customizableEdges13;
+            btnContinueToDash.CustomizableEdges = customizableEdges15;
             btnContinueToDash.DisabledState.BorderColor = Color.DarkGray;
             btnContinueToDash.DisabledState.CustomBorderColor = Color.DarkGray;
             btnContinueToDash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -407,7 +450,7 @@
             btnContinueToDash.ForeColor = Color.White;
             btnContinueToDash.Location = new Point(29, 393);
             btnContinueToDash.Name = "btnContinueToDash";
-            btnContinueToDash.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnContinueToDash.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnContinueToDash.Size = new Size(239, 56);
             btnContinueToDash.TabIndex = 32;
             btnContinueToDash.Text = "Continue to Dashboard";
@@ -420,7 +463,8 @@
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel1);
-            MinimumSize = new Size(1023, 634);
+            MaximumSize = new Size(1024, 640);
+            MinimumSize = new Size(1024, 640);
             Name = "Profile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile";
@@ -429,11 +473,11 @@
             guna2CustomGradientPanel1.PerformLayout();
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)profilePictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)PicBoxEdit).EndInit();
             guna2CustomGradientPanel3.ResumeLayout(false);
             guna2CustomGradientPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picLock).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             guna2CustomGradientPanel4.ResumeLayout(false);
@@ -455,7 +499,7 @@
         private PictureBox PicBoxMembershipType;
         private Guna.UI2.WinForms.Guna2Button btnContinueToDash;
         private Label lblLogo;
-        private PictureBox pictureBox2;
+        private PictureBox profilePictureBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblWelcome;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUserName;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
@@ -463,8 +507,10 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private PictureBox pictureBox1;
+        private PictureBox picLock;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtInterest;
+        private Label lblStatus;
+        private Guna.UI2.WinForms.Guna2Button btnBuyMembership;
     }
 }

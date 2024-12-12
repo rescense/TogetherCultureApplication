@@ -1,7 +1,5 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace Together_Culture__Dream_Team_.Back_End.Src.Main
 {
