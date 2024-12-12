@@ -71,10 +71,9 @@
             guna2CustomGradientPanel1.FillColor3 = Color.Maroon;
             guna2CustomGradientPanel1.FillColor4 = Color.Firebrick;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
-            guna2CustomGradientPanel1.Margin = new Padding(4, 5, 4, 5);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel1.Size = new Size(1340, 218);
+            guna2CustomGradientPanel1.Size = new Size(942, 131);
             guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // label7
@@ -83,22 +82,22 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(43, 33);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(220, 52);
             label7.Name = "label7";
-            label7.Size = new Size(223, 141);
+            label7.Size = new Size(556, 31);
             label7.TabIndex = 18;
-            label7.Text = "Together\r\nCulture\r\nCambridge";
+            label7.Text = "Please Select one or more than one Interests\r\n";
             // 
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.LightCoral;
-            guna2CustomGradientPanel2.Location = new Point(0, 298);
+            guna2CustomGradientPanel2.Location = new Point(0, 179);
+            guna2CustomGradientPanel2.Margin = new Padding(2, 2, 2, 2);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel2.Size = new Size(2057, 1025);
+            guna2CustomGradientPanel2.Size = new Size(1440, 615);
             guna2CustomGradientPanel2.TabIndex = 2;
             // 
             // guna2CustomGradientPanel3
@@ -114,10 +113,11 @@
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel3.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor4 = Color.Salmon;
-            guna2CustomGradientPanel3.Location = new Point(-4, 218);
+            guna2CustomGradientPanel3.Location = new Point(-3, 131);
+            guna2CustomGradientPanel3.Margin = new Padding(2, 2, 2, 2);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2CustomGradientPanel3.Size = new Size(1349, 588);
+            guna2CustomGradientPanel3.Size = new Size(945, 365);
             guna2CustomGradientPanel3.TabIndex = 3;
             // 
             // btnProceed
@@ -125,7 +125,7 @@
             btnProceed.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnProceed.AutoRoundedCorners = true;
             btnProceed.BackColor = Color.Transparent;
-            btnProceed.BorderRadius = 27;
+            btnProceed.BorderRadius = 25;
             btnProceed.CustomizableEdges = customizableEdges5;
             btnProceed.DisabledState.BorderColor = Color.DarkGray;
             btnProceed.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -134,23 +134,20 @@
             btnProceed.FillColor = Color.Black;
             btnProceed.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProceed.ForeColor = Color.White;
-            btnProceed.Location = new Point(598, 496);
-            btnProceed.Margin = new Padding(4, 5, 4, 5);
+            btnProceed.Location = new Point(395, 298);
             btnProceed.Name = "btnProceed";
             btnProceed.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnProceed.Size = new Size(149, 57);
+            btnProceed.Size = new Size(166, 53);
             btnProceed.TabIndex = 30;
             btnProceed.Text = "Proceed";
             btnProceed.Click += btnProceed_Click_1;
             // 
             // btnWorking
             // 
-            btnWorking.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnWorking.AutoRoundedCorners = true;
             btnWorking.BackColor = Color.Transparent;
-            btnWorking.BackgroundImage = Properties.Resources.Working_Pic;
             btnWorking.BorderColor = Color.Transparent;
-            btnWorking.BorderRadius = 79;
+            btnWorking.BorderRadius = 59;
             btnWorking.CustomizableEdges = customizableEdges7;
             btnWorking.DisabledState.BorderColor = Color.DarkGray;
             btnWorking.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -159,11 +156,12 @@
             btnWorking.FillColor = Color.Transparent;
             btnWorking.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnWorking.ForeColor = Color.Black;
-            btnWorking.Location = new Point(750, 314);
-            btnWorking.Margin = new Padding(4, 5, 4, 5);
+            btnWorking.Image = Properties.Resources.Working_Pic;
+            btnWorking.ImageSize = new Size(290, 100);
+            btnWorking.Location = new Point(525, 168);
             btnWorking.Name = "btnWorking";
             btnWorking.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnWorking.Size = new Size(410, 160);
+            btnWorking.Size = new Size(298, 120);
             btnWorking.TabIndex = 29;
             btnWorking.Click += btnWorking_Click;
             // 
@@ -172,8 +170,7 @@
             btnCaring.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCaring.AutoRoundedCorners = true;
             btnCaring.BackColor = Color.Transparent;
-            btnCaring.BackgroundImage = Properties.Resources.caring;
-            btnCaring.BorderRadius = 79;
+            btnCaring.BorderRadius = 59;
             btnCaring.CustomizableEdges = customizableEdges9;
             btnCaring.DisabledState.BorderColor = Color.DarkGray;
             btnCaring.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -182,12 +179,13 @@
             btnCaring.FillColor = Color.Transparent;
             btnCaring.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCaring.ForeColor = Color.White;
-            btnCaring.Location = new Point(190, 314);
-            btnCaring.Margin = new Padding(4, 5, 4, 5);
+            btnCaring.Image = Properties.Resources.caring;
+            btnCaring.ImageSize = new Size(290, 100);
+            btnCaring.Location = new Point(134, 168);
             btnCaring.Name = "btnCaring";
             btnCaring.PressedColor = Color.Transparent;
             btnCaring.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnCaring.Size = new Size(410, 160);
+            btnCaring.Size = new Size(298, 120);
             btnCaring.TabIndex = 28;
             btnCaring.Click += btnCaring_Click;
             // 
@@ -196,9 +194,8 @@
             btnSharing.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSharing.AutoRoundedCorners = true;
             btnSharing.BackColor = Color.Transparent;
-            btnSharing.BackgroundImage = Properties.Resources.Sharing;
             btnSharing.BorderColor = Color.Transparent;
-            btnSharing.BorderRadius = 79;
+            btnSharing.BorderRadius = 59;
             btnSharing.CustomizableEdges = customizableEdges11;
             btnSharing.DisabledState.BorderColor = Color.DarkGray;
             btnSharing.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -207,12 +204,13 @@
             btnSharing.FillColor = Color.Transparent;
             btnSharing.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSharing.ForeColor = Color.White;
-            btnSharing.Location = new Point(921, 104);
-            btnSharing.Margin = new Padding(4, 5, 4, 5);
+            btnSharing.Image = Properties.Resources.Sharing;
+            btnSharing.ImageSize = new Size(290, 100);
+            btnSharing.Location = new Point(646, 44);
             btnSharing.Name = "btnSharing";
             btnSharing.PressedColor = Color.Transparent;
             btnSharing.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnSharing.Size = new Size(410, 160);
+            btnSharing.Size = new Size(298, 120);
             btnSharing.TabIndex = 27;
             btnSharing.Click += btnSharing_Click;
             // 
@@ -221,8 +219,7 @@
             btnCreating.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCreating.AutoRoundedCorners = true;
             btnCreating.BackColor = Color.Transparent;
-            btnCreating.BackgroundImage = Properties.Resources.creating;
-            btnCreating.BorderRadius = 79;
+            btnCreating.BorderRadius = 59;
             btnCreating.CustomizableEdges = customizableEdges13;
             btnCreating.DisabledState.BorderColor = Color.DarkGray;
             btnCreating.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -231,12 +228,13 @@
             btnCreating.FillColor = Color.Transparent;
             btnCreating.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCreating.ForeColor = Color.White;
-            btnCreating.Location = new Point(468, 104);
-            btnCreating.Margin = new Padding(4, 5, 4, 5);
+            btnCreating.Image = Properties.Resources.creating;
+            btnCreating.ImageSize = new Size(290, 100);
+            btnCreating.Location = new Point(331, 44);
             btnCreating.Name = "btnCreating";
             btnCreating.PressedColor = Color.Transparent;
             btnCreating.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnCreating.Size = new Size(410, 160);
+            btnCreating.Size = new Size(298, 120);
             btnCreating.TabIndex = 26;
             btnCreating.Click += btnCreating_Click;
             // 
@@ -245,9 +243,8 @@
             btnExperiencing.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExperiencing.AutoRoundedCorners = true;
             btnExperiencing.BackColor = Color.Transparent;
-            btnExperiencing.BackgroundImage = Properties.Resources.experiencing;
             btnExperiencing.BorderColor = Color.Transparent;
-            btnExperiencing.BorderRadius = 79;
+            btnExperiencing.BorderRadius = 59;
             btnExperiencing.CustomizableEdges = customizableEdges15;
             btnExperiencing.DisabledState.BorderColor = Color.DarkGray;
             btnExperiencing.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -256,23 +253,25 @@
             btnExperiencing.FillColor = Color.Transparent;
             btnExperiencing.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnExperiencing.ForeColor = Color.White;
-            btnExperiencing.Location = new Point(17, 104);
-            btnExperiencing.Margin = new Padding(4, 5, 4, 5);
+            btnExperiencing.Image = Properties.Resources.experiencing;
+            btnExperiencing.ImageSize = new Size(290, 100);
+            btnExperiencing.Location = new Point(13, 44);
             btnExperiencing.Name = "btnExperiencing";
             btnExperiencing.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnExperiencing.Size = new Size(410, 160);
+            btnExperiencing.Size = new Size(298, 120);
             btnExperiencing.TabIndex = 25;
             btnExperiencing.Click += btnExperiencing_Click;
             // 
             // Interests
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1340, 807);
+            ClientSize = new Size(942, 494);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel1);
-            MaximumSize = new Size(1362, 863);
-            MinimumSize = new Size(1362, 863);
+            Margin = new Padding(2, 2, 2, 2);
+            MaximumSize = new Size(958, 533);
+            MinimumSize = new Size(958, 533);
             Name = "Interests";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Interests";

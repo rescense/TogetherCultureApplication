@@ -272,6 +272,7 @@
             txtInterest.Name = "txtInterest";
             txtInterest.PasswordChar = '\0';
             txtInterest.PlaceholderText = "";
+            txtInterest.ReadOnly = true;
             txtInterest.SelectedText = "";
             txtInterest.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtInterest.Size = new Size(615, 166);
