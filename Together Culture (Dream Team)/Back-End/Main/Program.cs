@@ -1,6 +1,4 @@
-using Together_Culture__Dream_Team_.Front_End.Src.Screens;
-using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
-using togther_Culture;
+using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
 
 namespace Together_Culture__Dream_Team_
 {
@@ -17,7 +15,7 @@ namespace Together_Culture__Dream_Team_
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //for testing the below form opens first, please uncomment the line bellow, and delete or comment the one with SearchUsersAdmin to view the landingPage upon running the program
-            Application.Run(new Log_in());
+            Application.Run(new Profilepage());
         }
     }
 }

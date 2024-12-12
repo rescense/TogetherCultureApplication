@@ -531,7 +531,7 @@
             panel1.BackColor = SystemColors.Control;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(197, 426);
+            panel1.Size = new Size(197, 103);
             panel1.TabIndex = 7;
             panel1.Paint += panel1_Paint_1;
             // 

@@ -14,8 +14,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class AdminDashboard : Form
     {
-
-        SideMenuBar SideMenuBar = new SideMenuBar();
         public AdminDashboard()
         {
             InitializeComponent();
@@ -36,55 +34,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             }
         }
 
-        private void showSideMenu(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(userControl);
-            userControl.BringToFront();
-
-        }
-
-        private bool isSideMenuVisible = false;
-
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            if (!isSideMenuVisible)
-            {
-                // Show the sidebar
-                panel1.Visible = true;
-                showSideMenu(SideMenuBar);
-                isSideMenuVisible = true;
-                BringToFront();
-
-                // Change PictureBox color when visible
-                pictureBox3.BackColor = Color.Black;
-            }
-            else
-            {
-                // Hide the sidebar
-                panel1.Controls.Clear();
-                panel1.Visible = false;
-                isSideMenuVisible = false;
-
-                pictureBox3.BackColor = Color.Transparent;
-            }
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            if (!isSideMenuVisible)
-            {
-                panel1.Visible = false;
-
-            }
-        }
-
-        private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -97,11 +46,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             SearchUsers userControlSearchUsers = new SearchUsers();
             addUserControl(userControlSearchUsers);
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timeBankLbl_MouseHover(object sender, EventArgs e)

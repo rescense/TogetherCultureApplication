@@ -19,57 +19,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlPI.Instance))
-            {
-                guna2CustomGradientPanel1.Controls.Add(UserControlPI.Instance);
-                UserControlPI.Instance.Dock = DockStyle.Fill;
-                UserControlPI.Instance.BringToFront();
-            }
-            else
-                UserControlPI.Instance.BringToFront();
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlChPassword.Instance))
-            {
-                guna2CustomGradientPanel1.Controls.Add(UserControlChPassword.Instance);
-                UserControlChPassword.Instance.Dock = DockStyle.Fill;
-                UserControlChPassword.Instance.BringToFront();
-            }
-            else
-                UserControlChPassword.Instance.BringToFront();
-        }
-
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btnBackToProfile_Click(object sender, EventArgs e)
         {
             // Open the Profile form
             Profile profile = new Profile();
@@ -79,22 +29,31 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms
             this.Close();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
+            UserControlChPassword changePassword = new UserControlChPassword();
+            addUserControl(changePassword);
         }
 
-        private void guna2Button3_Click_1(object sender, EventArgs e)
+        private void personalInfo_Click(object sender, EventArgs e)
         {
-            if (!guna2CustomGradientPanel1.Controls.Contains(UserControlSecurity.Instance))
-            {
-                guna2CustomGradientPanel1.Controls.Add(UserControlSecurity.Instance);
-                UserControlSecurity.Instance.Dock = DockStyle.Fill;
-                UserControlSecurity.Instance.BringToFront();
-            }
-            else
-                UserControlSecurity.Instance.BringToFront();
-
+            UserControlPI personalInfo = new UserControlPI();
+            addUserControl(personalInfo);
         }
+
+        private void btnSecurity_Click(object sender, EventArgs e)
+        {
+            UserControlSecurity userControlSecurity = new UserControlSecurity();
+            addUserControl(userControlSecurity);
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
     }
 }

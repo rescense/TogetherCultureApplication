@@ -78,7 +78,6 @@
             label16 = new Label();
             guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            pictureBox3 = new PictureBox();
             chatSpaceLbl = new Label();
             forYouLbl = new Label();
             eventsLbl = new Label();
@@ -86,7 +85,6 @@
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             adminPic = new PictureBox();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            panel1 = new Panel();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
@@ -107,7 +105,6 @@
             label22 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)adminPic).BeginInit();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
@@ -435,18 +432,6 @@
             guna2Button9.TabIndex = 23;
             guna2Button9.Text = "Login";
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(57, 55);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 37);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 24;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
-            // 
             // chatSpaceLbl
             // 
             chatSpaceLbl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -551,7 +536,6 @@
             guna2CustomGradientPanel2.Controls.Add(eventsLbl);
             guna2CustomGradientPanel2.Controls.Add(forYouLbl);
             guna2CustomGradientPanel2.Controls.Add(chatSpaceLbl);
-            guna2CustomGradientPanel2.Controls.Add(pictureBox3);
             guna2CustomGradientPanel2.Controls.Add(guna2Button9);
             guna2CustomGradientPanel2.Controls.Add(guna2Button10);
             guna2CustomGradientPanel2.Controls.Add(label16);
@@ -581,15 +565,6 @@
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2CustomGradientPanel2.Size = new Size(1446, 181);
             guna2CustomGradientPanel2.TabIndex = 24;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveBorder;
-            panel1.Location = new Point(0, 181);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(310, 607);
-            panel1.TabIndex = 25;
-            panel1.Paint += panel1_Paint;
             // 
             // guna2CustomGradientPanel3
             // 
@@ -822,26 +797,23 @@
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2CustomGradientPanel4.Size = new Size(1447, 681);
             guna2CustomGradientPanel4.TabIndex = 23;
-            guna2CustomGradientPanel4.Paint += guna2CustomGradientPanel4_Paint;
             // 
-            // AdminDashboardcs
+            // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1446, 854);
-            Controls.Add(panel1);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel4);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(1462, 893);
-            Name = "AdminDashboardcs";
+            Name = "AdminDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Mode";
             Load += AdminDashboardcs_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)adminPic).EndInit();
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
@@ -874,7 +846,6 @@
         private Label label16;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private PictureBox pictureBox3;
         private Label chatSpaceLbl;
         private Label forYouLbl;
         private Label eventsLbl;
@@ -882,7 +853,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private PictureBox adminPic;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
