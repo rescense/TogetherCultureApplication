@@ -4,6 +4,7 @@ using System.Text;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Screens.Profile_Forms;
 using System.Diagnostics;
+using Together_Culture__Dream_Team_.Front_End.Screens;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -59,12 +60,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             {
                 lblStatus.Visible = true;
                 btnBuyMembership.Visible = true;
+                btnContinueToDash.Visible = false;
             }
             else
             {
                 btnBuyMembership.Visible = false;
                 lblStatus.Visible = false;
                 picLock.Visible = false;
+                btnContinueToDash.Visible = true;
             }
         }
         private void LoadUserInterests()
@@ -273,6 +276,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             {
                 MessageBox.Show($"Unable to open the link: {ex.Message}");
             }
+        }
+
+        private void btnContinueToDash_Click(object sender, EventArgs e)
+        {
+            MemberAreaOnly memberAreaOnly = new MemberAreaOnly();
+            memberAreaOnly.Show();
+            this.Close();
         }
     }
 }

@@ -454,6 +454,7 @@
             btnContinueToDash.Size = new Size(239, 56);
             btnContinueToDash.TabIndex = 32;
             btnContinueToDash.Text = "Continue to Dashboard";
+            btnContinueToDash.Click += btnContinueToDash_Click;
             // 
             // Profile
             // 
