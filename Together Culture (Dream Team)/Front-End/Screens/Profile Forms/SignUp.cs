@@ -35,7 +35,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             if (IsValidName(input))
             {
-                txtFirstName.BackColor = Color.White; // Valid input
+                txtFirstName.BackColor = Color.LightGreen; // Valid input
                 isValidFirstName = true;
             }
             else
@@ -50,7 +50,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
             if (IsValidName(input))
             {
-                txtLastName.BackColor = Color.White; // Valid input
+                txtLastName.BackColor = Color.LightGreen; // Valid input
                 isValidLastName = true;
             }
             else
@@ -63,7 +63,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (IsValidUsername(txtUserName.Text))
             {
-                txtUserName.BackColor = Color.White; // Valid input
+                txtUserName.BackColor = Color.LightGreen; // Valid input
                 isValidUserName = true;
             }
             else
@@ -76,7 +76,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (IsValidEmail(txtEmail.Text))
             {
-                txtEmail.BackColor = Color.White; // Valid input
+                txtEmail.BackColor = Color.LightGreen; // Valid input
                 isEmailValid = true;
             }
             else
@@ -89,7 +89,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (IsValidPhoneNumber(txtPhoneNumber.Text))
             {
-                txtPhoneNumber.BackColor = Color.White; // Valid input
+                txtPhoneNumber.BackColor = Color.LightGreen; // Valid input
                 isPhoneNumberValid = true;
             }
             else
@@ -102,7 +102,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
             if (IsValidPassword(txtPassword.Text))
             {
-                txtPassword.BackColor = Color.White; // Valid input
+                txtPassword.BackColor = Color.LightGreen; // Valid input
                 isPasswordValid = true;
             }
             else
