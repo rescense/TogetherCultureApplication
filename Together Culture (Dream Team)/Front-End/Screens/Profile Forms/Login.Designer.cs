@@ -64,9 +64,10 @@
             CheckBoxShowPassword.BackColor = Color.Transparent;
             CheckBoxShowPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CheckBoxShowPassword.ForeColor = Color.White;
-            CheckBoxShowPassword.Location = new Point(53, 141);
+            CheckBoxShowPassword.Location = new Point(61, 188);
+            CheckBoxShowPassword.Margin = new Padding(3, 4, 3, 4);
             CheckBoxShowPassword.Name = "CheckBoxShowPassword";
-            CheckBoxShowPassword.Size = new Size(138, 25);
+            CheckBoxShowPassword.Size = new Size(168, 32);
             CheckBoxShowPassword.TabIndex = 0;
             CheckBoxShowPassword.Text = "Show Password";
             CheckBoxShowPassword.UseVisualStyleBackColor = false;
@@ -83,20 +84,21 @@
             guna2CustomGradientPanel1.FillColor3 = Color.Maroon;
             guna2CustomGradientPanel1.FillColor4 = Color.Firebrick;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
+            guna2CustomGradientPanel1.Margin = new Padding(3, 4, 3, 4);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel1.Size = new Size(944, 131);
+            guna2CustomGradientPanel1.Size = new Size(1077, 175);
             guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Clash Grotesk", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(30, 20);
+            label7.Location = new Point(34, 27);
             label7.Name = "label7";
-            label7.Size = new Size(146, 93);
+            label7.Size = new Size(184, 117);
             label7.TabIndex = 18;
             label7.Text = "Together\r\nCulture\r\nCambridge";
             // 
@@ -105,11 +107,11 @@
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.LightCoral;
-            guna2CustomGradientPanel2.Location = new Point(0, 179);
-            guna2CustomGradientPanel2.Margin = new Padding(2);
+            guna2CustomGradientPanel2.Location = new Point(0, 239);
+            guna2CustomGradientPanel2.Margin = new Padding(2, 3, 2, 3);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel2.Size = new Size(1440, 615);
+            guna2CustomGradientPanel2.Size = new Size(1646, 820);
             guna2CustomGradientPanel2.TabIndex = 2;
             // 
             // guna2CustomGradientPanel3
@@ -129,28 +131,31 @@
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel3.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor4 = Color.Salmon;
-            guna2CustomGradientPanel3.Location = new Point(0, 131);
-            guna2CustomGradientPanel3.Margin = new Padding(2);
+            guna2CustomGradientPanel3.Location = new Point(0, 175);
+            guna2CustomGradientPanel3.Margin = new Padding(2, 3, 2, 3);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2CustomGradientPanel3.Size = new Size(944, 371);
+            guna2CustomGradientPanel3.Size = new Size(1079, 495);
             guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(199, 99);
+            txtPassword.Location = new Point(227, 132);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(231, 25);
+            txtPassword.Size = new Size(263, 29);
             txtPassword.TabIndex = 34;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(199, 51);
+            txtEmail.Location = new Point(227, 68);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(231, 25);
+            txtEmail.Size = new Size(263, 29);
             txtEmail.TabIndex = 35;
             // 
             // label_LastName
@@ -159,10 +164,10 @@
             label_LastName.BackColor = Color.Transparent;
             label_LastName.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label_LastName.ForeColor = Color.White;
-            label_LastName.Location = new Point(88, 99);
+            label_LastName.Location = new Point(101, 132);
             label_LastName.Margin = new Padding(2, 0, 2, 0);
             label_LastName.Name = "label_LastName";
-            label_LastName.Size = new Size(97, 25);
+            label_LastName.Size = new Size(122, 32);
             label_LastName.TabIndex = 32;
             label_LastName.Text = "Password";
             // 
@@ -172,10 +177,10 @@
             label_FirstName.BackColor = Color.Transparent;
             label_FirstName.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label_FirstName.ForeColor = Color.White;
-            label_FirstName.Location = new Point(53, 51);
+            label_FirstName.Location = new Point(61, 68);
             label_FirstName.Margin = new Padding(2, 0, 2, 0);
             label_FirstName.Name = "label_FirstName";
-            label_FirstName.Size = new Size(135, 25);
+            label_FirstName.Size = new Size(175, 32);
             label_FirstName.TabIndex = 33;
             label_FirstName.Text = "Email Address";
             // 
@@ -186,9 +191,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(-388, 460);
+            label1.Location = new Point(-443, 613);
             label1.Name = "label1";
-            label1.Size = new Size(214, 37);
+            label1.Size = new Size(270, 46);
             label1.TabIndex = 27;
             label1.Text = "Forgot Password";
             // 
@@ -199,9 +204,9 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(271, 259);
+            label16.Location = new Point(310, 345);
             label16.Name = "label16";
-            label16.Size = new Size(159, 21);
+            label16.Size = new Size(199, 28);
             label16.TabIndex = 27;
             label16.Text = "Or new to the game ?";
             // 
@@ -209,9 +214,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(468, -16);
+            pictureBox1.Location = new Point(535, -21);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(452, 387);
+            pictureBox1.Size = new Size(517, 516);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
@@ -221,7 +227,7 @@
             btnSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSignUp.AutoRoundedCorners = true;
             btnSignUp.BackColor = Color.Transparent;
-            btnSignUp.BorderRadius = 16;
+            btnSignUp.BorderRadius = 21;
             btnSignUp.CustomizableEdges = customizableEdges5;
             btnSignUp.DisabledState.BorderColor = Color.DarkGray;
             btnSignUp.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -230,10 +236,11 @@
             btnSignUp.FillColor = Color.Black;
             btnSignUp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp.ForeColor = Color.White;
-            btnSignUp.Location = new Point(294, 208);
+            btnSignUp.Location = new Point(336, 277);
+            btnSignUp.Margin = new Padding(3, 4, 3, 4);
             btnSignUp.Name = "btnSignUp";
             btnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSignUp.Size = new Size(112, 34);
+            btnSignUp.Size = new Size(128, 45);
             btnSignUp.TabIndex = 25;
             btnSignUp.Text = "Sign Up";
             btnSignUp.Click += btnSignUp_click;
@@ -243,7 +250,7 @@
             btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLogin.AutoRoundedCorners = true;
             btnLogin.BackColor = Color.Transparent;
-            btnLogin.BorderRadius = 16;
+            btnLogin.BorderRadius = 21;
             btnLogin.CustomizableEdges = customizableEdges7;
             btnLogin.DisabledState.BorderColor = Color.DarkGray;
             btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -252,23 +259,25 @@
             btnLogin.FillColor = Color.Black;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(48, 208);
+            btnLogin.Location = new Point(55, 277);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnLogin.Size = new Size(112, 34);
+            btnLogin.Size = new Size(128, 45);
             btnLogin.TabIndex = 25;
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_click;
             // 
             // Log_in
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 501);
+            ClientSize = new Size(1077, 657);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel1);
-            MaximumSize = new Size(960, 540);
-            MinimumSize = new Size(960, 540);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(1095, 704);
+            MinimumSize = new Size(1095, 704);
             Name = "Log_in";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Log_in";

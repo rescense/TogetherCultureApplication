@@ -93,7 +93,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
                             MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
-                        
+
                     }
 
                     database.Close();
@@ -131,6 +131,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             {
                 txtPassword.PasswordChar = '*'; // Use '*' to mask the password
             }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
