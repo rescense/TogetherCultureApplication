@@ -206,7 +206,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             }
         }
 
-         int check(String email)
+        int check(String email)
         {
             try
             {
@@ -235,51 +235,48 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 string.IsNullOrEmpty(richTextBox4.Text) ||
                 string.IsNullOrEmpty(richTextBox1.Text) ||
                 string.IsNullOrEmpty(richTextBox2.Text) ||
-                string.IsNullOrEmpty(richTextBox3.Text) )
+                string.IsNullOrEmpty(richTextBox3.Text))
             {
                 MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (isEmailValid &&  isValidFirstName && isValidLastName && isPhoneNumberValid && isValidUserName)
+            if (isEmailValid && isValidFirstName && isValidLastName && isPhoneNumberValid && isValidUserName)
             {
                 try
                 {
-                    if ( check(richTextBox2.Text) == 0) // Check if email is already registered
+                    using (DatabaseConnect database = new DatabaseConnect())
                     {
-                        using (DatabaseConnect database = new DatabaseConnect())
+                        database.Open();
+
+                        // Create SQL Update Query
+                        string query = @"UPDATE [user]
+                                 SET first_name = @FirstName,
+                                     last_name = @LastName,
+                                     username = @Username,
+                                     phone_number = @PhoneNumber
+                                 WHERE LOWER(email) = LOWER(@Email)";
+
+                        SqlCommand command = new SqlCommand(query, database.Connection);
+
+                        // Add parameters
+                        command.Parameters.AddWithValue("@Username", richTextBox5.Text.Trim());
+                        command.Parameters.AddWithValue("@FirstName", richTextBox4.Text.Trim());
+                        command.Parameters.AddWithValue("@LastName", richTextBox1.Text.Trim());
+                        command.Parameters.AddWithValue("@PhoneNumber", richTextBox3.Text.Trim());
+                        command.Parameters.AddWithValue("@Email", richTextBox2.Text.Trim());
+
+                        // Execute the update query
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
                         {
-                            database.Open();
-
-
-                            SqlCommand command = new SqlCommand(
-                                "INSERT INTO [user] (username, first_name, last_name, email, phone_number) " +
-                                "VALUES (@Username, @FirstName, @LastName, @Email, @PhoneNumber)",
-                                database.Connection
-                            );
-
-                            // Adding parameters with AddWithValue
-                            command.Parameters.AddWithValue("@Username", richTextBox5.Text.Trim());
-                          
-                            command.Parameters.AddWithValue("@FirstName", richTextBox4.Text.Trim());
-                            command.Parameters.AddWithValue("@LastName", richTextBox1.Text.Trim());
-                            command.Parameters.AddWithValue("@Email", richTextBox2.Text.Trim());
-                            command.Parameters.AddWithValue("@PhoneNumber", richTextBox3.Text.Trim());
-                           // Set current date
-
-                            // Execute the query
-                            command.ExecuteNonQuery();
-
+                            MessageBox.Show("User details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-
-                        MessageBox.Show("Successfully!");
-                       
-
-               
-                    }
-                    else
-                    {
-                        MessageBox.Show($"The email '{richTextBox2.Text}' is already registered. Please use a different email.", "Duplicate Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        else
+                        {
+                            MessageBox.Show("No matching user found to update.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -293,13 +290,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 if (!isValidFirstName) missingFields += "- First Name\n";
                 if (!isValidLastName) missingFields += "- Last Name\n";
                 if (!isEmailValid) missingFields += "- Email\n";
-               
                 if (!isValidUserName) missingFields += "- Username\n";
                 if (!isPhoneNumberValid) missingFields += "- Phone Number\n";
 
                 MessageBox.Show(missingFields, "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        
-    }
+
+        }
+
+        private void richTextBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+    
     }
 }
