@@ -94,7 +94,7 @@
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(1641, -5);
             label1.Name = "label1";
-            label1.Size = new Size(198, 32);
+            label1.Size = new Size(248, 41);
             label1.TabIndex = 4;
             label1.Text = "Together Culture";
             // 
@@ -119,7 +119,7 @@
             label5.ForeColor = Color.White;
             label5.Location = new Point(3332, 34);
             label5.Name = "label5";
-            label5.Size = new Size(112, 15);
+            label5.Size = new Size(143, 20);
             label5.TabIndex = 6;
             label5.Text = "Already a member ?";
             // 
@@ -132,7 +132,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(2038, 34);
             label6.Name = "label6";
-            label6.Size = new Size(112, 15);
+            label6.Size = new Size(143, 20);
             label6.TabIndex = 13;
             label6.Text = "Already a member ?";
             // 
@@ -251,6 +251,7 @@
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2CustomGradientPanel2.Size = new Size(1008, 143);
             guna2CustomGradientPanel2.TabIndex = 4;
+            guna2CustomGradientPanel2.Paint += guna2CustomGradientPanel2_Paint;
             // 
             // label16
             // 
@@ -261,7 +262,7 @@
             label16.ForeColor = Color.White;
             label16.Location = new Point(709, 46);
             label16.Name = "label16";
-            label16.Size = new Size(149, 21);
+            label16.Size = new Size(186, 28);
             label16.TabIndex = 21;
             label16.Text = "Already a member ?";
             label16.Click += label16_Click;
@@ -333,7 +334,7 @@
             label18.ForeColor = Color.White;
             label18.Location = new Point(870, 91);
             label18.Name = "label18";
-            label18.Size = new Size(111, 30);
+            label18.Size = new Size(147, 37);
             label18.TabIndex = 18;
             label18.Text = "Place Hire";
             label18.Click += label18_Click;
@@ -347,7 +348,7 @@
             label17.ForeColor = Color.White;
             label17.Location = new Point(794, 91);
             label17.Name = "label17";
-            label17.Size = new Size(58, 30);
+            label17.Size = new Size(76, 37);
             label17.TabIndex = 18;
             label17.Text = "Blog";
             label17.Click += label17_Click;
@@ -361,7 +362,7 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(709, 91);
             label4.Name = "label4";
-            label4.Size = new Size(64, 30);
+            label4.Size = new Size(82, 37);
             label4.TabIndex = 18;
             label4.Text = "Shop";
             label4.Click += label4_Click;
@@ -375,7 +376,7 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(544, 91);
             label3.Name = "label3";
-            label3.Size = new Size(145, 30);
+            label3.Size = new Size(191, 37);
             label3.TabIndex = 19;
             label3.Text = "Memberships";
             label3.Click += membershipLabel_Click;
@@ -389,7 +390,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(420, 91);
             label2.Name = "label2";
-            label2.Size = new Size(103, 30);
+            label2.Size = new Size(132, 37);
             label2.TabIndex = 20;
             label2.Text = "About us";
             label2.Click += aboutUsLabel_Click;
@@ -402,7 +403,7 @@
             label7.ForeColor = SystemColors.ButtonHighlight;
             label7.Location = new Point(73, 21);
             label7.Name = "label7";
-            label7.Size = new Size(174, 111);
+            label7.Size = new Size(214, 138);
             label7.TabIndex = 16;
             label7.Text = "Together\r\nCulture\r\nCambridge";
             // 
@@ -436,7 +437,7 @@
             linkLabel3.LinkColor = Color.White;
             linkLabel3.Location = new Point(704, 17);
             linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(92, 15);
+            linkLabel3.Size = new Size(117, 20);
             linkLabel3.TabIndex = 9;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Term of Services";
@@ -450,7 +451,7 @@
             linkLabel2.LinkColor = Color.White;
             linkLabel2.Location = new Point(628, 17);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(49, 15);
+            linkLabel2.Size = new Size(60, 20);
             linkLabel2.TabIndex = 9;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Contact";
@@ -464,7 +465,7 @@
             linkLabel1.LinkColor = Color.White;
             linkLabel1.Location = new Point(527, 17);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(80, 15);
+            linkLabel1.Size = new Size(97, 20);
             linkLabel1.TabIndex = 9;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Privacy Policy";
@@ -478,7 +479,7 @@
             label15.ForeColor = Color.White;
             label15.Location = new Point(261, 17);
             label15.Name = "label15";
-            label15.Size = new Size(239, 15);
+            label15.Size = new Size(301, 20);
             label15.TabIndex = 8;
             label15.Text = "© 2024 Together Culture. All rights reserved.";
             // 
@@ -489,7 +490,7 @@
             label9.BackColor = Color.Transparent;
             label9.Location = new Point(2006, -59);
             label9.Name = "label9";
-            label9.Size = new Size(93, 15);
+            label9.Size = new Size(116, 20);
             label9.TabIndex = 1;
             label9.Text = "Cookies settings";
             // 
@@ -500,7 +501,7 @@
             label8.BackColor = Color.Transparent;
             label8.Location = new Point(1893, -59);
             label8.Name = "label8";
-            label8.Size = new Size(91, 15);
+            label8.Size = new Size(115, 20);
             label8.TabIndex = 2;
             label8.Text = "Terms of service";
             // 
@@ -511,7 +512,7 @@
             label10.BackColor = Color.Transparent;
             label10.Location = new Point(1792, -59);
             label10.Name = "label10";
-            label10.Size = new Size(80, 15);
+            label10.Size = new Size(99, 20);
             label10.TabIndex = 3;
             label10.Text = "Privacy policy";
             // 
@@ -522,7 +523,7 @@
             label11.BackColor = Color.Transparent;
             label11.Location = new Point(1522, -59);
             label11.Name = "label11";
-            label11.Size = new Size(239, 15);
+            label11.Size = new Size(301, 20);
             label11.TabIndex = 4;
             label11.Text = "© 2024 Together Culture. All rights reserved.";
             // 

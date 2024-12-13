@@ -271,5 +271,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         {
 
         }
+
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,15 +30,13 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,6 +45,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             lblLogo = new Label();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -71,6 +73,7 @@
             PicBoxMembershipType = new PictureBox();
             btnBuyMembership = new Guna.UI2.WinForms.Guna2Button();
             btnContinueToDash = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profilePictureBox).BeginInit();
@@ -95,10 +98,9 @@
             guna2CustomGradientPanel1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2CustomGradientPanel1.ForeColor = Color.White;
             guna2CustomGradientPanel1.Location = new Point(0, 1);
-            guna2CustomGradientPanel1.Margin = new Padding(3, 2, 3, 2);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel1.Size = new Size(309, 134);
+            guna2CustomGradientPanel1.Size = new Size(353, 179);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // lblLogo
@@ -107,9 +109,9 @@
             lblLogo.BackColor = Color.Transparent;
             lblLogo.Font = new Font("Microsoft Sans Serif", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLogo.ForeColor = SystemColors.ButtonHighlight;
-            lblLogo.Location = new Point(69, 14);
+            lblLogo.Location = new Point(79, 19);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(174, 111);
+            lblLogo.Size = new Size(214, 138);
             lblLogo.TabIndex = 30;
             lblLogo.Text = "Together\r\nCulture\r\nCambridge";
             // 
@@ -118,8 +120,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = Color.White;
-            guna2HtmlLabel4.Location = new Point(542, 50);
-            guna2HtmlLabel4.Margin = new Padding(3, 2, 3, 2);
+            guna2HtmlLabel4.Location = new Point(619, 67);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(3, 2);
             guna2HtmlLabel4.TabIndex = 29;
@@ -128,20 +129,20 @@
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            guna2CustomGradientPanel2.Controls.Add(guna2Button1);
             guna2CustomGradientPanel2.Controls.Add(btnProfile);
             guna2CustomGradientPanel2.Controls.Add(profilePictureBox);
             guna2CustomGradientPanel2.Controls.Add(PicBoxEdit);
             guna2CustomGradientPanel2.Controls.Add(lblEditPhoto);
-            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges5;
+            guna2CustomGradientPanel2.CustomizableEdges = customizableEdges7;
             guna2CustomGradientPanel2.FillColor = Color.DarkRed;
             guna2CustomGradientPanel2.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel2.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel2.FillColor4 = Color.IndianRed;
-            guna2CustomGradientPanel2.Location = new Point(0, 133);
-            guna2CustomGradientPanel2.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel2.Location = new Point(0, 177);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2CustomGradientPanel2.Size = new Size(309, 476);
+            guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CustomGradientPanel2.Size = new Size(353, 635);
             guna2CustomGradientPanel2.TabIndex = 1;
             // 
             // btnProfile
@@ -149,7 +150,7 @@
             btnProfile.BackColor = Color.Transparent;
             btnProfile.BorderColor = Color.White;
             btnProfile.BorderThickness = 1;
-            btnProfile.CustomizableEdges = customizableEdges3;
+            btnProfile.CustomizableEdges = customizableEdges5;
             btnProfile.DisabledState.BorderColor = Color.DarkGray;
             btnProfile.DisabledState.CustomBorderColor = Color.DarkGray;
             btnProfile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -160,10 +161,11 @@
             btnProfile.Image = (Image)resources.GetObject("btnProfile.Image");
             btnProfile.ImageAlign = HorizontalAlignment.Left;
             btnProfile.ImageSize = new Size(60, 60);
-            btnProfile.Location = new Point(3, 341);
+            btnProfile.Location = new Point(3, 324);
+            btnProfile.Margin = new Padding(3, 4, 3, 4);
             btnProfile.Name = "btnProfile";
-            btnProfile.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnProfile.Size = new Size(302, 105);
+            btnProfile.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnProfile.Size = new Size(345, 140);
             btnProfile.TabIndex = 34;
             btnProfile.Text = "Profile";
             btnProfile.Click += btnProfile_Click;
@@ -171,9 +173,10 @@
             // profilePictureBox
             // 
             profilePictureBox.InitialImage = (Image)resources.GetObject("profilePictureBox.InitialImage");
-            profilePictureBox.Location = new Point(63, 20);
+            profilePictureBox.Location = new Point(72, 27);
+            profilePictureBox.Margin = new Padding(3, 4, 3, 4);
             profilePictureBox.Name = "profilePictureBox";
-            profilePictureBox.Size = new Size(191, 171);
+            profilePictureBox.Size = new Size(218, 228);
             profilePictureBox.TabIndex = 33;
             profilePictureBox.TabStop = false;
             // 
@@ -181,9 +184,10 @@
             // 
             PicBoxEdit.BackColor = Color.Transparent;
             PicBoxEdit.Image = (Image)resources.GetObject("PicBoxEdit.Image");
-            PicBoxEdit.Location = new Point(192, 197);
+            PicBoxEdit.Location = new Point(219, 263);
+            PicBoxEdit.Margin = new Padding(3, 4, 3, 4);
             PicBoxEdit.Name = "PicBoxEdit";
-            PicBoxEdit.Size = new Size(25, 28);
+            PicBoxEdit.Size = new Size(29, 37);
             PicBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
             PicBoxEdit.TabIndex = 32;
             PicBoxEdit.TabStop = false;
@@ -193,10 +197,9 @@
             lblEditPhoto.BackColor = Color.Transparent;
             lblEditPhoto.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblEditPhoto.ForeColor = Color.White;
-            lblEditPhoto.Location = new Point(90, 197);
-            lblEditPhoto.Margin = new Padding(3, 2, 3, 2);
+            lblEditPhoto.Location = new Point(103, 263);
             lblEditPhoto.Name = "lblEditPhoto";
-            lblEditPhoto.Size = new Size(99, 32);
+            lblEditPhoto.Size = new Size(122, 38);
             lblEditPhoto.TabIndex = 31;
             lblEditPhoto.Text = "Edit Photo";
             lblEditPhoto.Click += lblEditPhoto_Click;
@@ -214,18 +217,17 @@
             guna2CustomGradientPanel3.Controls.Add(guna2CustomGradientPanel4);
             guna2CustomGradientPanel3.Controls.Add(btnBuyMembership);
             guna2CustomGradientPanel3.Controls.Add(btnContinueToDash);
-            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges17;
+            guna2CustomGradientPanel3.CustomizableEdges = customizableEdges19;
             guna2CustomGradientPanel3.FillColor = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel3.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel3.FillColor4 = Color.Salmon;
             guna2CustomGradientPanel3.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2CustomGradientPanel3.ForeColor = Color.White;
-            guna2CustomGradientPanel3.Location = new Point(308, 1);
-            guna2CustomGradientPanel3.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel3.Location = new Point(352, 1);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2CustomGradientPanel3.Size = new Size(701, 606);
+            guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2CustomGradientPanel3.Size = new Size(801, 808);
             guna2CustomGradientPanel3.TabIndex = 0;
             // 
             // guna2HtmlLabel2
@@ -233,8 +235,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(361, 394);
-            guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
+            guna2HtmlLabel2.Location = new Point(413, 525);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(3, 2);
             guna2HtmlLabel2.TabIndex = 36;
@@ -246,9 +247,10 @@
             picLock.BackColor = Color.Transparent;
             picLock.Image = (Image)resources.GetObject("picLock.Image");
             picLock.InitialImage = (Image)resources.GetObject("picLock.InitialImage");
-            picLock.Location = new Point(293, 394);
+            picLock.Location = new Point(335, 525);
+            picLock.Margin = new Padding(3, 4, 3, 4);
             picLock.Name = "picLock";
-            picLock.Size = new Size(63, 55);
+            picLock.Size = new Size(72, 73);
             picLock.SizeMode = PictureBoxSizeMode.Zoom;
             picLock.TabIndex = 35;
             picLock.TabStop = false;
@@ -259,14 +261,15 @@
             panel1.Controls.Add(txtInterest);
             panel1.Controls.Add(guna2Button2);
             panel1.Controls.Add(guna2HtmlLabel1);
-            panel1.Location = new Point(29, 87);
+            panel1.Location = new Point(33, 116);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(641, 292);
+            panel1.Size = new Size(733, 389);
             panel1.TabIndex = 34;
             // 
             // txtInterest
             // 
-            txtInterest.CustomizableEdges = customizableEdges7;
+            txtInterest.CustomizableEdges = customizableEdges9;
             txtInterest.DefaultText = "";
             txtInterest.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInterest.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -275,16 +278,16 @@
             txtInterest.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtInterest.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtInterest.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInterest.Location = new Point(13, 45);
-            txtInterest.Margin = new Padding(5);
+            txtInterest.Location = new Point(15, 60);
+            txtInterest.Margin = new Padding(6, 7, 6, 7);
             txtInterest.Multiline = true;
             txtInterest.Name = "txtInterest";
             txtInterest.PasswordChar = '\0';
             txtInterest.PlaceholderText = "";
             txtInterest.ReadOnly = true;
             txtInterest.SelectedText = "";
-            txtInterest.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtInterest.Size = new Size(615, 166);
+            txtInterest.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtInterest.Size = new Size(703, 221);
             txtInterest.TabIndex = 37;
             // 
             // guna2Button2
@@ -292,8 +295,8 @@
             guna2Button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             guna2Button2.AutoRoundedCorners = true;
             guna2Button2.BackColor = Color.Transparent;
-            guna2Button2.BorderRadius = 26;
-            guna2Button2.CustomizableEdges = customizableEdges9;
+            guna2Button2.BorderRadius = 35;
+            guna2Button2.CustomizableEdges = customizableEdges11;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -301,10 +304,11 @@
             guna2Button2.FillColor = Color.Brown;
             guna2Button2.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(421, 220);
+            guna2Button2.Location = new Point(481, 293);
+            guna2Button2.Margin = new Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button2.Size = new Size(195, 54);
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button2.Size = new Size(223, 72);
             guna2Button2.TabIndex = 34;
             guna2Button2.Text = "Edit Interests";
             guna2Button2.Click += guna2Button2_Click;
@@ -314,10 +318,9 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(13, 3);
-            guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
+            guna2HtmlLabel1.Location = new Point(15, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(287, 39);
+            guna2HtmlLabel1.Size = new Size(365, 48);
             guna2HtmlLabel1.TabIndex = 33;
             guna2HtmlLabel1.Text = "These are your interests:";
             // 
@@ -326,10 +329,9 @@
             lblUserName.BackColor = Color.Transparent;
             lblUserName.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUserName.ForeColor = Color.White;
-            lblUserName.Location = new Point(150, 26);
-            lblUserName.Margin = new Padding(3, 2, 3, 2);
+            lblUserName.Location = new Point(171, 35);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(56, 39);
+            lblUserName.Size = new Size(70, 48);
             lblUserName.TabIndex = 32;
             lblUserName.Text = "User";
             // 
@@ -338,10 +340,9 @@
             lblWelcome.BackColor = Color.Transparent;
             lblWelcome.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblWelcome.ForeColor = Color.White;
-            lblWelcome.Location = new Point(29, 26);
-            lblWelcome.Margin = new Padding(3, 2, 3, 2);
+            lblWelcome.Location = new Point(33, 35);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(114, 39);
+            lblWelcome.Size = new Size(144, 48);
             lblWelcome.TabIndex = 32;
             lblWelcome.Text = "Welcome";
             // 
@@ -352,15 +353,16 @@
             guna2CustomGradientPanel4.Controls.Add(lblUserType);
             guna2CustomGradientPanel4.Controls.Add(lblMembershiptype);
             guna2CustomGradientPanel4.Controls.Add(PicBoxMembershipType);
-            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges11;
+            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges13;
             guna2CustomGradientPanel4.FillColor = Color.DarkRed;
             guna2CustomGradientPanel4.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel4.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel4.FillColor4 = Color.Firebrick;
-            guna2CustomGradientPanel4.Location = new Point(0, 473);
+            guna2CustomGradientPanel4.Location = new Point(0, 631);
+            guna2CustomGradientPanel4.Margin = new Padding(3, 4, 3, 4);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2CustomGradientPanel4.Size = new Size(701, 141);
+            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2CustomGradientPanel4.Size = new Size(801, 188);
             guna2CustomGradientPanel4.TabIndex = 33;
             // 
             // lblStatus
@@ -368,9 +370,9 @@
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.Transparent;
             lblStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStatus.Location = new Point(420, 30);
+            lblStatus.Location = new Point(480, 40);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(238, 63);
+            lblStatus.Size = new Size(295, 84);
             lblStatus.TabIndex = 33;
             lblStatus.Text = "You are currently a non member \r\nplease buy a membership to \r\ncontinue to dashboard";
             // 
@@ -380,10 +382,9 @@
             lblUserType.BackColor = Color.Transparent;
             lblUserType.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUserType.ForeColor = Color.White;
-            lblUserType.Location = new Point(127, 57);
-            lblUserType.Margin = new Padding(3, 2, 3, 2);
+            lblUserType.Location = new Point(145, 76);
             lblUserType.Name = "lblUserType";
-            lblUserType.Size = new Size(218, 32);
+            lblUserType.Size = new Size(270, 38);
             lblUserType.TabIndex = 32;
             lblUserType.Text = "Your Membership Type";
             // 
@@ -393,10 +394,9 @@
             lblMembershiptype.BackColor = Color.Transparent;
             lblMembershiptype.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMembershiptype.ForeColor = Color.White;
-            lblMembershiptype.Location = new Point(127, 27);
-            lblMembershiptype.Margin = new Padding(3, 2, 3, 2);
+            lblMembershiptype.Location = new Point(145, 36);
             lblMembershiptype.Name = "lblMembershiptype";
-            lblMembershiptype.Size = new Size(198, 32);
+            lblMembershiptype.Size = new Size(244, 38);
             lblMembershiptype.TabIndex = 32;
             lblMembershiptype.Text = "Your Member Status:";
             // 
@@ -405,9 +405,10 @@
             PicBoxMembershipType.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             PicBoxMembershipType.BackColor = Color.Transparent;
             PicBoxMembershipType.Image = (Image)resources.GetObject("PicBoxMembershipType.Image");
-            PicBoxMembershipType.Location = new Point(20, 27);
+            PicBoxMembershipType.Location = new Point(23, 36);
+            PicBoxMembershipType.Margin = new Padding(3, 4, 3, 4);
             PicBoxMembershipType.Name = "PicBoxMembershipType";
-            PicBoxMembershipType.Size = new Size(102, 77);
+            PicBoxMembershipType.Size = new Size(117, 103);
             PicBoxMembershipType.SizeMode = PictureBoxSizeMode.Zoom;
             PicBoxMembershipType.TabIndex = 0;
             PicBoxMembershipType.TabStop = false;
@@ -417,8 +418,8 @@
             btnBuyMembership.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnBuyMembership.AutoRoundedCorners = true;
             btnBuyMembership.BackColor = Color.Transparent;
-            btnBuyMembership.BorderRadius = 27;
-            btnBuyMembership.CustomizableEdges = customizableEdges13;
+            btnBuyMembership.BorderRadius = 36;
+            btnBuyMembership.CustomizableEdges = customizableEdges15;
             btnBuyMembership.DisabledState.BorderColor = Color.DarkGray;
             btnBuyMembership.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBuyMembership.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -426,10 +427,11 @@
             btnBuyMembership.FillColor = Color.Brown;
             btnBuyMembership.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuyMembership.ForeColor = Color.White;
-            btnBuyMembership.Location = new Point(431, 393);
+            btnBuyMembership.Location = new Point(493, 524);
+            btnBuyMembership.Margin = new Padding(3, 4, 3, 4);
             btnBuyMembership.Name = "btnBuyMembership";
-            btnBuyMembership.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnBuyMembership.Size = new Size(239, 56);
+            btnBuyMembership.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnBuyMembership.Size = new Size(273, 75);
             btnBuyMembership.TabIndex = 32;
             btnBuyMembership.Text = "Buy Membership";
             btnBuyMembership.Click += btnBuyMembership_Click;
@@ -439,8 +441,8 @@
             btnContinueToDash.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnContinueToDash.AutoRoundedCorners = true;
             btnContinueToDash.BackColor = Color.Transparent;
-            btnContinueToDash.BorderRadius = 27;
-            btnContinueToDash.CustomizableEdges = customizableEdges15;
+            btnContinueToDash.BorderRadius = 36;
+            btnContinueToDash.CustomizableEdges = customizableEdges17;
             btnContinueToDash.DisabledState.BorderColor = Color.DarkGray;
             btnContinueToDash.DisabledState.CustomBorderColor = Color.DarkGray;
             btnContinueToDash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -448,24 +450,47 @@
             btnContinueToDash.FillColor = Color.Brown;
             btnContinueToDash.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnContinueToDash.ForeColor = Color.White;
-            btnContinueToDash.Location = new Point(29, 393);
+            btnContinueToDash.Location = new Point(33, 524);
+            btnContinueToDash.Margin = new Padding(3, 4, 3, 4);
             btnContinueToDash.Name = "btnContinueToDash";
-            btnContinueToDash.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnContinueToDash.Size = new Size(239, 56);
+            btnContinueToDash.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnContinueToDash.Size = new Size(273, 75);
             btnContinueToDash.TabIndex = 32;
             btnContinueToDash.Text = "Continue to Dashboard";
             btnContinueToDash.Click += btnContinueToDash_Click;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Button1.BorderColor = Color.White;
+            guna2Button1.BorderThickness = 1;
+            guna2Button1.CustomizableEdges = customizableEdges3;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Brown;
+            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(90, 555);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button1.Size = new Size(174, 56);
+            guna2Button1.TabIndex = 35;
+            guna2Button1.Text = "Sign Out";
+            guna2Button1.Click += guna2Button1_Click;
+            // 
             // Profile
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1008, 601);
+            ClientSize = new Size(1150, 791);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel1);
-            MaximumSize = new Size(1024, 640);
-            MinimumSize = new Size(1024, 640);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(1168, 838);
+            MinimumSize = new Size(1168, 838);
             Name = "Profile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile";
@@ -513,5 +538,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtInterest;
         private Label lblStatus;
         private Guna.UI2.WinForms.Guna2Button btnBuyMembership;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

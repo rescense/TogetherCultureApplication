@@ -68,12 +68,11 @@
             mainPanel.FillColor2 = Color.LightCoral;
             mainPanel.FillColor3 = Color.LightCoral;
             mainPanel.FillColor4 = Color.Red;
-            mainPanel.Location = new Point(307, 1);
-            mainPanel.Margin = new Padding(3, 2, 3, 2);
-            mainPanel.MinimumSize = new Size(700, 606);
+            mainPanel.Location = new Point(351, 1);
+            mainPanel.MinimumSize = new Size(800, 808);
             mainPanel.Name = "mainPanel";
             mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            mainPanel.Size = new Size(700, 606);
+            mainPanel.Size = new Size(800, 808);
             mainPanel.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -85,11 +84,10 @@
             guna2PictureBox1.Image = Properties.Resources.istockphoto_841152680_1024x1024;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(0, 0);
-            guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
-            guna2PictureBox1.MinimumSize = new Size(700, 606);
+            guna2PictureBox1.MinimumSize = new Size(800, 808);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(700, 606);
+            guna2PictureBox1.Size = new Size(800, 808);
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
@@ -105,11 +103,10 @@
             guna2CustomGradientPanel2.FillColor2 = Color.IndianRed;
             guna2CustomGradientPanel2.FillColor3 = Color.LightCoral;
             guna2CustomGradientPanel2.FillColor4 = Color.IndianRed;
-            guna2CustomGradientPanel2.Location = new Point(0, 159);
-            guna2CustomGradientPanel2.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel2.Location = new Point(0, 212);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2CustomGradientPanel2.Size = new Size(307, 476);
+            guna2CustomGradientPanel2.Size = new Size(351, 635);
             guna2CustomGradientPanel2.TabIndex = 1;
             // 
             // btnBackToProfile
@@ -125,11 +122,10 @@
             btnBackToProfile.FillColor = Color.Brown;
             btnBackToProfile.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBackToProfile.ForeColor = Color.White;
-            btnBackToProfile.Location = new Point(56, 379);
-            btnBackToProfile.Margin = new Padding(3, 2, 3, 2);
+            btnBackToProfile.Location = new Point(67, 521);
             btnBackToProfile.Name = "btnBackToProfile";
             btnBackToProfile.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnBackToProfile.Size = new Size(194, 42);
+            btnBackToProfile.Size = new Size(222, 56);
             btnBackToProfile.TabIndex = 0;
             btnBackToProfile.Text = "Back to Profile";
             btnBackToProfile.Click += btnBackToProfile_Click;
@@ -148,11 +144,10 @@
             btnSecurity.FillColor = Color.Transparent;
             btnSecurity.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSecurity.ForeColor = Color.White;
-            btnSecurity.Location = new Point(3, 104);
-            btnSecurity.Margin = new Padding(3, 2, 3, 2);
+            btnSecurity.Location = new Point(3, 139);
             btnSecurity.Name = "btnSecurity";
             btnSecurity.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSecurity.Size = new Size(295, 45);
+            btnSecurity.Size = new Size(337, 60);
             btnSecurity.TabIndex = 2;
             btnSecurity.Text = "Security";
             btnSecurity.TextAlign = HorizontalAlignment.Left;
@@ -172,11 +167,10 @@
             btnPersonalInfo.FillColor = Color.Transparent;
             btnPersonalInfo.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPersonalInfo.ForeColor = Color.White;
-            btnPersonalInfo.Location = new Point(3, 54);
-            btnPersonalInfo.Margin = new Padding(3, 2, 3, 2);
+            btnPersonalInfo.Location = new Point(3, 72);
             btnPersonalInfo.Name = "btnPersonalInfo";
             btnPersonalInfo.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnPersonalInfo.Size = new Size(295, 45);
+            btnPersonalInfo.Size = new Size(337, 60);
             btnPersonalInfo.TabIndex = 1;
             btnPersonalInfo.Text = "Personal Information";
             btnPersonalInfo.TextAlign = HorizontalAlignment.Left;
@@ -196,11 +190,10 @@
             btnChangePassword.FillColor = Color.Transparent;
             btnChangePassword.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnChangePassword.ForeColor = Color.White;
-            btnChangePassword.Location = new Point(3, 5);
-            btnChangePassword.Margin = new Padding(3, 2, 3, 2);
+            btnChangePassword.Location = new Point(3, 7);
             btnChangePassword.Name = "btnChangePassword";
             btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnChangePassword.Size = new Size(295, 45);
+            btnChangePassword.Size = new Size(337, 60);
             btnChangePassword.TabIndex = 0;
             btnChangePassword.Text = "Change Password";
             btnChangePassword.TextAlign = HorizontalAlignment.Left;
@@ -216,10 +209,9 @@
             guna2CustomGradientPanel3.FillColor3 = Color.Maroon;
             guna2CustomGradientPanel3.FillColor4 = Color.Firebrick;
             guna2CustomGradientPanel3.Location = new Point(0, 0);
-            guna2CustomGradientPanel3.Margin = new Padding(3, 2, 3, 2);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel3.Size = new Size(307, 160);
+            guna2CustomGradientPanel3.Size = new Size(351, 213);
             guna2CustomGradientPanel3.TabIndex = 2;
             // 
             // lblLogo
@@ -228,22 +220,21 @@
             lblLogo.BackColor = Color.Transparent;
             lblLogo.Font = new Font("Microsoft Sans Serif", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblLogo.ForeColor = SystemColors.ButtonHighlight;
-            lblLogo.Location = new Point(66, 25);
+            lblLogo.Location = new Point(75, 33);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(174, 111);
+            lblLogo.Size = new Size(214, 138);
             lblLogo.TabIndex = 31;
             lblLogo.Text = "Together\r\nCulture\r\nCambridge";
             // 
             // Profilepage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1008, 601);
+            ClientSize = new Size(1152, 801);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(mainPanel);
-            Margin = new Padding(3, 2, 3, 2);
-            MinimumSize = new Size(1024, 638);
+            MinimumSize = new Size(1168, 835);
             Name = "Profilepage";
             Text = "Profilepage";
             mainPanel.ResumeLayout(false);

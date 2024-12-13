@@ -284,5 +284,20 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             memberAreaOnly.Show();
             this.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+           
+            // Create an instance of the landing page form
+            landingPage landingPage = new landingPage();
+
+            // Show the landing page
+            landingPage.Show();
+
+            // Close the current Profile form
+            this.Close();
+          
+            
+        }
     }
 }
