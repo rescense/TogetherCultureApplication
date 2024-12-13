@@ -235,13 +235,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 string.IsNullOrEmpty(richTextBox4.Text) ||
                 string.IsNullOrEmpty(richTextBox1.Text) ||
                 string.IsNullOrEmpty(richTextBox2.Text) ||
-                string.IsNullOrEmpty(richTextBox3.Text))
+                string.IsNullOrEmpty(richTextBox3.Text) ||
+                string.IsNullOrEmpty(richTextBox9.Text))
             {
                 MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (isEmailValid && isValidFirstName && isValidLastName && isPhoneNumberValid && isValidUserName)
+            if (isEmailValid && isValidFirstName && isValidLastName && isPhoneNumberValid && isValidUserName && IsValidEmail(richTextBox9.Text))
             {
                 try
                 {
@@ -254,8 +255,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                                  SET first_name = @FirstName,
                                      last_name = @LastName,
                                      username = @Username,
-                                     phone_number = @PhoneNumber
-                                 WHERE LOWER(email) = LOWER(@Email)";
+                                     phone_number = @PhoneNumber,
+                                    email = @NewEmail
+                                 WHERE LOWER(email) = LOWER(@CurrentEmail)";
+                                 
 
                         SqlCommand command = new SqlCommand(query, database.Connection);
 
@@ -264,7 +267,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                         command.Parameters.AddWithValue("@FirstName", richTextBox4.Text.Trim());
                         command.Parameters.AddWithValue("@LastName", richTextBox1.Text.Trim());
                         command.Parameters.AddWithValue("@PhoneNumber", richTextBox3.Text.Trim());
-                        command.Parameters.AddWithValue("@Email", richTextBox2.Text.Trim());
+                        command.Parameters.AddWithValue("@NewEmail", richTextBox9.Text.Trim()); // New email
+                        command.Parameters.AddWithValue("@CurrentEmail", richTextBox2.Text.Trim()); // Current email
 
                         // Execute the update query
                         int rowsAffected = command.ExecuteNonQuery();
@@ -289,7 +293,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
                 string missingFields = "Please check the following fields:\n";
                 if (!isValidFirstName) missingFields += "- First Name\n";
                 if (!isValidLastName) missingFields += "- Last Name\n";
-                if (!isEmailValid) missingFields += "- Email\n";
+                if (!isEmailValid) missingFields += "- Current Email\n";
+                if (!IsValidEmail(richTextBox9.Text)) missingFields += "- New Email\n";
                 if (!isValidUserName) missingFields += "- Username\n";
                 if (!isPhoneNumberValid) missingFields += "- Phone Number\n";
 
@@ -303,6 +308,9 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
         }
 
-    
+        private void richTextBox9_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
