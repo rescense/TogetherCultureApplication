@@ -7,53 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
+using System.Xml.Linq;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using static Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms.eventsMain_UC;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventFeedback_UC : UserControl
     {
-        private BindingList<Feedback> feedbackList;
-        private eventsForm.EventDetails eventDetails;
+        private readonly int _eventId;
+        private readonly DatabaseConnect _dbConnect;
 
-        public eventFeedback_UC(eventsForm.EventDetails eventDetails)
+        public eventFeedback_UC(int eventId)
         {
             InitializeComponent();
-            this.eventDetails = eventDetails;
-            feedbackList = new BindingList<Feedback>();
-
-            if (eventDetails == null)
-            {
-                throw new ArgumentNullException(nameof(eventDetails), "Event details cannot be null.");
-            }
-
-            LoadEventDetails(eventDetails);
+            _eventId = eventId;
+            _dbConnect = new DatabaseConnect();
+        }
+        private void eventFeedback_UC_Load(object sender, EventArgs e)
+        {
+            LoadEventDetails();
             LoadFeedback();
         }
-
-        // Load event details into the appropriate panel
-        private void LoadEventDetails(eventsForm.EventDetails currentEvent)
+        private void LoadEventDetails()
         {
-            label4.Text = currentEvent.EventName +"\n\n\n"+ currentEvent.EventDate.ToShortDateString() + "\n\n\n" + currentEvent.EventDate.ToShortDateString();
+            string query = $"SELECT event_name, date, time, location, ticket_price FROM [event] WHERE event_id = {_eventId}";
+            var eventDetails = _dbConnect.ExecuteQuery(query);
+
+            if (eventDetails.Rows.Count > 0)
+            {
+                var row = eventDetails.Rows[0];
+                label4.Text = row["event_name"].ToString() + "\n\n\n" +
+                row["date"].ToString() + "\n\n\n" +
+                row["time"].ToString() + "\n\n\n" +
+                row["location"].ToString() + "\n\n\n" +
+                row["ticket_price"].ToString();
+            }
         }
 
         // Load feedback into the DataGridView
         private void LoadFeedback()
         {
-            // Simulate fetching feedback from a database
+            string query = $"SELECT comment, feedback_date FROM [feedback] WHERE event_id = {_eventId}";
+            var feedbackTable = _dbConnect.ExecuteQuery(query);            
+            dataGridView2.DataSource = feedbackTable;
 
-            var sampleFeedback = new List<Feedback>
-            {
-            new Feedback { UserName = "Alice", Comment = "Great event!", Timestamp = DateTime.Now.AddDays(-1) },
-            new Feedback { UserName = "Bob", Comment = "Very informative.", Timestamp = DateTime.Now.AddDays(-2) }
-            };
-
-            foreach (var feedback in sampleFeedback)
-            {
-                feedbackList.Add(feedback);
-            }
-
-            dataGridView2.DataSource = feedbackList;
-            // feedback list - list of feedback related to the event.
+            // Show count of feedbacks
+            label10.Text = $"{feedbackTable.Rows.Count} feedbacks received";
         }
 
         // Handle adding new feedback
@@ -61,14 +62,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             if (!string.IsNullOrWhiteSpace(richTextBox3.Text))
             {
-                // Add new feedback to the list
-                // get user name from database assign to variable
-                feedbackList.Add(new Feedback
-                {
-                    UserName = "variable here",
-                    Comment = richTextBox3.Text.Trim(),
-                    Timestamp = DateTime.Now
-                });
+                string comment = richTextBox3.Text;
+                string query = $"INSERT INTO [feedback] (event_id, comment, feedback_date) " +
+                    $"VALUES ({_eventId}, '{comment}', '{DateTime.Now.Date}')";
+                
+                _dbConnect.ExecuteQuery(query);
 
                 richTextBox3.Clear();
             }
@@ -77,14 +75,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
                 MessageBox.Show("Please enter your feedback before submitting.");
             }
 
-        }
-
-        // Feedback model for the DataGridView
-        public class Feedback
-        {
-            public string UserName { get; set; }
-            public string Comment { get; set; }
-            public DateTime Timestamp { get; set; }
         }
 
         // tools
@@ -101,5 +91,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
 
         }
+
+
     }
 }

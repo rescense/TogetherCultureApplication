@@ -17,7 +17,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         public eventsForm()
         {
             InitializeComponent();
-            LoadEventMainUserControl();
         }
         private void eventsForm_Load(object sender, EventArgs e)
         {
@@ -25,56 +24,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         }
 
         // user controls
+        // load main page
         private void LoadEventMainUserControl()
         {
             var eventsMainUC = new eventsMain_UC();
             eventsMainUC.Dock = DockStyle.Fill;
-
-            // after database
-            eventsMainUC.EventSelected += eventsMain_UC_EventSelected;
-
             panel1.Controls.Clear();
             panel1.Controls.Add(eventsMainUC);
 
         }
-        private void eventsMain_UC_EventSelected(object sender, eventsForm.EventDetails eventDetails) 
-        {
-            var check = DateTime.Compare(eventDetails.EventDate.Date, DateTime.Today);
-            if (check < 0)
-            {
-                LoadEventFeedbackUC(eventDetails);
-            }
-            else 
-            {
-                LoadEventDetailsOrBookingUC(eventDetails);
-            }
-        }
 
-        private void LoadEventFeedbackUC(eventsForm.EventDetails eventDetails) 
-        {
-            var eventFeedbackUC = new eventFeedback_UC(eventDetails);
-            eventFeedbackUC.Dock = DockStyle.Fill;
-
-            // back to main page
-            //eventFeedbackUC.BackToEvents += (s, args) => LoadEventMainUserControl();
-
-            panel1.Controls.Clear();
-            panel1.Controls.Add(eventFeedbackUC);
-
-        }
-        private void LoadEventDetailsOrBookingUC(eventsForm.EventDetails eventDetails)
-        {
-            var eventBookingUC = new eventDetailsOrBooking_UC (eventDetails);
-            eventBookingUC.Dock = DockStyle.Fill;
-
-            // back to main page
-            // eventBookingUC.BackToEvents += (s, args) => LoadEventMainUserControl();
-
-            panel1.Controls.Clear();
-            panel1.Controls.Add(eventBookingUC);
-        }
-
-        // rest
+        // tools
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
@@ -84,12 +44,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         private void userControlPanel(object sender, PaintEventArgs e) // design name - panel1
         {
 
-        }
-        public class EventDetails
-        {
-            public string EventName { get; set; }
-            public DateTime EventDate { get; set; }
-            public string EventDescription { get; set; }
         }
     }
 }

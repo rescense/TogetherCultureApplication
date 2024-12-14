@@ -44,6 +44,7 @@
             label3 = new Label();
             label2 = new Label();
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            label6 = new Label();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             comboBoxAttendeeType = new ComboBox();
             txtAttendeeName = new RichTextBox();
@@ -73,7 +74,7 @@
             guna2CustomGradientPanel2.Location = new Point(0, 0);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2CustomGradientPanel2.Size = new Size(1445, 533);
+            guna2CustomGradientPanel2.Size = new Size(1445, 522);
             guna2CustomGradientPanel2.TabIndex = 5;
             guna2CustomGradientPanel2.Paint += guna2CustomGradientPanel2_Paint;
             // 
@@ -125,6 +126,7 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            guna2CustomGradientPanel4.Controls.Add(label6);
             guna2CustomGradientPanel4.Controls.Add(guna2Button9);
             guna2CustomGradientPanel4.Controls.Add(comboBoxAttendeeType);
             guna2CustomGradientPanel4.Controls.Add(txtAttendeeName);
@@ -145,6 +147,18 @@
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomGradientPanel4.Size = new Size(686, 484);
             guna2CustomGradientPanel4.TabIndex = 33;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(37, 438);
+            label6.Name = "label6";
+            label6.Size = new Size(116, 21);
+            label6.TabIndex = 50;
+            label6.Text = "Total price :";
             // 
             // guna2Button9
             // 
@@ -174,7 +188,7 @@
             // 
             comboBoxAttendeeType.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxAttendeeType.FormattingEnabled = true;
-            comboBoxAttendeeType.Items.AddRange(new object[] { "Me", "Guest" });
+            comboBoxAttendeeType.Items.AddRange(new object[] { "member", "full_price", "concession" });
             comboBoxAttendeeType.Location = new Point(344, 195);
             comboBoxAttendeeType.Name = "comboBoxAttendeeType";
             comboBoxAttendeeType.Size = new Size(295, 33);
@@ -299,6 +313,7 @@
             Controls.Add(guna2CustomGradientPanel2);
             Name = "eventDetailsOrBooking_UC";
             Size = new Size(1444, 522);
+            Load += eventDetailsOrBooking_UC_Load;
             guna2CustomGradientPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -326,5 +341,6 @@
         private DataGridView dataGridViewAttendees;
         private Label label5;
         private Label label1;
+        private Label label6;
     }
 }

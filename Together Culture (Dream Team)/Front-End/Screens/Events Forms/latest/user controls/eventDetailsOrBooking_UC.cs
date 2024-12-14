@@ -7,39 +7,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventDetailsOrBooking_UC : UserControl
     {
-                private BindingList<Attendee> attendeeList; // List of attendees
-        private eventsForm.EventDetails eventDetails;
+        private readonly int _eventId;
+        private readonly DatabaseConnect _dbConnect;
 
-        public eventDetailsOrBooking_UC(eventsForm.EventDetails eventDetails)
+        public eventDetailsOrBooking_UC(int eventId)
         {
             InitializeComponent();
-
-            this.eventDetails = eventDetails;
-            attendeeList = new BindingList<Attendee>();
-
-            LoadEventDetails(eventDetails);
-            InitializeAttendeeSection();
+            _eventId = eventId;
+            _dbConnect = new DatabaseConnect();
         }
-
-        // Load event details into the appropriate panel
-        private void LoadEventDetails(eventsForm.EventDetails currentEvent)
+        private void eventDetailsOrBooking_UC_Load(object sender, EventArgs e)
         {
-            label4.Text = currentEvent.EventName + "\n\n\n" + currentEvent.EventDate.ToShortDateString() + "\n\n\n" + currentEvent.EventDate.ToShortDateString();
+            LoadEventDetails();
         }
+        private void LoadEventDetails()
+        {          
+            string query = $"SELECT event_name, date, time, location, ticket_price FROM [event] WHERE event_id = {_eventId}";
+            var eventDetails = _dbConnect.ExecuteQuery(query);
 
-        // Initialize attendee section
+            if (eventDetails.Rows.Count > 0)
+            {
+                var row = eventDetails.Rows[0];
+                label4.Text = row["event_name"].ToString() +
+                    row["date"].ToString() + "\n\n\n" +
+                    row["time"].ToString() + "\n\n\n" +
+                    row["location"].ToString() +
+                    row["ticket_price"].ToString();
+            }
+        }
         private void InitializeAttendeeSection()
         {
-            dataGridViewAttendees.DataSource = attendeeList;
-
             // Populate ComboBox with attendee types
-            comboBoxAttendeeType.Items.Add("Member");
-            comboBoxAttendeeType.Items.Add("Guest");
+            comboBoxAttendeeType.Items.Add("member");
+            comboBoxAttendeeType.Items.Add("concession");
+            comboBoxAttendeeType.Items.Add("full_price");
             comboBoxAttendeeType.SelectedIndex = 0;
         }
         // Add attendee button click
@@ -47,12 +54,19 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             if (!string.IsNullOrWhiteSpace(txtAttendeeName.Text) && comboBoxAttendeeType.SelectedIndex >= 0)
             {
-                // Add attendee to the list
-                attendeeList.Add(new Attendee
-                {
-                    Name = txtAttendeeName.Text.Trim(),
-                    Type = comboBoxAttendeeType.SelectedItem.ToString()
-                });
+                string attendeeName = txtAttendeeName.Text;
+                string attendeeType = comboBoxAttendeeType.SelectedItem.ToString();
+                //decimal ticketPrice = decimal.Parse(lblTicketPrice.Text);
+                decimal ticketPrice = 10;
+
+                // Add to DataGrid
+                dataGridViewAttendees.Rows.Add(attendeeName, attendeeType, ticketPrice);
+
+                // Calculate total price
+                decimal totalPrice = dataGridViewAttendees.Rows.Cast<DataGridViewRow>()
+                    .Sum(row => Convert.ToDecimal(row.Cells["TicketPrice"].Value));
+
+                label6.Text = $"Total price: {totalPrice:C2}";
 
                 txtAttendeeName.Clear();
             }
@@ -64,15 +78,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         // Remove attendee button click
         private void btnRemoveAttendee_Click(object sender, EventArgs e)
         {
-            if (dataGridViewAttendees.SelectedRows.Count > 0)
+            if (dataGridViewAttendees.SelectedRows.Count > 0 && dataGridViewAttendees.SelectedRows.Count < 2)
             {
                 var selectedRow = dataGridViewAttendees.SelectedRows[0];
-                var attendee = selectedRow.DataBoundItem as Attendee;
-
-                if (attendee != null)
-                {
-                    attendeeList.Remove(attendee);
-                }
+                dataGridViewAttendees.Rows.Remove(selectedRow);
             }
             else
             {
@@ -84,10 +93,46 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             if (int.TryParse(txtNumAttendees.Text.Trim(), out int numAttendees) && numAttendees > 0)
             {
-                if (numAttendees == attendeeList.Count)
-                {
-                    // Add data to the database
-                    SaveAttendeesToDatabase();
+                if (dataGridViewAttendees.SelectedRows.Count == numAttendees)
+                {                   
+                    int totalTickets = dataGridViewAttendees.Rows.Count;
+                    decimal totalAmount = decimal.Parse(label6.Text.Replace("Total price: ", "").Replace("₺", "").Trim());
+                    int _userId = 0;
+                    int newTicketId = 1, newEventOrderId = 1;
+                    
+                    // --- generate new ticket id for saving to database
+                    string maxTicketIdQuery = "SELECT MAX(ticket_id) FROM event_ticket_booking";
+                    DataTable result1 = _dbConnect.ExecuteQuery(maxTicketIdQuery);
+                    if (result1.Rows.Count > 0 && result1.Rows[0][0] != DBNull.Value)
+                    {
+                        newTicketId = Convert.ToInt32(result1.Rows[0][0]) + 1; 
+                    }
+                    // --- generate new event order id for saving to database
+                    string maxEventOrderIdQuery = "SELECT MAX(event_order_id) FROM event_orders";
+                    DataTable result2 = _dbConnect.ExecuteQuery(maxTicketIdQuery);
+                    if (result2.Rows.Count > 0 && result2.Rows[0][0] != DBNull.Value)
+                    {
+                        newEventOrderId = Convert.ToInt32(result2.Rows[0][0]) + 1;
+                    }
+                    // --- Get user Id
+
+                    // ~~ Add order to the database
+                    // all orders considered paid at the moment
+                    string query = $"INSERT INTO [event_orders] (event_order_id, user_id, event_id, order_date, total_tickets, total_amount, booking_status) " +
+                        $"VALUES ('{newEventOrderId}', '{_userId}','{_eventId}', '{DateTime.Now.Date}', {totalTickets}, {totalAmount}, 'paid')";
+                    _dbConnect.ExecuteQuery(query);
+                    
+                    // Add ticket bookings
+                    foreach (DataGridViewRow row in dataGridViewAttendees.Rows)
+                    {
+                        string attendeeName = row.Cells["AttendeeName"].Value.ToString();
+                        string attendeeType = row.Cells["AttendeeType"].Value.ToString();
+                        decimal ticketPrice = Convert.ToDecimal(row.Cells["TicketPrice"].Value);
+
+                        string ticketQuery = $"INSERT INTO [event_ticket_booking] (ticket_id, event_order_id, attendee_name, attendee_type, ticket_price) " +
+                            $"VALUES (SCOPE_IDENTITY(),'{newTicketId}', '{attendeeName}', '{attendeeType}', {ticketPrice})";
+                        _dbConnect.ExecuteQuery(ticketQuery);
+                    }
                     MessageBox.Show("Payment processed successfully and attendees saved!");
                 }
                 else
@@ -100,31 +145,10 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
                 MessageBox.Show("Please enter a valid number of attendees.");
             }
         }
-        // Simulate saving attendees to a database
-        private void SaveAttendeesToDatabase()
-        {
-            foreach (var attendee in attendeeList)
-            {
-                // Save logic here (e.g., insert into database)
-                //Console.WriteLine($"Saving {attendee.Name} ({attendee.Type}) to database.");
-            }
-        }
 
         private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-    }
-    // Attendee model for the DataGridView
-    public class Attendee
-    {
-        public string Name { get; set; }
-        public string Type { get; set; }
-    }
-    public class EventDetails
-    {
-        public string EventName { get; set; }
-        public DateTime EventDate { get; set; }
-        public string EventDescription { get; set; }
     }
 }

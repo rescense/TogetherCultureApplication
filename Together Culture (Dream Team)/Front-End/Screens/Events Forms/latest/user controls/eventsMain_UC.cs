@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,50 +9,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventsMain_UC : UserControl
     {
-        public event EventHandler<eventsForm.EventDetails> EventSelected;
+        private readonly DatabaseConnect _dbConnect;
         public static int yearVar, monthVar;
         private ucDays currentlySelectedDay;
         public eventsMain_UC()
         {
             InitializeComponent();
-            //if selected from calendar
-            //LoadEvents();
+            _dbConnect = new DatabaseConnect();
         }
         private void eventsMain_UC_Load(object sender, EventArgs e)
         {
             showDays(DateTime.Now.Month, DateTime.Now.Year);
         }
-        private void LoadEvents()
-        {
-            //load data for data gride view
-        }
 
-        private void btnSelectedEvent_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                var selectedRow = dataGridView1.SelectedRows[0];
-                // turn selected items into Event details
-                var eventDetails = selectedRow.DataBoundItem as eventsForm.EventDetails;
-
-                //raise event with eventDetails
-                guna2Button1.Click += (s, e) => EventSelected?.Invoke(this, eventDetails);
-                EventSelected?.Invoke(this, eventDetails);
-            }
-            else
-            {
-                MessageBox.Show("Please select one event");
-            }
-        }
-
-
-        //  Calendar
+        // ~~~~~~~~~~~~~~~~~   Calendar   ~~~~~~~~~~~~~~~~~
         // filling days in calendar
         private void showDays(int month, int year)
         {
@@ -83,7 +61,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             if (currentlySelectedDay != null)
             {
-                currentlySelectedDay.Deselect(); // Deselect the previously selected day
+                currentlySelectedDay.Deselect(); 
             }
 
             // Update the current selection
@@ -96,26 +74,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             // Load events for the selected date
             LoadEvents(date);
         }
-
-        private void LoadEvents(DateTime selectedDate)
-        {
-            // Simulated data for demonstration purposes
-            var events = new List<EventDetails>
-            {
-                new EventDetails { EventName = "Meeting", EventDate = DateTime.Today, EventDescription = "Team meeting" },
-                new EventDetails { EventName = "Workshop", EventDate = DateTime.Today.AddDays(1), EventDescription = "Coding workshop" },
-            };
-
-            // Filter events based on the selected date
-            var filteredEvents = events.Where(ev => ev.EventDate.Date == selectedDate.Date).ToList();
-            dataGridView1.DataSource = filteredEvents;
-
-            if (!filteredEvents.Any())
-            {
-                MessageBox.Show("No events found for the selected date.");
-            }
-        }
-
         // buttons for calendar
         // next btn
         private void guna2Button9_Click(object sender, EventArgs e)
@@ -140,6 +98,109 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
             showDays(monthVar, yearVar);
         }
 
+        // ~~~~~~~~~~~~~~~~~~~~  event selection ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        private void LoadEvents(DateTime selectedDate)
+        {
+            //load data for data gride view
+            string query = "SELECT event_id, event_name, date, time, location, ticket_price FROM [event]";
+            var eventsTable = _dbConnect.ExecuteQuery(query);
+            List<Event> events = ConvertDataTableToList(eventsTable);
+
+            // Filter events based on the selected date
+            var filteredDataTableEvents = eventsTable.AsEnumerable()
+                .Where(ev => ev.Field<DateTime>("Date").Date == selectedDate.Date)
+                .CopyToDataTable();
+            var filteredEvents = events.Where(ev => ev.Date.Date == selectedDate.Date).ToList();
+
+            dataGridView1.DataSource = filteredDataTableEvents;
+
+            if (!filteredEvents.Any())
+            {
+                MessageBox.Show("No events found for the selected date.");
+            }
+        }
+
+        private void btnSelectedEvent_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((dataGridView1.SelectedRows.Count > 0) && (dataGridView1.SelectedRows.Count < 2))
+            {
+                if (e.RowIndex >= 0)
+                {
+                    var selectedRow = dataGridView1.Rows[e.RowIndex];
+                    int eventId = Convert.ToInt32(selectedRow.Cells["event_id"].Value);
+                    DateTime eventDate = Convert.ToDateTime(selectedRow.Cells["date"].Value);
+                    eventsForm parentForm = this.Parent as eventsForm; 
+
+                    // Check if the event is in the future or past
+                    if (eventDate.Date < DateTime.Now.Date)
+                    {
+                        LoadEventFeedbackUC(eventId); // Load Feedback for past events
+                    }
+                    else
+                    {
+                        LoadEventDetailsOrBookingUC(eventId); // Load Booking for future events
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select one event");
+            }
+        }
+        // ~~~~~~~~~~~~~~~~~ new pages for selected events ~~~~~~~~~~~~~~~~~
+        // load feeedback page of event feed back and event bookings
+        private void LoadEventFeedbackUC(int eventId)
+        {
+            var eventFeedbackUC = new eventFeedback_UC(eventId);
+            eventFeedbackUC.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(eventFeedbackUC);
+
+        }
+        private void LoadEventDetailsOrBookingUC(int eventId)
+        {
+            var eventBookingUC = new eventDetailsOrBooking_UC(eventId);
+            eventBookingUC.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(eventBookingUC);
+        }
+
+
+        // for conversion of data table to list
+        public class Event
+        {
+            public int EventId { get; set; }
+            public string EventName { get; set; }
+            public DateTime Date { get; set; }
+            public TimeSpan Time { get; set; }
+            public string Location { get; set; }
+            public decimal TicketPrice { get; set; }
+            public int MaximumOccupancy { get; set; }
+        }
+        public List<Event> ConvertDataTableToList(DataTable dataTable)
+        {
+            List<Event> eventsList = new List<Event>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Event eventObj = new Event()
+                {
+                    EventId = Convert.ToInt32(row["event_id"]),
+                    EventName = row["event_name"].ToString(),
+                    Date = Convert.ToDateTime(row["date"]),
+                    Time = Convert.ToDateTime(row["time"]).TimeOfDay,
+                    Location = row["location"].ToString(),
+                    TicketPrice = Convert.ToDecimal(row["ticket_price"]),
+                    MaximumOccupancy = Convert.ToInt32(row["maximum_occupancy"])
+                };
+
+                eventsList.Add(eventObj);
+            }
+
+            return eventsList;
+        }
+        // ~~~~~~~~~~~~~~~ tools ~~~~~~~~~~~~~~~
         private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
 
