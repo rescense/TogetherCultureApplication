@@ -51,7 +51,6 @@
             txtNumAttendees = new RichTextBox();
             btnAddAttendee = new Guna.UI2.WinForms.Guna2Button();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            vScrollBar1 = new VScrollBar();
             dataGridViewAttendees = new DataGridView();
             label5 = new Label();
             label1 = new Label();
@@ -80,6 +79,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -126,6 +126,7 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2CustomGradientPanel4.Controls.Add(label6);
             guna2CustomGradientPanel4.Controls.Add(guna2Button9);
             guna2CustomGradientPanel4.Controls.Add(comboBoxAttendeeType);
@@ -133,7 +134,6 @@
             guna2CustomGradientPanel4.Controls.Add(txtNumAttendees);
             guna2CustomGradientPanel4.Controls.Add(btnAddAttendee);
             guna2CustomGradientPanel4.Controls.Add(guna2Button8);
-            guna2CustomGradientPanel4.Controls.Add(vScrollBar1);
             guna2CustomGradientPanel4.Controls.Add(dataGridViewAttendees);
             guna2CustomGradientPanel4.Controls.Add(label5);
             guna2CustomGradientPanel4.Controls.Add(label1);
@@ -150,6 +150,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -162,6 +163,7 @@
             // 
             // guna2Button9
             // 
+            guna2Button9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;
@@ -186,6 +188,7 @@
             // 
             // comboBoxAttendeeType
             // 
+            comboBoxAttendeeType.Anchor = AnchorStyles.Right;
             comboBoxAttendeeType.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxAttendeeType.FormattingEnabled = true;
             comboBoxAttendeeType.Items.AddRange(new object[] { "member", "full_price", "concession" });
@@ -196,6 +199,7 @@
             // 
             // txtAttendeeName
             // 
+            txtAttendeeName.Anchor = AnchorStyles.Right;
             txtAttendeeName.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             txtAttendeeName.ForeColor = Color.Gray;
             txtAttendeeName.Location = new Point(344, 146);
@@ -207,6 +211,7 @@
             // 
             // txtNumAttendees
             // 
+            txtNumAttendees.Anchor = AnchorStyles.Right;
             txtNumAttendees.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNumAttendees.ForeColor = Color.Gray;
             txtNumAttendees.Location = new Point(344, 97);
@@ -218,6 +223,7 @@
             // 
             // btnAddAttendee
             // 
+            btnAddAttendee.Anchor = AnchorStyles.Left;
             btnAddAttendee.AutoRoundedCorners = true;
             btnAddAttendee.BackColor = Color.Transparent;
             btnAddAttendee.BorderColor = Color.White;
@@ -242,6 +248,7 @@
             // 
             // guna2Button8
             // 
+            guna2Button8.Anchor = AnchorStyles.Right;
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.White;
@@ -264,22 +271,16 @@
             guna2Button8.Text = "Remove Last Attendee";
             guna2Button8.Click += btnRemoveAttendee_Click;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(613, 287);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(28, 141);
-            vScrollBar1.TabIndex = 42;
-            // 
             // dataGridViewAttendees
             // 
+            dataGridViewAttendees.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewAttendees.BackgroundColor = Color.FromArgb(255, 128, 128);
             dataGridViewAttendees.BorderStyle = BorderStyle.None;
             dataGridViewAttendees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewAttendees.Location = new Point(37, 287);
             dataGridViewAttendees.Name = "dataGridViewAttendees";
             dataGridViewAttendees.RowHeadersWidth = 51;
-            dataGridViewAttendees.Size = new Size(577, 141);
+            dataGridViewAttendees.Size = new Size(604, 141);
             dataGridViewAttendees.TabIndex = 41;
             // 
             // label5
@@ -337,7 +338,6 @@
         private RichTextBox txtNumAttendees;
         private Guna.UI2.WinForms.Guna2Button btnAddAttendee;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private VScrollBar vScrollBar1;
         private DataGridView dataGridViewAttendees;
         private Label label5;
         private Label label1;

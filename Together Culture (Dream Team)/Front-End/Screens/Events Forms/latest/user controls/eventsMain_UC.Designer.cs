@@ -85,7 +85,6 @@
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            vScrollBar1 = new VScrollBar();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             flowLayoutPanel1.SuspendLayout();
@@ -121,6 +120,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -133,6 +133,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -145,6 +146,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -157,6 +159,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -169,6 +172,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -181,6 +185,7 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -193,6 +198,7 @@
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -205,6 +211,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.Controls.Add(panel2);
             flowLayoutPanel1.Controls.Add(panel3);
@@ -540,6 +547,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft JhengHei UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -552,23 +560,18 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(255, 128, 128);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(785, 156);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(563, 343);
+            dataGridView1.Size = new Size(591, 343);
             dataGridView1.TabIndex = 40;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(1349, 156);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(28, 343);
-            vScrollBar1.TabIndex = 41;
             // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button1.AutoRoundedCorners = true;
             guna2Button1.BackColor = Color.Transparent;
             guna2Button1.BorderColor = Color.White;
@@ -594,7 +597,6 @@
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.Controls.Add(guna2Button1);
-            guna2CustomGradientPanel2.Controls.Add(vScrollBar1);
             guna2CustomGradientPanel2.Controls.Add(dataGridView1);
             guna2CustomGradientPanel2.Controls.Add(label2);
             guna2CustomGradientPanel2.Controls.Add(guna2Button8);
@@ -688,7 +690,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Label label2;
         private DataGridView dataGridView1;
-        private VScrollBar vScrollBar1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
     }

@@ -34,7 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             textBox1 = new TextBox();
-            vScrollBar1 = new VScrollBar();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +46,6 @@
             // 
             guna2CustomGradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel2.Controls.Add(textBox1);
-            guna2CustomGradientPanel2.Controls.Add(vScrollBar1);
             guna2CustomGradientPanel2.Controls.Add(dataGridView1);
             guna2CustomGradientPanel2.Controls.Add(label1);
             guna2CustomGradientPanel2.Controls.Add(guna2Button8);
@@ -66,6 +64,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(35, 22);
             textBox1.Name = "textBox1";
@@ -74,21 +73,15 @@
             textBox1.TabIndex = 36;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(805, 140);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(31, 362);
-            vScrollBar1.TabIndex = 35;
-            // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.BackgroundColor = Color.FromArgb(255, 128, 128);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(35, 140);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(770, 362);
+            dataGridView1.Size = new Size(795, 362);
             dataGridView1.TabIndex = 34;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -106,6 +99,7 @@
             // 
             // guna2Button8
             // 
+            guna2Button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.FromArgb(64, 0, 30);
@@ -129,6 +123,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Skills Requested", "Skills Offered" });
@@ -153,7 +148,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private VScrollBar vScrollBar1;
         private DataGridView dataGridView1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;

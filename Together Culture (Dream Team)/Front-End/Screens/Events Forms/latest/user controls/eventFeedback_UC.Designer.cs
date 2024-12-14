@@ -44,7 +44,6 @@
             guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             label10 = new Label();
             label9 = new Label();
-            vScrollBar2 = new VScrollBar();
             dataGridView2 = new DataGridView();
             label6 = new Label();
             label8 = new Label();
@@ -73,6 +72,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -119,11 +119,11 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            guna2CustomGradientPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2CustomGradientPanel3.Controls.Add(richTextBox3);
             guna2CustomGradientPanel3.Controls.Add(guna2Button10);
             guna2CustomGradientPanel3.Controls.Add(label10);
             guna2CustomGradientPanel3.Controls.Add(label9);
-            guna2CustomGradientPanel3.Controls.Add(vScrollBar2);
             guna2CustomGradientPanel3.Controls.Add(dataGridView2);
             guna2CustomGradientPanel3.Controls.Add(label6);
             guna2CustomGradientPanel3.Controls.Add(label8);
@@ -140,6 +140,7 @@
             // 
             // richTextBox3
             // 
+            richTextBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             richTextBox3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             richTextBox3.ForeColor = Color.Gray;
             richTextBox3.Location = new Point(37, 400);
@@ -152,6 +153,7 @@
             // 
             // guna2Button10
             // 
+            guna2Button10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Button10.AutoRoundedCorners = true;
             guna2Button10.BackColor = Color.Transparent;
             guna2Button10.BorderColor = Color.White;
@@ -175,6 +177,7 @@
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.Right;
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -187,6 +190,7 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -197,27 +201,22 @@
             label9.TabIndex = 43;
             label9.Text = "Comments and Ratings Received\r\n";
             // 
-            // vScrollBar2
-            // 
-            vScrollBar2.Location = new Point(613, 171);
-            vScrollBar2.Name = "vScrollBar2";
-            vScrollBar2.Size = new Size(28, 205);
-            vScrollBar2.TabIndex = 42;
-            // 
             // dataGridView2
             // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.BackgroundColor = Color.FromArgb(255, 128, 128);
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Location = new Point(37, 171);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(577, 205);
+            dataGridView2.Size = new Size(604, 205);
             dataGridView2.TabIndex = 41;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -230,6 +229,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -268,7 +268,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Label label10;
         private Label label9;
-        private VScrollBar vScrollBar2;
         private DataGridView dataGridView2;
         private Label label6;
         private Label label8;

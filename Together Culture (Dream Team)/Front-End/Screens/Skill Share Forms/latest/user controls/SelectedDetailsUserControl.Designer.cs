@@ -63,6 +63,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -75,6 +76,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -87,9 +89,10 @@
             // 
             // guna2CirclePictureBox1
             // 
+            guna2CirclePictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2CirclePictureBox1.BackColor = Color.Transparent;
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(194, 18);
+            guna2CirclePictureBox1.Location = new Point(214, 18);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -99,6 +102,7 @@
             // 
             // guna2Button9
             // 
+            guna2Button9.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;

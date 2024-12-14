@@ -73,6 +73,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(29, 22);
             textBox1.Name = "textBox1";
@@ -83,6 +84,7 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            guna2CustomGradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel4.Controls.Add(textBox5);
             guna2CustomGradientPanel4.Controls.Add(textBox4);
             guna2CustomGradientPanel4.Controls.Add(textBox3);
@@ -104,6 +106,7 @@
             // 
             // textBox5
             // 
+            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox5.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox5.Location = new Point(392, 348);
             textBox5.Name = "textBox5";
@@ -114,6 +117,7 @@
             // 
             // textBox4
             // 
+            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox4.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox4.Location = new Point(392, 285);
             textBox4.Name = "textBox4";
@@ -124,6 +128,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox3.Location = new Point(392, 220);
             textBox3.Name = "textBox3";
@@ -134,6 +139,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox2.Location = new Point(392, 96);
             textBox2.Name = "textBox2";
@@ -144,6 +150,7 @@
             // 
             // comboBox2
             // 
+            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Skills Requested", "Skills Offered" });
@@ -155,6 +162,7 @@
             // 
             // guna2Button9
             // 
+            guna2Button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button9.AutoRoundedCorners = true;
             guna2Button9.BackColor = Color.Transparent;
             guna2Button9.BorderColor = Color.White;
@@ -191,6 +199,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -203,6 +212,7 @@
             // 
             // guna2Button8
             // 
+            guna2Button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2Button8.AutoRoundedCorners = true;
             guna2Button8.BackColor = Color.Transparent;
             guna2Button8.BorderColor = Color.FromArgb(64, 0, 30);
@@ -227,6 +237,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Skills Requested", "Skills Offered" });
@@ -263,7 +274,7 @@
         private TextBox textBox1;
         private TextBox textBox5;
         private TextBox textBox4;
-        private TextBox textBox3;
         private TextBox textBox2;
+        public TextBox textBox3;
     }
 }
