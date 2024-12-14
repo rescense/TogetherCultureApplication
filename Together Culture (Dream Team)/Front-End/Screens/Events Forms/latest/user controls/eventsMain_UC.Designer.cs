@@ -589,7 +589,7 @@
             guna2Button1.Size = new Size(145, 29);
             guna2Button1.TabIndex = 42;
             guna2Button1.Text = "Check Event";
-            guna2Button1.Click += btnSelectedEvent_Click;
+            guna2Button1.Click += eventSelectedBtn_Click;
             // 
             // guna2CustomGradientPanel2
             // 

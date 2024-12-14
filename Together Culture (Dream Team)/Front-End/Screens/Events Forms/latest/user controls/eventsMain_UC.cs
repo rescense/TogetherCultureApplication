@@ -61,7 +61,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             if (currentlySelectedDay != null)
             {
-                currentlySelectedDay.Deselect(); 
+                currentlySelectedDay.Deselect();
             }
 
             // Update the current selection
@@ -120,32 +120,41 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
                 MessageBox.Show("No events found for the selected date.");
             }
         }
-
-        private void btnSelectedEvent_Click(object sender, DataGridViewCellEventArgs e)
+        private void eventSelectedBtn_Click(object sender, EventArgs e)
         {
-            if ((dataGridView1.SelectedRows.Count > 0) && (dataGridView1.SelectedRows.Count < 2))
+            // Check if there is a selected row
+            if (dataGridView1.SelectedRows.Count == 1)
             {
-                if (e.RowIndex >= 0)
-                {
-                    var selectedRow = dataGridView1.Rows[e.RowIndex];
-                    int eventId = Convert.ToInt32(selectedRow.Cells["event_id"].Value);
-                    DateTime eventDate = Convert.ToDateTime(selectedRow.Cells["date"].Value);
-                    eventsForm parentForm = this.Parent as eventsForm; 
+                // Simulate DataGridViewCellEventArgs
+                int rowIndex = dataGridView1.SelectedRows[0].Index;
+                var cellEventArgs = new DataGridViewCellEventArgs(0, rowIndex);
 
-                    // Check if the event is in the future or past
-                    if (eventDate.Date < DateTime.Now.Date)
-                    {
-                        LoadEventFeedbackUC(eventId); // Load Feedback for past events
-                    }
-                    else
-                    {
-                        LoadEventDetailsOrBookingUC(eventId); // Load Booking for future events
-                    }
-                }
+                // Call the existing method
+                eventSelectedBtn(sender, cellEventArgs);
             }
             else
             {
-                MessageBox.Show("Please select one event");
+                MessageBox.Show("Please select one event.");
+            }
+        }
+        private void eventSelectedBtn(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var selectedRow = dataGridView1.Rows[e.RowIndex];
+                int eventId = Convert.ToInt32(selectedRow.Cells["event_id"].Value);
+                DateTime eventDate = Convert.ToDateTime(selectedRow.Cells["date"].Value);
+                eventsForm parentForm = this.Parent as eventsForm;
+
+                // Check if the event is in the future or past
+                if (eventDate.Date < DateTime.Now.Date)
+                {
+                    LoadEventFeedbackUC(eventId); // Load Feedback for past events
+                }
+                else
+                {
+                    LoadEventDetailsOrBookingUC(eventId); // Load Booking for future events
+                }
             }
         }
         // ~~~~~~~~~~~~~~~~~ new pages for selected events ~~~~~~~~~~~~~~~~~
