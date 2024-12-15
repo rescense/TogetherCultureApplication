@@ -7,189 +7,88 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms;
+using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+using static Guna.UI2.WinForms.Suite.Descriptions;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
+namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest
 {
-    public partial class skillShare : Form
+    public partial class skillShareMain : Form
     {
-        public skillShare()
+        private readonly DatabaseConnect _dbConnect;
+
+        public skillShareMain()
         {
             InitializeComponent();
+            _dbConnect = new DatabaseConnect();
+            LoadInitialUserControls();
         }
-        // ~~~~~  Header Panel  ~~~~~
-        private void headerPanel(object sender, PaintEventArgs e)
-        {
 
-        }
-        // together culture label on header panel
-        private void togetherCultureLabel(object sender, EventArgs e)
+        private void LoadInitialUserControls()
         {
+            // Load initial User Controls
+            SearchAndPostUserControl searchAndPostUC = new SearchAndPostUserControl();
+            TimeBankUserControl timeBankUC = new TimeBankUserControl();
 
-        }
-        // together culture logo on header panel
-        private void logoPictureBox(object sender, EventArgs e)
-        {
+            // Add controls to panels
+            panel1.Controls.Clear();
+            panel1.Controls.Add(searchAndPostUC);
 
+            panel2.Controls.Clear();
+            panel2.Controls.Add(timeBankUC);
         }
-        // Buttons on header Panel
-        private void chatSpaceBtn(object sender, EventArgs e)
+
+        public void SwitchUserControls(UserControl panel1UC, UserControl panel2UC)
         {
+            // Switch user controls in the respective panels
+            panel1.Controls.Clear();
+            panel1.Controls.Add(panel1UC);
+
+            panel2.Controls.Clear();
+            panel2.Controls.Add(panel2UC);
+        }
+
+        private void SkillShareForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _dbConnect?.Dispose(); // Ensure database connection is closed on form close
+        }
+
+        // buttons on header panel
+        private void chatSpace_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("  Coming Soon....  ");
+        }
+
+        private void eventsBtn_Click(object sender, EventArgs e)
+        {
+            eventsMain ef = new eventsMain();
+            ef.Show();
+            this.Hide();
+            this.Dispose();
+        }
+
+        private void timeBankBtn_Click(object sender, EventArgs e)
+        {
+            skillShareMain ssk = new skillShareMain();
+            ssk.Show();
+
+            this.Hide();
+            this.Dispose();
+        }
+
+        private void ProfileBtn_Click(object sender, EventArgs e)
+        {
+            Profile pf = new Profile();
+            pf.Show();
             
-        }
-
-        private void forYouBtn(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eventsBtn(object sender, EventArgs e)
-        {
-            eventsMain emSsm = new eventsMain();
-            emSsm.Show();
-        }
-
-        private void skillShareBtn(object sender, EventArgs e)
-        {
-            skillShare skSsm = new skillShare();
-            skSsm.Show();
-        }
-
-        private void myModulesBtn(object sender, EventArgs e)
-        {
-
-        }
-
-        private void profileBtn(object sender, EventArgs e)
-        {
-            AccountSettingsPage aspSsm = new AccountSettingsPage();
-            aspSsm.Show();
-        }
-
-        // Search Panel
-        private void searchPanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void searchBoxTextBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filteringSearchComboBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchBtn(object sender, EventArgs e)
-        {
-            SkillShareResults sskSsm = new SkillShareResults();
-            sskSsm.Show();
-        }
-
-        // post a service panel
-        private void postServicePanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void postServiceLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void detailsForPostLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void serviceTitleTextBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void offerRequestCombobox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void descriptionTextBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timeRequiredTextBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contactPreferenceTextBox(object sender, EventArgs e)
-        {
-
-        }
-
-        private void postBtn(object sender, EventArgs e)
-        {
-
-        }
-
-
-        // Timebank Panel
-        private void timeBankPanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // header label
-        private void timeBankHeaderLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        // text label
-        private void timeBankDescriptionLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        // text panel for offer/request
-        private void offerRequestPanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // text label for offer/request
-        private void requestLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void offerLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        // value panel for offer or request
-        private void valueOfferPanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void valueRequestPanel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // value label for offer or request
-        private void valueRequestLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void valueOfferLabel(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            this.Dispose();
         }
     }
+
 }
+
+
+

@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms;
+using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest;
 using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
-using togther_Culture;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
@@ -133,7 +134,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void timeBankLbl_MouseClick(object sender, MouseEventArgs e)
         {
             // Create an instance of the skillShare form
-            skillShare skillShareForm = new skillShare();
+            skillShareMain skillShareForm = new skillShareMain();
 
             // Show the skillShareMain form
             skillShareForm.Show();

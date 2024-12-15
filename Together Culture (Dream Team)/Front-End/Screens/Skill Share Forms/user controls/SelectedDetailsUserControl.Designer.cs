@@ -88,6 +88,7 @@
             // 
             guna2CirclePictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2CirclePictureBox1.BackColor = Color.Transparent;
+            guna2CirclePictureBox1.Image = Properties.Resources.istockphoto_841152680_1024x10242;
             guna2CirclePictureBox1.ImageRotate = 0F;
             guna2CirclePictureBox1.Location = new Point(214, 18);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";

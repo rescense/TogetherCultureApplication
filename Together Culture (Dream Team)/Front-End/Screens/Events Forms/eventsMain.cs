@@ -3,201 +3,81 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Together_Culture__Dream_Team_.Front_End.Src.Screens.All_Users_Screen;
-using togther_Culture;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Xml.Linq;
+using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
-namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
+namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventsMain : Form
     {
-        public static int yearVar, monthVar;
         public eventsMain()
         {
             InitializeComponent();
         }
-
-        private void eventsMain_Load(object sender, EventArgs e)
-        {
-            showDays(DateTime.Now.Month, DateTime.Now.Year);
-        }
-
-        // Header Panel
-        private void headerPanel(object sender, PaintEventArgs e)
+        private void eventsForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        // Together Culture Label
-        private void togetherCultureLabel(object sender, EventArgs e)
+        // user controls
+        // load main page
+        private void LoadEventMainUserControl()
         {
-
-        }
-        // Together Culture Logo
-        private void togetherCultureLogoPictureBox(object sender, EventArgs e)
-        {
-
-        }
-
-        // Header Panel buttons
-        private void chatSpaceBtn(object sender, EventArgs e)
-        {
+            var eventsMainUC = new eventsMain_UC();
+            eventsMainUC.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(eventsMainUC);
 
         }
 
-        private void forYouBtn(object sender, EventArgs e)
+        // tools
+
+        private void guna2Button6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void eventsBtn(object sender, EventArgs e)
-        {
-            eventsMain emEm = new eventsMain();
-            emEm.Show();
-        }
-
-        private void skillShareBtn(object sender, EventArgs e)
-        {
-            skillShare skEm = new skillShare();
-            skEm.Show();
-        }
-
-        private void myModulesBtn(object sender, EventArgs e)
+        private void userControlPanel(object sender, PaintEventArgs e) // design name - panel1
         {
 
         }
 
-        private void profileBtn(object sender, EventArgs e)
+        // header panel buttons
+        private void chatSpaceBtn_Click(object sender, EventArgs e)
         {
-            AccountSettingsPage aspEm = new AccountSettingsPage();
-            aspEm.Show();
+            MessageBox.Show("  Coming Soon....  ");
         }
 
-        // Calendar Panel
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void timeBankBtn_Click(object sender, EventArgs e)
         {
+            skillShareMain ssk = new skillShareMain();
+            ssk.Show();
 
-        }
-        // Calendar labels
-        private void calendarLabel(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            this.Dispose();
         }
 
-        private void MonthLabel_Click(object sender, EventArgs e)
+        private void eventsBtn_Click(object sender, EventArgs e)
         {
-
-        }
-        // Days Label
-        private void MondayLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TuesdayLabel(object sender, EventArgs e)
-        {
-
+            eventsMain ef = new eventsMain();
+            ef.Show();
+            
+            this.Hide();
+            this.Dispose();
         }
 
-        private void WednesdayLabel(object sender, EventArgs e)
+        private void ProfileBtn_Click(object sender, EventArgs e)
         {
+            Profile pf = new Profile();
+            pf.Show();
 
-        }
-
-        private void ThursdayLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FridayLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaturdayLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SundayLabel(object sender, EventArgs e)
-        {
-
-        }
-
-        // filling days in calendar
-        private void showDays(int month, int year)
-        {
-            flowLayoutPanel1.Controls.Clear();
-            yearVar = year;
-            monthVar = month;
-
-            string monthName = new DateTimeFormatInfo().GetMonthName(month);
-            monthLabel.Text = monthName.ToUpper() + " " + year;
-            DateTime startOfTheMonth = new DateTime(year, month, 1);
-            int day = DateTime.DaysInMonth(year, month);
-            int week = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-            for (int i = 1; i < week; i++)
-            {
-                ucDays uc = new ucDays("");
-                flowLayoutPanel1.Controls.Add(uc);
-            }
-            for (int i = 1; i < day; i++)
-            {
-                ucDays uc = new ucDays(i + "");
-                flowLayoutPanel1.Controls.Add(uc);
-            }
-
-        }
-
-        // buttons for calendar
-        private void nextBtn(object sender, EventArgs e)
-        {
-            monthVar += 1;
-            if (monthVar > 12)
-            {
-                monthVar = 1;
-                yearVar += 1;
-            }
-            showDays(monthVar, yearVar);
-        }
-
-        private void previousBtn(object sender, EventArgs e)
-        {
-            monthVar -= 1;
-            if (monthVar < 1)
-            {
-                monthVar = 12;
-                yearVar -= 1;
-            }
-            showDays(monthVar, yearVar);
-        }
-
-        // Upcoming events label
-        private void upcomingEventsLabel(object sender, EventArgs e)
-        {
-
-        }
-        // events list
-        private void eventsListDataGridView(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void eventsListScrollBar(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        // check events button
-        private void checkEventsBtn(object sender, EventArgs e)
-        {
-            eventsBooking eb = new eventsBooking();
-            eb.Show();
+            this.Hide();
+            this.Dispose();
         }
     }
 }

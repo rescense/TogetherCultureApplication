@@ -144,7 +144,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
                 var selectedRow = dataGridView1.Rows[e.RowIndex];
                 int eventId = Convert.ToInt32(selectedRow.Cells["event_id"].Value);
                 DateTime eventDate = Convert.ToDateTime(selectedRow.Cells["date"].Value);
-                eventsForm parentForm = this.Parent as eventsForm;
+                eventsMain parentForm = this.Parent as eventsMain;
 
                 // Check if the event is in the future or past
                 if (eventDate.Date < DateTime.Now.Date)
