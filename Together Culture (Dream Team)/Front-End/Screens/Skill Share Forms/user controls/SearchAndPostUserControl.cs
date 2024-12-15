@@ -59,7 +59,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             }
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             string searchText = textBox1.Text.Trim();
             string filter = comboBox1.SelectedItem?.ToString();
@@ -167,9 +167,5 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             // post button
         }
 
-        private void search_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

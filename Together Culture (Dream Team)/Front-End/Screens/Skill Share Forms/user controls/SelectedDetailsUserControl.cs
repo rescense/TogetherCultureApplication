@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using Together_Culture__Dream_Team_.Front_End.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls
 {
     public partial class SelectedDetailsUserControl : UserControl
     {
         private readonly int _skillShareId;
+        private readonly int _userId;
         public SelectedDetailsUserControl(int skillShareId)
         {
             InitializeComponent();

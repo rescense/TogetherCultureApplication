@@ -112,12 +112,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void eventsLbl_MouseClick(object sender, MouseEventArgs e)
         {
             // Create an instance of the eventsMainForm form
-            eventsMain eventsMainForm = new eventsMain();
-
-            // Show the eventsMainForm form
-            eventsMainForm.Show();
-
-            this.Close(); //  close the form
+            // Create an instance of the skillShare form
+            MessageBox.Show("events for admins, coming soon..");
         }
 
         private void togetherCultureLbl_MouseClick(object sender, MouseEventArgs e)
@@ -134,12 +130,8 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         private void timeBankLbl_MouseClick(object sender, MouseEventArgs e)
         {
             // Create an instance of the skillShare form
-            skillShareMain skillShareForm = new skillShareMain();
+            MessageBox.Show("skill share for admins, coming soon..");
 
-            // Show the skillShareMain form
-            skillShareForm.Show();
-
-            this.Close(); //  close the form
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)

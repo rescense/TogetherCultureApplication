@@ -8,29 +8,52 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Back_End.Src.Main;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls
 {
     public partial class TimeBankUserControl : UserControl
     {
-        public TimeBankUserControl()
+        public TimeBankUserControl(int userId)
         {
             InitializeComponent();
-            InitializeTimeBankInfo();
+            var _user_id = userId;
+            InitializeTimeBankInfo(_user_id);
         }
 
-        private void InitializeTimeBankInfo()
+        private void InitializeTimeBankInfo(int _user_id)
         {
-            // Sample data for Time Bank
-            // These values would ideally come from a database or another source
-            int timeRequested = 3;  // In hours
-            int timeOffered = 5;    // In hours
-            int timeLeft = 10;      // In hours
+            try 
+            {
+                using (var dbConnect = new DatabaseConnect()) 
+                {
+                    dbConnect.Open();
+                    string query = $@"
+                    SELECT time_offered, time_requested, time_balance
+                    FROM time_bank
+                    WHERE user_id = {_user_id}";
 
-            // Update the labels with the data
-            label5.Text = $"{timeRequested} hours";    // Label showing the time requested
-            label6.Text = $"{timeOffered} hours";        // Label showing the time offered
-            label8.Text = $"You have {timeLeft} hours left in your\nTime Bank.";  // Label showing the time left
+                    DataTable result = dbConnect.ExecuteQuery(query);
+
+                    if (result.Rows.Count > 0)
+                    {
+                        DataRow row = result.Rows[0];
+
+                        var time_offered = row["time_offered"].ToString();
+                        var time_requested = row["time_requested"].ToString();
+                        var time_balance = row["time_balance"].ToString();
+
+                        label5.Text = $"{time_offered}";
+                        label6.Text = $"{time_requested}";
+                        label8.Text = $"You have {time_balance} hours left in your\r\nTime Bank.";  
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading details: {ex.Message}");
+            }
         }
         private void guna2CustomGradientPanel3_Paint(object sender, PaintEventArgs e)
         {

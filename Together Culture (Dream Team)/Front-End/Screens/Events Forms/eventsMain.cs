@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.VisualBasic.ApplicationServices;
 using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest;
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
@@ -15,9 +16,11 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 {
     public partial class eventsMain : Form
     {
-        public eventsMain()
+        private int _userId;
+        public eventsMain(int userid)
         {
             InitializeComponent();
+            _userId = userid;
         }
         private void eventsForm_Load(object sender, EventArgs e)
         {
@@ -55,7 +58,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 
         private void timeBankBtn_Click(object sender, EventArgs e)
         {
-            skillShareMain ssk = new skillShareMain();
+            skillShareMain ssk = new skillShareMain(_userId);
             ssk.Show();
 
             this.Hide();
@@ -64,7 +67,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
 
         private void eventsBtn_Click(object sender, EventArgs e)
         {
-            eventsMain ef = new eventsMain();
+            eventsMain ef = new eventsMain(_userId);
             ef.Show();
             
             this.Hide();

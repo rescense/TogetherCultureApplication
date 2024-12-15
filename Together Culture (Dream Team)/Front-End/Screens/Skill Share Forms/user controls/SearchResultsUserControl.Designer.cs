@@ -120,6 +120,7 @@
             guna2Button8.Size = new Size(128, 45);
             guna2Button8.TabIndex = 32;
             guna2Button8.Text = "Search";
+            guna2Button8.Click += guna2Button8_Click;
             // 
             // comboBox1
             // 

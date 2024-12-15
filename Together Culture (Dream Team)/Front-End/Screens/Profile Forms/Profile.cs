@@ -13,7 +13,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         public Profile()
         {
             InitializeComponent();
-
             lblStatus.Visible = false;
         }
 
@@ -280,7 +279,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 
         private void btnContinueToDash_Click(object sender, EventArgs e)
         {
-            MemberAreaOnly memberAreaOnly = new MemberAreaOnly();
+            MemberAreaOnly memberAreaOnly = new MemberAreaOnly(userId);
             memberAreaOnly.Show();
             this.Close();
         }

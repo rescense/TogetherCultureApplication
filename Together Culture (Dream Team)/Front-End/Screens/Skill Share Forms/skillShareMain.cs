@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
 using Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms;
 using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls;
@@ -18,11 +19,13 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
     public partial class skillShareMain : Form
     {
         private readonly DatabaseConnect _dbConnect;
+        private readonly int userid;
 
-        public skillShareMain()
+        public skillShareMain(int user_id)
         {
             InitializeComponent();
             _dbConnect = new DatabaseConnect();
+            userid = user_id;
             LoadInitialUserControls();
         }
 
@@ -30,7 +33,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         {
             // Load initial User Controls
             SearchAndPostUserControl searchAndPostUC = new SearchAndPostUserControl();
-            TimeBankUserControl timeBankUC = new TimeBankUserControl();
+            TimeBankUserControl timeBankUC = new TimeBankUserControl(userid);
 
             // Add controls to panels
             panel1.Controls.Clear();
@@ -63,7 +66,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 
         private void eventsBtn_Click(object sender, EventArgs e)
         {
-            eventsMain ef = new eventsMain();
+            eventsMain ef = new eventsMain(userid);
             ef.Show();
             this.Hide();
             this.Dispose();
@@ -71,7 +74,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 
         private void timeBankBtn_Click(object sender, EventArgs e)
         {
-            skillShareMain ssk = new skillShareMain();
+            skillShareMain ssk = new skillShareMain(userid);
             ssk.Show();
 
             this.Hide();
