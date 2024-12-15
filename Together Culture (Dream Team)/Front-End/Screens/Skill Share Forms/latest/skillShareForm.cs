@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms;
 using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 using static Guna.UI2.WinForms.Suite.Descriptions;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest
@@ -25,7 +27,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         {
             var searchAndPostUC = new SearchAndPostUserControl();
             searchAndPostUC.Dock = DockStyle.Fill;
-            
+
 
             panel1.Controls.Clear();
             panel1.Controls.Add(searchAndPostUC);
@@ -83,6 +85,33 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             public string ContactPreference { get; set; }
             public string MemberName { get; set; }
             public int TimeRequired { get; set; }
+        }
+
+        // buttons on header panel
+        private void chatSpace_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("  Coming Soon....  ");
+        }
+
+        private void eventsBtn_Click(object sender, EventArgs e)
+        {
+            eventsForm ef = new eventsForm();
+            ef.Show();
+            this.Close();
+        }
+
+        private void timeBankBtn_Click(object sender, EventArgs e)
+        {
+            skillShareForm ssk = new skillShareForm();
+            ssk.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, EventArgs e)
+        {
+            Profile pf = new Profile();
+            pf.Show();
+            this.Close();
         }
     }
 

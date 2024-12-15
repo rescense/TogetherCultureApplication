@@ -115,6 +115,7 @@
             guna2Button6.Size = new Size(238, 76);
             guna2Button6.TabIndex = 37;
             guna2Button6.Text = "Profile";
+            guna2Button6.Click += ProfileBtn_Click;
             // 
             // label10
             // 
@@ -128,6 +129,7 @@
             label10.Size = new Size(205, 50);
             label10.TabIndex = 36;
             label10.Text = "Time bank";
+            label10.Click += timeBankBtn_Click;
             // 
             // label9
             // 
@@ -141,6 +143,7 @@
             label9.Size = new Size(134, 50);
             label9.TabIndex = 35;
             label9.Text = "Events";
+            label9.Click += eventsBtn_Click;
             // 
             // label8
             // 
@@ -167,6 +170,7 @@
             label7.Size = new Size(213, 50);
             label7.TabIndex = 33;
             label7.Text = "Chat Space";
+            label7.Click += chatSpace_Click;
             // 
             // pictureBox2
             // 

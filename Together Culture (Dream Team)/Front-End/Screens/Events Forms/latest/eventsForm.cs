@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest;
 using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
@@ -44,6 +45,33 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         private void userControlPanel(object sender, PaintEventArgs e) // design name - panel1
         {
 
+        }
+
+        // header panel buttons
+        private void chatSpaceBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("  Coming Soon....  ");
+        }
+
+        private void timeBankBtn_Click(object sender, EventArgs e)
+        {
+            skillShareForm ssk = new skillShareForm();
+            ssk.Show();
+            this.Close();
+        }
+
+        private void eventsBtn_Click(object sender, EventArgs e)
+        {
+            eventsForm ef = new eventsForm();
+            ef.Show();
+            this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, EventArgs e)
+        {
+            Profile pf = new Profile();
+            pf.Show();
+            this.Close();
         }
     }
 }
