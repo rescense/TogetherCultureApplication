@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Together_Culture__Dream_Team_.Back_End.Src.Main;
+using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.latest.user_controls
@@ -16,10 +18,12 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
     public partial class SearchAndPostUserControl : UserControl
     {
         private readonly DatabaseConnect _dbConnect;
+        private readonly int userid;
 
-        public SearchAndPostUserControl()
+        public SearchAndPostUserControl(int _userid)
         {
             InitializeComponent();
+            userid = _userid;
             _dbConnect = new DatabaseConnect();
         }
 
@@ -108,17 +112,58 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
                 _dbConnect.Close();
             }
         }
-        // functions
 
-        // Tools
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            // post button
+            PostService();
+        }
         private void PostService()
         {
+            if (string.IsNullOrEmpty(textBox2.Text) ||
+               string.IsNullOrEmpty(textBox3.Text) ||
+               string.IsNullOrEmpty(textBox4.Text) ||
+               string.IsNullOrEmpty(textBox5.Text) 
+                )
+            {
+                MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             // Gather the values entered by the user in the form
             string title = textBox2.Text;
             string category = comboBox2.SelectedItem.ToString();
             string description = textBox3.Text;
             string time = textBox4.Text;
             string contact = textBox5.Text;
+            string skillShareId = "1";
+            try
+            {
+                using (DatabaseConnect database = new DatabaseConnect())
+                {
+                    database.Open();
+                    SqlCommand command = new SqlCommand(
+                            "INSERT INTO [skil_share] (skill_share_id, user_id, service_title, offering_requesting, description, time_required, contact) " +
+                            "VALUES (@skillShareId, @userId, @serviceTitle, @offeringOrRequesting, @description, @timeRequired, @contact)",
+                            database.Connection
+                    );
+                    // Adding parameters with AddWithValue
+                    command.Parameters.AddWithValue("@skillShareId", skillShareId);
+                    command.Parameters.AddWithValue("@userId", userid);
+                    command.Parameters.AddWithValue("@serviceTitle", title);
+                    command.Parameters.AddWithValue("@offeringOrRequesting", category);
+                    command.Parameters.AddWithValue("@description", description);
+                    command.Parameters.AddWithValue("@timeRequired", time);
+                    command.Parameters.AddWithValue("@contact", contact);
+                    
+                    // Execute the query
+                    command.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             // Code to save service/skill in the database (you would add actual database code here)
             MessageBox.Show("Service posted successfully!");
@@ -160,11 +205,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             // contact preference
-        }
-
-        private void guna2Button9_Click(object sender, EventArgs e)
-        {
-            // post button
         }
 
     }

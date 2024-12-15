@@ -32,7 +32,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         private void LoadInitialUserControls()
         {
             // Load initial User Controls
-            SearchAndPostUserControl searchAndPostUC = new SearchAndPostUserControl();
+            SearchAndPostUserControl searchAndPostUC = new SearchAndPostUserControl(userid);
             TimeBankUserControl timeBankUC = new TimeBankUserControl(userid);
 
             // Add controls to panels

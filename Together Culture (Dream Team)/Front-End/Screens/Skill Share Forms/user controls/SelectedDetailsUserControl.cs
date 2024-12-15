@@ -24,7 +24,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             _skillShareId = skillShareId;
             LoadDetails();
         }
-        // new
         private void LoadDetails()
         {
             try

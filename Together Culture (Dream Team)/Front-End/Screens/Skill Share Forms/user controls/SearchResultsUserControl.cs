@@ -13,7 +13,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 {
     public partial class SearchResultsUserControl : UserControl
     {
-        //public event EventHandler<skillShareForm.EventDetails> ResultSelected;
         private readonly DataTable _searchResults;
         private readonly DatabaseConnect _dbConnect;
 
