@@ -57,21 +57,27 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Events_Forms
         {
             skillShareForm ssk = new skillShareForm();
             ssk.Show();
-            this.Close();
+
+            this.Hide();
+            this.Dispose();
         }
 
         private void eventsBtn_Click(object sender, EventArgs e)
         {
             eventsForm ef = new eventsForm();
             ef.Show();
-            this.Close();
+            
+            this.Hide();
+            this.Dispose();
         }
 
         private void ProfileBtn_Click(object sender, EventArgs e)
         {
             Profile pf = new Profile();
             pf.Show();
-            this.Close();
+
+            this.Hide();
+            this.Dispose();
         }
     }
 }

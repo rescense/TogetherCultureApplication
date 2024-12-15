@@ -97,21 +97,26 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
         {
             eventsForm ef = new eventsForm();
             ef.Show();
-            this.Close();
+            this.Hide();
+            this.Dispose();
         }
 
         private void timeBankBtn_Click(object sender, EventArgs e)
         {
             skillShareForm ssk = new skillShareForm();
             ssk.Show();
-            this.Close();
+
+            this.Hide();
+            this.Dispose();
         }
 
         private void ProfileBtn_Click(object sender, EventArgs e)
         {
             Profile pf = new Profile();
             pf.Show();
-            this.Close();
+            
+            this.Hide();
+            this.Dispose();
         }
     }
 
