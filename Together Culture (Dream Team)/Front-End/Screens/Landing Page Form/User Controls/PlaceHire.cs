@@ -1,16 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
+﻿namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class PlaceHire : UserControl
     {
@@ -36,10 +24,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             rectxt2 = new Rectangle(label2.Location, label2.Size);
         }
 
-        private void UserControlPlaceHire_Load(object sender, EventArgs e)
-        {
-
-        }
         private void Form1_Reposition(object sender, EventArgs e)
         {
             resize_Control(pictureBox1, recBut1);
@@ -68,16 +52,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 
             c.Location = new Point(newX, newY);
             c.Size = new Size(newWidth, newHeight);
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
 
         }
     }

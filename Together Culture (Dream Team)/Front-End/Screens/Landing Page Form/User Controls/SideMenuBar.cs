@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Together_Culture__Dream_Team_.Front_End.Src.Screens;
+﻿using Together_Culture__Dream_Team_.Front_End.Src.Screens;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {

@@ -1,21 +1,9 @@
-﻿using Guna.UI2.WinForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
     public partial class Blog : UserControl
     {
-
         private Size formOriginalSize;
         private Rectangle recpic1;
         private Rectangle recpic2;
@@ -26,16 +14,17 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
         private Rectangle rectxt3;
         private Rectangle rectxt4;
 
-
         public Blog()
         {
             InitializeComponent();
 
+            // Attach resize event handlers
             this.Resize += Form1_Resize;
             this.Resize += Form1_Reposition;
 
             formOriginalSize = this.Size;
 
+            // Store initial positions and sizes
             recpic1 = new Rectangle(pictureBox1.Location, pictureBox1.Size);
             recpic2 = new Rectangle(pictureBox2.Location, pictureBox2.Size);
             recpic3 = new Rectangle(pictureBox3.Location, pictureBox3.Size);
@@ -46,7 +35,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             rectxt4 = new Rectangle(linkLabel4.Location, linkLabel4.Size);
         }
 
-        // Position the components w.r.t window size
+        // Dynamically reposition components
         private void Form1_Reposition(object sender, EventArgs e)
         {
             resize_Control(pictureBox1, recpic1);
@@ -57,108 +46,79 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             resize_Control(linkLabel2, rectxt2);
             resize_Control(linkLabel3, rectxt3);
             resize_Control(linkLabel4, rectxt4);
-
         }
 
-        // Resize the Text w.r.t window size
+        // Dynamically resize text
         private void Form1_Resize(object sender, EventArgs e)
         {
-            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 60f; // Adjust the divisor as needed
-            linkLabel1.Font = new Font(linkLabel1.Font.FontFamily, newSize, linkLabel1.Font.Style);
-            linkLabel2.Font = new Font(linkLabel2.Font.FontFamily, newSize, linkLabel2.Font.Style);
-            linkLabel3.Font = new Font(linkLabel3.Font.FontFamily, newSize, linkLabel3.Font.Style);
-            linkLabel4.Font = new Font(linkLabel4.Font.FontFamily, newSize, linkLabel4.Font.Style);
+            float newSize = Math.Min(this.ClientSize.Width, this.ClientSize.Height) / 60f; // Adjust as needed
+
+            UpdateFontSize(linkLabel1, newSize);
+            UpdateFontSize(linkLabel2, newSize);
+            UpdateFontSize(linkLabel3, newSize);
+            UpdateFontSize(linkLabel4, newSize);
         }
 
-        // Resize Control cordinates and calculations
-        private void resize_Control(Control c, Rectangle r)
+        // Update the font size of a control
+        private void UpdateFontSize(LinkLabel label, float newSize)
         {
-            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
-            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
-            int newX = (int)(r.X * xRatio);
-            int newY = (int)(r.Y * yRatio);
-
-            int newWidth = (int)(r.Width * xRatio);
-            int newHeight = (int)(r.Height * yRatio);
-
-            c.Location = new Point(newX, newY);
-            c.Size = new Size(newWidth, newHeight);
-
+            label.Font = new Font(label.Font.FontFamily, newSize, label.Font.Style);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        // Dynamically resize and reposition a control
+        private void resize_Control(Control control, Rectangle originalRect)
         {
+            float xRatio = (float)this.Width / formOriginalSize.Width;
+            float yRatio = (float)this.Height / formOriginalSize.Height;
 
+            int newX = (int)(originalRect.X * xRatio);
+            int newY = (int)(originalRect.Y * yRatio);
+            int newWidth = (int)(originalRect.Width * xRatio);
+            int newHeight = (int)(originalRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Opens the specified URL in the default browser
+        private void OpenUrl(string url)
         {
-            String url = "https://www.togetherculture.com/blog/we-are-together-culture-meet-niketa";
             try
             {
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
+                    UseShellExecute = true
                 });
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Unable to open the link: {ex.Message}");
             }
+        }
+
+        // Event handlers for link clicks
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenUrl("https://www.togetherculture.com/blog/we-are-together-culture-meet-niketa");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            String url = "https://www.togetherculture.com/blog/we-are-together-culture-meet-francesco";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
+            OpenUrl("https://www.togetherculture.com/blog/we-are-together-culture-meet-francesco");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            String url = "https://www.togetherculture.com/blog/we-are-together-culture-meet-vicky";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
+            OpenUrl("https://www.togetherculture.com/blog/we-are-together-culture-meet-vicky");
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            String url = "https://www.togetherculture.com/blog/we-are-together-culture-meet-bel";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
+            OpenUrl("https://www.togetherculture.com/blog/we-are-together-culture-meet-bel");
         }
 
+        // Event handlers for mouse hover effects on pictures
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.Black;

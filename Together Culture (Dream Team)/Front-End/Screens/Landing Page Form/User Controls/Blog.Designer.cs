@@ -101,7 +101,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 27;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             pictureBox1.MouseEnter += pictureBox1_MouseEnter;
             pictureBox1.MouseLeave += pictureBox1_MouseLeave;
             // 

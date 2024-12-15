@@ -95,7 +95,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -134,9 +133,8 @@
             guna2Button1.Size = new Size(246, 87);
             guna2Button1.TabIndex = 34;
             guna2Button1.Text = "Learn More";
-            guna2Button1.Click += guna2Button1_Click;
             // 
-            // UserControlPlaceHire
+            // PlaceHire
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -145,9 +143,8 @@
             Controls.Add(guna2Button1);
             Controls.Add(pictureBox1);
             Controls.Add(guna2CustomGradientPanel1);
-            Name = "UserControlPlaceHire";
+            Name = "PlaceHire";
             Size = new Size(1446, 614);
-            Load += UserControlPlaceHire_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

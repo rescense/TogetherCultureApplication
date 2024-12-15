@@ -1,24 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 using Together_Culture__Dream_Team_.Front_End.Src.User_Controls;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
 {
     public partial class landingPage : Form
     {
-        public landingPage()
-        {
-            InitializeComponent();
-        }
-
+        // User controls for different sections of the application
         SideMenuBar SideMenuBar = new SideMenuBar();
         AboutUs AboutUs = new AboutUs();
         Memberships Memberships = new Memberships();
@@ -26,181 +13,131 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
         Blog Blog = new Blog();
         PlaceHire UserControlPlaceHire = new PlaceHire();
 
+        // State variables to manage UI visibility and interaction
         private bool isSideMenuVisible = false;
-        private bool colorChange = false;
 
+        public landingPage()
+        {
+            InitializeComponent();
+            InitializeDefaultView(); // Set the default view on initialization
+        }
+
+        // Sets the default view to the About Us section and hides the side menu
+        private void InitializeDefaultView()
+        {
+            addUserControl(AboutUs);
+            SideMenuPanel.Visible = false;
+        }
+
+        // Adds a user control to the main panel
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            guna2CustomGradientPanel4.Controls.Clear();
-            guna2CustomGradientPanel4.Controls.Add(userControl);
-            userControl.BringToFront();
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(userControl);
         }
 
+        // Toggles the visibility of the side menu
+        private void ToggleSideMenu()
+        {
+            isSideMenuVisible = !isSideMenuVisible;
+            SideMenuPanel.Visible = isSideMenuVisible;
+
+            if (isSideMenuVisible)
+            {
+                showSideMenu(SideMenuBar);
+                PicSideMenuBar.BackColor = Color.Black;
+            }
+            else
+            {
+                SideMenuPanel.Controls.Clear();
+                PicSideMenuBar.BackColor = Color.Transparent;
+            }
+        }
+
+        // Displays a specific user control in the side menu panel
         private void showSideMenu(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(userControl);
-            userControl.BringToFront();
-
+            SideMenuPanel.Controls.Clear();
+            SideMenuPanel.Controls.Add(userControl);
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        // Highlights the currently active label and resets others
+        private void UpdateActiveLabelColor(Label activeLabel)
         {
+            foreach (var control in MenuPanel.Controls)
+            {
+                if (control is Label label)
+                {
+                    label.BackColor = label == activeLabel ? Color.Black : Color.Transparent;
+                }
+            }
+        }
 
+
+
+        // Event handler for side menu bar click
+        private void PicSideMenuBar_Click(object sender, EventArgs e)
+        {
+            ToggleSideMenu();
+        }
+
+        // Changes the background color when mouse enters the side menu icon
+        private void PicSideMenuBar_MouseEnter(object sender, EventArgs e)
+        {
+            PicSideMenuBar.BackColor = Color.Black;
+        }
+
+        // Resets the background color when mouse leaves the side menu icon
+        private void PicSideMenuBar_MouseLeave(object sender, EventArgs e)
+        {
             if (!isSideMenuVisible)
             {
-                // Show the sidebar
-                panel1.Visible = true;
-                showSideMenu(SideMenuBar);
-                isSideMenuVisible = true;
-                BringToFront();
-
-                // Change PictureBox color when visible
-                pictureBox3.BackColor = Color.Black;
-            }
-            else
-            {
-                // Hide the sidebar
-                panel1.Controls.Clear();
-                panel1.Visible = false;
-                isSideMenuVisible = false;
-
-                pictureBox3.BackColor = Color.Transparent;
+                PicSideMenuBar.BackColor = Color.Transparent;
             }
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-            if (!isSideMenuVisible)
-            {
-                panel1.Visible = false;
-
-            }
-
-        }
-
-        private void guna2CustomGradientPanel4_Paint_1(object sender, PaintEventArgs e)
-        {
-            addUserControl(AboutUs);
-        }
-
+        // Event handlers for navigation menu clicks
         private void aboutUsLabel_Click(object sender, EventArgs e)
         {
             addUserControl(AboutUs);
-
-
-            if (!colorChange)
-            {
-
-                // Change PictureBox color when visible
-                label2.BackColor = Color.Black; // Example color
-                label3.BackColor = Color.Transparent;
-                label4.BackColor = Color.Transparent;
-                label17.BackColor = Color.Transparent;
-                label18.BackColor = Color.Transparent;
-            }
-            else
-            {
-
-                label2.BackColor = Color.Transparent;
-            }
+            UpdateActiveLabelColor(lblAboutUs);
         }
 
         private void membershipLabel_Click(object sender, EventArgs e)
         {
             addUserControl(Memberships);
-
-            if (!colorChange)
-            {
-
-                // Change PictureBox color when visible
-                label3.BackColor = Color.Black; // Example color
-                label2.BackColor = Color.Transparent;
-                label4.BackColor = Color.Transparent;
-                label17.BackColor = Color.Transparent;
-                label18.BackColor = Color.Transparent;
-            }
-            else
-            {
-
-                label3.BackColor = Color.Transparent;
-            }
+            UpdateActiveLabelColor(lblMemberships);
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void shopLabel_Click(object sender, EventArgs e)
         {
-
             addUserControl(Shop);
-            if (!colorChange)
-            {
-
-                // Change PictureBox color when visible
-                label4.BackColor = Color.Black; // Example color
-                label2.BackColor = Color.Transparent;
-                label3.BackColor = Color.Transparent;
-                label17.BackColor = Color.Transparent;
-                label18.BackColor = Color.Transparent;
-            }
-            else
-            {
-
-                label4.BackColor = Color.Transparent;
-            }
+            UpdateActiveLabelColor(lblShop);
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void blogLabel_Click(object sender, EventArgs e)
         {
-
             addUserControl(Blog);
-
-            if (!colorChange)
-            {
-
-                // Change PictureBox color when visible
-                label17.BackColor = Color.Black; // Example color
-                label2.BackColor = Color.Transparent;
-                label3.BackColor = Color.Transparent;
-                label4.BackColor = Color.Transparent;
-                label18.BackColor = Color.Transparent;
-            }
-            else
-            {
-
-                label17.BackColor = Color.Transparent;
-            }
+            UpdateActiveLabelColor(lblBlog);
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void placeHireLabel_Click(object sender, EventArgs e)
         {
-            if (!colorChange)
-            {
-                addUserControl(UserControlPlaceHire);
-
-                // Change PictureBox color when visible
-                label18.BackColor = Color.Black; // Example color
-                label2.BackColor = Color.Transparent;
-                label3.BackColor = Color.Transparent;
-                label4.BackColor = Color.Transparent;
-                label17.BackColor = Color.Transparent;
-            }
-            else
-            {
-
-                label18.BackColor = Color.Transparent;
-            }
+            addUserControl(UserControlPlaceHire);
+            UpdateActiveLabelColor(lblPlaceHire);
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Opens a URL in the default web browser
+        private void OpenUrl(string url)
         {
-            String url = "https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf";
             try
             {
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
+                    UseShellExecute = true
                 });
             }
             catch (Exception ex)
@@ -209,72 +146,34 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             }
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Event handlers for footer links
+        private void privacyPolicyLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            String url = "https://www.togetherculture.com/contact";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
+            OpenUrl("https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf");
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void contactLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            String url = "https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf";
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Ensures compatibility with modern systems
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unable to open the link: {ex.Message}");
-            }
+            OpenUrl("https://www.togetherculture.com/contact");
         }
 
-        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        private void termsOfServicesLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pictureBox3.BackColor = Color.Black;
-
+            OpenUrl("https://static1.squarespace.com/static/63bc104e8f7c476406bd6221/t/63eb86ae583c021a4fbf916b/1676379822886/Privacy+and+Data+Protection+Statement_Together+Culture+2023.pdf");
         }
 
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox3.BackColor = Color.Transparent;
-        }
-
-        private void guna2Button10_Click(object sender, EventArgs e)
+        // Opens the Sign Up form
+        private void SignUpButton_Click(object sender, EventArgs e)
         {
             Sign_up sign_Up = new Sign_up();
-
             sign_Up.Show();
         }
 
-        private void guna2Button9_Click(object sender, EventArgs e)
+        // Opens the Login form
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             Log_in log_In = new Log_in();
             log_In.Show();
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

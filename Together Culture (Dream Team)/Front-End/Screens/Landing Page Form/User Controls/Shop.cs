@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 
 namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
 {
@@ -91,21 +81,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.User_Controls
             {
                 MessageBox.Show($"Unable to open the link: {ex.Message}");
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Shop_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         

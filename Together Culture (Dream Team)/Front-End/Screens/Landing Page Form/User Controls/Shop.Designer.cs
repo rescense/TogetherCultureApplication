@@ -54,7 +54,6 @@
             pictureBox2.Size = new Size(627, 416);
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // guna2Button1
             // 
@@ -158,7 +157,6 @@
             Controls.Add(pictureBox2);
             Name = "Shop";
             Size = new Size(1446, 614);
-            Load += Shop_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();

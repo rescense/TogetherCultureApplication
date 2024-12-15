@@ -56,7 +56,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 23;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
             // 
             // label1
             // 
@@ -67,7 +66,6 @@
             label1.Size = new Size(633, 64);
             label1.TabIndex = 8;
             label1.Text = "Together Culture is a community interest company based \r\nat 5 Fitzroy Street. ";
-            label1.Click += label20_Click;
             // 
             // label2
             // 
@@ -78,7 +76,6 @@
             label2.Size = new Size(490, 25);
             label2.TabIndex = 8;
             label2.Text = "We do what we say on the tin, we build together culture. ";
-            label2.Click += label20_Click;
             // 
             // label3
             // 
@@ -89,7 +86,6 @@
             label3.Size = new Size(267, 21);
             label3.TabIndex = 8;
             label3.Text = "Think of ‘Together Culture’ as a noun.";
-            label3.Click += label20_Click;
             // 
             // label4
             // 
@@ -100,7 +96,6 @@
             label4.Size = new Size(580, 63);
             label4.TabIndex = 8;
             label4.Text = "Together Culture (n.) the product of turning up to collaborate in the acts of sharing,\r\ncaring, learning, and experimenting which results in the spreading of gritty hope,\r\nthrough action.  ";
-            label4.Click += label20_Click;
             // 
             // guna2Button1
             // 
@@ -175,7 +170,6 @@
             Controls.Add(label1);
             Name = "AboutUs";
             Size = new Size(1446, 607);
-            Load += AboutUs_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();

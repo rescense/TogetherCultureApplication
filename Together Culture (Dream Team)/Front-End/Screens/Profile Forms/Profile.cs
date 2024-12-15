@@ -296,7 +296,6 @@ namespace Together_Culture__Dream_Team_.Front_End.Src.Screens
             // Close the current Profile form
             this.Close();
           
-            
         }
     }
 }
