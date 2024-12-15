@@ -47,7 +47,7 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 
                 string query = $@"
                 INSERT INTO skill_share (user_id, service_title, offering_or_requesting, description, time_required, contact)
-                VALUES (1, '{serviceTitle}', '{offeringOrRequesting}', '{description}', '{timeRequired}', '{contact}')";
+                VALUES ('{userid}', '{serviceTitle}', '{offeringOrRequesting}', '{description}', '{timeRequired}', '{contact}')";
 
                 _dbConnect.Open();
                 _dbConnect.ExecuteQuery(query);
@@ -136,6 +136,15 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
             string time = textBox4.Text;
             string contact = textBox5.Text;
             string skillShareId = "1";
+
+            string maxSkillShareIdQuery = "SELECT MAX(skill_share_id) FROM skill_share";
+            DataTable result = _dbConnect.ExecuteQuery(maxSkillShareIdQuery);
+            if (result.Rows.Count > 0 && result.Rows[0][0] != DBNull.Value)
+            {
+                int _skillShareId = Convert.ToInt32(result.Rows[0][0]) + 1;
+                skillShareId = _skillShareId.ToString();
+            }
+
             try
             {
                 using (DatabaseConnect database = new DatabaseConnect())
