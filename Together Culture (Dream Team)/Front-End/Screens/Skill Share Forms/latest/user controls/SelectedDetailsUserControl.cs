@@ -32,15 +32,14 @@ namespace Together_Culture__Dream_Team_.Front_End.Screens.Skill_Share_Forms.late
 
                 label3.Text = $"{memberName}\n\nAssistance Type\n\n{Category}\n\n{TimeRequired}\n\n{description}\n\n\n{contact}";
             }
-
-            guna2Button9.Click += (s, e) =>
-            {
-                // Code to log interest in the database
-                MessageBox.Show("Interest shown successfully!");
-            };
         }
 
         private void guna2CustomGradientPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
